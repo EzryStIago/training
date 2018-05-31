@@ -11872,11 +11872,11 @@ bowtie --help    #this is not parallel execution! no srun!
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Using-N,-n,-and-c-options-in-slurm">Using N, n, and c options in slurm<a class="anchor-link" href="#Using-N,-n,-and-c-options-in-slurm">&#182;</a></h2><ul>
-<li>if in doubt, use -N 1 -n 1  (N=nodes, n=tasks per node)</li>
+<li>if in doubt, use -N 1 -n 1  (N=nodes, n=ntasks)</li>
 <li>'N'&gt;1 and 'n'&gt;1 option can be used only with MPI-enabled software or such. Not a lot of software falls into that category!<ul>
 <li>software that does: <ul>
 <li>MPI, </li>
-<li>ipython parallel (uses py4mpi), </li>
+<li>ipython parallel (uses mpi4py), </li>
 <li>GATK 4 (uses Spark as parallelizing engine)</li>
 </ul>
 </li>
