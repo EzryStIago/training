@@ -1,0 +1,29 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to the Office of Advanced Research Computing at Rutgers!",
+            "title": "Home"
+        },
+        {
+            "location": "/resources/",
+            "text": "Here are some resources you might want to consult to learn more about how to use an HPC cluster\n\n\nSlurm\n\n\n\n\nOARC cluster user guide Amarel/Perceval\n - this is a must-read for any new users, even if you are an experienced Linux user \n\n\nintro videos by Kristina\n\n\nterse slurm tips\n\n\n\n\nLinux tutorials\n\n\n\n\nlinux tutorial by Galen\n\n\nto be continued\n\n\n\n\nGraphical user interface\n\n\n\n\nweb-based access to the cluster (still testing) - only from campus or VPN",
+            "title": "Resources"
+        },
+        {
+            "location": "/resources/#slurm",
+            "text": "OARC cluster user guide Amarel/Perceval  - this is a must-read for any new users, even if you are an experienced Linux user   intro videos by Kristina  terse slurm tips",
+            "title": "Slurm"
+        },
+        {
+            "location": "/resources/#linux-tutorials",
+            "text": "linux tutorial by Galen  to be continued",
+            "title": "Linux tutorials"
+        },
+        {
+            "location": "/resources/#graphical-user-interface",
+            "text": "web-based access to the cluster (still testing) - only from campus or VPN",
+            "title": "Graphical user interface"
+        }
+    ]
+}
