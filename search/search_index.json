@@ -7,12 +7,12 @@
         },
         {
             "location": "/resources/",
-            "text": "Here are some resources you might want to consult to learn more about how to use an HPC cluster\n\n\nSlurm\n\n\n\n\nOARC cluster user guide Amarel/Perceval\n - this is a must-read for any new users, even if you are an experienced Linux user \n\n\nintro videos by Kristina\n\n\nterse slurm tips\n\n\n\n\nLinux tutorials\n\n\n\n\nlinux tutorial by Galen\n\n\nto be continued\n\n\n\n\nGraphical user interface\n\n\n\n\nweb-based access to the cluster (still testing) - only from campus or VPN",
+            "text": "Here are some resources you might want to consult to learn more about how to use an HPC cluster\n\n\nSlurm\n\n\n\n\nOARC cluster user guide Amarel/Perceval\n - this is a must-read for any new users, even if you are an experienced Linux user \n\n\nOARC cluster community\n - a lot of software is installed already by other users of the cluster, this describes how to use it and contribute to it\n\n\nintro videos by Kristina\n\n\nterse slurm tips\n\n\n\n\nLinux tutorials\n\n\n\n\nlinux tutorial by Galen\n\n\nto be continued\n\n\n\n\nGraphical user interface\n\n\n\n\nweb-based access to the cluster (still testing) - only from campus or VPN\n\n\n\n\nResources on the web\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown",
             "title": "Resources"
         },
         {
             "location": "/resources/#slurm",
-            "text": "OARC cluster user guide Amarel/Perceval  - this is a must-read for any new users, even if you are an experienced Linux user   intro videos by Kristina  terse slurm tips",
+            "text": "OARC cluster user guide Amarel/Perceval  - this is a must-read for any new users, even if you are an experienced Linux user   OARC cluster community  - a lot of software is installed already by other users of the cluster, this describes how to use it and contribute to it  intro videos by Kristina  terse slurm tips",
             "title": "Slurm"
         },
         {
@@ -24,6 +24,11 @@
             "location": "/resources/#graphical-user-interface",
             "text": "web-based access to the cluster (still testing) - only from campus or VPN",
             "title": "Graphical user interface"
+        },
+        {
+            "location": "/resources/#resources-on-the-web",
+            "text": "markdown editor  - lets you view the finished (rendered) markdown side by side with raw markdown",
+            "title": "Resources on the web"
         }
     ]
 }
