@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Resources - OARC-Rutgers</title>
+  <title>HowTo - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Resources";
-    var mkdocs_page_input_path = "resources.md";
-    var mkdocs_page_url = "/resources/";
+    var mkdocs_page_name = "HowTo";
+    var mkdocs_page_input_path = "howto.md";
+    var mkdocs_page_url = "/howto/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -52,29 +52,26 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1">
-		
-    <a class="" href="../howto/">HowTo</a>
-	    </li>
-          
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">Resources</a>
+    <a class="current" href="./">HowTo</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#slurm">Slurm</a></li>
+    <li class="toctree-l2"><a href="#several-howtos">Several HowTos</a></li>
     
 
-    <li class="toctree-l2"><a href="#linux-tutorials">Linux tutorials</a></li>
+    <li class="toctree-l2"><a href="#tunneling">Tunneling</a></li>
     
 
-    <li class="toctree-l2"><a href="#graphical-user-interface">Graphical user interface</a></li>
-    
-
-    <li class="toctree-l2"><a href="#resources-on-the-web">Resources on the web</a></li>
+    <li class="toctree-l2"><a href="#how-to-launch-jupyter-notebook-on-the-cluster">How to launch Jupyter notebook on the cluster</a></li>
     
 
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../resources/">Resources</a>
 	    </li>
           
         </ul>
@@ -99,10 +96,10 @@
     
       
     
-    <li>Resources</li>
+    <li>HowTo</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/resources.md"
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/howto.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -112,27 +109,30 @@
           <div role="main">
             <div class="section">
               
-                <p>Here are some resources you might want to consult to learn more about how to use an HPC cluster</p>
-<h1 id="slurm">Slurm</h1>
-<ul>
-<li><a href="https://rutgers-oarc.github.io/amarel/">OARC cluster user guide Amarel/Perceval</a> - this is a must-read for any new users, even if you are an experienced Linux user </li>
-<li><a href="https://rutgers-oarc.github.io/community/">OARC cluster community</a> - a lot of software is installed already by other users of the cluster, this describes how to use it and contribute to it</li>
-<li><a href="https://github.com/KristinaPlazonic/videos">intro videos by Kristina</a></li>
-<li><a href="http://htmlpreview.github.io/?https://github.com/rutgers-oarc/training/blob/master/cluster_presentation_2018-05-30.html">terse slurm tips</a></li>
-</ul>
-<h1 id="linux-tutorials">Linux tutorials</h1>
-<ul>
-<li><a href="http://www.rci.rutgers.edu/~gc563/linux/index.html">linux tutorial by Galen</a></li>
-<li>to be continued</li>
-</ul>
-<h1 id="graphical-user-interface">Graphical user interface</h1>
-<ul>
-<li><a href="https://ondemand.hpc.rutgers.edu/">web-based access to the cluster (still testing) - only from campus or VPN</a></li>
-</ul>
-<h1 id="resources-on-the-web">Resources on the web</h1>
-<ul>
-<li><a href="https://stackedit.io">markdown editor</a> - lets you view the finished (rendered) markdown side by side with raw markdown</li>
-</ul>
+                <h1 id="several-howtos">Several HowTos</h1>
+<h1 id="tunneling">Tunneling</h1>
+<p>This is a technique for connecting from your local machine to a remote web server, such as Jupyter notebook running on the compute node of a cluster. </p>
+<ol>
+<li>run jupyter notebook as a slurm job </li>
+<li>find out on which compute node jupyter notebook ended up</li>
+<li>in another terminal establish "port forwarding" - from local port 9999 to port 8889 on the specific node (slepner009 here)</li>
+</ol>
+<pre><code># This procedure works not only with jupyter notebook, but any web app running on a compute node
+
+#command to run jupyter notebook 
+srun -p main -c 1 -t 10:00 --error=slurm.%N_%j.err --output=slurm.%N_%j.out jupyter notebook --no-browser --ip=0.0.0.0 --port=8889
+
+# to start jupyter succintly 
+sbatch start_jupyter.sh      #start jupyter job on port 8889
+squeue -u kp807              #find out on which node is the job running - say it's slepner009
+
+# in another terminal establish &quot;port forwarding&quot; - from local port 9999 to port 8889 on the specific node (slepner009 here)
+ssh -L 9999:slepner009:8889 kp807@amarel.hpc.rutgers.edu   # modify slepner009, the ports, the netID
+</code></pre>
+
+<p>Video expaining the steps above: 
+<a href="http://www.youtube.com/watch?v=Nb2ERdr5KD0"><img alt="Port Tunneling" src="http://img.youtube.com/vi/Nb2ERdr5KD0/0.jpg" /></a></p>
+<h1 id="how-to-launch-jupyter-notebook-on-the-cluster">How to launch Jupyter notebook on the cluster</h1>
               
             </div>
           </div>
@@ -140,8 +140,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../resources/" class="btn btn-neutral float-right" title="Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../howto/" class="btn btn-neutral" title="HowTo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -169,8 +171,10 @@
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../howto/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../resources/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
