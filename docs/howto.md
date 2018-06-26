@@ -1,6 +1,5 @@
-Several HowTos
-=====================
 # Tunneling
+
 This is a technique for connecting from your local machine to a remote web server, such as Jupyter notebook running on the compute node of a cluster. 
 
 1. run jupyter notebook as a slurm job 
