@@ -2,7 +2,6 @@ site_name: OARC-Rutgers
 repo_url: https://github.com/rutgers-oarc/training
 pages:
   - Home: 'index.md'
-  - Cheatsheets: 'cheatsheet.md'
   - HowTo: 'howto.md' 
   - Resources: 'resources.md'
 theme: readthedocs
