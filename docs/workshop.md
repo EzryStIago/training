@@ -29,14 +29,22 @@ This is a list of other software you might find useful
 
 # Setup
 
-1. Connect to the cluster login node by one of the following methods: 
+## Connect to the cluster login node 
+Do this by one of the following methods: 
+
   - *via a terminal*: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as `putty` or `moba-xterm`. Then from your terminal connect to the cluster by executing the following command: 
+
 ``` ssh -X <your net id>@amarel.hpc.rutgers.edu```
+
    This is the preferred way, as your copy-pasting will most likely work best. 
   - *via FastX*: in your browser, go to `https://amarel.hpc.rutgers.edu:3443`
 
-2. Get resources on the compute node of the cluster to execute your computations by running the following command in your terminal: 
+## Get resources on the compute node 
+
+You get to the cluster to execute your computations by running the following command in your terminal: 
+
 ```srun  -p main --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --export=ALL --pty /bin/bash```
+
 Notice that the name in your terminal will change from `amarel` to node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. This explains the parts of this command: 
 
 |command part| meaning|
@@ -50,7 +58,8 @@ Notice that the name in your terminal will change from `amarel` to node name lik
 |`-t 01:40:00`| run this for a maximum time of 1 hour 40 minutes|
 |`--pty /bin/bash`| run the terminal shell in an interactive mode|
 
-3. *Prepare some directories for the data* 
+## Prepare some directories for the data
+
    You have two main spaces on the Amarel cluster. These are `/home/netid/` (e.g. `/home/kp807/` for my netid) and '/scratch/netid/'. They differ in how often they are backed up and by size (100Gb for `/home` and 500Gb for `/scratch`). So we will install programs in `/home`, while the data and output will be in `/scratch`. Execute these commands: 
 ```
                 cd ~                      # change directory to your home directory
@@ -66,7 +75,8 @@ Notice that the name in your terminal will change from `amarel` to node name lik
                 mkdir dex_treated
 ```
 
-4. Install programs
+## Install programs
+
    Each program will have slightly different installation instructions. Here is a handy sequence of commands that will install them: 
 ```
 ##We are going to do some modifications to a system file .bashrc, be careful doing it and make sure that you created a copy of your .bashrc file
@@ -142,4 +152,4 @@ module load intel/17.0.4 R-Project/3.4.1
 
 # Download data
 
-#
+
