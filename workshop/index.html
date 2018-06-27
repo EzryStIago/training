@@ -210,22 +210,54 @@
 <li>
 <p>Get resources on the compute node of the cluster to execute your computations by running the following command in your terminal: 
 <code>srun  -p main --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --export=ALL --pty /bin/bash</code>
-Notice that the name in your terminal will change from <code>amarel</code> to node name like <code>hal0025</code> or <code>slepner086</code>. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. This explains the parts of this command: 
-|command part| meaning|
-|----|----|
-|<code>srun</code>| <code>slurm</code> run, i.e. allocate resources and run via <code>slurm</code> scheduler | 
-|<code>-p main</code> | on the main partition, one of several queues on the cluster|
-|<code>--reservation=genomics</code>| we reserved some compute nodes for this workshop to not wait long for resources|
-|<code>-N 1</code>| ask for one node|
-|<code>-c 2</code>| ask for two cores|
-|<code>-n 1</code>| this will be 1 most times|
-|<code>-t 01:40:00</code>| run this for a maximum time of 1 hour 40 minutes|
-|<code>--pty /bin/bash</code>| run the terminal shell in an interactive mode|</p>
+Notice that the name in your terminal will change from <code>amarel</code> to node name like <code>hal0025</code> or <code>slepner086</code>. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. This explains the parts of this command: </p>
 </li>
-<li>
-<p><em>Prepare some directories for the data</em> 
-   You have two main spaces on the Amarel cluster. These are <code>/home/netid/</code> (e.g. <code>/home/kp807/</code> for my netid) and '/scratch/netid/'. They differ in how often they are backed up and by size (100Gb for <code>/home</code> and 500Gb for <code>/scratch</code>). So we will install programs in <code>/home</code>, while the data and output will be in <code>/scratch</code>. Execute these commands: </p>
-</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>command part</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>srun</code></td>
+<td><code>slurm</code> run, i.e. allocate resources and run via <code>slurm</code> scheduler</td>
+</tr>
+<tr>
+<td><code>-p main</code></td>
+<td>on the main partition, one of several queues on the cluster</td>
+</tr>
+<tr>
+<td><code>--reservation=genomics</code></td>
+<td>we reserved some compute nodes for this workshop to not wait long for resources</td>
+</tr>
+<tr>
+<td><code>-N 1</code></td>
+<td>ask for one node</td>
+</tr>
+<tr>
+<td><code>-c 2</code></td>
+<td>ask for two cores</td>
+</tr>
+<tr>
+<td><code>-n 1</code></td>
+<td>this will be 1 most times</td>
+</tr>
+<tr>
+<td><code>-t 01:40:00</code></td>
+<td>run this for a maximum time of 1 hour 40 minutes</td>
+</tr>
+<tr>
+<td><code>--pty /bin/bash</code></td>
+<td>run the terminal shell in an interactive mode</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><em>Prepare some directories for the data</em> 
+   You have two main spaces on the Amarel cluster. These are <code>/home/netid/</code> (e.g. <code>/home/kp807/</code> for my netid) and '/scratch/netid/'. They differ in how often they are backed up and by size (100Gb for <code>/home</code> and 500Gb for <code>/scratch</code>). So we will install programs in <code>/home</code>, while the data and output will be in <code>/scratch</code>. Execute these commands: </li>
 </ol>
 <pre><code>                cd ~                      # change directory to your home directory
                 mkdir Genomics_Workshop
