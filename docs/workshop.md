@@ -1,3 +1,7 @@
+# Overview
+
+These are the instructions on how to 
+
 
 # Genomic Software
 
@@ -22,35 +26,34 @@ This is a list of software already available on the cluster and the command you 
 |tophat2| alignment software|`module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0`|
 |R|language for statistical analysis|`module load intel/17.0.4 R-Project/3.4.1`|
 
-This is a list of other software you might find useful
-               | GSEA     | genome set enrichment analysis| [link] (http://software.broadinstitute.org/gsea/index.jsp) |
-               | IGV      | Interactive Genome Viewer      | [link] (http://software.broadinstitute.org/software/igv/)|
-               | Cytoscape| Network visualization softwar   | [link] (http://www.cytoscape.org/)|
+This is a list of other software you might find useful:
+
+|software|description|link|
+|------|-----------------------------|-----------------------|
+| GSEA     | genome set enrichment analysis| [link](http://software.broadinstitute.org/gsea/index.jsp) |
+| IGV      | Interactive Genome Viewer      | [link](http://software.broadinstitute.org/software/igv/)|
+| Cytoscape| Network visualization softwar   | [link](http://www.cytoscape.org/)|
 
 # Setup
 
-## Connect to the cluster login node 
+### Connect to the cluster login node 
 Do this by one of the following methods: 
 
-  - *via a terminal*: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as `putty` or `moba-xterm`. Then from your terminal connect to the cluster by executing the following command: 
-
-``` ssh -X <your net id>@amarel.hpc.rutgers.edu```
-
+  - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as `putty` or `moba-xterm`. Then from your terminal connect to the cluster by executing the following command:   
+``` ssh -X <your net id>@amarel.hpc.rutgers.edu```   
    This is the preferred way, as your copy-pasting will most likely work best. 
-  - *via FastX*: in your browser, go to `https://amarel.hpc.rutgers.edu:3443`
+  - **via FastX**: in your browser, go to `https://amarel.hpc.rutgers.edu:3443`
 
-## Get resources on the compute node 
+### Get resources on the compute node 
 
-You get to the cluster to execute your computations by running the following command in your terminal: 
-```srun  -p main --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --export=ALL --pty /bin/bash```
-Notice that the name in your terminal will change from `amarel` to node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. This explains the parts of this command: 
+You get to the cluster to execute your computations by running the following command in your terminal:    
+```srun  -p main --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --export=ALL --pty /bin/bash```   
+Notice that the name in your terminal will change from `amarel` to node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. The following table explains the parts of this command: 
 
 |command part| meaning|
 |----|----|
 |`srun`| `slurm` run, i.e. allocate resources and run via `slurm` scheduler | 
 |`-p main` | on the main partition, one of several queues on the cluster|
-
-
 |`--reservation=genomics`| we reserved some compute nodes for this workshop to not wait long for resources|
 |`-N 1`| ask for one node|
 |`-c 2`| ask for two cores|
@@ -58,9 +61,14 @@ Notice that the name in your terminal will change from `amarel` to node name lik
 |`-t 01:40:00`| run this for a maximum time of 1 hour 40 minutes|
 |`--pty /bin/bash`| run the terminal shell in an interactive mode|
 
-## Prepare some directories for the data
+### Prepare some directories for the data
 
-   You have two main spaces on the Amarel cluster. These are `/home/netid/` (e.g. `/home/kp807/` for my netid) and '/scratch/netid/'. They differ in how often they are backed up and by size (100Gb for `/home` and 500Gb for `/scratch`). So we will install programs in `/home`, while the data and output will be in `/scratch`. Execute these commands: 
+You have two main spaces on the Amarel cluster. These are: 
+
+- your home directory - `/home/netid/`  (e.g. `/home/kp807/` for my netid) -
+- your scratch directory - `/scratch/netid/`
+
+  They differ in how often they are backed up and by size (100Gb for `/home` and 500Gb for `/scratch`). So we will install programs in `/home`, while the data and output will be in `/scratch`. Execute these commands: 
 ```
                 cd ~                      # change directory to your home directory
                 mkdir Genomics_Workshop
@@ -141,7 +149,7 @@ Notice that the name in your terminal will change from `amarel` to node name lik
                 java -jar ~/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar #-h                    
 
 ```
-Moreover, execute these commands to load system-installed sofware so the system knows where to find it (i.e. `samtools command will work`): 
+Moreover, execute the following commands to load system-installed sofware so the system knows where to find it (i.e. `samtools` command will work if you execute `module load samtools`): 
 ```
 module load samtools       
 module load bedtools2./2.25.0
@@ -151,5 +159,32 @@ module load intel/17.0.4 R-Project/3.4.1
 ```
 
 # Download data
+
+We will download human RNA-seq data with [GEO accession GSE52778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778). The samples we download are in NCBI's short read archive format (SRA). To unpack the original sequence files can be a bit tricky at first. Please put them in different directories:
+```        
+                mkdir -p  /scratch/$USER/Genomics_Workshop/
+                cd /scratch/$USER/Genomics_Workshop/
+                mkdir untreated  
+                mkdir dex_treated
+```
+
+We will use sratoolkit programs to download data but first we need to configure a location where all data files will be stored. `sratoolkit` will be in your home directory, under `Programs`, and the `vdb-config` might be under the `bin` directory. You will enter `/scratch/your_netID/Genomics_Workshop/download` for the path. 
+```
+                vdb-config   --interactive-mode textual     ### dash-dash before interactive-mode
+                         Your choice > 4
+## type new path
+                        /scratch/your_netID/Genomics_Workshop/download
+                        Your choice > Y
+```
+
+Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools. Downloading can take some time! [TODO: check how much time for these files!]
+```
+prefetch -v SRR1039508
+fastq-dump --gzip --split-files SRR1039508
+```
+These two commands showed how to do it for one sample. You need to do it for 6 samples total. 
+
+
+
 
 
