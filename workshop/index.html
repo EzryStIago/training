@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Workshops - OARC-Rutgers</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Workshops";
+    var mkdocs_page_input_path = "workshop.md";
+    var mkdocs_page_url = "/workshop/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> OARC-Rutgers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../howto/">HowTo</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Workshops</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#genomic-software">Genomic Software</a></li>
+    
+
+    <li class="toctree-l2"><a href="#setup">Setup</a></li>
+    
+
+    <li class="toctree-l2"><a href="#download-data">Download data</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../resources/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">OARC-Rutgers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Workshops</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/workshop.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="genomic-software">Genomic Software</h1>
+<p>This is a list of software to install for the workshop</p>
+<table>
+<thead>
+<tr>
+<th>software</th>
+<th>description</th>
+<th>link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seqtk</td>
+<td>very handy and fast for processing fastq/a files</td>
+<td><a href="https://github.com/lh3/seqtk">link</a></td>
+</tr>
+<tr>
+<td>sratoolkit</td>
+<td>downloading and processing data from GEO/SRA database</td>
+<td><a href="http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz">link</a></td>
+</tr>
+<tr>
+<td>htseq-count</td>
+<td>counting the  reads mapped on to genomics feature</td>
+<td><a href="http://htseq.readthedocs.io/en/master/install.html">link</a></td>
+</tr>
+<tr>
+<td>fastQC</td>
+<td>widely used for sequencing read QC</td>
+<td><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip">link</a></td>
+</tr>
+<tr>
+<td>RSeQC-2.6.4</td>
+<td>An RNA-seq quality control package, multiple functions</td>
+<td>python package</td>
+</tr>
+<tr>
+<td>trimmomatic</td>
+<td>fastq quality trim and adaptor removal</td>
+<td><a href="http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip">link</a></td>
+</tr>
+</tbody>
+</table>
+<p>This is a list of software already available on the cluster and the command you need to execute to load it in your environment: </p>
+<table>
+<thead>
+<tr>
+<th>software</th>
+<th>description</th>
+<th>load it on the cluster</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Samtools</td>
+<td></td>
+<td><code>module load samtools</code></td>
+</tr>
+<tr>
+<td>Bedtools</td>
+<td></td>
+<td><code>module load bedtools2./2.25.0</code></td>
+</tr>
+<tr>
+<td>bowtie2</td>
+<td>alignment software</td>
+<td><code>module load bowtie2</code></td>
+</tr>
+<tr>
+<td>tophat2</td>
+<td>alignment software</td>
+<td><code>module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0</code></td>
+</tr>
+<tr>
+<td>R</td>
+<td>language for statistical analysis</td>
+<td><code>module load intel/17.0.4 R-Project/3.4.1</code></td>
+</tr>
+</tbody>
+</table>
+<p>This is a list of other software you might find useful
+               | GSEA     | genome set enrichment analysis| [link] (http://software.broadinstitute.org/gsea/index.jsp) |
+               | IGV      | Interactive Genome Viewer      | [link] (http://software.broadinstitute.org/software/igv/)|
+               | Cytoscape| Network visualization softwar   | [link] (http://www.cytoscape.org/)|</p>
+<h1 id="setup">Setup</h1>
+<ol>
+<li>Connect to the cluster login node by one of the following methods: </li>
+<li><em>via a terminal</em>: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as <code>putty</code> or <code>moba-xterm</code>. Then from your terminal connect to the cluster by executing the following command: 
+<code>ssh -X &lt;your net id&gt;@amarel.hpc.rutgers.edu</code>
+   This is the preferred way, as your copy-pasting will most likely work best. </li>
+<li>
+<p><em>via FastX</em>: in your browser, go to <code>https://amarel.hpc.rutgers.edu:3443</code></p>
+</li>
+<li>
+<p>Get resources on the compute node of the cluster to execute your computations by running the following command in your terminal: 
+<code>srun  -p main --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --export=ALL --pty /bin/bash</code>
+Notice that the name in your terminal will change from <code>amarel</code> to node name like <code>hal0025</code> or <code>slepner086</code>. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. This explains the parts of this command: 
+|command part| meaning|
+|----|----|
+|<code>srun</code>| <code>slurm</code> run, i.e. allocate resources and run via <code>slurm</code> scheduler | 
+|<code>-p main</code> | on the main partition, one of several queues on the cluster|
+|<code>--reservation=genomics</code>| we reserved some compute nodes for this workshop to not wait long for resources|
+|<code>-N 1</code>| ask for one node|
+|<code>-c 2</code>| ask for two cores|
+|<code>-n 1</code>| this will be 1 most times|
+|<code>-t 01:40:00</code>| run this for a maximum time of 1 hour 40 minutes|
+|<code>--pty /bin/bash</code>| run the terminal shell in an interactive mode|</p>
+</li>
+<li>
+<p><em>Prepare some directories for the data</em> 
+   You have two main spaces on the Amarel cluster. These are <code>/home/netid/</code> (e.g. <code>/home/kp807/</code> for my netid) and '/scratch/netid/'. They differ in how often they are backed up and by size (100Gb for <code>/home</code> and 500Gb for <code>/scratch</code>). So we will install programs in <code>/home</code>, while the data and output will be in <code>/scratch</code>. Execute these commands: </p>
+</li>
+</ol>
+<pre><code>                cd ~                      # change directory to your home directory
+                mkdir Genomics_Workshop
+                cd Genomics_Workshop
+                mkdir Programs            # download and install programs here
+</code></pre>
+
+<pre><code>                mkdir -p  /scratch/$USER/Genomics_Workshop/
+                cd /scratch/$USER/Genomics_Workshop/
+                mkdir untreated  
+                mkdir dex_treated
+</code></pre>
+
+<ol>
+<li>Install programs
+   Each program will have slightly different installation instructions. Here is a handy sequence of commands that will install them: </li>
+</ol>
+<pre><code>##We are going to do some modifications to a system file .bashrc, be careful doing it and make sure that you created a copy of your .bashrc file
+                cd
+                cp .bashrc .bashrc_20180118
+                nano .bashrc
+##At the end of the file add the line  “##  Genomics_Workshop 06/27/2018 settings”
+##Exit nano (ctrl+x)
+
+#Seqtk:   https://github.com/lh3/seqtk   ##  very handy and fast for processing fastq/a files
+                cd
+                cd Genomics_Workshop/Programs/
+                git clone https://github.com/lh3/seqtk.git 
+                cd seqtk
+                make
+                echo ‘export PATH=$HOME/Genomics_Workshop/Programs/seqtk:$PATH’ &gt;&gt;  ~/.bashrc
+                source ~/.bashrc
+
+#sratoolkit     https://www.ncbi.nlm.nih.gov/books/NBK158900/
+                        https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software
+##for downloading and processing data from GEO/SRA database
+                cd
+                cd Genomics_Workshop/Programs/
+                wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz
+                tar zxvf sratoolkit.2.8.2-centos_linux64.tar.gz
+                echo ‘export PATH=$HOME/Genomics_Workshop/Programs/sratoolkit.2.8.2-centos_linux64/bin:$PATH’ &gt;&gt; ~/.bashrc
+                source ~/.bashrc 
+
+#htseq-count    http://htseq.readthedocs.io/en/master/install.html ##for counting the  reads mapped on to genomics feature
+
+                cd
+                module load intel/17.0.2 python/2.7.12
+                pip install HTSeq --user
+
+#fastQC          #widely used for sequencing read QC
+
+                cd
+                cd  Genomics_Workshop/Programs/
+                wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip
+                unzip  fastqc_v0.11.6.zip
+                echo ‘export PATH=$HOME/Genomics_Workshop/Programs/FastQC:$PATH’ &gt;&gt; ~/.bashrc
+                source ~/.bashrc
+
+
+#FASTX-toolkit    http://hannonlab.cshl.edu/fastx_toolkit/   (##also a tool kit for fastq processing, quality trim, adaptor removal, etc. try if time allows)
+
+#RSeQC-2.6.4     ##An RNA-seq quality control package, multiple functions
+
+                cd
+                cd  Genomics_Workshop/Programs/
+                module load python/2.7.12
+                module load intel/17.0.2
+                pip install RSeQC --user
+
+
+#trimmomatic             ##for fastq quality trim and adaptor removal
+
+                cd
+                cd  Genomics_Workshop/Programs/
+                wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip
+                unzip Trimmomatic-0.36.zip 
+                java -jar ~/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar #-h                    
+
+</code></pre>
+
+<p>Moreover, execute these commands to load system-installed sofware so the system knows where to find it (i.e. <code>samtools command will work</code>): </p>
+<pre><code>module load samtools       
+module load bedtools2./2.25.0
+module load bowtie2
+module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
+module load intel/17.0.4 R-Project/3.4.1
+</code></pre>
+
+<h1 id="download-data">Download data</h1>
+<h1 id="_1"></h1>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../resources/" class="btn btn-neutral float-right" title="Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../howto/" class="btn btn-neutral" title="HowTo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../howto/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../resources/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
