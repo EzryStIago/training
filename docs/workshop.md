@@ -38,6 +38,7 @@ This is a list of other software you might find useful
 2. Get resources on the compute node of the cluster to execute your computations by running the following command in your terminal: 
 ```srun  -p main --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --export=ALL --pty /bin/bash```
 Notice that the name in your terminal will change from `amarel` to node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. This explains the parts of this command: 
+
 |command part| meaning|
 |----|----|
 |`srun`| `slurm` run, i.e. allocate resources and run via `slurm` scheduler | 
