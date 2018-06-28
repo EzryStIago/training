@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>R tutorial - OARC-Rutgers</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "R tutorial";
+    var mkdocs_page_input_path = "ressentials.md";
+    var mkdocs_page_url = "/ressentials/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> OARC-Rutgers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../howto/">HowTo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../workshop/">Workshops</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">R tutorial</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#to-start-r-shell-on-the-cluster">To start R shell on the cluster</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#packages-used-from-bioconductor">Packages used from BioConductor</a></li>
+        
+            <li><a class="toctree-l3" href="#example-calculate-gene-length">Example: Calculate gene length</a></li>
+        
+            <li><a class="toctree-l3" href="#some-r-essentials">Some R essentials</a></li>
+        
+            <li><a class="toctree-l3" href="#various-directoryfilelibrary-manipulations">Various directory/file/library manipulations</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../resources/">Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">OARC-Rutgers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>R tutorial</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/ressentials.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="to-start-r-shell-on-the-cluster">To start R shell on the cluster</h1>
+<p>See workshop for explanation of the various options of <code>srun</code></p>
+<pre><code class="bash">        module load intel/17.0.4
+        module load R-Project/3.4.1
+        ## run an interactive shell for 1 hr 40 min on 1 node, 2 cores; you will be placed on a compute node this way
+        srun -p main -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash
+        ##start R on compute node now
+        R
+</code></pre>
+
+<h2 id="packages-used-from-bioconductor">Packages used from BioConductor</h2>
+<p>If these packages are not installed, you can install them yourself. On login node, start R and inside R copy-paste the following commands: </p>
+<pre><code class="r">        source(&quot;https://bioconductor.org/biocLite.R&quot;) 
+        biocLite(&quot;ape&quot;)
+        biocLite(&quot;MKmisc&quot;)
+        biocLite(&quot;Heatplus&quot;)
+        biocLite(&quot;affycoretools&quot;)
+        biocLite(&quot;flashClust&quot;)
+        biocLite(&quot;affy&quot;)
+</code></pre>
+
+<h2 id="example-calculate-gene-length">Example: Calculate gene length</h2>
+<p>Get some data from ENSEMBLE<br />
+<code>wget ftp://ftp.ensembl.org/pub/release-91/gtf/homo_sapiens/Homo_sapiens.GRCh38.91.gtf.gz</code></p>
+<p>In R shell, you can execute these commands to compute gene lengths: </p>
+<pre><code class="r">
+         library(GenomicFeatures)
+         gtfdb &lt;- makeTxDbFromGFF(&quot;Homo_sapiens.GRCh38.78.gtf&quot;,format=&quot;gtf&quot;)
+         exons.list.per.gene &lt;- exonsBy(gtfdb,by=&quot;gene&quot;)
+         exonic.gene.sizes &lt;- lapply(exons.list.per.gene,function(x){sum(width(reduce(x)))})
+         class(exonic.gene.sizes)
+
+         Hg20_geneLength &lt;-do.call(rbind, exonic.gene.sizes)
+         colnames(Hg20_geneLength) &lt;- paste('geneLength')    
+</code></pre>
+
+<h2 id="some-r-essentials">Some R essentials</h2>
+<h4 id="arithmetic-functions">Arithmetic functions</h4>
+<pre><code class="r">        2+2
+        3*3
+        3*8+2
+        log10(1000)
+        log2(8)
+        abs(-10)
+        sqrt(81)
+</code></pre>
+
+<h4 id="creating-objects">Creating objects</h4>
+<pre><code class="r">        ls()  #see what objects are in the workspace
+        x &lt;- 4
+        x
+        x = 3  #a single = is an assignment operator
+        x
+        x == 5 #a double == asks &quot;is the left side equivalent to the right side?&quot;
+        x + 2   #objects can be used in equations
+        y &lt;- &quot;anyname&quot;
+        y
+        class(x)
+        class(y)
+        ls()
+</code></pre>
+
+<h4 id="vector-and-matrix">Vector and Matrix</h4>
+<pre><code class="r">        x1 &lt;- c(1,2,3,4,5)
+        x1
+        class(x1)
+        length(x1)
+        x &lt;- cbind(x1, x1+1)    #1 will be added to all the numbers in x1
+        x
+        class(x)       #what kind of object is x?
+        dim(x)         #the dimension of matrix
+        x1[1:3]        #use [] to get subsets of a vector
+        x[1,]          #use [,] to get subsets of a matrix (or dataframe)
+        x[,1]
+        x[,-1]
+        x[c(1,2),]
+        x[-c(1,3),]
+        colnames(x)
+        colnames(x) &lt;-c(&quot;A&quot;,&quot;B&quot;)
+        rownames(x) &lt;-c(&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;)
+        x
+</code></pre>
+
+<h4 id="data-frames">Data Frames</h4>
+<pre><code class="r">        z &lt;- data.frame(A=x[,1], B=rownames(x), C=factor(rownames(x)), D=x[,1]==3, stringsAsFactors=F)
+        class(z)
+        names(z)
+        dim(z)
+        class(z$A)
+        class(z$B)
+        class(z$C)
+        class(z$D)
+        z$B
+        z$C
+</code></pre>
+
+<h4 id="more-ways-to-subset-dataframes">More ways to subset dataframes</h4>
+<pre><code class="r">        z$B
+        z[[2]]
+        z[,2]   #these first 3 give equivalent results
+        z[,1:2]
+        z[,c(1,3)]
+        z[c(1,3:5),]
+</code></pre>
+
+<h4 id="lists">Lists</h4>
+<pre><code class="r">        mylist &lt;- list(first=z,second=x,third=c(&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;))
+        class(mylist)
+        mylist
+        names(mylist)
+        class(mylist$first)
+        class(mylist$second)
+</code></pre>
+
+<h4 id="functions">Functions</h4>
+<pre><code class="r">        my.add &lt;- function(a, b) {a - b}
+        class(my.add)
+        my.add(4,99)
+        my.add(99,4)
+        my.add(b = 99, a = 4)
+</code></pre>
+
+<h2 id="various-directoryfilelibrary-manipulations">Various directory/file/library manipulations</h2>
+<pre><code class="r">        library(limma)  #load the limma package
+
+
+        #### Make sure the working directory is set to your file on the computer;
+
+        getwd()  #see what the current working directory is
+        setwd(&quot;????????????????&quot;)  #change the working directory
+
+
+        #### Output a single object as a comma separated value file
+
+        write.csv(z, file=&quot;test.csv&quot;)
+</code></pre>
+
+<h4 id="save-all-the-objects-you-have-created-to-your-workspace">Save all the objects you have created to your workspace</h4>
+<pre><code class="r">        save.image()                #creates a default file named &quot;.RData&quot;
+        save.image(&quot;intro.Rdata&quot;)   #creates a named file
+</code></pre>
+
+<h4 id="remove-objects-from-your-workspace">Remove objects from your workspace</h4>
+<pre><code class="r">        ls()
+        rm(x)          #remove a single object by name
+        ls()
+        rm(z,x1)       #remove multiple objects by name
+        ls()
+        load(&quot;intro.Rdata&quot;)
+        ls()
+        rm(list=ls())  #remove all objects
+        ls()
+</code></pre>
+
+<h4 id="save-a-history-of-all-the-commands-entered">Save a history of all the commands entered</h4>
+<pre><code class="r">        savehistory(&quot;introhistory.Rhistory&quot;)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../resources/" class="btn btn-neutral float-right" title="Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../workshop/" class="btn btn-neutral" title="Workshops"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../workshop/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../resources/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
