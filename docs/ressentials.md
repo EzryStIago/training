@@ -1,27 +1,19 @@
 # To start R shell on the cluster 
 
-see workshop for explanation of the various options on the 
-```
+See workshop for explanation of the various options of `srun`
+```bash
         module load intel/17.0.4
         module load R-Project/3.4.1
-        ## run an interactive shell for 1 hr 40 min on 1 node, 2 cores away from the login node
-        srun --x11 -p main -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash
+        ## run an interactive shell for 1 hr 40 min on 1 node, 2 cores; you will be placed on a compute node this way
+        srun -p main -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash
         ##start R on compute node now
         R
 ```
 
 ## Packages used from BioConductor
 
-If these packages are not installed, you can install them yourself. On login node, start R and inside R copy-paste the following commands
+If these packages are not installed, you can install them yourself. On login node, start R and inside R copy-paste the following commands: 
 
-0: R practice: 
-
-        a). Install needed packages
-        ##exit from the computer node, START R ON LOGIN NODE, install some packages
-        exit  ##do exit, only if you are on a computer node
-        module load intel/17.0.4
-        module load R-Project/3.4.1
-        R
 ```r
         source("https://bioconductor.org/biocLite.R") 
         biocLite("ape")
@@ -36,7 +28,8 @@ If these packages are not installed, you can install them yourself. On login nod
 
 Get some data from ENSEMBLE  
 ```wget ftp://ftp.ensembl.org/pub/release-91/gtf/homo_sapiens/Homo_sapiens.GRCh38.91.gtf.gz```
-In R, you can execute these commands: 
+
+In R shell, you can execute these commands to compute gene lengths: 
 ```r
 
          library(GenomicFeatures)
@@ -51,7 +44,7 @@ In R, you can execute these commands:
 
 ## Some R essentials
 
-        #### Arithmetic functions
+#### Arithmetic functions
 ```r
         2+2
         3*3
@@ -62,8 +55,7 @@ In R, you can execute these commands:
         sqrt(81)
 ```
 
-
-        #### Creating objects
+#### Creating objects
 
 ```r
         ls()  #see what objects are in the workspace
@@ -81,7 +73,7 @@ In R, you can execute these commands:
 ```
 
 
-       #### Vector and Matrix
+#### Vector and Matrix
 
 ```r
         x1 <- c(1,2,3,4,5)
@@ -104,7 +96,7 @@ In R, you can execute these commands:
         x
 ```
 
-        #### Data Frames
+#### Data Frames
 
 ```r
         z <- data.frame(A=x[,1], B=rownames(x), C=factor(rownames(x)), D=x[,1]==3, stringsAsFactors=F)
@@ -119,7 +111,7 @@ In R, you can execute these commands:
         z$C
 ```
 
-        #### More ways to subset dataframes
+#### More ways to subset dataframes
 
 
 ```r
@@ -132,7 +124,7 @@ In R, you can execute these commands:
 ```
 
 
-        #### Lists
+#### Lists
 
 ```r
         mylist <- list(first=z,second=x,third=c("W","X","Y","Z"))
@@ -144,7 +136,7 @@ In R, you can execute these commands:
 ```
 
 
-        #### Functions
+#### Functions
 
 ```r
         my.add <- function(a, b) {a - b}
@@ -172,7 +164,7 @@ In R, you can execute these commands:
 ```
 
 
-        #### Save all the objects you have created to your workspace
+#### Save all the objects you have created to your workspace
 ```r
         save.image()                #creates a default file named ".RData"
         save.image("intro.Rdata")   #creates a named file
@@ -180,7 +172,7 @@ In R, you can execute these commands:
 
 
 
-        #### Remove objects from your workspace
+#### Remove objects from your workspace
 
 ```r
         ls()
@@ -195,7 +187,7 @@ In R, you can execute these commands:
 ```
 
 
-        #### Save a history of all the commands entered
+#### Save a history of all the commands entered
 
 ```r
         savehistory("introhistory.Rhistory")
