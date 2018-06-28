@@ -86,6 +86,17 @@
     <li class="toctree-l2"><a href="#download-data">Download data</a></li>
     
 
+    <li class="toctree-l2"><a href="#running-bioinformatics-jobs">Running bioinformatics jobs</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#fastqc-raw-data-qc-and-quality-trimadaptor-removal">FastQC - raw data QC and quality trim/adaptor removal</a></li>
+        
+            <li><a class="toctree-l3" href="#trimmomatic-quality-trimadaptor-removal">Trimmomatic - quality trim/adaptor removal</a></li>
+        
+        </ul>
+    
+
     </ul>
 	    </li>
           
@@ -130,7 +141,8 @@
             <div class="section">
               
                 <h1 id="overview">Overview</h1>
-<p>These are the instructions on how to </p>
+<p>These are notes from the workshop on genomics. What's covered in these notes: 
+1. Setup</p>
 <h1 id="genomic-software">Genomic Software</h1>
 <p>This is a list of software to install for the workshop</p>
 <table>
@@ -393,20 +405,53 @@ module load intel/17.0.4 R-Project/3.4.1
                 mkdir dex_treated
 </code></pre>
 
-<p>We will use sratoolkit programs to download data but first we need to configure a location where all data files will be stored. <code>sratoolkit</code> will be in your home directory, under <code>Programs</code>, and the <code>vdb-config</code> might be under the <code>bin</code> directory. You will enter <code>/scratch/your_netID/Genomics_Workshop/download</code> for the path. </p>
+<p>We will use sratoolkit programs to download data but first we need to configure a location where all data files will be stored. <code>sratoolkit</code> will be in your home directory, under <code>Programs</code>, and the <code>vdb-config</code> might be under the <code>bin</code> directory. You will enter <code>/scratch/your_netID/Genomics_Workshop/download</code> for the path - NOTE you have to replace <code>your_netID</code> with your true netId, e.g. <code>kp807</code>. Do not copy blindly! So your downloads will always go to this directory and you will need to move it out to wherever you want to have them. </p>
 <pre><code>                vdb-config   --interactive-mode textual     ### dash-dash before interactive-mode
                          Your choice &gt; 4
-## type new path
+## type new path in
                         /scratch/your_netID/Genomics_Workshop/download
                         Your choice &gt; Y
 </code></pre>
 
 <p>Then execute the following commands to get the data. Both <code>prefetch</code> and <code>fastq-dump</code> are part of sratools. Downloading can take some time! [TODO: check how much time for these files!]</p>
-<pre><code>prefetch -v SRR1039508
-fastq-dump --gzip --split-files SRR1039508
+<pre><code>prefetch -v SRR1039508                           # fetches the SRA data
+fastq-dump --gzip --split-files SRR1039508       # ???? 
 </code></pre>
 
-<p>These two commands showed how to do it for one sample. You need to do it for 6 samples total. </p>
+<p>You have to pay attention to where you are putting your data. So these two commands will actually be several: </p>
+<pre><code>                cd  untreated                       # now you are in /scratch/..../Genomics_Workshop/untreated
+                prefetch -v SRR1039508
+                mv /scratch/$USER/Genomics_Workshop/download/sra/SRR1039508.sra .  # moving from download to actual directory 
+                fastq-dump --gzip --split-files SRR1039516
+</code></pre>
+
+<p>The commands above showed how to do it for one sample. You need to do it for 6 samples total. </p>
+<pre><code>                SRR1039508  SRR1039512 SRR1039516   (untreated)
+                SRR1039509  SRR1039513  SRR1039517  (dex_treated)
+</code></pre>
+
+<h1 id="running-bioinformatics-jobs">Running bioinformatics jobs</h1>
+<h3 id="fastqc-raw-data-qc-and-quality-trimadaptor-removal">FastQC - raw data QC and quality trim/adaptor removal</h3>
+<p>Explain what is fastqc is doing here - TODO</p>
+<pre><code>        cd /scratch/$USER/Genomics_Workshop/untreated         
+        module load java  ## fastqc is written in java; we need to load java before using fastqc
+        mkdir fastqc      ## create a folder to store the QC output 
+        fastqc -o fastqc SRR1039508_1.fastq SRR1039508_2.fastq
+</code></pre>
+
+<p>FastQC produces an html page as output, <code>fastqc/SRR1039508_1_fastqc.html</code>, with different kinds of views of data (and Phred scores). You can download this file to your local machine and open it in browser. It is also possible to open browser on the cluster, but the cluster is not really designed for that. To see more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop/Labs/FastQC_details.pdf</p>
+<h3 id="trimmomatic-quality-trimadaptor-removal">Trimmomatic - quality trim/adaptor removal</h3>
+<pre><code>    ##for demonstration purpose, we will take a small subset data using seqtk
+    cd /scratch/$USER/Genomics_Workshop/untreated
+    seqtk sample -s100  SRR1039508_1.fastq 10000 &gt; SRR1039508_1_10k.fastq 
+    seqtk sample -s100  SRR1039508_2.fastq 10000 &gt; SRR1039508_2_10k.fastq 
+    ## /projects/oarc/Genomics_Workshop/Labs/Seqtk_Examples.docx
+    ## This file contains useful examples how to use seqtk
+
+    ##now, run trimmomatic to trim the read quality , and remove adaptor
+    module load java    ### because trimmomatic
+    java -jar /home/$USER/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar PE -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/$USER/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
+</code></pre>
               
             </div>
           </div>
