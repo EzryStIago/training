@@ -4,5 +4,6 @@ pages:
   - Home: 'index.md'
   - HowTo: 'howto.md' 
   - Workshops: 'workshop.md'
+  - R tutorial: 'ressentials.md'
   - Resources: 'resources.md'
 theme: readthedocs

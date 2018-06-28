@@ -199,7 +199,7 @@ The commands above showed how to do it for one sample. You need to do it for 6 s
 
 # Running bioinformatics jobs
 
-### FastQC - raw data QC and quality trim/adaptor removal
+### FastQC - raw data QC 
 
 Explain what is fastqc is doing here - TODO
 ```
