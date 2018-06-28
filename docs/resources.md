@@ -10,7 +10,7 @@ Here are some resources you might want to consult to learn more about how to use
 # Linux tutorials
 
 - [linux tutorial by Galen](http://www.rci.rutgers.edu/~gc563/linux/index.html)
-- to be continued
+- [UNIX Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 
 # Graphical user interface 
 

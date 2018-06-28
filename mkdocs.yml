@@ -3,4 +3,5 @@ repo_url: https://github.com/rutgers-oarc/training
 pages:
   - Home: 'index.md'
   - Resources: 'resources.md'
+  - CheatSheet: 'cheatsheet.md'
 theme: readthedocs
