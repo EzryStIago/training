@@ -1,6 +1,7 @@
 # Overview
 
-These are the instructions on how to 
+These are notes from the workshop on genomics. What's covered in these notes: 
+1. Setup
 
 
 # Genomic Software
@@ -168,22 +169,59 @@ We will download human RNA-seq data with [GEO accession GSE52778](https://www.nc
                 mkdir dex_treated
 ```
 
-We will use sratoolkit programs to download data but first we need to configure a location where all data files will be stored. `sratoolkit` will be in your home directory, under `Programs`, and the `vdb-config` might be under the `bin` directory. You will enter `/scratch/your_netID/Genomics_Workshop/download` for the path. 
+We will use sratoolkit programs to download data but first we need to configure a location where all data files will be stored. `sratoolkit` will be in your home directory, under `Programs`, and the `vdb-config` might be under the `bin` directory. You will enter `/scratch/your_netID/Genomics_Workshop/download` for the path - NOTE you have to replace `your_netID` with your true netId, e.g. `kp807`. Do not copy blindly! So your downloads will always go to this directory and you will need to move it out to wherever you want to have them. 
 ```
                 vdb-config   --interactive-mode textual     ### dash-dash before interactive-mode
                          Your choice > 4
-## type new path
+## type new path in
                         /scratch/your_netID/Genomics_Workshop/download
                         Your choice > Y
 ```
 
 Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools. Downloading can take some time! [TODO: check how much time for these files!]
 ```
-prefetch -v SRR1039508
-fastq-dump --gzip --split-files SRR1039508
+prefetch -v SRR1039508                           # fetches the SRA data
+fastq-dump --gzip --split-files SRR1039508       # ???? 
 ```
-These two commands showed how to do it for one sample. You need to do it for 6 samples total. 
+You have to pay attention to where you are putting your data. So these two commands will actually be several: 
+```
+                cd  untreated                       # now you are in /scratch/..../Genomics_Workshop/untreated
+                prefetch -v SRR1039508
+                mv /scratch/$USER/Genomics_Workshop/download/sra/SRR1039508.sra .  # moving from download to actual directory 
+                fastq-dump --gzip --split-files SRR1039516
+``` 
 
+The commands above showed how to do it for one sample. You need to do it for 6 samples total. 
+```
+                SRR1039508  SRR1039512 SRR1039516   (untreated)
+                SRR1039509  SRR1039513  SRR1039517  (dex_treated)
+```
+
+# Running bioinformatics jobs
+
+### FastQC - raw data QC and quality trim/adaptor removal
+
+Explain what is fastqc is doing here - TODO
+```
+        cd /scratch/$USER/Genomics_Workshop/untreated         
+        module load java  ## fastqc is written in java; we need to load java before using fastqc
+        mkdir fastqc      ## create a folder to store the QC output 
+        fastqc -o fastqc SRR1039508_1.fastq SRR1039508_2.fastq
+```
+FastQC produces an html page as output, `fastqc/SRR1039508_1_fastqc.html`, with different kinds of views of data (and Phred scores). You can download this file to your local machine and open it in browser. It is also possible to open browser on the cluster, but the cluster is not really designed for that. To see more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop/Labs/FastQC_details.pdf
+
+### Trimmomatic - quality trim/adaptor removal
+
+        ##for demonstration purpose, we will take a small subset data using seqtk
+        cd /scratch/$USER/Genomics_Workshop/untreated
+        seqtk sample -s100  SRR1039508_1.fastq 10000 > SRR1039508_1_10k.fastq 
+        seqtk sample -s100  SRR1039508_2.fastq 10000 > SRR1039508_2_10k.fastq 
+        ## /projects/oarc/Genomics_Workshop/Labs/Seqtk_Examples.docx
+        ## This file contains useful examples how to use seqtk 
+
+        ##now, run trimmomatic to trim the read quality , and remove adaptor
+        module load java    ### because trimmomatic
+        java -jar /home/$USER/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar PE -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/$USER/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
 
 
 
