@@ -6,6 +6,9 @@ pages:
   - Workshops: 'workshop.md'
   - Lab I: 'Lab_1.md'
   - Lab II: 'Lab_2.md'
+  - Lab III: 'Lab_3.md'
+  - Lab IV: "Lab_4.md" 
+  - Lab V: 'Lab_5.md'
   - R tutorial: 'ressentials.md'
   - Resources: 'resources.md'
   - CheatSheet: 'cheatsheet.md'
