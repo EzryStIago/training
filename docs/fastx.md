@@ -12,6 +12,6 @@ This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 
 
 Here is the video walking through these steps: 
 
-[![Graphical programs via FastX](http://img.youtube.com/vi/2LaGZtOv8Lc/0.jpg)](https://www.youtube.com/watch?v=8UQHLO85rlQ)
+[![Graphical programs via FastX](https://img.youtube.com/vi/8UQHLO85rlQ/0.jpg)](https://www.youtube.com/watch?v=8UQHLO85rlQ)
 
 
