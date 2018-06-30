@@ -1,7 +1,7 @@
 # Overview
 
 These are notes from the workshop on genomics. What's covered in these notes: 
-1. Setup
+1.vk1 Setup
 
 
 # Genomic Software
@@ -38,12 +38,13 @@ This is a list of other software you might find useful:
 # Setup
 
 ### Connect to the cluster login node 
-Do this by one of the following methods: 
+The preferred method to connect to the cluster is through a web browser and fastX client
+ - **via FastX**: in your browser, go to `https://amarel.hpc.rutgers.edu:3443
+If the above method doesn't work you may still connect 
 
-  - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as `putty` or `moba-xterm`. Then from your terminal connect to the cluster by executing the following command:   
+  - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as `mobaXterm` [link] (https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
 ``` ssh -X <your net id>@amarel.hpc.rutgers.edu```   
-   This is the preferred way, as your copy-pasting will most likely work best. 
-  - **via FastX**: in your browser, go to `https://amarel.hpc.rutgers.edu:3443`
+  
 
 ### Get resources on the compute node 
 
