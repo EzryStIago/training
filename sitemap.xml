@@ -2,27 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/howto/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/fastx/</loc>
+     <lastmod>2018-06-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/workshop/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/Lab_1/</loc>
+     <lastmod>2018-06-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/Lab_2/</loc>
+     <lastmod>2018-06-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/Lab_3/</loc>
+     <lastmod>2018-06-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/Lab_4/</loc>
+     <lastmod>2018-06-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/Lab_5/</loc>
+     <lastmod>2018-06-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/ressentials/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/resources/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/cheatsheet/</loc>
+     <lastmod>2018-06-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

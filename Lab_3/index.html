@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>HowTo - OARC-Rutgers</title>
+  <title>Lab III - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "HowTo";
-    var mkdocs_page_input_path = "howto.md";
-    var mkdocs_page_url = "/howto/";
+    var mkdocs_page_name = "Lab III";
+    var mkdocs_page_input_path = "Lab_3.md";
+    var mkdocs_page_url = "/Lab_3/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -52,18 +52,9 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">HowTo</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#tunneling">Tunneling</a></li>
-    
-
-    <li class="toctree-l2"><a href="#how-to-launch-jupyter-notebook-on-the-cluster">How to launch Jupyter notebook on the cluster</a></li>
-    
-
-    </ul>
+    <a class="" href="../howto/">HowTo</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -86,9 +77,15 @@
     <a class="" href="../Lab_2/">Lab II</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../Lab_3/">Lab III</a>
+    <a class="current" href="./">Lab III</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#lab-3-running-enrichment-analysis-using-gsea">Lab 3  Running enrichment analysis using GSEA</a></li>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -138,10 +135,10 @@
     
       
     
-    <li>HowTo</li>
+    <li>Lab III</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/howto.md"
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/Lab_3.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -151,61 +148,53 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="tunneling">Tunneling</h1>
-<p>This is a technique for connecting from your local machine to a remote web server, such as Jupyter notebook running on the compute node of a cluster. </p>
-<ol>
-<li>run jupyter notebook as a slurm job </li>
-<li>find out on which compute node jupyter notebook ended up</li>
-<li>in another terminal establish "port forwarding" - from local port 9999 to port 8889 on the specific node (slepner009 here)</li>
-</ol>
-<pre><code># This procedure works not only with jupyter notebook, but any web app running on a compute node
+                <h1 id="lab-3-running-enrichment-analysis-using-gsea">Lab 3  Running enrichment analysis using GSEA</h1>
+<p>The command to start the gsea:</p>
+<pre><code>srun --x11 -p main --reservation=genomics_2 -N 1 -c 2 -n 1 -t 2:00:00 --pty /bin/bash -i  ##get onto a reserved compute node
+        module load java
+        java -jar /scratch/$USER/Genomics_Workshop/gsea-3.0.jar      
 
-#command to run jupyter notebook 
-srun -p main -c 1 -t 10:00 --error=slurm.%N_%j.err --output=slurm.%N_%j.out jupyter notebook --no-browser --ip=0.0.0.0 --port=8889
-
-# to start jupyter succintly 
-sbatch start_jupyter.sh      #start jupyter job on port 8889
-squeue -u kp807              #find out on which node is the job running - say it's slepner009
-
-# in another terminal establish &quot;port forwarding&quot; - from local port 9999 to port 8889 on the specific node (slepner009 here)
-ssh -L 9999:slepner009:8889 kp807@amarel.hpc.rutgers.edu   # modify slepner009, the ports, the netID
 </code></pre>
 
-<p>Video expaining the steps above: 
-<a href="http://www.youtube.com/watch?v=Nb2ERdr5KD0"><img alt="Port Tunneling" src="http://img.youtube.com/vi/Nb2ERdr5KD0/0.jpg" /></a></p>
-<h1 id="how-to-launch-jupyter-notebook-on-the-cluster">How to launch Jupyter notebook on the cluster</h1>
-<p>There is an already available installation of Anaconda 5.1.0 with Python 3.6.4 on the cluster, which contains both Jupyter notebook and Jupyter lab. To load the necessary module execute these commands: </p>
-<pre><code>module use /projects/community/modulefiles
-module load py-data-science-stack
+<p>Prepare files required to run GSEA<br />
+For detailed file format, see <a href="https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#GMX:_Gene_MatriX_file_format_.28.2A.gmx.29">here</a></p>
+<blockquote>
+<p>Expression data files   </p>
+<blockquote>
+<p>Gene cluster text file format (.gct)</p>
+</blockquote>
+<p>Gene set files</p>
+<blockquote>
+<p>gene matrix file format  (.gmx)
+gene matrix transposed format (.gmt)</p>
+</blockquote>
+<p>Phenotype data files</p>
+<blockquote>
+<p>Categorical class file (.cls)  (defining experimental group)</p>
+</blockquote>
+</blockquote>
+<p>A set of following sample files are prepared for GSEA analysis practice, which are located at  <code>/projects/oarc/Genomics_Workshop/GSEA/</code></p>
+<pre><code>fpkm_values.ready.gct    gct file (expression fpkm values)
+        fpkm_values.ready.cls     cls file  (defining experimental group)
+        Mouse_Human_NCI_Nature_November_01_2017_symbol.gmt     gmt file (gene set file biological function set)
+
 </code></pre>
 
-<p>Copy this into a script file like <code>start_jupyter.sh</code></p>
-<pre><code>#!/bin/bash
-
-#SBATCH --partition=main             # Partition (job queue)
-#SBATCH --job-name=jupyter          # Assign an short name to your job
-#SBATCH --nodes=1                    # Number of nodes you require
-#SBATCH --ntasks=1                   # Total # of tasks across all nodes
-#SBATCH --cpus-per-task=1            # Cores per task (&gt;1 if multithread tasks)
-#SBATCH --mem=4000                 # Real memory (RAM) required (MB)
-#SBATCH --time=01:00:00              # Total run time limit (HH:MM:SS)
-#SBATCH --output=slurm.%N.%j.out     # STDOUT output file
-#SBATCH --error=slurm.%N.%j.err      # STDERR output file (optional) 
-
-export XDG_RUNTIME_DIR=$HOME/tmp   ## needed for jupyter writting temporary files
-
-module use /projects/community/modulefiles 
-module load py-data-science-stack         # loads anaconda
-source activate pytorch-0.4.0
-
-#run system-installed jupyter notebook on port 8889. ip 0.0.0.0 means &quot;any ip as interface&quot;
-srun jupyter notebook --no-browser --ip=0.0.0.0 --port=8889
+<p>In practice analysis, use online broad C2 geneset instead of the above .gmt file<br />
+ Results are located at <code>/home/Net_ID/gsea_home/output/&lt;jun27&gt;/my_analysis.Gsea.nnnnnnnnnnnnn/</code>  </p>
+<p>To view your result:</p>
+<pre><code>  cd ~/gsea_home/output/&lt;jun27&gt;/my_analysis.Gsea.nnnnnnnnnnnnn/  
+    ## (same as: cd /home/Net_ID/gsea_home/output/&lt;jun27&gt;/my_analysis.Gsea.nnnnnnnnnnn/)
+  firefox index.html
 </code></pre>
 
-<p>Then run <code>sbatch start_jupyter.sh</code> on amarel login node. Now you need to find which node the jupyter notebook is running at. Do <code>squeue -u &lt;your net id&gt;</code> to see the slurm jobs you are running. 
-You should then do the port tunneling described in the previous section and open local browser at that port. </p>
-<p>Youtube video that explains this: 
-<a href="https://www.youtube.com/watch?v=8UQHLO85rlQ"><img alt="Graphical programs via FastX" src="http://img.youtube.com/vi/8UQHLO85rlQ/0.jpg" /></a></p>
+<p><strong>Additional gene set database downloading source:</strong></p>
+<ul>
+<li><a href="http://software.broadinstitute.org/gsea/msigdb/index.jsp">http://software.broadinstitute.org/gsea/msigdb/index.jsp</a></li>
+<li><a href="http://download.baderlab.org/EM_Genesets/">http://download.baderlab.org/EM_Genesets/</a></li>
+<li><a href="http://www.go2msig.org/cgi-bin/prebuilt.cgi">http://www.go2msig.org/cgi-bin/prebuilt.cgi</a></li>
+<li>or build your <a href="http://www.go2msig.org/cgi-bin/go2msig.cgi">own</a></li>
+</ul>
               
             </div>
           </div>
@@ -213,10 +202,10 @@ You should then do the port tunneling described in the previous section and open
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../fastx/" class="btn btn-neutral float-right" title="FastX">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Lab_4/" class="btn btn-neutral float-right" title="Lab IV">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Lab_2/" class="btn btn-neutral" title="Lab II"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -244,10 +233,10 @@ You should then do the port tunneling described in the previous section and open
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Lab_2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../fastx/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Lab_4/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

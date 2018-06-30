@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>HowTo - OARC-Rutgers</title>
+  <title>FastX - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "HowTo";
-    var mkdocs_page_input_path = "howto.md";
-    var mkdocs_page_url = "/howto/";
+    var mkdocs_page_name = "FastX";
+    var mkdocs_page_input_path = "fastx.md";
+    var mkdocs_page_url = "/fastx/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -52,23 +52,17 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">HowTo</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#tunneling">Tunneling</a></li>
-    
-
-    <li class="toctree-l2"><a href="#how-to-launch-jupyter-notebook-on-the-cluster">How to launch Jupyter notebook on the cluster</a></li>
-    
-
-    </ul>
-	    </li>
-          
             <li class="toctree-l1">
 		
-    <a class="" href="../fastx/">FastX</a>
+    <a class="" href="../howto/">HowTo</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">FastX</a>
+    <ul class="subnav">
+            
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -138,10 +132,10 @@
     
       
     
-    <li>HowTo</li>
+    <li>FastX</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/howto.md"
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/fastx.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -151,61 +145,19 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="tunneling">Tunneling</h1>
-<p>This is a technique for connecting from your local machine to a remote web server, such as Jupyter notebook running on the compute node of a cluster. </p>
+                <p>Connecting to the remote Linux cluster makes running graphical programs remotely tricky, because the graphical program runs on the remote computer, yet, it must be displayed on the local machine such as laptop. In general, command line interaction with the cluster is normally preferred and even more efficient than a GUI. However, there are times when running a graphical program cannot be avoided, for example, running a debugger for a code running on the cluster. </p>
+<p>There is a convenient way to run a graphical program remotely, for example, using FastX. Here is the procedure: </p>
 <ol>
-<li>run jupyter notebook as a slurm job </li>
-<li>find out on which compute node jupyter notebook ended up</li>
-<li>in another terminal establish "port forwarding" - from local port 9999 to port 8889 on the specific node (slepner009 here)</li>
+<li>Go to htts://amarel.hpc.rutgers.edu:3443  and log in (you must be either on campus, or connected through VPN)</li>
+<li>Click on Launch session</li>
+<li>Click on xterm</li>
+<li>Run this command that will ask the resource scheduler to put you on a compute node, rather than a login node (where you shouldn't be running intensive computations)<br />
+<code>srun -p main -N 1 -c 2 --mem=4Gb -t 1:00:00 --pty /bin/bash</code><br />
+This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 Gb or memory and time of 1 hour and runs interactive shell. After executing this, you should notice that the name of the node changed from <code>amarel</code> to <code>slepner036</code> or some such. You can request whatever resources you deem necessary for your work, but keep in mind that bigger requests are typically placed further down in the queue. </li>
+<li>Start the program with graphical interface from the terminal window.</li>
 </ol>
-<pre><code># This procedure works not only with jupyter notebook, but any web app running on a compute node
-
-#command to run jupyter notebook 
-srun -p main -c 1 -t 10:00 --error=slurm.%N_%j.err --output=slurm.%N_%j.out jupyter notebook --no-browser --ip=0.0.0.0 --port=8889
-
-# to start jupyter succintly 
-sbatch start_jupyter.sh      #start jupyter job on port 8889
-squeue -u kp807              #find out on which node is the job running - say it's slepner009
-
-# in another terminal establish &quot;port forwarding&quot; - from local port 9999 to port 8889 on the specific node (slepner009 here)
-ssh -L 9999:slepner009:8889 kp807@amarel.hpc.rutgers.edu   # modify slepner009, the ports, the netID
-</code></pre>
-
-<p>Video expaining the steps above: 
-<a href="http://www.youtube.com/watch?v=Nb2ERdr5KD0"><img alt="Port Tunneling" src="http://img.youtube.com/vi/Nb2ERdr5KD0/0.jpg" /></a></p>
-<h1 id="how-to-launch-jupyter-notebook-on-the-cluster">How to launch Jupyter notebook on the cluster</h1>
-<p>There is an already available installation of Anaconda 5.1.0 with Python 3.6.4 on the cluster, which contains both Jupyter notebook and Jupyter lab. To load the necessary module execute these commands: </p>
-<pre><code>module use /projects/community/modulefiles
-module load py-data-science-stack
-</code></pre>
-
-<p>Copy this into a script file like <code>start_jupyter.sh</code></p>
-<pre><code>#!/bin/bash
-
-#SBATCH --partition=main             # Partition (job queue)
-#SBATCH --job-name=jupyter          # Assign an short name to your job
-#SBATCH --nodes=1                    # Number of nodes you require
-#SBATCH --ntasks=1                   # Total # of tasks across all nodes
-#SBATCH --cpus-per-task=1            # Cores per task (&gt;1 if multithread tasks)
-#SBATCH --mem=4000                 # Real memory (RAM) required (MB)
-#SBATCH --time=01:00:00              # Total run time limit (HH:MM:SS)
-#SBATCH --output=slurm.%N.%j.out     # STDOUT output file
-#SBATCH --error=slurm.%N.%j.err      # STDERR output file (optional) 
-
-export XDG_RUNTIME_DIR=$HOME/tmp   ## needed for jupyter writting temporary files
-
-module use /projects/community/modulefiles 
-module load py-data-science-stack         # loads anaconda
-source activate pytorch-0.4.0
-
-#run system-installed jupyter notebook on port 8889. ip 0.0.0.0 means &quot;any ip as interface&quot;
-srun jupyter notebook --no-browser --ip=0.0.0.0 --port=8889
-</code></pre>
-
-<p>Then run <code>sbatch start_jupyter.sh</code> on amarel login node. Now you need to find which node the jupyter notebook is running at. Do <code>squeue -u &lt;your net id&gt;</code> to see the slurm jobs you are running. 
-You should then do the port tunneling described in the previous section and open local browser at that port. </p>
-<p>Youtube video that explains this: 
-<a href="https://www.youtube.com/watch?v=8UQHLO85rlQ"><img alt="Graphical programs via FastX" src="http://img.youtube.com/vi/8UQHLO85rlQ/0.jpg" /></a></p>
+<p>Here is the video walking through these steps: </p>
+<p><a href="https://www.youtube.com/watch?v=8UQHLO85rlQ"><img alt="Graphical programs via FastX" src="https://img.youtube.com/vi/8UQHLO85rlQ/0.jpg" /></a></p>
               
             </div>
           </div>
@@ -213,10 +165,10 @@ You should then do the port tunneling described in the previous section and open
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../fastx/" class="btn btn-neutral float-right" title="FastX">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../workshop/" class="btn btn-neutral float-right" title="Workshops">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../howto/" class="btn btn-neutral" title="HowTo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -244,10 +196,10 @@ You should then do the port tunneling described in the previous section and open
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../howto/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../fastx/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../workshop/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

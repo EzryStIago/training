@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Resources - OARC-Rutgers</title>
+  <title>CheatSheet - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Resources";
-    var mkdocs_page_input_path = "resources.md";
-    var mkdocs_page_url = "/resources/";
+    var mkdocs_page_name = "CheatSheet";
+    var mkdocs_page_input_path = "cheatsheet.md";
+    var mkdocs_page_url = "/cheatsheet/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -97,29 +97,17 @@
     <a class="" href="../ressentials/">R tutorial</a>
 	    </li>
           
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">Resources</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#slurm">Slurm</a></li>
-    
-
-    <li class="toctree-l2"><a href="#linux-tutorials">Linux tutorials</a></li>
-    
-
-    <li class="toctree-l2"><a href="#graphical-user-interface">Graphical user interface</a></li>
-    
-
-    <li class="toctree-l2"><a href="#resources-on-the-web">Resources on the web</a></li>
-    
-
-    </ul>
-	    </li>
-          
             <li class="toctree-l1">
 		
-    <a class="" href="../cheatsheet/">CheatSheet</a>
+    <a class="" href="../resources/">Resources</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">CheatSheet</a>
+    <ul class="subnav">
+            
+    </ul>
 	    </li>
           
         </ul>
@@ -144,10 +132,10 @@
     
       
     
-    <li>Resources</li>
+    <li>CheatSheet</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/resources.md"
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/cheatsheet.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -157,27 +145,60 @@
           <div role="main">
             <div class="section">
               
-                <p>Here are some resources you might want to consult to learn more about how to use an HPC cluster</p>
-<h1 id="slurm">Slurm</h1>
-<ul>
-<li><a href="https://rutgers-oarc.github.io/amarel/">OARC cluster user guide Amarel/Perceval</a> - this is a must-read for any new users, even if you are an experienced Linux user </li>
-<li><a href="https://rutgers-oarc.github.io/community/">OARC cluster community</a> - a lot of software is installed already by other users of the cluster, this describes how to use it and contribute to it</li>
-<li><a href="https://github.com/KristinaPlazonic/videos">intro videos by Kristina</a></li>
-<li><a href="http://htmlpreview.github.io/?https://github.com/rutgers-oarc/training/blob/master/cluster_presentation_2018-05-30.html">terse slurm tips</a></li>
-</ul>
-<h1 id="linux-tutorials">Linux tutorials</h1>
-<ul>
-<li><a href="http://www.rci.rutgers.edu/~gc563/linux/index.html">linux tutorial by Galen</a></li>
-<li><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">UNIX Tutorial for Beginners</a></li>
-</ul>
-<h1 id="graphical-user-interface">Graphical user interface</h1>
-<ul>
-<li><a href="https://ondemand.hpc.rutgers.edu/">web-based access to the cluster (still testing) - only from campus or VPN</a></li>
-</ul>
-<h1 id="resources-on-the-web">Resources on the web</h1>
-<ul>
-<li><a href="https://stackedit.io">markdown editor</a> - lets you view the finished (rendered) markdown side by side with raw markdown</li>
-</ul>
+                <table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ls -lag</td>
+<td>list access rights for all files</td>
+</tr>
+<tr>
+<td>chmod [options] file</td>
+<td>change access rights for named file</td>
+</tr>
+<tr>
+<td>command &amp;</td>
+<td>run command in background</td>
+</tr>
+<tr>
+<td>^C</td>
+<td>kill the job running in the foreground</td>
+</tr>
+<tr>
+<td>^Z</td>
+<td>suspend the job running in the foreground</td>
+</tr>
+<tr>
+<td>bg</td>
+<td>background the suspended job</td>
+</tr>
+<tr>
+<td>jobs</td>
+<td>list current jobs</td>
+</tr>
+<tr>
+<td>fg %1</td>
+<td>foreground job number 1</td>
+</tr>
+<tr>
+<td>kill %1</td>
+<td>kill job number 1</td>
+</tr>
+<tr>
+<td>ps</td>
+<td>list current processes</td>
+</tr>
+<tr>
+<td>kill 26152</td>
+<td>kill process number 26152</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
@@ -185,10 +206,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cheatsheet/" class="btn btn-neutral float-right" title="CheatSheet">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../ressentials/" class="btn btn-neutral" title="R tutorial"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../resources/" class="btn btn-neutral" title="Resources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -216,10 +235,8 @@
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../ressentials/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../resources/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../cheatsheet/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

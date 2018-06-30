@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Resources - OARC-Rutgers</title>
+  <title>Lab V - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Resources";
-    var mkdocs_page_input_path = "resources.md";
-    var mkdocs_page_url = "/resources/";
+    var mkdocs_page_name = "Lab V";
+    var mkdocs_page_input_path = "Lab_5.md";
+    var mkdocs_page_url = "/Lab_5/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -87,9 +87,15 @@
     <a class="" href="../Lab_4/">Lab IV</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../Lab_5/">Lab V</a>
+    <a class="current" href="./">Lab V</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#lab-5-id-mapping-and-conversion">Lab 5 ID mapping and conversion</a></li>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -97,24 +103,9 @@
     <a class="" href="../ressentials/">R tutorial</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Resources</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#slurm">Slurm</a></li>
-    
-
-    <li class="toctree-l2"><a href="#linux-tutorials">Linux tutorials</a></li>
-    
-
-    <li class="toctree-l2"><a href="#graphical-user-interface">Graphical user interface</a></li>
-    
-
-    <li class="toctree-l2"><a href="#resources-on-the-web">Resources on the web</a></li>
-    
-
-    </ul>
+    <a class="" href="../resources/">Resources</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -144,10 +135,10 @@
     
       
     
-    <li>Resources</li>
+    <li>Lab V</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/resources.md"
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/Lab_5.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -157,27 +148,14 @@
           <div role="main">
             <div class="section">
               
-                <p>Here are some resources you might want to consult to learn more about how to use an HPC cluster</p>
-<h1 id="slurm">Slurm</h1>
-<ul>
-<li><a href="https://rutgers-oarc.github.io/amarel/">OARC cluster user guide Amarel/Perceval</a> - this is a must-read for any new users, even if you are an experienced Linux user </li>
-<li><a href="https://rutgers-oarc.github.io/community/">OARC cluster community</a> - a lot of software is installed already by other users of the cluster, this describes how to use it and contribute to it</li>
-<li><a href="https://github.com/KristinaPlazonic/videos">intro videos by Kristina</a></li>
-<li><a href="http://htmlpreview.github.io/?https://github.com/rutgers-oarc/training/blob/master/cluster_presentation_2018-05-30.html">terse slurm tips</a></li>
-</ul>
-<h1 id="linux-tutorials">Linux tutorials</h1>
-<ul>
-<li><a href="http://www.rci.rutgers.edu/~gc563/linux/index.html">linux tutorial by Galen</a></li>
-<li><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">UNIX Tutorial for Beginners</a></li>
-</ul>
-<h1 id="graphical-user-interface">Graphical user interface</h1>
-<ul>
-<li><a href="https://ondemand.hpc.rutgers.edu/">web-based access to the cluster (still testing) - only from campus or VPN</a></li>
-</ul>
-<h1 id="resources-on-the-web">Resources on the web</h1>
-<ul>
-<li><a href="https://stackedit.io">markdown editor</a> - lets you view the finished (rendered) markdown side by side with raw markdown</li>
-</ul>
+                <h1 id="lab-5-id-mapping-and-conversion">Lab 5 ID mapping and conversion</h1>
+<p>Learn about gene identifiers, g:profiler, Synergizer and BioMart</p>
+<hr />
+<p>Use the above gene list:  <br />
+1. Convert Gene IDs to Entrez Gene, gene name: Use g:Profiler 
+  Explore more functions, what the site can do for you <br />
+2. Get gene name, GO annotation + evidence codes Use Ensembl BioMart<br />
+3. Do it again with your own gene list  </p>
               
             </div>
           </div>
@@ -185,10 +163,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cheatsheet/" class="btn btn-neutral float-right" title="CheatSheet">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../ressentials/" class="btn btn-neutral float-right" title="R tutorial">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../ressentials/" class="btn btn-neutral" title="R tutorial"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Lab_4/" class="btn btn-neutral" title="Lab IV"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -216,10 +194,10 @@
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../ressentials/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Lab_4/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../cheatsheet/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../ressentials/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
