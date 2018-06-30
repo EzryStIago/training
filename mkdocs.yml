@@ -3,6 +3,7 @@ repo_url: https://github.com/rutgers-oarc/training
 pages:
   - Home: 'index.md'
   - HowTo: 'howto.md' 
+  - FastX: 'fastx.md'
   - Workshops: 'workshop.md'
   - R tutorial: 'ressentials.md'
   - Resources: 'resources.md'
