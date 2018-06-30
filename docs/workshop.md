@@ -223,6 +223,247 @@ FastQC produces an html page as output, `fastqc/SRR1039508_1_fastqc.html`, with 
         module load java    ### because trimmomatic
         java -jar /home/$USER/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar PE -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/$USER/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
 
+**NOTE:**  the above is a one line command, illustrated as the following:
+```
+        java -jar trimmomatic-0.36.jar PE \
+        -phred33 -trimlog trim.log \
+        input_1.fq  input_2.fq \
+        output_1_paired.fq  output_1_unpaired.fq \
+        output_2_paired.fq  output_2_unpaired.fq \
+        ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35 / 
+
+        ## Once it started run, you shall see the following:
+        TrimmomaticPE: Started with arguments:
+        -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/yc759/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
+        Multiple cores found: Using 2 threads
+        Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+        ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+        Input Read Pairs: 100000 Both Surviving: 96596 (96.60%) Forward Only Surviving: 1542 (1.54%) Reverse Only Surviving: 1467 (1.47%) Dropped: 395 (0.40%)
+        TrimmomaticPE: Completed successfully
+
+        ##view the output, the trim.log file, .e.g.  length=63 55 1 56 7 (the original read length 63, now 55 after trim, 1 base from left end and 7 bases from the right end were trimmed off, 56 bases in middle remained)
+ 
+   ##you may also try fastx_quality_stats from the FASTX—toolkit
+
+```
+
+### FastQC - Run on cleaned reads, compare result
+```
+     module load java
+     fastqc -o fastqc SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
+
+     ## /projects/oarc/Genomics_Workshop/Labs/FastQC_details.pdf , helpful in viewing and interpreting the output
+```
+
+### Download reference and reference indexing 
+
+Human genome indexing will take hours, we have the reference pre-prepared. Stored at  `/projects/oarc/Genomics_Workshop/Reference/ `
+For in class practice, we will do this on E.coli genome
+
+```
+       cd /scratch/$USER/Genomics_Workshop/
+        mkdir Reference
+        cd Reference
+
+        wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Escherichia_coli/latest_assembly_versions/GCA_000005845.2_ASM584v2/GCA_000005845.2_ASM584v2_genomic.fna.gz
+
+        gunzip GCA_000005845.2_ASM584v2_genomic.fna.gz
+        module load bowtie2
+        bowtie2-build GCA_000005845.2_ASM584v2_genomic.fna GCA_000005845.2_ASM584v2_genomic
+
+###if download from ENSEMBLE
+        wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-38/fasta/bacteria_0_collection/escherichia_coli_str_k_12_substr_mg1655/dna/Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.dna.toplevel.fa.gz
+```
+
+### Mapping with tophat2, (STAR, HISAT2)
+
+Now, go to your data folder
+        `cd  /scratch/$USER/Genomics_Workshop/untreated`
+
+```
+cd  /scratch/$USER/Genomics_Workshop/untreated
+        module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
+        module load samtools   #bowtie2 is loaded already
+        mkdir tophat_out
+        tophat2 -p 10 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508_1
+        0k --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/  hg20_transciptome/GR
+        Ch38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel
+        SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
+## you shall modify the -p value to be consistent with the -c value you requested in the beginning
+```
+You shall see something like:
+```
+   [2018-03-30 11:48:57] Beginning TopHat run (v2.1.0)
+-----------------------------------------------
+[2018-03-30 11:48:57] Checking for Bowtie
+                  Bowtie version:        2.2.9.0
+[2018-03-30 11:48:58] Checking for Bowtie index files (transcriptome)..
+[2018-03-30 11:48:58] Checking for Bowtie index files (genome)..
+[2018-03-30 11:48:58] Checking for reference FASTA file
+[2018-03-30 11:48:58] Generating SAM header for /projects/oarc/Genomics_Workshop/Referen
+ce/hg20/Homo_sapiens.GRCh38.dna.toplevel
+[2018-03-30 11:49:09] Reading known junctions from GTF file
+[2018-03-30 11:49:27] Preparing reads
+         left reads: min. length=35, max. length=63, 96592 kept reads (4 discarded)
+        right reads: min. length=35, max. length=63, 96594 kept reads (2 discarded)
+[2018-03-30 11:49:29] Using pre-built transcriptome data..
+[2018-03-30 11:49:35] Mapping left_kept_reads to transcriptome GRCh38.78 with Bowtie2
+[2018-03-30 11:49:49] Mapping right_kept_reads to transcriptome GRCh38.78 with Bowtie2
+[2018-03-30 11:50:03] Resuming TopHat pipeline with unmapped reads
+[2018-03-30 11:50:03] Mapping left_kept_reads.m2g_um to genome Homo_sapiens.GRCh38.dna.t
+oplevel with Bowtie2
+[2018-03-30 11:50:16] Mapping left_kept_reads.m2g_um_seg1 to genome Homo_sapiens.GRCh38.dna.toplevel with Bowtie2 (1/2)
+[2018-03-30 11:50:18] Mapping left_kept_reads.m2g_um_seg2 to genome Homo_sapiens.GRCh38.dna.toplevel with Bowtie2 (2/2)
+[2018-03-30 11:50:20] Mapping right_kept_reads.m2g_um to genome Homo_sapiens.GRCh38.dna.toplevel with Bowtie2
+[2018-03-30 11:50:23] Mapping right_kept_reads.m2g_um_seg1 to genome Homo_sapiens.GRCh38.dna.toplevel with Bowtie2 (1/2)
+[2018-03-30 11:50:25] Mapping right_kept_reads.m2g_um_seg2 to genome Homo_sapiens.GRCh38.dna.toplevel with Bowtie2 (2/2)
+……………………………………………………….
+```
+The transcriptome index was built  by pointing to gtf file first,  here we have it prepared already, just so we can save time.  The following would be the command to generate the transcriptome index while running tophat alignment.
+```
+   tophat2 -p 10 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039516 –GTF /projects/oarc/Genomics_Workshop/Reference/hg20/ Homo_sapiens.GRCh38.78.gtf --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039516_1.fastq.pairedOut.fastq SRR1039516_2.fastq.pairedOut.fastq
+
+```
+The output folder `tophat_out/untreated_SRR1039508/` shall contain the following files/folder (in blue): 
+```
+     cd  /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508
+        $ ll
+   total 2183632
+ -rw-rw-r-- 1 yc759 oarc 2174796848 Jan 16 21:57 accepted_hits.bam
+ -rw-rw-r-- 1 yc759 oarc        565 Jan 16 21:57 align_summary.txt
+ -rw-rw-r-- 1 yc759 oarc    1921529 Jan 16 21:57 deletions.bed
+ -rw-rw-r-- 1 yc759 oarc    2239884 Jan 16 21:57 insertions.bed
+ -rw-rw-r-- 1 yc759 oarc   14181618 Jan 16 21:57 junctions.bed
+ drwxrwsr-x 2 yc759 oarc       4096 Jan 16 21:57 logs
+ -rw-rw-r-- 1 yc759 oarc        184 Jan 16 21:57 prep_reads.info
+ -rw-rw-r-- 1 yc759 oarc   42846571 Jan 16 21:57 unmapped.bam
+```
+
+### Read counts using htseq-count
+
+GO TO WHERE YOUR ALIGNMENT OUTPUT FOLDER IS, FOR EXAMPLE: 
+
+``` 
+  cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
+  ln –s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.bam accepted_hits.bam   
+
+  ##make a soft link to the full bam file we already prepared, if you didn’t have the bam ready yet
+
+     module load samtools intel/17.0.2 python/2.7.12 
+     samtools sort -n  accepted_hits.bam | samtools view | htseq-count -m intersection-nonempty -t exon -i gene_id -s no --additional-attr=gene_name  -/projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf > untreated08.txt
+```
+Use samtools to sort the bam file by name:  because htseq-count accepts bam file sorted by name as default, but tophat generates bam sorted by coordinates by default
+The same way to generate the counts file *untreated12.txt*, *untreated16.txt*,*dex09.txt*, *dex13.txt*, *dex17.txt*
+
+### Perform Mapping QC using RSeQC
+
+Now,  quality control using RSeQC –a few examples here, please go to the website for more functions `http://rseqc.sourceforge.net/`
+```
+  cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
+        module load python/2.7.12
+        module load intel/17.0.4
+     
+        $ read_distribution.py -i accepted_hits.bam -r /projects/oarc/Genomics_Workshop/
+Reference/Homo_sapiens.GRCh38.79.bed
+processing/projects/oarc/Genomics_Workshop/Reference/Homo_sapiens.GRCh38.79.bed ... Done
+        processing accepted_hits.bam ... Finished
+
+        Total Reads                   43474036
+        Total Tags                    54438789
+        Total Assigned Tags           53991382
+        =====================================================================
+        Group               Total_bases         Tag_count           Tags/Kb
+        CDS_Exons           103371993           43264842            418.54
+        5'UTR_Exons         5217678             583447              111.82
+        3'UTR_Exons         29324747            8145122             277.76
+        Introns             1500197093          1805034             1.20
+        TSS_up_1kb          33306654            18893               0.57
+        TSS_up_5kb          148463534           41165               0.28
+        TSS_up_10kb         265823549           55644               0.21
+        TES_down_1kb        35215293            50954               1.45
+        TES_down_5kb        152556214           113325              0.74
+        TES_down_10kb       268614580           137293              0.51
+        =====================================================================
+
+ $ bam_stat.py -i accepted_hits.bam
+        Load BAM file ...
+
+        Done
+
+        #==================================================
+        #All numbers are READ count
+        #==================================================
+
+        Total records:                          52528699
+
+        QC failed:                              0
+        Optical/PCR duplicate:                  0
+        Non primary hits                        9054663
+        Unmapped reads:                         0
+        mapq < mapq_cut (non-unique):           2684801
+
+        mapq >= mapq_cut (unique):              40789235
+        Read-1:                                 20414530
+        Read-2:                                 20374705
+        Reads map to '+':                       20393901
+        Reads map to '-':                       20395334
+        Non-splice reads:                       30860931
+        Splice reads:                           9928304
+        Reads mapped in proper pairs:           32386536
+        Proper-paired reads map to different chrom:312
+
+```
+The script does genebody coverage calculation requires the input bam files to be sorted and indexed (we will do it using samtools). The calculation and plot will require R
+Go to one of the tophat_out sample folder
+```
+$ module load intel/17.0.4  R-Project/3.4.1    
+        $ module load samtools
+        $ samtools sort accepted_hits.bam –o accepted_hits.sorted.bam 
+        ##this may take a while, you may use the one already prepared for you by making a soft link
+        ln –s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.sorted.bam accepted_hits.sorted.bam
+
+
+        $ samtools index accepted_hits.sorted.bam
+ 
+        $ geneBody_coverage.py -r /projects/oarc/Genomics_Workshop/Reference/hg38.housekeepingGenes.bed -i accepted_hits.sorted.bam -o test
+@ 2018-01-14 13:17:33: Read BED file (reference gene model) ...
+@ 2018-01-14 13:17:33: Total 3802 transcripts loaded
+@ 2018-01-14 13:17:33: Get BAM file(s) ...
+        accepted_hits.sorted.bam
+@ 2018-01-14 13:17:33: Processing accepted_hits.sorted.bam ...
+        3800 transcripts finished
+
+
+        Sample  Skewness
+        accepted_hits.sorted    -3.61577607436
+@ 2018-01-14 13:28:59: Running R script ...
+null device
+          1
+
+```
+output files:        test.geneBodyCoverage.r
+                                test.geneBodyCoverage.txt
+                log.txt
+                test.geneBodyCoverage.curves.pdf
+
+download the gene.bed files :  `https://sourceforge.net/projects/rseqc/files/BED/Human_Homo_sapiens/ `  
+Be careful that the genome version, be consistent between reference genome used in mapping and now. For now, you may use what’s provided 
+
+if you want to find out whether the sequencing read is strand specific or not, do:
+```
+        $ infer_experiment.py -r  /projects/oarc/Genomics_Workshop/Reference/ Homo_sapiens.GRCh38.79.bed -i accepted_hits.bam
+
+    Reading reference gene model /projects/oarc/Genomics_Workshop/Reference/Homo_sapiens.GRCh38.79.bed ... Done
+    Loading SAM/BAM file ...  Total 200000 usable reads were sampled
+
+
+This is PairEnd Data
+Fraction of reads failed to determine: 0.1406
+Fraction of reads explained by "1++,1--,2+-,2-+": 0.4302
+Fraction of reads explained by "1+-,1-+,2++,2--": 0.4292
+```
+
+
 
 
 
