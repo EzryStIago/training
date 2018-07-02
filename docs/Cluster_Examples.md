@@ -1,8 +1,8 @@
 # Using R
-___
+
 Generally, there are 2 approaches for accessing R on Amarel: (1) use one of the pre-installed R modules named R-Project/*version* (these versions come bundled with a very broad range of common and useful tools), or (2) install your own custom build of R in your /home directory or in a shared directory (e.g., /projects/[group] or /projects/community).
 
-*Using pre-installed R modules:*
+**Using pre-installed R modules:**
 
 Start by finding which module you wish to use with the 'module spider R-Project' command:
 ```
@@ -43,7 +43,7 @@ which R
 /opt/sw/packages/intel-17.0.4/R-Project/3.4.1/bin/R
 ```
 What R packages are already installed?
-```
+```R
 pkgs <- installed.packages ()
 pkgs[,c("Package", "Version")]
 
@@ -74,12 +74,12 @@ Now, every time I start any version of R, my ~/my.R.libs directory will be the f
 There are a variety of different ways to install packages in R. The most straightforward way is to use the built-in 'install.packages()' function while R is running. Using this approach gives you the flexibility to install the latest version of a package or you can specify an older version of a package. To install a specifc version of a package, you'll need the URL (web address) for the tarball (*.tar.gz or *.tgz file) containing the source code for that version.
 
 For example, I want to load the following list of packages, and I need the specifc versions listed here: 'kernlab' version 0.9-24 'ROCR' version 1.0.7 'class' version 7.3.14 'party' version 1.0.25 'e1071' version 1.6.7 'randomForest' version 4.6.12 I can use a web search to find the source tarballs for these packages. For example, to find 'kernlab' version 0.9-24, I search for "kernlab" and find the [website](https://cran.r-project.org/web/packages/kernlab/index.html). At that site, I see that 0.9-25 is the current version (not what I want), but there is "kernlab archive" link there that takes me to a long list of previous versions. I see a link for version 0.9-24 there, so I copy that URL and use that URL in my install.packages() command:  
-```
+```R
 install.packages("https://cran.r-project.org/src/contrib/Archive/kernlab/kernlab_0.9-24.tar.gz", lib="~/my.R.libs")
 ```
 
 The other packages I need can be found in the same way. While installing them, I find that 'ROCR-1.0.7' requires 'gplots' and 'party-1.0-25' requires 6 other prerequisites. So, I have to also install those prerequisite packages. In the end, my install.packages() commands are as follows:
-```
+```R
 install.packages("gplots", lib="~/my.R.libs")
 install.packages("https://cran.r-project.org/src/contrib/ROCR_1.0-7.tar.gz", lib="~/my.R.libs")
 install.packages("https://cran.r-project.org/src/contrib/class_7.3-14.tar.gz", lib="~/my.R.libs")
@@ -129,36 +129,37 @@ export MANPATH=/home/gc563/R/3.4.4/share/man
 If you're adding these lines to the bottom of your ~/.bashrc file, log-out and log-in again, then verify that the settings are working:
 
 ```
-module list
+$ module list
 Currently Loaded Modules:
   1) gcc/5.4   2) java/1.8.0_161
-which R
+$ which R
 ~/R/3.4.4/bin/R
 ```
 Now that my new R installation is setup, I can begin adding R packages. Since this is my own installation of R and not one of the preinstalled versions available on the cluster, my default packages/libraries directory is /home/gc563/R/3.4.4/lib64/R/library  
-`.libPaths()  
-[1] "/home/gc563/R/3.4.4/lib64/R/library"`
+```
+> .libPaths()  
+[1] "/home/gc563/R/3.4.4/lib64/R/library"
+```
 
 Install a package:
-``` 
+```R
 install.packages("rJava")
-   library(rJava)
+library(rJava)
 ```
-*Saving figures/ plots from R (without a display):*
-
+**Saving figures/ plots from R (without a display):**  
 Need to save a PDF, PostScript, SVG, PNG, JPG, or TIFF file in your working directory? Normally, writing a graphics file from R requires a display of some kind and the X11 protocol. That's often not convenient for batch jobs running on the cluster. Alternatively, you can use the Cairo graphics device/library for R. Cairo enables you to write bitmap or vector graphics directly to a file. Here's an example:
-```
-R --no-save
+```R
+$ R --no-save
 png('my-figure.png', type='cairo')
 plot(rnorm(10),rnorm(10))
 dev.off()
 q()
 ```
 # Using Python
-___
+
 Generally, there are 2 approaches for using Python and its associated tools: (1) use one of the pre-installed Python modules (version 2.7.x or 3.5.x) which come bundled with a very broad range of common and useful tools (you can add or update packages if needed) or (2) install your own custom build of Python in your /home directory or in a shared directory (e.g., /projects/[group] or /projects/community).
 
-*Using pre-installed Python modules:*  
+**Using pre-installed Python modules:** 
 
 With the pre-installed Python modules, you can add or update Python modules/packages as needed if you do it using the '--user' option for pip. This option will instruct pip to install new software or upgrades in your ~/.local directory. Here's an example where I'm installing the Django package:
 ```
@@ -213,20 +214,23 @@ If you're adding these lines to the bottom of your ~/.bashrc file, log-out and l
 
 
 # Running GROMACS 
-___
+
 Here is a simple example procedure that demonstrates how to use GROMACS 2016 on Amarel. In this example, we’ll start with a downloaded PDB file and proceed through importing that file into GROMACS, solvating the protein, a quick energy minimization, and then an MD equilibration. This example is not intended to teach anyone how to use GROMACS. Instead, it is intended to assist new GROMACS users in learning to use GROMACS on Amarel.  
-(1) Download a PDB file.  
-`wget https://files.rcsb.org/view/5EWT.pdb`  
-(2) Load the GROMACS software module plus any needed prerequisites.  
-`module purge  
-module load intel/17.0.1 mvapich2/2.2 gromacs/2016.1`  
-(3) Import the PDB into GROMACS, while defining the force field and water model to be used for this system.  
-`gmx_mpi pdb2gmx -f 5EWT.pdb -ff charmm27 -water tip3p -ignh -o 5EWT.gro -p 5EWT.top -i 5EWT.itp`  
-(4) Increase the size of the unit cell to accommodate a reasonable volume of solvent around the protein.    
-`gmx_mpi editconf -f 5EWT.gro -o 5EWT_newbox.gro -box 10 10 10 -center 5 5 5`  
-(5) Now add water molecules into the empty space in the unit cell to solvate the protein.  
-`gmx_mpi solvate -cp 5EWT_newbox.gro -p 5EWT.top -o 5EWT_solv.gro`  
-(6) Prepare your SLURM job script(s). The 2 **mdrun** commands in the following steps can be executed from within an interactive session or they can be run in batch mode using job scripts. If your mdrun commands/job might take more than a few minutes to run, it would be best to run them in batch mode using a job script. Here’s an example job script for a GROMACS MD simulation. To run the 2 **mdrun** commands below, simply replace the example **mdrun** command in this script with one of the mdrun commands from the steps below and submit that job after preparing the simulation with the appropriate **grompp** step.
+
+1. Download a PDB file.  
+    ```wget https://files.rcsb.org/view/5EWT.pdb```  
+2. Load the GROMACS software module plus any needed prerequisites.  
+    ```
+    module purge  
+    module load intel/17.0.1 mvapich2/2.2 gromacs/2016.1
+    ```
+3. Import the PDB into GROMACS, while defining the force field and water model to be used for this system.  
+   ```gmx_mpi pdb2gmx -f 5EWT.pdb -ff charmm27 -water tip3p -ignh -o 5EWT.gro -p 5EWT.top -i 5EWT.itp``` 
+4. Increase the size of the unit cell to accommodate a reasonable volume of solvent around the protein.  
+    ```gmx_mpi editconf -f 5EWT.gro -o 5EWT_newbox.gro -box 10 10 10 -center 5 5 5```
+5.  Now add water molecules into the empty space in the unit cell to solvate the protein.  
+    ```gmx_mpi solvate -cp 5EWT_newbox.gro -p 5EWT.top -o 5EWT_solv.gro```
+6. Prepare your SLURM job script(s). The 2 **mdrun** commands in the following steps can be executed from within an interactive session or they can be run in batch mode using job scripts. If your mdrun commands/job might take more than a few minutes to run, it would be best to run them in batch mode using a job script. Here’s an example job script for a GROMACS MD simulation. To run the 2 **mdrun** commands below, simply replace the example **mdrun** command in this script with one of the mdrun commands from the steps below and submit that job after preparing the simulation with the appropriate **grompp** step.
 ```
 #!/bin/bash
 #SBATCH --partition=main                # Partition (job queue)
@@ -245,7 +249,7 @@ srun --mpi=pmi2 gmx_mpi mdrun -v -s 5EWT_solv_prod.tpr \
                 -o 5EWT_solv_prod.trr -c 5EWT_solv_prod.gro \
                 -e 5EWT_solv_prod.edr -g 5EWT_solv_prod.md.log
 ```
-(7) Perform an inital, quick energy minimization. Here, we’re using a customized MD parameters file named em.mdp, which contains these instructions:
+7. Perform an inital, quick energy minimization. Here, we’re using a customized MD parameters file named em.mdp, which contains these instructions:
 ```
 integrator     = steep
 nsteps         = 200
@@ -253,14 +257,14 @@ cutoff-scheme  = Verlet
 coulombtype    = PME
 pbc            = xyz
 emtol          = 100
-```
-These are the commands (both the grompp step and the mdrun step) used to prepare and run the minimization:
+```  
+These are the commands (both the grompp step and the mdrun step) used to prepare and run the minimization:  
 ```
 gmx_mpi grompp -f em.mdp -c 5EWT_solv.gro -p 5EWT.top -o 5EWT_solv_mini.tpr -po 5EWT_solv_mini.mdp
 
 gmx_mpi mdrun -v -s 5EWT_solv_mini.tpr -o 5EWT_solv_mini.trr -c 5EWT_solv_mini.gro -e 5EWT_solv_mini.edr -g 5EWT_solv_mini.md.log
 ```
-(8) Perform a quick MD equilibration (same syntax/commands for a regular MD run). Here, we’re using a customized MD parameters file named equil.mdp, which contains these instructions:
+8. Perform a quick MD equilibration (same syntax/commands for a regular MD run). Here, we’re using a customized MD parameters file named equil.mdp, which contains these instructions:
 ```
 integrator               = md
 dt                       = 0.002
@@ -293,9 +297,10 @@ gmx_mpi grompp -f equil.mdp -c 5EWT_solv_mini.gro -p 5EWT.top -o 5EWT_solv_equil
 gmx_mpi mdrun -v -s 5EWT_solv_equil.tpr -o 5EWT_solv_equil.trr -c 5EWT_solv_equil.gro -e 5EWT_solv_equil.edr -g 5EWT_solv_equil.md.log
 ```
 # Running TensorFlow with a GPU
-___
-To do this, you can use the [Singularity](http://singularity.lbl.gov/) container manager and a Docker image containing the TensorFlow software.  
-Running Singularity can be done in batch mode using a job script. Below is an example job script for this purpose (for this example, we'll name this script TF_gpu.sh)
+
+To do this, you can use the [Singularity](http://singularity.lbl.gov/) container manager and a Docker image containing the TensorFlow software. 
+
+Running Singularity can be done in batch mode using a job script. Below is an example job script for this purpose (for this example, we'll name this script `TF_gpu.sh`)
 ```
 #!/bin/bash
 #SBATCH --partition=main             # Partition (job queue)
@@ -316,12 +321,11 @@ module load singularity/.2.5.1
 
 srun singularity exec --nv docker://tensorflow/tensorflow:1.4.1-gpu python 
 ```
-Once your job script is ready, submit it using the sbatch command:
-
-` sbatch TF_gpu.sh`
+Once your job script is ready, submit it using the sbatch command:  
+```$ sbatch TF_gpu.sh```
 Alternatively, you can run Singularity interactively:
 ```
-srun --pty -p main --gres=gpu:1 --time=15:00 --mem=6G singularity shell --nv docker://tensorflow/tensorflow:1.4.1-gpu
+$ srun --pty -p main --gres=gpu:1 --time=15:00 --mem=6G singularity shell --nv docker://tensorflow/tensorflow:1.4.1-gpu
 
 Docker image path: index.docker.io/tensorflow/tensorflow:1.4.1-gpu
 Cache folder set to /home/user/.singularity/docker
@@ -352,7 +356,8 @@ Singularity tensorflow:latest-gpu:~> python3 -V
 Python 3.5.2
 ```
 Please remember to exit from your interactive job after you are finished with your calculations.  
-There are several Docker images available on Amarel for use with Singularity. The one used in the example above, tensorflow1.4.1-gpu, is intended for python 2.7.12. If you want to use Python3, you'll need a different image, docker://tensorflow/tensorflow:1.4.1-gpu-py3, and the Python command will be 'python3' instead of 'python' in your script.
+
+There are several Docker images available on Amarel for use with Singularity. The one used in the example above, tensorflow:1.4.1-gpu, is intended for python 2.7.12. If you want to use Python3, you'll need a different image, docker://tensorflow/tensorflow:1.4.1-gpu-py3, and the Python command will be `python3` instead of `python` in your script.
 
 
 

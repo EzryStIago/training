@@ -4,7 +4,7 @@ repo_url: https://github.com/rutgers-oarc/training
 pages:
   - Home: 'index.md'
   - Amarel User Guide:
-      - Amarel Guide:'Amarel_User_Guide.md'
+      - Amarel Guide: 'Amarel_User_Guide.md'
       - Examples: 'Cluster_Examples.md'
   - HowTo: 
       - Jupyter: 'howtos/jupyter.md' 
@@ -18,5 +18,5 @@ pages:
       - Lab V: 'workshops/Lab_5.md'
   - R tutorial: 'ressentials.md'
   - Resources: 'resources.md'
-  - CheatSheet: 'cheatsheet.md'
+  - CheatSheet: 'linux.md'
 theme: readthedocs
