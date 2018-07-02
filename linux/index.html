@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>CheatSheet - OARC-Rutgers</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "CheatSheet";
+    var mkdocs_page_input_path = "linux.md";
+    var mkdocs_page_url = "/linux/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> OARC-Rutgers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Amarel User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Amarel_User_Guide/">Amarel Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Cluster_Examples/">Examples</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">HowTo</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../howtos/jupyter/">Jupyter</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../howtos/fastx/">FastX</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Workshops</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../workshops/workshop/">Genomics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_1/">Lab I</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_2/">Lab II</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_3/">Lab III</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_4/">Lab IV</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_5/">Lab V</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ressentials/">R tutorial</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../resources/">Resources</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">CheatSheet</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#navigating-file-tree">Navigating file tree</a></li>
+    
+
+    <li class="toctree-l2"><a href="#viewing-files">Viewing files</a></li>
+    
+
+    <li class="toctree-l2"><a href="#useful-commands">Useful commands:</a></li>
+    
+
+    <li class="toctree-l2"><a href="#redirecting">Redirecting</a></li>
+    
+
+    <li class="toctree-l2"><a href="#permissions">Permissions</a></li>
+    
+
+    <li class="toctree-l2"><a href="#modules">Modules</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">OARC-Rutgers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>CheatSheet</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/linux.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="navigating-file-tree">Navigating file tree</h1>
+<table>
+<thead>
+<tr>
+<th align="right"><strong>Command</strong></th>
+<th align="center"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><em>ls</em></td>
+<td align="center">list files and directories</td>
+</tr>
+<tr>
+<td align="right"><em>ls -a</em></td>
+<td align="center">list all files and directories</td>
+</tr>
+<tr>
+<td align="right"><em>mkdir</em></td>
+<td align="center">make a directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd directory</em></td>
+<td align="center">change to named directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd</em></td>
+<td align="center">change to home-directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd ~</em></td>
+<td align="center">change to home-directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd ..</em></td>
+<td align="center">change to parent directory</td>
+</tr>
+<tr>
+<td align="right"><em>pwd</em></td>
+<td align="center">display the path of the current directory</td>
+</tr>
+<tr>
+<td align="right"><em>rm</em></td>
+<td align="center">removes files only</td>
+</tr>
+<tr>
+<td align="right"><em>rmdir</em></td>
+<td align="center">removes directory(make sure its empty)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="viewing-files">Viewing files</h1>
+<table>
+<thead>
+<tr>
+<th align="right"><strong>Command</strong></th>
+<th align="left"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">cp file1 file2</td>
+<td align="left">copy file1 and call it file2</td>
+</tr>
+<tr>
+<td align="right">mv file1 file2</td>
+<td align="left">move or rename file1 to file2</td>
+</tr>
+<tr>
+<td align="right">rm file</td>
+<td align="left">remove a file</td>
+</tr>
+<tr>
+<td align="right">rmdir directory</td>
+<td align="left">remove a directory</td>
+</tr>
+<tr>
+<td align="right">cat file</td>
+<td align="left">display a file</td>
+</tr>
+<tr>
+<td align="right">less file</td>
+<td align="left">display a file a page at a time</td>
+</tr>
+<tr>
+<td align="right">head file</td>
+<td align="left">display the first few lines of a file</td>
+</tr>
+<tr>
+<td align="right">tail file</td>
+<td align="left">display the last few lines of a file</td>
+</tr>
+<tr>
+<td align="right">grep 'keyword'</td>
+<td align="left">file   search a file for keywords</td>
+</tr>
+<tr>
+<td align="right">wc file -l/w</td>
+<td align="left">count number of lines/words/characters in file</td>
+</tr>
+</tbody>
+</table>
+<h1 id="useful-commands">Useful commands:</h1>
+<table>
+<thead>
+<tr>
+<th align="left">command</th>
+<th align="left">description</th>
+<th align="left">usage example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">which <command></td>
+<td align="left">see where command is installed</td>
+<td align="left">which python</td>
+</tr>
+<tr>
+<td align="left">pwd</td>
+<td align="left">which directory I'm in</td>
+<td align="left">pwd</td>
+</tr>
+<tr>
+<td align="left">man <command></td>
+<td align="left">manual page for command</td>
+<td align="left">man cut</td>
+</tr>
+<tr>
+<td align="left">grep <pattern></td>
+<td align="left">filter for lines which fit pattern</td>
+<td align="left">cat myfile &#124; grep GATK</td>
+</tr>
+<tr>
+<td align="left">cut -d<delimiter> -f<number></td>
+<td align="left">split line by delimiter and get field number 3</td>
+<td align="left">cat myfile &#124; cut -d'_' -f3</td>
+</tr>
+<tr>
+<td align="left">sort <file></td>
+<td align="left">sort lines, often used with <code>uniq</code></td>
+<td align="left">sort myfile &#124; uniq</td>
+</tr>
+<tr>
+<td align="left">uniq</td>
+<td align="left">suppress repeated lines, works only if sorted</td>
+<td align="left">see above example</td>
+</tr>
+<tr>
+<td align="left">less</td>
+<td align="left">paginated output</td>
+<td align="left">less myfile</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">redirect output (e.g. list files and save filenames in aaa.txt)</td>
+<td align="left">ls &gt; aaa.txt</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;</td>
+<td align="left">append output to existing file</td>
+<td align="left">echo "blah" &gt;&gt; aaa.txt</td>
+</tr>
+<tr>
+<td align="left">find</td>
+<td align="left">find files with some properties e.g. display all files recursively from current directory</td>
+<td align="left"><code>find .</code></td>
+</tr>
+<tr>
+<td align="left">chmod</td>
+<td align="left">change permissions on a file or directory</td>
+<td align="left">chmod u+x myscript.sh</td>
+</tr>
+<tr>
+<td align="left">top</td>
+<td align="left">display most intensive processes</td>
+<td align="left"><code>top</code></td>
+</tr>
+<tr>
+<td align="left">ps auxw</td>
+<td align="left">list processes</td>
+<td align="left"><code>ps auxw</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="redirecting">Redirecting</h1>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>command &gt; file</td>
+<td>redirect standard output to a file</td>
+</tr>
+<tr>
+<td>command &gt;&gt; file</td>
+<td>append standard output to a file</td>
+</tr>
+<tr>
+<td>command &lt; file</td>
+<td>redirect standard input from a file</td>
+</tr>
+<tr>
+<td><em>command1 &#x7c; command2</em></td>
+<td>pipe the output of command1 to the input of command2</td>
+</tr>
+<tr>
+<td>cat file1 file2 &gt; file0</td>
+<td>concatenate file1 and file2 to file0</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>sort data</td>
+</tr>
+<tr>
+<td>who</td>
+<td>list users currently logged in</td>
+</tr>
+<tr>
+<td>*</td>
+<td>match any number of characters</td>
+</tr>
+<tr>
+<td>?</td>
+<td>match one character</td>
+</tr>
+<tr>
+<td>man command</td>
+<td>read the online manual page for a command</td>
+</tr>
+<tr>
+<td>whatis command</td>
+<td>brief description of a command</td>
+</tr>
+<tr>
+<td>apropos keyword</td>
+<td>match commands with keyword in their man pages</td>
+</tr>
+</tbody>
+</table>
+<h1 id="permissions">Permissions</h1>
+<table>
+<thead>
+<tr>
+<th><strong>Symbol</strong></th>
+<th><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u</td>
+<td>user</td>
+</tr>
+<tr>
+<td>g</td>
+<td>group</td>
+</tr>
+<tr>
+<td>o</td>
+<td>other</td>
+</tr>
+<tr>
+<td>a</td>
+<td>all</td>
+</tr>
+<tr>
+<td>r</td>
+<td>read</td>
+</tr>
+<tr>
+<td>w</td>
+<td>write (and delete)</td>
+</tr>
+<tr>
+<td>x</td>
+<td>execute (and access directory)</td>
+</tr>
+<tr>
+<td>u+x</td>
+<td>add executing permission for user</td>
+</tr>
+<tr>
+<td>u-x</td>
+<td>take away executing permission</td>
+</tr>
+</tbody>
+</table>
+<h1 id="modules">Modules</h1>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>module avail</td>
+<td>show a list of the core (primary) modules available</td>
+</tr>
+<tr>
+<td>module load <em>module_name</em></td>
+<td>loads the named software module</td>
+</tr>
+<tr>
+<td>module use <code>/projects/community/projectsmodule use /projects/community/modulefiles/</code></td>
+<td>Now if you do module avail, it also shows modules uploaded by other users</td>
+</tr>
+<tr>
+<td>module spider</td>
+<td>shows a comprehensive list of all available modules or type name after spider to show details about specific module</td>
+</tr>
+<tr>
+<td>module purge</td>
+<td>removes all loaded module</td>
+</tr>
+<tr>
+<td>ml</td>
+<td>lists modules loaded</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../resources/" class="btn btn-neutral" title="Resources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../resources/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

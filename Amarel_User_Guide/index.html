@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Amarel Guide - OARC-Rutgers</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Amarel Guide";
+    var mkdocs_page_input_path = "Amarel_User_Guide.md";
+    var mkdocs_page_url = "/Amarel_User_Guide/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> OARC-Rutgers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Amarel User Guide</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Amarel Guide</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#general-information">General Information</a></li>
+    
+
+    <li class="toctree-l3"><a href="#connecting-to-amarel">Connecting to Amarel</a></li>
+    
+
+    <li class="toctree-l3"><a href="#moving-files">Moving files</a></li>
+    
+
+    <li class="toctree-l3"><a href="#listing-available-resources">Listing available resources</a></li>
+    
+
+    <li class="toctree-l3"><a href="#loading-software-modules">Loading software modules</a></li>
+    
+
+    <li class="toctree-l3"><a href="#running-a-serial-single-core-job">Running a serial (single-core) job</a></li>
+    
+
+    <li class="toctree-l3"><a href="#running-a-parallel-multicore-mpi-job">Running a parallel (multicore MPI) job</a></li>
+    
+
+    <li class="toctree-l3"><a href="#running-an-interactive-job">Running an interactive job</a></li>
+    
+
+    <li class="toctree-l3"><a href="#monitoring-the-status-of-jobs">Monitoring the status of jobs</a></li>
+    
+
+    <li class="toctree-l3"><a href="#killing-cancelling-terminating-jobs">Killing/ cancelling/ terminating jobs</a></li>
+    
+
+    <li class="toctree-l3"><a href="#installing-your-own-software">Installing your own software</a></li>
+    
+
+    <li class="toctree-l3"><a href="#singularity">Singularity</a></li>
+    
+
+    <li class="toctree-l3"><a href="#troubleshooting-common-problems">Troubleshooting/ Common Problems</a></li>
+    
+
+    <li class="toctree-l3"><a href="#acknowledging-amarel">Acknowledging Amarel</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Cluster_Examples/">Examples</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">HowTo</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../howtos/jupyter/">Jupyter</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../howtos/fastx/">FastX</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Workshops</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../workshops/workshop/">Genomics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_1/">Lab I</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_2/">Lab II</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_3/">Lab III</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_4/">Lab IV</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../workshops/Lab_5/">Lab V</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ressentials/">R tutorial</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../resources/">Resources</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../linux/">CheatSheet</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">OARC-Rutgers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Amarel User Guide &raquo;</li>
+        
+      
+    
+    <li>Amarel Guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/Amarel_User_Guide.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="general-information">General Information</h1>
+<p>_
+Amarel is a CentOS 7 Linux compute cluster that is actively growing through the combination of separate computing clusters into a single, shared resource.</p>
+<p>Amarel includes the following hardware (this list may already be outdated since the cluster is actively growing):</p>
+<pre><code>52 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 128 GB RAM
+20 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 256 GB RAM
+4 28-core e5-2680v4 nodes each with 2 x Nvidia Pascal P100 GPUs onboard
+2 high-memory nodes, each with 56 e7-4830v4 (Broadwell) cores + 1.5 TB RAM
+53 CPU-only nodes, each with 16 Intel Xeon e5-2670 (Sandy Bridge) cores + 128 GB RAM
+5 CPU-only nodes, each with 20 Intel Xeon e5-2670 (Ivy Bridge) cores + 128 GB RAM
+26 CPU-only nodes, each with 24 Intel Xeon e5-2670 (Haswell) cores + 128 GB RAM
+4 CPU-only nodes, each with 16 Intel Xeon e5-2680 (Broadwell) cores + 128 GB RAM
+3 12-core e5-2670 nodes with 8 Nvidia Tesla M2070 GPUs onboard
+2 28-core e5-2680 nodes with 4 Quadro M6000 GPUs onboard
+1 16-core e5-2670 node with 8 Xeon Phi 5110P accelerators onboard
+</code></pre>
+
+<p>Default run time = 2 hours in the 'main' partition
+Maximum run time = 3 days in the 'main' partition</p>
+<h1 id="connecting-to-amarel">Connecting to Amarel</h1>
+<p>_
+Amarel is currently accessed using a single hostname, amarel.rutgers.edu</p>
+<p>When you connect to this system, your log-in session (your Linux shell) will begin on one of multiple log-in nodes, named amarel1, amarel2, etc.</p>
+<p>So, while you are logged-in to Amarel, you will see "amarel1" or "amarel2" as the name of the machine you are using.</p>
+<p><code>ssh [your NetID]@amarel.rutgers.edu</code></p>
+<p>If you are connecting from a location outside the Rutgers campus network, you will need to first connect to the campus network using the Rutgers VPN (virtual private network) service. See <a href="https://oit.rutgers.edu/vpn">here</a> for details.</p>
+<h1 id="moving-files">Moving files</h1>
+<p>There are many different ways to this: secure copy (scp), remote sync (rsync), an FTP client (FileZilla), etc. Let’s assume you’re logged-in to a local workstation or laptop (not already logged-in to Amarel). To send files from your local system to your Amarel /home directory,<br />
+<code>scp file-1.txt file-2.txt [NetID]@amarel.rutgers.edu:/home/[NetID]</code></p>
+<p>To pull a file from your Amarel /home directory to your laptop (note the “.” at the end of this command),<br />
+<code>scp [NetID]@amarel.rutgers.edu:/home/[NetID]/file-1.txt  .</code></p>
+<p>If you want to copy an entire directory and its contents using scp, you’ll need to “package” your directory into a single, compressed file before moving it:<br />
+<code>tar -czf my-directory.tar.gz my-directory</code></p>
+<p>After moving it, you can unpack that .tar.gz file to get your original directory and contents:<br />
+<code>tar -xzf my-directory.tar.gz</code></p>
+<p>A handy way to synchronize a local file or entire directory between your local workstation and the Amarel cluster is to use the rsync utility. First, let's sync a local (recently updated) directory with the same directory stored on Amarel:<br />
+<code>rsync -trlvpz work-dir gc563@amarel.rutgers.edu:/home/gc563/work-dir</code></p>
+<p>In this example, the rsync options I'm using are t (preserve modification times), r (recursive, sync all subdirectories), l (preserve symbolic links), v (verbose, show all details), p (preserve permissions), z (compress transferred data)</p>
+<p>To sync a local directory with updated data from Amarel:<br />
+<code>rsync -trlvpz gc563@amarel.rutgers.edu:/home/gc563/work-dir work-dir</code></p>
+<p>Here, we've simply reversed the order of the local and remote locations.</p>
+<p>For added security, you can use SSH for the data transfer by adding the e option followed by the protocol name (ssh, in this case):<br />
+<code>rsync -trlvpze ssh gc563@amarel.rutgers.edu:/home/gc563/work-dir work-dir</code></p>
+<h1 id="listing-available-resources">Listing available resources</h1>
+<p>Before requesting resources (compute nodes), it’s helpful to see what resources are available and what cluster partitions (job queues) to use for certain resources.</p>
+<p>Example of using the <strong>sinfo</strong> command:</p>
+<pre><code>sinfo
+
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+main*        up 3-00:00:00      4 drain* hal[0050-0051,0055,0093]
+main*        up 3-00:00:00      5  down* slepner[084-088]
+main*        up 3-00:00:00      4  drain hal[0023,0025-0027]
+main*        up 3-00:00:00     86    mix gpu[003-004,006],hal[0001-0008,0017-0018,0022,0024,0028-0032,0044-0047,0054,0056-0057,0062-0068,0073-0079,0081-0092,0094-0096],mem002,pascal[001-006],slepner[010-014,016,018-023,036,042-044,046,048,071,074,076,081-082]
+main*        up 3-00:00:00     84  alloc gpu005,hal[0009-0016,0019-0021,0033-0043,0048-0049,0052-0053,0058-0061,0069-0072,0080],mem001,slepner[009,015,017,024-035,037-041,045,047,054-070,072-073,075,077-080,083]
+main*        up 3-00:00:00      2   down gpu[001-002]
+gpu          up 3-00:00:00      8    mix gpu[003,006],pascal[001-006]
+gpu          up 3-00:00:00      1  alloc gpu005
+gpu          up 3-00:00:00      2   down gpu[001-002]
+phi          up 3-00:00:00      1    mix gpu004
+mem          up 3-00:00:00      1    mix mem002
+mem          up 3-00:00:00      1  alloc mem001
+</code></pre>
+
+<p>Understanding this output:</p>
+<ul>
+<li>There are 4 basic partitions, main (traditional compute nodes, CPUs only), gpu (nodes with general-purpose GPU accelerators), mem (CPU-only nodes with 1.5 TB RAM), phi (CPU-only nodes with Xeon Phi coprocessors.</li>
+<li>The upper limit for a job’s run time is 3 days (72 hours).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Term</strong></th>
+<th><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allocated (alloc)</td>
+<td>nodes that are currently running jobs.</td>
+</tr>
+<tr>
+<td>Mixed (mix)</td>
+<td>nodes have jobs using some, but not all, CPU cores onboard.</td>
+</tr>
+<tr>
+<td>Idle</td>
+<td>nodes are currently available for new jobs.</td>
+</tr>
+<tr>
+<td>Drained (drain, drng)</td>
+<td>nodes are not available for use and may be offline for maintenance.</td>
+</tr>
+<tr>
+<td>Slepner, Norse Mythology</td>
+<td>"Sleipnir" 8-legged war horse (this made more sense when CPUs had 8 cores).</td>
+</tr>
+<tr>
+<td>Hal</td>
+<td>Hal is a dependable member of the Discovery One crew who does an excellent job of following instructions.</td>
+</tr>
+<tr>
+<td>Pascal</td>
+<td>French mathematician and the name of one of NVIDIA's GPU architectures.</td>
+</tr>
+<tr>
+<td>CUDA</td>
+<td>This is the name of a parallel computing platform and application programming interface (API) model created by Nvidia</td>
+</tr>
+</tbody>
+</table>
+<h1 id="loading-software-modules">Loading software modules</h1>
+<hr />
+<p>When you first log-in, only basic system-wide tools are available automatically. To use a specific software package that is already installed, you can setup your environment using the module system.</p>
+<p>The module avail command will show a list of the core (primary) modules available:</p>
+<pre><code>module avail
+
+-------------------------------------------------- /opt/sw/modulefiles/Core --------------------------------------------------
+   ARACNE/20110228         blat/35                  gcc/4.9.3               intel_mkl/16.0.3 (D)    mvapich2/2.2        (D)
+   HISAT2/2.0.4            bowtie2/2.2.6            gcc/4.9.4               intel_mkl/17.0.0        openmpi/2.1.1
+   HISAT2/2.1.0     (D)    bowtie2/2.2.9     (D)    gcc/5.3                 intel_mkl/17.0.1        pgi/16.9
+   MATLAB/R2017a           bwa/0.7.12               gcc/5.4          (D)    intel_mkl/17.0.2        pgi/16.10           (D)
+   MATLAB/R2017b    (D)    bwa/0.7.13        (D)    hdf5/1.8.16             java/1.7.0_79           python/2.7.11
+   Mathematica/11.1        cuda/7.5                 intel/16.0.1            java/1.8.0_66           python/2.7.12
+   OpenCV/2.3.1            cuda/8.0                 intel/16.0.3     (D)    java/1.8.0_73           python/3.5.0
+   STAR/2.5.2a             cuda/9.0          (D)    intel/16.0.4            java/1.8.0_121          python/3.5.2        (D)
+   Trinotate/2.0.2         cudnn/7.0.3              intel/17.0.0            java/1.8.0_141          samtools/0.1.19
+   bamtools/2.4.0          cufflinks/2.2.1          intel/17.0.1            java/1.8.0_152   (D)    samtools/1.2
+   bcftools/1.2            delly/0.7.6              intel/17.0.2            modeller/9.16           samtools/1.3.1      (D)
+   bedtools2/2.25.0        gaussian/03revE01        intel/17.0.4            moe/2016.0802           trinityrnaseq/2.1.1
+   blast/2.6.0             gaussian/09revD01 (D)    intel_mkl/16.0.1        mvapich2/2.1
+</code></pre>
+
+<p>Understanding this output:</p>
+<p>The packages with a (D) are the default versions for packages where multiple versions are available.</p>
+<p>To see a comprehensive list of all available modules (not just the core modules) use the <strong>module spider</strong> command.</p>
+<pre><code>module spider
+
+---------------------------------------------------------------------------------------------------------------
+The following is a list of the modules currently available:
+---------------------------------------------------------------------------------------------------------------
+  ARACNE: ARACNE/20110228
+    ARACNE: an algorithm for the reconstruction of gene regulatory networks in a mammalian cellular context
+
+  HISAT2: HISAT2/2.0.4, HISAT2/2.1.0
+    HISAT2: graph-based alignment of next generation sequencing reads to a population of genomes
+
+  HMMER: HMMER/3.1b2
+    HMMER: biosequence analysis using profile hidden Markov models
+
+  MATLAB: MATLAB/R2017a, MATLAB/R2017b
+    MATLAB: The Language of Technical Computing
+
+  Mathematica: Mathematica/11.1
+    Wolfram Mathematica: Modern Technical Computing
+
+  NAMD: NAMD/2.10
+    NAMD: Scalable Molecular Dynamics
+
+  ORCA: ORCA/3.0.3
+    ORCA: An ab initio, DFT and semiempirical SCF-MO package
+
+  OpenCV: OpenCV/2.3.1
+    OpenCV: Open Source Computer Vision
+</code></pre>
+
+<p>Loading a software module changes your environment settings so that the executable binaries, needed libraries, etc. are available for use.   </p>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>explanation</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>module load</td>
+<td>load a software module</td>
+<td><code>module load intel/16.0.3</code></td>
+</tr>
+<tr>
+<td>module unload</td>
+<td>remove select modules</td>
+<td><code>module unload intel/16.0.3</code></td>
+</tr>
+<tr>
+<td>module purge</td>
+<td>load the default version of any software package</td>
+<td><code>module load intel</code></td>
+</tr>
+</tbody>
+</table>
+<p>Below are some examples.</p>
+<pre><code>module load intel/16.0.3 mvapich2/2.1
+module list
+Currently Loaded Modules:
+  1) intel/16.0.3   2) mvapich2/2.1
+
+module unload mvapich2/2.1
+module list
+Currently Loaded Modules:
+  1) intel/16.0.3
+
+module purge
+module list
+No modules loaded
+
+module load intel
+module list
+Currently Loaded Modules:
+  1) intel/16.0.3
+</code></pre>
+
+<p>If you always use the same software modules, your <code>~/.bashrc</code> (a hidden login script located in your /home directory) can be configured to load those modules automatically every time you log in. Just add your desired module load command(s) to the end of that file. You can always edit your <code>~/.bashrc</code> file to change or remove those commands later.</p>
+<p><strong>PLEASE NOTE:</strong> Software installed cluster-wide is typically configured with default or standard (basic) options, so special performance-enhancing features may not be enabled. This is because the Amarel cluster comprises a variety of hardware platforms and cluster-wide software installations must be compatible with all of the available hardware (including the older compute nodes). If the performance of the software you use for your research can be enhanced using hardware-specific options (targeting special CPU core instruction sets), you should consider installing your own customized version of that software in your /home directory.</p>
+<h1 id="running-a-serial-single-core-job">Running a serial (single-core) job</h1>
+<hr />
+<p>Here’s an example of a SLURM job script for a serial job. I’m running a program called “zipper” which is in my /scratch (temporary work) directory. I plan to run my entire job from within my /scratch directory because that offers the best filesystem I/O performance.</p>
+<pre><code>#!/bin/bash
+
+#SBATCH --partition=main             # Partition (job queue)
+#SBATCH --requeue                    # Return job to the queue if preempted
+#SBATCH --job-name=zipx001a          # Assign an short name to your job
+#SBATCH --nodes=1                    # Number of nodes you require
+#SBATCH --ntasks=1                   # Total # of tasks across all nodes
+#SBATCH --cpus-per-task=1            # Cores per task (&gt;1 if multithread tasks)
+#SBATCH --mem=2000                   # Real memory (RAM) required (MB)
+#SBATCH --time=02:00:00              # Total run time limit (HH:MM:SS)
+#SBATCH --output=slurm.%N.%j.out     # STDOUT output file
+#SBATCH --error=slurm.%N.%j.err      # STDERR output file (optional)
+#SBATCH --export=ALL                 # Export you current env to the job env
+
+cd /scratch/[your NetID]
+
+module purge
+module load intel/16.0.3 fftw/3.3.1
+
+srun /scratch/[your NetID]/zipper/2.4.1/bin/zipper &lt; my-input-file.in
+</code></pre>
+
+<p>Understanding this job script:</p>
+<ul>
+<li>A job script contains the instructions for the SLURM workload manager (cluster job scheduler) to manage resource allocation, scheduling, and execution of your job.</li>
+<li>The lines beginning with #SBATCH contain commands intended only for the workload manager.</li>
+<li>My job will be assigned to the “main” partition (job queue).</li>
+<li>If this job is preempted, it will be returned to the job queue and will start again when required resources are available</li>
+<li>This job will only use 1 CPU core and should not require much memory, so I have requested only 2 GB of RAM — it’s a good practice to request only about 2 GB per core for any job unless you know that your job will require more than that.</li>
+<li>My job will be terminated when the run time limit has been reached, even if the program I’m running is not finished. It is not possible to extend this time after a job starts running.</li>
+<li>Any output that would normally go to the command line will be redirected into the output file I have specified, and that file will be named using the compute node name and the job ID number.</li>
+</ul>
+<p>Be sure to configure your environment as needed for running your application/executable. This usually means loading any needed modules before the step where you run your application/executable.</p>
+<p>Here’s how to run a serial batch job, loading modules and using the <strong>sbatch</strong> command:<br />
+<code>sbatch my-job-script.sh</code><br />
+The <strong>sbatch</strong> command reads the contents of your job script and forwards those instructions to the SLURM workload manager. Depending on the level of activity on the cluster, your job may wait in the job queue for minutes or hours before it begins running.</p>
+<h1 id="running-a-parallel-multicore-mpi-job">Running a parallel (multicore MPI) job</h1>
+<hr />
+<p>Here’s an example of a SLURM job script for a parallel job. See the previous (serial) example for some important details omitted here.</p>
+<pre><code>#!/bin/bash
+
+#SBATCH --partition=main             # Partition (job queue)
+#SBATCH --requeue                    # Return job to the queue if preempted
+#SBATCH --job-name=zipx001a          # Assign an short name to your job
+#SBATCH --nodes=1                    # Number of nodes you require
+#SBATCH --ntasks=16                  # Total # of tasks across all nodes
+#SBATCH --cpus-per-task=1            # Cores per task (&gt;1 if multithread tasks)
+#SBATCH --mem=124000                 # Real memory (RAM) required (MB)
+#SBATCH --time=02:00:00              # Total run time limit (HH:MM:SS)
+#SBATCH --output=slurm.%N.%j.out     # STDOUT output file
+#SBATCH --error=slurm.%N.%j.err      # STDERR output file (optional)
+#SBATCH --export=ALL                 # Export you current env to the job env
+
+cd /scratch/[your NetID]
+
+module purge
+module load intel/16.0.3 fftw/3.3.1 mvapich2/2.1
+
+srun --mpi=pmi2 /scratch/[your NetID]/zipper/2.4.1/bin/zipper &lt; my-input-file.in
+</code></pre>
+
+<p>Understanding this job script:</p>
+<ul>
+<li>The srun command is used to coordinate communication among the parallel tasks of your job. You must specify how many tasks you will be using, and this number usually matches the –ntasks value in your job’s hardware allocation request.</li>
+<li>This job will use 16 CPU cores and nearly 8 GB of RAM per core, so I have requested a total of 124 GB of RAM — it’s a good practice to request only about 2 GB per core for any job unless you know that your job will require more than that.</li>
+<li>Note here that I’m also loading the module for the parallel communication libraries (MPI libraries) needed by my parallel executable.</li>
+</ul>
+<p>Here’s how to run a parallel batch job, loading modules and using the <strong>sbatch</strong> command:<br />
+<code>sbatch my-job-script.sh</code></p>
+<h1 id="running-an-interactive-job">Running an interactive job</h1>
+<p>An interactive job gives you an active connection to a compute node (or collection of compute nodes) where you will have a login shell and you can run commands directly on the command line. This can be useful for testing, short analysis tasks, computational steering, or for running GUI-based applications.</p>
+<p>When submitting an interactive job, you can request resources (single or multiple cores, memory, GPU nodes, etc.) just like you would in a batch job:</p>
+<pre><code>[NetID@amarel1 ~]$ srun --partition=main --nodes=1 --ntasks=1 --cpus-per-task=1 --mem=2000 --time=00:30:00 --export=ALL --pty bash -i
+
+srun: job 1365471 queued and waiting for resources
+srun: job 1365471 has been allocated resources
+
+[NetID@slepner045 ~]$
+</code></pre>
+
+<p>Notice that, when the interactive job is ready, the command prompt changes from NetID@amarel1 to NetID@slepner045. This change shows that I’ve been automatically logged-in to slepner045 and I’m now ready to run commands there. To exit this shell and return to the shell running on the amarel1 login node, type the exit command.</p>
+<h1 id="monitoring-the-status-of-jobs">Monitoring the status of jobs</h1>
+<p>_
+The simplest way to quickly check on the status of active jobs is by using the <strong>squeue</strong> command:</p>
+<pre><code>squeue -u [your NetID]
+
+  JOBID PARTITION     NAME     USER  ST       TIME  NODES NODELIST(REASON)
+1633383      main   zipper    xx345   R       1:15      1 slepner36
+</code></pre>
+
+<p>Here, the state of each job is typically listed as being either PD (pending), R (running), along with the amount of allocated time that has been used (DD-HH:MM:SS).</p>
+<p>For summary accounting information (including jobs that have already completed), you can use the <strong>sacct</strong> command:</p>
+<pre><code>sacct
+
+       JobID    JobName  Partition    Account  AllocCPUS      State ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- -------- 
+1633383          zipper       main      statx         16    RUNNING      0:0
+</code></pre>
+
+<p>Here, the state of each job is listed as being either PENDING, RUNNING, COMPLETED, or FAILED.</p>
+<p>For complete and detailed job info, you can use the <strong>scontrol show job [JobID]</strong> command:</p>
+<pre><code>scontrol show job 244348
+
+JobId=244348 JobName=XIoT22
+   UserId=gc563(148267) GroupId=gc563(148267) MCS_label=N/A
+   Priority=5050 Nice=0 Account=oarc QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=1-04:07:40 TimeLimit=2-00:00:00 TimeMin=N/A
+   SubmitTime=2017-05-14T07:47:19 EligibleTime=2017-05-14T07:47:19
+   StartTime=2017-05-14T07:47:21 EndTime=2017-05-16T07:47:21 Deadline=N/A
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=main AllocNode:Sid=amarel1:22391
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hal0053
+   BatchHost=hal0053
+   NumNodes=1 NumCPUs=28 NumTasks=28 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=28,mem=124000M,node=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=124000M MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/scratch/gc563/run.STMV.CPU.slurm
+   WorkDir=/scratch/gc563
+   StdErr=/scratch/gc563/slurm.%N.244348.out
+   StdIn=/dev/null
+   StdOut=/scratch/gc563/slurm.%N.244348.out
+   Power=
+</code></pre>
+
+<h1 id="killing-cancelling-terminating-jobs">Killing/ cancelling/ terminating jobs</h1>
+<p>To terminate a job, regardless of whether it is running or just waiting in the job queue, use the scancel command and specify the JobID number of the job you wish to terminate:<br />
+<code>scancel 1633383</code>
+A job can only be cancelled by the owner of that job. When you terminate a job, a message from the SLURM workload manager will be directed to STDERR and that message will look like this:<br />
+<code>slurmstepd: *** JOB 1633383 ON slepner036 CANCELLED AT 2016-10-04T15:38:07 ***</code></p>
+<h1 id="installing-your-own-software">Installing your own software</h1>
+<p>_
+Package management systems like yum or apt-get, which are used to install software in typical Linux systems, are not available to users of shared computing resources like Amarel. Thus, most packages need to be compiled from their source code and then installed. Further, most packages are generally configured to be installed in /usr or /opt, but these locations are inaccessible to (not writeable for) general users. Special care must be taken by users to ensure that the packages will be installed in their own /home directory (/home/[NetID]).</p>
+<p>As an example, here are the steps for installing ZIPPER, a generic example package that doesn’t actually exist:</p>
+<ol>
+<li>
+<p>Download your software package. You can usually download a software package to your laptop, and then transfer the downloaded package to your /home/[NetID] directory on Amarel for installation. Alternatively, if you have the http or ftp address for the package, you can transfer that package directly to your home directory while logged-in to Amarel using the <strong>wget</strong> utility:
+<code>wget http://www.zippersimxl.org/public/zipper/zipper-4.1.5.tar.gz</code></p>
+</li>
+<li>
+<p>Unzip and unpack the .tar.gz (or .tgz) file. Most software packages are compressed in a .zip, .tar or .tar.gz file. You can use the tar utility to unpack the contents of these files:<br />
+<code>tar -zxf zipper-4.1.5.tar.gz</code></p>
+</li>
+<li>
+<p>Read the instructions for installing. Several packages come with an INSTALL or README script with instructions for setting up that package. Many will also explicitly include instructions on how to do so on a system where you do not have root access. Alternatively, the installation instructions may be posted on the website from which you downloaded the software.<br />
+<code>cd zipper-4.1.5 
+  less README</code></p>
+</li>
+<li>
+<p>Load the required software modules for installation. Software packages generally have dependencies, i.e., they require other software packages in order to be installed. The README or INSTALL file will generally list these dependencies. Often, you can use the available modules to satisfy these dependencies. But sometimes, you may also need to install the dependencies for yourself. Here, we load the dependencies for ZIPPER:<br />
+<code>module load intel/16.0.3 mvapich2/2.1</code></p>
+</li>
+<li>
+<p>Perform the installation. The next few steps vary widely but instructions almost always come with the downloaded source package. Guidance on the special arguments passed to the configure script is often available by running the <strong>./configure -–help</strong> command. What you see below is just a typical example of special options that might be specified.<br />
+<code>./configure --prefix=/home/[NetID]/zipper/4.1.5 --disable-float --enable-mpi --without-x --disable-shared
+make -j 4
+make install</code><br />
+  Several packages are set up in a similar way, i.e., using configure, then make, and make install. Note the options provided to the configure script – these differ from package to package, and are documented as part of the setup instructions, but the prefix option is almost always supported. It specifies where the package will be installed. Unless this special argument is provided, the package will generally be installed to a location such as /usr/local or /opt, but users do not have write-access to those directories. So, here, I'm installing software in my /home/[NetID]/zipper/4.1.5 directory. The following directories are created after installation:   </p>
+<ul>
+<li><code>/home/[NetID]/zipper/4.1.5/bin</code> where executables will be placed</li>
+<li><code>/home/[NetID]/zipper/4.1.5/lib</code> where library files will be placed</li>
+<li><code>/home/[NetID]/zipper/4.1.5/include</code> where header files will be placed</li>
+<li><code>/home/[NetID]/zipper/4.1.5/share/man</code> where documentation will be placed</li>
+</ul>
+</li>
+<li>
+<p>Configure environment settings. The above bin, lib, include and share directories are generally not part of the shell environment, i.e., the shell and other programs don’t “know” about these directories. Therefore, the last step in the installation process is to add these directories to the shell environment:  </p>
+</li>
+</ol>
+<pre><code>export PATH=/home/[NetID]/zipper/4.1.5/bin:$PATH
+export C_INCLUDE_PATH=/home/[NetID]/zipper/4.1.5/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/[NetID]/zipper/4.1.5/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=/home/[NetID]/zipper/4.1.5/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/[NetID]/zipper/4.1.5/lib:$LD_LIBRARY_PATH
+export MANPATH=/home/[NetID]/zipper/4.1.5/share/man:$MANPATH
+</code></pre>
+
+<p>These <strong>export</strong> commands are standalone commands that change the shell environment, but these new settings are only valid for the current shell session. Rather than executing these commands for every shell session, they can be added to the end of your ~/.bashrc file which will result in those commands being executed every time you log-in to Amarel.</p>
+<h1 id="singularity">Singularity</h1>
+<p><a href="http://singularity.lbl.gov/">Singularity</a> is a Linux containerization tool suitable for HPC environments. It uses its own container format and also has features that enable importing Docker containers.</p>
+<p><a href="https://www.docker.com/">Docker</a> is a platform that employs features of the Linux kernel to run software in a container. The software housed in a Docker container is not standalone program but an entire OS distribution, or at least enough of the OS to enable the program to work. Docker can be thought of as somewhat like a software distribution mechanism like yum or apt. It also can be thought of as an expanded version of a chroot jail, or a reduced version of a virtual machine.</p>
+<p><strong>Important differences between Docker and Singularity:</strong></p>
+<ul>
+<li>Docker and Singularity have their own container formats.</li>
+<li>Docker containers can be imported and run using Singularity.</li>
+<li>Docker containers usually run as root, which means you cannot run Docker on a  shared computing system (cluster).</li>
+<li>Singularity allows for containers that can be run as a regular user. How? When importing a Docker container, Singularity removes any elements which can only run as root. The resulting containers can be run using a regular user account.</li>
+</ul>
+<p><strong>Importing a Docker image:</strong></p>
+<p>If you have a pre-built Docker container, you can use Singularity to convert this container to the Singularity format. Once that's done, you can upload your Singularity container to your storage space on Amarel and run jobs using that container.</p>
+<p>Here's an example. NOTE that most of these steps are performed on your local system, not while logged-in on Amarel.</p>
+<p>If you need to use any of Amarel's filesystems inside your container, you will need to make sure the appropriate directories exist in your container so those filesystems can be mounted using those directories.</p>
+<p>Start your container (in this example we will use ubuntu:latest) and create directories for mounting /scratch/gc563 and /projects/oarc. Of course, you'll need to use directories that you can access on Amarel.</p>
+<pre><code>$ sudo docker run -it ubuntu:latest bash  
+root@11a87dkw8748:/# mkdir -p /scratch/gc563 /projects/oarc
+</code></pre>
+
+<p><strong>Exporting your Docker image</strong><br />
+Find the name of your Docker image using the 'docker ps' command,</p>
+<pre><code>$ sudo docker ps
+CONTAINER ID  IMAGE          COMMAND  CREATED        STATUS        NAMES
+11a87dkw8748  ubuntu:latest  &quot;bash&quot;   2 minutes ago  Up 2 minutes  bendakaya_pakodi
+</code></pre>
+
+<p>In this example the name of the images is bendakaya_pakodi. Export this image to a tarball,  </p>
+<pre><code>$ sudo docker export bendakaya_pakodi &gt; ubuntu.tar
+</code></pre>
+
+<p><strong>Converting to a Singularity image</strong><br />
+You will need to have Singularity installed on your local workstation/laptop to prepare your image. The 'create' and 'import' operations of Singularity require root privileges, which you do not have on Amarel.</p>
+<p>Create an empty singularity image, and then import the exported docker image into it,  </p>
+<pre><code>$ sudo singularity create ubuntu.img
+Creating a sparse image with a maximum size of 1024MiB...
+Using given image size of 1024
+Formatting image (/sbin/mkfs.ext3)
+Done. Image can be found at: ubuntu.img
+$ sudo singularity import ubuntu.img ubuntu.tar
+</code></pre>
+
+<p><strong>Using Singularity containers inside a SLURM job</strong><br />
+<a href="https://rutgers-oarc.github.io/amarel/#movingfiles">Transfer</a> your new Singularity image to Amarel. The following steps are performed while logged-in to Amarel.</p>
+<p>You can run any task/program inside the container by prefacing it with<br />
+<code>singularity exec [your image name]</code> </p>
+<p>Here is a simple example job script that executes commands inside a container,  </p>
+<pre><code>#SBATCH --partition=main             # Partition (job queue)
+#SBATCH --job-name=sing2me           # Assign an short name to your job
+#SBATCH --nodes=1                    # Number of nodes you require
+#SBATCH --ntasks=1                   # Total # of tasks across all nodes
+#SBATCH --cpus-per-task=1            # Cores per task (&gt;1 if multithread tasks)
+#SBATCH --mem=4000                   # Real memory (RAM) required (MB)
+#SBATCH --time=00:30:00              # Total run time limit (HH:MM:SS)
+#SBATCH --output=slurm.%N.%j.out     # STDOUT output file
+
+module purge
+module load singularity/.2.5.1
+
+## Where am I running?
+srun singularity exec ubuntu.img hostname
+
+## What is the current time and date?
+srun singularity exec ubuntu.img date
+</code></pre>
+
+<p>If you created directories for any Amarel filesystems, you should find they are mounted inside your container,</p>
+<pre><code>mount | grep gpfs
+/dev/scratch/gc563 on /scratch/gc563 type gpfs (rw,relatime)
+/dev/projects/oarc on /projects/oarc type gpfs (rw,relatime)
+</code></pre>
+
+<p>NOTE: If your container mounts Amarel directories, software inside the container may be able to destroy data on these filesystems for which you have write permissions. Proceed with caution.</p>
+<h1 id="troubleshooting-common-problems">Troubleshooting/ Common Problems</h1>
+<p>Failure to load module dependencies/prerequisites:</p>
+<pre><code> module load R-Project/3.4.1
+Lmod has detected the following error:  These module(s) exist but cannot be loaded as requested: &quot;R-Project/3.4.1&quot;
+Try: &quot;module spider R-Project/3.4.1&quot; to see how to load the module(s).
+
+</code></pre>
+
+<p>This software module has a prerequisite module that must be loaded first. To find out what prerequisite module is required, use the 'module spider' command followed by the name of the module you're trying to load:  </p>
+<pre><code>module spider R-Project/3.4.1
+    This module can only be loaded through the following modules:
+      intel/17.0.4
+    Help: 
+      This module loads the installation R-Project 3.4.1 compiled with the Intel 17.0.4 compilers.
+</code></pre>
+
+<p>Ah-ha, it looks like the intel/17.0.4 module must be loaded before loading R-Project/3.4.1</p>
+<h1 id="acknowledging-amarel">Acknowledging Amarel</h1>
+<p>Please reference OARC and the Amarel cluster in any research report, journal or publication that requires citation of an author's work. Recognizing the OARC resources you used to conduct your research is important for our process of acquiring funding for hardware, support services, and other infrastructure improvements. The minimal content of a reference should include:</p>
+<p><em>Office of Advanced Research Computing (OARC) at Rutgers, The State University of New Jersey</em></p>
+<p>A suggested acknowledgement is:</p>
+<p><em>The authors acknowledge the Office of Advanced Research Computing (OARC) at Rutgers, The State University of New Jersey for providing access to the Amarel cluster and associated research computing resources that have contributed to the results reported here. URL: http://oarc.rutgers.edu</em></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Cluster_Examples/" class="btn btn-neutral float-right" title="Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Cluster_Examples/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

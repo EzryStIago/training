@@ -54,6 +54,21 @@
           
             <li class="toctree-l1">
 		
+    <span class="caption-text">Amarel User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Amarel_User_Guide/">Amarel Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Cluster_Examples/">Examples</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <span class="caption-text">HowTo</span>
     <ul class="subnav">
                 <li class="">
@@ -132,7 +147,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../cheatsheet/">CheatSheet</a>
+    <a class="" href="../../linux/">CheatSheet</a>
 	    </li>
           
         </ul>
@@ -267,9 +282,9 @@ On the login node start R
         module load R-Project/3.4.1
         R
 
- then in the R workspace do the following:
-        &gt; source(&quot;https://bioconductor.org/biocLite.R&quot;)
-        &gt; biocLite(&quot;MKmisc&quot;)
+ #then in the R workspace do the following:
+        source(&quot;https://bioconductor.org/biocLite.R&quot;)
+        biocLite(&quot;MKmisc&quot;)
         Would you like to use a personal library instead?  (y/n)  y
 
         Would you like to create a personal library
@@ -278,12 +293,12 @@ On the login node start R
 
  Wait till it finishes.
 
-        &gt; biocLite(&quot;Heatplus&quot;)
-        &gt; biocLite(&quot;affycoretools&quot;)
-        &gt; biocLite(&quot;flashClust&quot;)
-        &gt; biocLite(&quot;affy&quot;)
-        &gt; biocLite(&quot;GenomicFeatures&quot;)
-        &gt; quit()   ###quit R, no save
+         biocLite(&quot;Heatplus&quot;)
+         biocLite(&quot;affycoretools&quot;)
+         biocLite(&quot;flashClust&quot;)
+         biocLite(&quot;affy&quot;)
+         biocLite(&quot;GenomicFeatures&quot;)
+         quit()   ###quit R, no save
 Save workspace image? [y/n/c]: n
 </code></pre>
 
@@ -299,68 +314,68 @@ Go to your working directory
  You should be in the directory where the files merged_counts_clean2.txt and "Targets.txt", annotation gtf file are. If not there, set your working directory :
  <code>&gt;setwd("/scratch/&lt;your_netID&gt;/Genomics_Workshop/DE_analysis/")</code> ##set the working directory</p>
 <p>Now load up the libraries needed for the analysis</p>
-<pre><code>    &gt;library(edgeR)
-    &gt;library(MKmisc)
-    &gt;library(affy)
-    &gt;library(flashClust)
-    &gt;library(affycoretools)
-    &gt;library(Heatplus)
-    &gt;library(GenomicFeatures)
+<pre><code>    library(edgeR)
+    library(MKmisc)
+    library(affy)
+    library(flashClust)
+    library(affycoretools)
+    library(Heatplus)
+    library(GenomicFeatures)
 </code></pre>
-<pre><code>&gt; raw.data &lt;- read.delim(&quot;merged_counts_clean2.txt&quot;, header=F, row.names=1)  
+<pre><code> raw.data &lt;- read.delim(&quot;merged_counts_clean2.txt&quot;, header=F, row.names=1)  
 ##import count data to R
-&gt; head(raw.data)  ## check the beginning portion of the imported file, now an object
-&gt; dim(raw.data)   ##check the dimention of this object
-&gt; class(raw.data)  ## check what class of this object
-&gt; apply(raw.data, 2, summary) ## check the range of counts per sample
-&gt; range(rowSums(raw.data))      ## check the range of counts per gene
-&gt; colnames(raw.data) &lt;- c(&quot;dex09&quot;,&quot;dex13&quot;,&quot;dex17&quot;,&quot;untreated08&quot;,&quot;untreated12&quot;,&quot;untreated16&quot;)
+ head(raw.data)  ## check the beginning portion of the imported file, now an object
+ dim(raw.data)   ##check the dimention of this object
+ class(raw.data)  ## check what class of this object
+ apply(raw.data, 2, summary) ## check the range of counts per sample
+ range(rowSums(raw.data))      ## check the range of counts per gene
+ colnames(raw.data) &lt;- c(&quot;dex09&quot;,&quot;dex13&quot;,&quot;dex17&quot;,&quot;untreated08&quot;,&quot;untreated12&quot;,&quot;untreated16&quot;)
 ##add column header
 
-&gt;raw.data2 &lt;- raw.data[rowSums(raw.data) != 0 ,] ##remove genes with zero counts for all samples
-&gt; dim(raw.data2)
+ raw.data2 &lt;- raw.data[rowSums(raw.data) != 0 ,] ##remove genes with zero counts for all samples
+ dim(raw.data2)
 
-&gt; cpm.values &lt;- cpm(raw.data2) #calculate counts per million mapped reads without any other normalization
+ cpm.values &lt;- cpm(raw.data2) #calculate counts per million mapped reads without any other normalization
 
-&gt;above1cpm &lt;- apply(cpm.values, 1, function(x) sum(x &gt;=1)) ##How many samples/genes had at least 1 cpm 
-&gt; counts.use &lt;- raw.data2[above1cpm &gt;= 3,] ##we have three replicates in each group. If a gene can be reliably detected, it should be detected in all 3 replicates. So, a gene to be included for further analysis shall have 1 cpm in at least 3 samples. (The 3 samples are irrespective of group)
-&gt;dim(counts.use)
-&gt;colSums(counts.use) / colSums(raw.data)  ##the % of total counts kept after filtering
-&gt;nrow(counts.use) / nrow(raw.data)  ##the % of genes kept after filtering
+ above1cpm &lt;- apply(cpm.values, 1, function(x) sum(x &gt;=1)) ##How many samples/genes had at least 1 cpm 
+ counts.use &lt;- raw.data2[above1cpm &gt;= 3,] ##we have three replicates in each group. If a gene can be reliably detected, it should be detected in all 3 replicates. So, a gene to be included for further analysis shall have 1 cpm in at least 3 samples. (The 3 samples are irrespective of group)
+ dim(counts.use)
+ colSums(counts.use) / colSums(raw.data)  ##the % of total counts kept after filtering
+ nrow(counts.use) / nrow(raw.data)  ##the % of genes kept after filtering
 
-&gt; targets &lt;- readTargets()      ##import targets file that contains experiment group info.
-&gt; targets$GpF &lt;- factor(targets$group)   ##change character to factor
-&gt; targets$GpN &lt;- as.numeric(targets$GpF) ##change factor to numeric (optional)
+  targets &lt;- readTargets()      ##import targets file that contains experiment group info.
+  targets$GpF &lt;- factor(targets$group)   ##change character to factor
+  targets$GpN &lt;- as.numeric(targets$GpF) ##change factor to numeric (optional)
 
-&gt; ls()  #see that objects have been loaded
-&gt;save.image(&quot;RNASeqDemo.RData&quot;)   ##save the work workspace
-&gt;savehistory(&quot;RNASeqDemo.Rhistory&quot;)  ##save command history
+  ls()  #see that objects have been loaded
+  save.image(&quot;RNASeqDemo.RData&quot;)   ##save the work workspace
+  savehistory(&quot;RNASeqDemo.Rhistory&quot;)  ##save command history
 
 </code></pre>
 
 <h2 id="lab-23-to-calculate-expression-values-as-fpkm">Lab 2.3: To calculate expression values as fpkm</h2>
 <p>First, compute the gene length as described in Lab6--partI</p>
-<pre><code>&gt; library(GenomicFeatures)  ##may skip, because we already loaded at start
-&gt; gtfdb &lt;- makeTxDbFromGFF(&quot;Homo_sapiens.GRCh38.78.gtf&quot;,format=&quot;gtf&quot;)
-&gt; exons.list.per.gene &lt;- exonsBy(gtfdb,by=&quot;gene&quot;)
-&gt; exonic.gene.sizes &lt;- lapply(exons.list.per.gene,function(x){sum(width(reduce(x)))})
-&gt; class(exonic.gene.sizes)
-&gt;Hg20_geneLength &lt;-do.call(rbind, exonic.gene.sizes)
-&gt; colnames(Hg20_geneLength) &lt;- paste('geneLength')    
+<pre><code> library(GenomicFeatures)  ##may skip, because we already loaded at start
+ gtfdb &lt;- makeTxDbFromGFF(&quot;Homo_sapiens.GRCh38.78.gtf&quot;,format=&quot;gtf&quot;)
+ exons.list.per.gene &lt;- exonsBy(gtfdb,by=&quot;gene&quot;)
+ exonic.gene.sizes &lt;- lapply(exons.list.per.gene,function(x){sum(width(reduce(x)))})
+ class(exonic.gene.sizes)
+ Hg20_geneLength &lt;-do.call(rbind, exonic.gene.sizes)
+ colnames(Hg20_geneLength) &lt;- paste('geneLength')    
 
-&gt;Hg20_geneLength2 &lt;- data.frame(Hg20_geneLength[rownames(counts.use),]) ## to extract the gene length file to contain 
-the same number genes in the same order as in the filtered read counts file
-&gt;colnames(Hg20_geneLength2) &lt;- paste('geneLength')  ## to change column name, make    it neat
-&gt; fpkm.data &lt;- cpm(counts.use) / (Hg20_geneLength2$geneLength/1000) ## compute fpkm
-&gt;  min.count &lt;- apply(fpkm.data,1,min)
-&gt; write.csv(fpkm.data,file=&quot;fpkm_values.csv&quot;)  #### To output FPKM data  
+ Hg20_geneLength2 &lt;- data.frame(Hg20_geneLength[rownames(counts.use),]) ## to extract the gene length file to contain 
+ the same number genes in the same order as in the filtered read counts file
+ colnames(Hg20_geneLength2) &lt;- paste('geneLength')  ## to change column name, make    it neat
+ fpkm.data &lt;- cpm(counts.use) / (Hg20_geneLength2$geneLength/1000) ## compute fpkm
+ min.count &lt;- apply(fpkm.data,1,min)
+ write.csv(fpkm.data,file=&quot;fpkm_values.csv&quot;)  #### To output FPKM data  
 
 </code></pre>
 
 <h2 id="lab-24-analysis-qc-or-sample-diagnosis">Lab 2.4:  Analysis QC ---or sample diagnosis</h2>
 <pre><code> ## density distribution##
- &gt; plotDensity(log2(raw.data+0.1),col=targets$GpF,lty=1,lwd=2)
- &gt; legend(&quot;topright&quot;, legend=levels(targets$GpF),fill=1:4)
+  plotDensity(log2(raw.data+0.1),col=targets$GpF,lty=1,lwd=2)
+  legend(&quot;topright&quot;, legend=levels(targets$GpF),fill=1:4)
 </code></pre>
 
 <p>change data from raw.data to raw.data2, to CPM, FPKM,.. to see the effect of filtering and normalization</p>
@@ -370,38 +385,38 @@ plot(hc.raw,hang = -1, main = &quot;RNASeqDemo, raw values&quot;, sub = &quot;&q
 ##change data from raw.data to raw.data2, to CPM, logCPM, FPKM,.. to see the effect of filtering and normalization
 
 #####PCA#######
-&gt;  plotPCA(fpkm.data, pch=16, col=targets$GpF,groupnames=levels(targets$GpF), addtext=rep(1:3,4),main=&quot;PCA on FPKM&quot;)
+  plotPCA(fpkm.data, pch=16, col=targets$GpF,groupnames=levels(targets$GpF), addtext=rep(1:3,4),main=&quot;PCA on FPKM&quot;)
 
 ###do it after edgeR analysis, otherwise some values not existing yet###
 
-&gt;  plotPCA(logCPM), pch=16, col=targets$GpF,groupnames=levels(targets$GpF), addtext=rep(1:3,4),main=&quot;PCA on logCPM&quot;)
+  plotPCA(logCPM), pch=16, col=targets$GpF,groupnames=levels(targets$GpF), addtext=rep(1:3,4),main=&quot;PCA on logCPM&quot;)
 
 
 #####heatmap####
-&gt;test &lt;- topTags(eR.dex_Ctl,n=Inf,sort.by=&quot;PValue&quot;)$table ####sort gene list according to P values
-&gt;test2 &lt;- test[1:500,]  ###Take the top 500 significant genes
-&gt;logCPM2 &lt;- logCPM[rownames(test2),]  ###Extract logCPM values of these 500 genes
-&gt; meanFC &lt;- logCPM2 - rowMeans(logCPM2)
-&gt; color.meanFC &lt;- heatmapCol(data = meanFC, lim = 3, col =colorRampPalette(c(&quot;blue&quot;,&quot;white&quot;,&quot;red&quot;))(128))
-&gt; heatmap_2(meanFC, col=color.meanFC, legend=3, scale=&quot;none&quot;)
+  test &lt;- topTags(eR.dex_Ctl,n=Inf,sort.by=&quot;PValue&quot;)$table ####sort gene list according to P values
+  test2 &lt;- test[1:500,]  ###Take the top 500 significant genes
+  logCPM2 &lt;- logCPM[rownames(test2),]  ###Extract logCPM values of these 500 genes
+  meanFC &lt;- logCPM2 - rowMeans(logCPM2)
+  color.meanFC &lt;- heatmapCol(data = meanFC, lim = 3, col =colorRampPalette(c(&quot;blue&quot;,&quot;white&quot;,&quot;red&quot;))(128))
+  heatmap_2(meanFC, col=color.meanFC, legend=3, scale=&quot;none&quot;)
 
 
 
  #####Volcano plot####
-&gt; with(eR.dex_Ctl.detailed, plot(logFC, -log10(PValue), pch=20, main=&quot;Volcano plot&quot;, xlim=c(-2.5,2),ylim=c(0,25)))
-&gt; with(subset(eR.dex_Ctl.detailed,FDR&lt;0.05), points(logFC, -log10(PValue), pch=20, col=&quot;red&quot;))
-&gt; with(subset(eR.dex_Ctl.detailed, abs(logFC)&gt;1), points(logFC, -log10(PValue), pch=20, col=&quot;orange&quot;))
-&gt; with(subset(eR.dex_Ctl.detailed, FDR&lt;0.05&amp;abs(logFC)&gt;1), points(logFC, -log10(PValue), pch=20, col=&quot;green&quot;))
+  with(eR.dex_Ctl.detailed, plot(logFC, -log10(PValue), pch=20, main=&quot;Volcano plot&quot;, xlim=c(-2.5,2),ylim=c(0,25)))
+  with(subset(eR.dex_Ctl.detailed,FDR&lt;0.05), points(logFC, -log10(PValue), pch=20, col=&quot;red&quot;))
+  with(subset(eR.dex_Ctl.detailed, abs(logFC)&gt;1), points(logFC, -log10(PValue), pch=20, col=&quot;orange&quot;))
+  with(subset(eR.dex_Ctl.detailed, FDR&lt;0.05&amp;abs(logFC)&gt;1), points(logFC, -log10(PValue), pch=20, col=&quot;green&quot;))
 
 </code></pre>
 
 <h2 id="lab-25-differential-expression-analysis-with-edger">Lab 2.5: Differential expression analysis  with edgeR</h2>
 <p>Create the design matrix</p>
-<pre><code>&gt; groups &lt;- factor(targets$group)
-&gt; design &lt;- model.matrix(~0+groups)
-&gt; colnames(design) &lt;- levels(groups)
-&gt; rownames(design) &lt;- targets$sample   
-&gt; design
+<pre><code>  groups &lt;- factor(targets$group)
+  design &lt;- model.matrix(~0+groups)
+  colnames(design) &lt;- levels(groups)
+  rownames(design) &lt;- targets$sample   
+  design
 </code></pre>
 
 <pre><code>                                        control dex
@@ -419,45 +434,45 @@ attr(,&quot;contrasts&quot;)$groups
 </code></pre>
 
 <h3 id="create-contrast-matrix">Create contrast matrix</h3>
-<p><code>&gt;cont.matrix &lt;- makeContrasts(dex_Ctl= dex - control, levels=design)</code></p>
+<p><code>cont.matrix &lt;- makeContrasts(dex_Ctl= dex - control, levels=design)</code></p>
 <h3 id="create-dgelist-object">Create DGEList object</h3>
-<pre><code>&gt;  d &lt;- DGEList(counts=counts.use, lib.size=colSums(counts.use), group=targets$GpF)
-&gt; class(d)
-&gt; names(d)    ## the names of the items in the list
-&gt; d$counts[1:5,]    ## The counts are stored in the $counts:
-&gt;d$samples   ## The group info and library sizes stored in $samples
-&gt; d &lt;- calcNormFactors(d)  ## an additional normalization factor using a TMM method
-&gt; d$samples   ## now the norm.factors are no longer 1
+<pre><code> d &lt;- DGEList(counts=counts.use, lib.size=colSums(counts.use), group=targets$GpF)
+ class(d)
+ names(d)    ## the names of the items in the list
+ d$counts[1:5,]    ## The counts are stored in the $counts:
+ d$samples   ## The group info and library sizes stored in $samples
+ d &lt;- calcNormFactors(d)  ## an additional normalization factor using a TMM method
+ d$samples   ## now the norm.factors are no longer 1
 
 ###this can be useful when diagnose problem)###
-&gt; apply(d$counts,2,function(x) sum(sort(x/sum(x),decreasing=T)[1:20])) * 100
+ apply(d$counts,2,function(x) sum(sort(x/sum(x),decreasing=T)[1:20])) * 100
 ##the proportions of total counts for the top 20 genes in each sample, 10-20% is OK. 
 
-&gt;logCPM &lt;-  cpm(d$counts, log = TRUE)   ## modified logCPM values in edgeR, can be used for clustering, heatmap
+ logCPM &lt;-  cpm(d$counts, log = TRUE)   ## modified logCPM values in edgeR, can be used for clustering, heatmap
 
 </code></pre>
 
 <p>Now,the DE test! The term "estimating dispersions" in edgeR describes a method to account for the variance among 
 replicates.</p>
-<pre><code>&gt; d &lt;- estimateGLMCommonDisp(d, design, verbose=TRUE)   
+<pre><code>  d &lt;- estimateGLMCommonDisp(d, design, verbose=TRUE)   
 Disp = 0.06037 , BCV = 0.2457 
-&gt; d &lt;- estimateGLMTrendedDisp(d, design)
-&gt; d &lt;- estimateGLMTagwiseDisp(d, design)
-&gt; plotBCV(d)   ## the relationship between the overall abundance and the tagwise dispersion estimates
+  d &lt;- estimateGLMTrendedDisp(d, design)
+  d &lt;- estimateGLMTagwiseDisp(d, design)
+  plotBCV(d)   ## the relationship between the overall abundance and the tagwise dispersion estimates
 
 
-&gt; fit.edgeR &lt;- glmFit(d, design)  ## Estimate model coefficients from count data and design matrix
-&gt; names(fit.edgeR)
+  fit.edgeR &lt;- glmFit(d, design)  ## Estimate model coefficients from count data and design matrix
+  names(fit.edgeR)
 </code></pre>
 
 <p>Specify contrasts of interest,  do empirical Bayes "shrinkage" of  variances and calculate test statistics. Both of these are performed with same function glmLRT in edgeR (Genewise Negative Binomial Generalized Linear Models)</p>
-<pre><code>&gt; eR.dex_Ctl &lt;- glmLRT(fit.edgeR, contrast=cont.matrix[,1])
+<pre><code> eR.dex_Ctl &lt;- glmLRT(fit.edgeR, contrast=cont.matrix[,1])
 
-&gt; summary(decideTestsDGE(eR.dex_Ctl)) [,1]  ## Correct for multiple tests and extract relvant data (1 means sig up, -1 means sig down, and 0 means NS)
+ summary(decideTestsDGE(eR.dex_Ctl)) [,1]  ## Correct for multiple tests and extract relvant data (1 means sig up, -1 means sig down, and 0 means NS)
 
-&gt; eR.dex_Ctl.detailed &lt;- topTags(eR.dex_Ctl,n=Inf,sort.by=&quot;none&quot;)$table ## Get detailed output for a single contrast
+ eR.dex_Ctl.detailed &lt;- topTags(eR.dex_Ctl,n=Inf,sort.by=&quot;none&quot;)$table ## Get detailed output for a single contrast
 
-&gt;  eR.dex_Ctl.detailed[1:5,]
+ eR.dex_Ctl.detailed[1:5,]
                       logFC   logCPM         LR    PValue       FDR
 ENSG00000000003 -0.36354885 5.227841 2.37143785 0.1235732 0.5501740
 ENSG00000000419  0.18626588 4.674100 0.79016266 0.3740509 0.8571700
@@ -472,9 +487,9 @@ ENSG00000000971  0.35401120 8.007586 1.55551391 0.2123233 0.7070242
 ## FDR = adjusted p-value 
 
 #### To back-translate logFC to regular FC with down-reg as -FC
-&gt; eR.dex_Ctl.detailed$FC &lt;- 2^abs(eR.dex_Ctl.detailed$logFC) * sign(eR.dex_Ctl.detailed$logFC)
+ eR.dex_Ctl.detailed$FC &lt;- 2^abs(eR.dex_Ctl.detailed$logFC) * sign(eR.dex_Ctl.detailed$logFC)
 
-&gt; write.csv(eR.dex_Ctl.detailed,file=&quot;Demo_eR.dex_Ctl_results.csv&quot;)  ##output the file
+ write.csv(eR.dex_Ctl.detailed,file=&quot;Demo_eR.dex_Ctl_results.csv&quot;)  ##output the file
 
 </code></pre>
               
