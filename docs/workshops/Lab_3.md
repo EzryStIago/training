@@ -36,7 +36,7 @@ fpkm_values.ready.gct    gct file (expression fpkm values)
   	## (same as: cd /home/Net_ID/gsea_home/output/<jun27>/my_analysis.Gsea.nnnnnnnnnnn/)
   firefox index.html
 ```
-** Additional gene set database downloading source:**
+**Additional gene set database downloading source:**
 
   * <http://software.broadinstitute.org/gsea/msigdb/index.jsp>
   * <http://download.baderlab.org/EM_Genesets/>

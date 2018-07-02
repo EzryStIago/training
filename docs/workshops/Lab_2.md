@@ -1,4 +1,4 @@
-#LAB 2:  data processing and expression analysis using edgeR
+# LAB 2:  data processing and expression analysis using edgeR
 
  All the htseq-count output files should be present in one folder. Here we created the folder read_counts.
 ```

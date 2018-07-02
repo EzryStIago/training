@@ -10,8 +10,11 @@ Here are some resources you might want to consult to learn more about how to use
 
 # Linux tutorials
 
-- [linux tutorial by Galen](http://www.rci.rutgers.edu/~gc563/linux/index.html)
+- [Linux tutorial by Galen](http://www.rci.rutgers.edu/~gc563/linux/index.html)
 - [UNIX Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
+- [Rutgers Linux course](http://linuxcourse.rutgers.edu/) Rutgers course teaching Linux for engineering students, runs every semester
+- [Cornell virtual workshop stuff](https://cvw.cac.cornell.edu/Linux/&nbsp) - interactive if you have xsede login (?)
+- [Software Carpentry](http://swcarpentry.github.io/shell-novice/) - Software Carpentry has a number of lectures and workshops on many computing subjects
 
 # Graphical user interface 
 

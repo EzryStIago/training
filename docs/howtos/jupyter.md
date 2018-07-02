@@ -60,7 +60,7 @@ Then run `sbatch start_jupyter.sh` on amarel login node. Now you need to find wh
 You should then do the port tunneling described in the previous section and open local browser at that port. 
 
 Youtube video that explains this: 
-[![Starting Jupyter notebook](http://img.youtube.com/vi/2LaGZtOv8Lc/0.jpg)](http://www.youtube.com/watch?v=2LaGZtOv8Lc)
+[![Graphical programs via FastX](http://img.youtube.com/vi/8UQHLO85rlQ/0.jpg)](https://www.youtube.com/watch?v=8UQHLO85rlQ)
 
 
 
