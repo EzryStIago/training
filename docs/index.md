@@ -6,6 +6,13 @@ For more information on OARC, including how to get access or become owners, plea
 
 These pages are a collection of resources to help you to utilize the cluster more effectively. Even if you are a very experienced Linux user, you will want to read [Amarel user guide]() as it has slurm tips and examples. 
 
+# WARNING - READ!
+
+- Do not run large computational jobs on the **login** node. Use slurm to allocate resources on the compute node. 
+- TODO: add more complete list
+
+## Learning paths
+
 - For users familiar with Linux but new to `slurm`, follow [this path]()
 - For users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets
 
