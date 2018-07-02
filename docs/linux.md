@@ -76,8 +76,8 @@ a |all
 r |read
 w |write (and delete)
 x |execute (and access directory)
-+ |add permission
-- |take away permission
+u+x |add executing permission for user
+u-x |take away executing permission
 
 # Modules
 **Command**|**Meaning**
