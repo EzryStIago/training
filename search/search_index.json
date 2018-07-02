@@ -2,8 +2,18 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to the Office of Advanced Research Computing at Rutgers! \n\n\n\n\nOARC is university-wide initiative that is to develop and implement a strategic vision for centralizing the advanced research computing and data cyberinfrastructure (ACI) ecosystem at Rutgers. OARC has the goal of providing Rutgers researchers with essential computing and data handling capabilities, and students with necessary exposure and training, through centralized resources, services and training.\n\n\n\n\nFor more information on OARC, including how to get access or become owners, please visit \nour web page\n\n\nThese pages are a collection of resources to help you to utilize the cluster more effectively. Even if you are a very experienced Linux user, you will want to read \nAmarel user guide\n as it has slurm tips and examples. \n\n\n\n\nFor users familiar with Linux but new to \nslurm\n, follow \nthis path\n\n\nFor users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets",
+            "text": "Welcome to the Office of Advanced Research Computing at Rutgers! \n\n\n\n\nOARC is university-wide initiative that is to develop and implement a strategic vision for centralizing the advanced research computing and data cyberinfrastructure (ACI) ecosystem at Rutgers. OARC has the goal of providing Rutgers researchers with essential computing and data handling capabilities, and students with necessary exposure and training, through centralized resources, services and training.\n\n\n\n\nFor more information on OARC, including how to get access or become owners, please visit \nour web page\n\n\nThese pages are a collection of resources to help you to utilize the cluster more effectively. Even if you are a very experienced Linux user, you will want to read \nAmarel user guide\n as it has slurm tips and examples. \n\n\nWARNING - READ!\n\n\n\n\nDo not run large computational jobs on the \nlogin\n node. Use slurm to allocate resources on the compute node. \n\n\nTODO: add more complete list\n\n\n\n\nLearning paths\n\n\n\n\nFor users familiar with Linux but new to \nslurm\n, follow \nthis path\n\n\nFor users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets",
             "title": "Home"
+        },
+        {
+            "location": "/#warning-read",
+            "text": "Do not run large computational jobs on the  login  node. Use slurm to allocate resources on the compute node.   TODO: add more complete list",
+            "title": "WARNING - READ!"
+        },
+        {
+            "location": "/#learning-paths",
+            "text": "For users familiar with Linux but new to  slurm , follow  this path  For users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets",
+            "title": "Learning paths"
         },
         {
             "location": "/howtos/jupyter/",
