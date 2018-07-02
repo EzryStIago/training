@@ -3,7 +3,7 @@ ___
 Amarel is a CentOS 7 Linux compute cluster that is actively growing through the combination of separate computing clusters into a single, shared resource.
 
 Amarel includes the following hardware (this list may already be outdated since the cluster is actively growing):
-
+```
 52 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 128 GB RAM
 20 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 256 GB RAM
 4 28-core e5-2680v4 nodes each with 2 x Nvidia Pascal P100 GPUs onboard
@@ -15,7 +15,7 @@ Amarel includes the following hardware (this list may already be outdated since 
 3 12-core e5-2670 nodes with 8 Nvidia Tesla M2070 GPUs onboard
 2 28-core e5-2680 nodes with 4 Quadro M6000 GPUs onboard
 1 16-core e5-2670 node with 8 Xeon Phi 5110P accelerators onboard
-
+```
 Default run time = 2 hours in the 'main' partition
 Maximum run time = 3 days in the 'main' partition
 
@@ -89,21 +89,16 @@ There are 4 basic partitions, main (traditional compute nodes, CPUs only), gpu (
 
 The upper limit for a job’s run time is 3 days (72 hours).
 
-Allocated (alloc) nodes are currently running jobs.
-
-Mixed (mix) nodes have jobs using some, but not all, CPU cores onboard.
-
-Idle nodes are currently available for new jobs.
-
-Drained (drain, drng) nodes are not available for use and may be offline for maintenance.
-
-Slepner? Norse Mythology, "Sleipnir" 8-legged war horse (this made more sense when CPUs had 8 cores).
-
-Hal? Hal is a dependable member of the Discovery One crew who does an excellent job of following instructions.
-
-Pascal? French mathematician and the name of one of NVIDIA's GPU architectures.
-
-CUDA? This is the name of a parallel computing platform and application programming interface (API) model created by Nvidia
+**Abbreviation** |**Meaning**
+---|---
+Allocated (alloc) |nodes are currently running jobs.
+Mixed (mix)| nodes have jobs using some, but not all, CPU cores onboard.
+Idle| nodes are currently available for new jobs.
+Drained (drain, drng) |nodes are not available for use and may be offline for maintenance.
+Slepner, Norse Mythology| "Sleipnir" 8-legged war horse (this made more sense when CPUs had 8 cores).
+Hal| Hal is a dependable member of the Discovery One crew who does an excellent job of following instructions.
+Pascal| French mathematician and the name of one of NVIDIA's GPU architectures.
+CUDA| This is the name of a parallel computing platform and application programming interface (API) model created by Nvidia
 
 # Loading software modules
 ___
@@ -166,14 +161,10 @@ The following is a list of the modules currently available:
     OpenCV: Open Source Computer Vision
 ```
 
-Loading a software module changes your environment settings so that the executable binaries, needed libraries, etc. are available for use.
-
-To load a software module, use the module load command, followed by the name and version desired.
-
-To remove select modules, use the module unload command. To remove all loaded software modules, use the module purge command.
-
-To load the default version of any software package, use the module load command but only specify the name of the package, not the version number.
-
+Loading a software module changes your environment settings so that the executable binaries, needed libraries, etc. are available for use.  
+To load a software module, use the module load command, followed by the name and version desired.  
+To remove select modules, use the module unload command. To remove all loaded software modules, use the module purge command.  
+To load the default version of any software package, use the module load command but only specify the name of the package, not the version number.  
 
 Below are some examples.
 ```
@@ -416,14 +407,14 @@ ___
 
 [Docker](https://www.docker.com/) is a platform that employs features of the Linux kernel to run software in a container. The software housed in a Docker container is not standalone program but an entire OS distribution, or at least enough of the OS to enable the program to work. Docker can be thought of as somewhat like a software distribution mechanism like yum or apt. It also can be thought of as an expanded version of a chroot jail, or a reduced version of a virtual machine.
 
-## Important differences between Docker and Singularity:
+**Important differences between Docker and Singularity:**
 
   * Docker and Singularity have their own container formats.
   * Docker containers can be imported and run using Singularity.
   * Docker containers usually run as root, which means you cannot run Docker on a  shared computing system (cluster).
   * Singularity allows for containers that can be run as a regular user. How? When importing a Docker container, Singularity removes any elements which can only run as root. The resulting containers can be run using a regular user account.
 
-## Importing a Docker image:
+**Importing a Docker image:**
 
 If you have a pre-built Docker container, you can use Singularity to convert this container to the Singularity format. Once that's done, you can upload your Singularity container to your storage space on Amarel and run jobs using that container.
 
@@ -435,7 +426,7 @@ Start your container (in this example we will use ubuntu:latest) and create dire
 `sudo docker run -it ubuntu:latest bash  
 root@11a87dkw8748:/# mkdir -p /scratch/gc563 /projects/oarc`
 
-## Exporting your Docker image
+**Exporting your Docker image**
 
 Find the name of your Docker image using the 'docker ps' command,
 ```
@@ -447,7 +438,7 @@ In this example the name of the images is bendakaya_pakodi. Export this image to
 `sudo docker export bendakaya_pakodi > ubuntu.tar
 `
 
-## Converting to a Singularity image
+**Converting to a Singularity image**
 
 You will need to have Singularity installed on your local workstation/laptop to prepare your image. The 'create' and 'import' operations of Singularity require root privileges, which you do not have on Amarel.
 
@@ -461,7 +452,7 @@ Done. Image can be found at: ubuntu.img
 $ sudo singularity import ubuntu.img ubuntu.tar
 ```
 
-## Using Singularity containers inside a SLURM jon
+**Using Singularity containers inside a SLURM job**
 
 [Transfer](https://rutgers-oarc.github.io/amarel/#movingfiles) your new Singularity image to Amarel. The following steps are performed while logged-in to Amarel.
 
