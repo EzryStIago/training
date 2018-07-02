@@ -292,7 +292,7 @@
         },
         {
             "location": "/resources/",
-            "text": "Here are some resources you might want to consult to learn more about how to use an HPC cluster\n\n\nSlurm\n\n\n\n\nOARC cluster user guide Amarel/Perceval\n - this is a must-read for any new users, even if you are an experienced Linux user \n\n\nOARC cluster community\n - a lot of software is installed already by other users of the cluster, this describes how to use it and contribute to it\n\n\nintro videos by Kristina\n\n\nterse slurm tips\n\n\n\n\nLinux tutorials\n\n\n\n\nlinux tutorial by Galen\n\n\nUNIX Tutorial for Beginners\n\n\n\n\nGraphical user interface\n\n\n\n\nweb-based access to the cluster (still testing) - only from campus or VPN\n\n\n\n\nResources on the web\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown",
+            "text": "Here are some resources you might want to consult to learn more about how to use an HPC cluster\n\n\nSlurm\n\n\n\n\nOARC cluster user guide Amarel/Perceval\n - this is a must-read for any new users, even if you are an experienced Linux user \n\n\nOARC cluster community\n - a lot of software is installed already by other users of the cluster, this describes how to use it and contribute to it\n\n\nintro videos by Kristina\n\n\nterse slurm tips\n\n\n\n\nLinux tutorials\n\n\n\n\nLinux tutorial by Galen\n\n\nUNIX Tutorial for Beginners\n\n\nRutgers Linux course\n Rutgers course teaching Linux for engineering students, runs every semester\n\n\nCornell virtual workshop stuff\n - interactive if you have xsede login (?)\n\n\nSoftware Carpentry\n - Software Carpentry has a number of lectures and workshops on many computing subjects\n\n\n\n\nGraphical user interface\n\n\n\n\nweb-based access to the cluster (still testing) - only from campus or VPN\n\n\n\n\nResources on the web\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown",
             "title": "Resources"
         },
         {
@@ -302,7 +302,7 @@
         },
         {
             "location": "/resources/#linux-tutorials",
-            "text": "linux tutorial by Galen  UNIX Tutorial for Beginners",
+            "text": "Linux tutorial by Galen  UNIX Tutorial for Beginners  Rutgers Linux course  Rutgers course teaching Linux for engineering students, runs every semester  Cornell virtual workshop stuff  - interactive if you have xsede login (?)  Software Carpentry  - Software Carpentry has a number of lectures and workshops on many computing subjects",
             "title": "Linux tutorials"
         },
         {
