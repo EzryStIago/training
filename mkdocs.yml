@@ -4,19 +4,15 @@ repo_url: https://github.com/rutgers-oarc/training
 pages:
   - Home: 'index.md'
   - Amarel User Guide:
-      - Amarel Guide:'Amarel_User_Guide.md'
+      - Amarel Guide: 'Amarel_User_Guide.md'
       - Examples: 'Cluster_Examples.md'
   - HowTo: 
       - Jupyter: 'howtos/jupyter.md' 
       - FastX: 'howtos/fastx.md'
   - Workshops: 
       - Genomics: 'workshops/workshop.md'
-      - Lab I: 'workshops/Lab_1.md'
-      - Lab II: 'workshops/Lab_2.md'
-      - Lab III: 'workshops/Lab_3.md'
-      - Lab IV: "workshops/Lab_4.md" 
-      - Lab V: 'workshops/Lab_5.md'
+      - Labs: 'workshops/Labs.md'
   - R tutorial: 'ressentials.md'
   - Resources: 'resources.md'
-  - CheatSheet: 'cheatsheet.md'
-theme: readthedocs
+  - CheatSheet: 'CheatSheet.md'
+theme: rtd-dropdown

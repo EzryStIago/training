@@ -89,7 +89,7 @@ There are 4 basic partitions, main (traditional compute nodes, CPUs only), gpu (
 
 The upper limit for a job’s run time is 3 days (72 hours).
 
-**Abbreviation** |**Meaning**
+**Term** |**Meaning**
 ---|---
 Allocated (alloc) |nodes are currently running jobs.
 Mixed (mix)| nodes have jobs using some, but not all, CPU cores onboard.
@@ -237,8 +237,8 @@ Any output that would normally go to the command line will be redirected into th
 Be sure to configure your environment as needed for running your application/executable. This usually means loading any needed modules before the step where you run your application/executable.
 
 
-Here’s how to run a serial batch job, loading modules and using the **sbatch** command:
-`sbatch my-job-script.sh`
+Here’s how to run a serial batch job, loading modules and using the **sbatch** command:  
+`sbatch my-job-script.sh`. 
 The **sbatch** command reads the contents of your job script and forwards those instructions to the SLURM workload manager. Depending on the level of activity on the cluster, your job may wait in the job queue for minutes or hours before it begins running.
 
 # Running a parallel (multicore MPI) job
@@ -275,7 +275,7 @@ This job will use 16 CPU cores and nearly 8 GB of RAM per core, so I have reques
 Note here that I’m also loading the module for the parallel communication libraries (MPI libraries) needed by my parallel executable.
 
 
-Here’s how to run a parallel batch job, loading modules and using the **sbatch** command:
+Here’s how to run a parallel batch job, loading modules and using the **sbatch** command:  
 `sbatch my-job-script.sh`
 
 # Running an interactive job
@@ -407,14 +407,14 @@ ___
 
 [Docker](https://www.docker.com/) is a platform that employs features of the Linux kernel to run software in a container. The software housed in a Docker container is not standalone program but an entire OS distribution, or at least enough of the OS to enable the program to work. Docker can be thought of as somewhat like a software distribution mechanism like yum or apt. It also can be thought of as an expanded version of a chroot jail, or a reduced version of a virtual machine.
 
-**Important differences between Docker and Singularity:**
+##Important differences between Docker and Singularity:
 
   * Docker and Singularity have their own container formats.
   * Docker containers can be imported and run using Singularity.
   * Docker containers usually run as root, which means you cannot run Docker on a  shared computing system (cluster).
   * Singularity allows for containers that can be run as a regular user. How? When importing a Docker container, Singularity removes any elements which can only run as root. The resulting containers can be run using a regular user account.
 
-**Importing a Docker image:**
+##Importing a Docker image:
 
 If you have a pre-built Docker container, you can use Singularity to convert this container to the Singularity format. Once that's done, you can upload your Singularity container to your storage space on Amarel and run jobs using that container.
 
@@ -426,7 +426,7 @@ Start your container (in this example we will use ubuntu:latest) and create dire
 `sudo docker run -it ubuntu:latest bash  
 root@11a87dkw8748:/# mkdir -p /scratch/gc563 /projects/oarc`
 
-**Exporting your Docker image**
+##Exporting your Docker image
 
 Find the name of your Docker image using the 'docker ps' command,
 ```
@@ -438,7 +438,7 @@ In this example the name of the images is bendakaya_pakodi. Export this image to
 `sudo docker export bendakaya_pakodi > ubuntu.tar
 `
 
-**Converting to a Singularity image**
+##Converting to a Singularity image
 
 You will need to have Singularity installed on your local workstation/laptop to prepare your image. The 'create' and 'import' operations of Singularity require root privileges, which you do not have on Amarel.
 
@@ -452,7 +452,7 @@ Done. Image can be found at: ubuntu.img
 $ sudo singularity import ubuntu.img ubuntu.tar
 ```
 
-**Using Singularity containers inside a SLURM job**
+##Using Singularity containers inside a SLURM job
 
 [Transfer](https://rutgers-oarc.github.io/amarel/#movingfiles) your new Singularity image to Amarel. The following steps are performed while logged-in to Amarel.
 

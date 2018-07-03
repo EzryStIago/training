@@ -1,8 +1,10 @@
 # Using R
 ___
-Generally, there are 2 approaches for accessing R on Amarel: (1) use one of the pre-installed R modules named R-Project/*version* (these versions come bundled with a very broad range of common and useful tools), or (2) install your own custom build of R in your /home directory or in a shared directory (e.g., /projects/[group] or /projects/community).
+Generally, there are 2 approaches for accessing R on Amarel:  
+(1) use one of the pre-installed R modules named R-Project/*version* (these versions come bundled with a very broad range of common and useful tools).   
+(2) install your own custom build of R in your /home directory or in a shared directory (e.g. `/projects/[group]` or `/projects/community`).
 
-*Using pre-installed R modules:*
+##Using pre-installed R modules
 
 Start by finding which module you wish to use with the 'module spider R-Project' command:
 ```
@@ -91,7 +93,7 @@ install.packages("https://cran.r-project.org/src/contrib/Archive/randomForest/ra
 Once all of my package installs have completed successfully, those packages can be loaded normally and they will be available every time I log-in to the cluster.
 
 
-**Installing your own build of R:**
+## Installing your own build of R
 
 For some users or groups, installing and customizing or even modifying the latest version (or a specific version) of R is necessary. For those users, I'll demonstrate how to install a version of R below.
 
@@ -158,7 +160,7 @@ q()
 ___
 Generally, there are 2 approaches for using Python and its associated tools: (1) use one of the pre-installed Python modules (version 2.7.x or 3.5.x) which come bundled with a very broad range of common and useful tools (you can add or update packages if needed) or (2) install your own custom build of Python in your /home directory or in a shared directory (e.g., /projects/[group] or /projects/community).
 
-*Using pre-installed Python modules:*  
+## Using pre-installed Python modules 
 
 With the pre-installed Python modules, you can add or update Python modules/packages as needed if you do it using the '--user' option for pip. This option will instruct pip to install new software or upgrades in your ~/.local directory. Here's an example where I'm installing the Django package:
 ```
@@ -186,7 +188,7 @@ pip 10.0.1 from /home/gc563/.local/lib/python3.5/site-packages/pip (python 3.5)
 $ .local/bin/pip install --user Django
 ```
 
-*Building your own Python installation:*
+## Building your own Python installation
 
 Using this approach, I must specify that I want Python to be installed in my /home directory. This is done using the '--prefix=' option. Also, I prefer to use a [package]/[version] naming scheme because that enables easy organization of multiple verisons of Python (optional, it's just a personal preference).  
 At the end of my install procedure, I remove the downloaded install package and tarball, just to tidy-up.
