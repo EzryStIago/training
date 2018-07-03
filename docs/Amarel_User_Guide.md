@@ -1,5 +1,5 @@
 # General Information
-_
+
 Amarel is a CentOS 7 Linux compute cluster that is actively growing through the combination of separate computing clusters into a single, shared resource.
 
 Amarel includes the following hardware (this list may already be outdated since the cluster is actively growing):
@@ -21,7 +21,7 @@ Maximum run time = 3 days in the 'main' partition
 
 
 # Connecting to Amarel
-_
+
 Amarel is currently accessed using a single hostname, amarel.rutgers.edu
 
 When you connect to this system, your log-in session (your Linux shell) will begin on one of multiple log-in nodes, named amarel1, amarel2, etc.
@@ -345,7 +345,7 @@ A job can only be cancelled by the owner of that job. When you terminate a job, 
 ```slurmstepd: *** JOB 1633383 ON slepner036 CANCELLED AT 2016-10-04T15:38:07 ***```
 
 # Installing your own software
-_
+
 Package management systems like yum or apt-get, which are used to install software in typical Linux systems, are not available to users of shared computing resources like Amarel. Thus, most packages need to be compiled from their source code and then installed. Further, most packages are generally configured to be installed in /usr or /opt, but these locations are inaccessible to (not writeable for) general users. Special care must be taken by users to ensure that the packages will be installed in their own /home directory (/home/[NetID]).
 
 As an example, here are the steps for installing ZIPPER, a generic example package that doesn’t actually exist:
