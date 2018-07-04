@@ -10,6 +10,7 @@
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Amarel Guide - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
@@ -44,136 +45,486 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Amarel User Guide</span>
-    <ul class="subnav">
-                <li class=" current">
-                    
-    <a class="current" href="./">Amarel Guide</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#general-information">General Information</a></li>
+      
+
+
+  
     
 
-    <li class="toctree-l3"><a href="#connecting-to-amarel">Connecting to Amarel</a></li>
+
+<ul class="" href="/">
+  
+    
+    
+      <li class=" toctree-l1">
+        <a class="" href="/">Home</a>
+      </li>
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
     
 
-    <li class="toctree-l3"><a href="#moving-files">Moving files</a></li>
-    
+  <p class="caption">Amarel User Guide</p>
 
-    <li class="toctree-l3"><a href="#listing-available-resources">Listing available resources</a></li>
-    
 
-    <li class="toctree-l3"><a href="#loading-software-modules">Loading software modules</a></li>
+<ul class="current" href="Amarel_User_Guide">
+  
     
+      
+<li class="current toctree-l1">
+  <a href="./" title="Amarel Guide"
+      class="current">
+    Amarel Guide
+  </a>
 
-    <li class="toctree-l3"><a href="#running-a-serial-single-core-job">Running a serial (single-core) job</a></li>
+  
+  
     
-
-    <li class="toctree-l3"><a href="#running-a-parallel-multicore-mpi-job">Running a parallel (multicore MPI) job</a></li>
     
-
-    <li class="toctree-l3"><a href="#running-an-interactive-job">Running an interactive job</a></li>
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <ul class="current subnav">
     
+      
 
-    <li class="toctree-l3"><a href="#monitoring-the-status-of-jobs">Monitoring the status of jobs</a></li>
+  
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#general-information" title="Amarel Guide">General Information</a>
+  </li>
+
     
+      
 
-    <li class="toctree-l3"><a href="#killing-cancelling-terminating-jobs">Killing/ cancelling/ terminating jobs</a></li>
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#connecting-to-amarel" title="Amarel Guide">Connecting to Amarel</a>
+  </li>
+
     
+      
 
-    <li class="toctree-l3"><a href="#installing-your-own-software">Installing your own software</a></li>
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#moving-files" title="Amarel Guide">Moving files</a>
+  </li>
+
     
+      
 
-    <li class="toctree-l3"><a href="#singularity">Singularity</a></li>
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#listing-available-resources" title="Amarel Guide">Listing available resources</a>
+  </li>
+
     
+      
 
-    <li class="toctree-l3"><a href="#troubleshooting-common-problems">Troubleshooting/ Common Problems</a></li>
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#loading-software-modules" title="Amarel Guide">Loading software modules</a>
+  </li>
+
     
+      
 
-    <li class="toctree-l3"><a href="#acknowledging-amarel">Acknowledging Amarel</a></li>
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#running-a-serial-single-core-job" title="Amarel Guide">Running a serial (single-core) job</a>
+  </li>
+
     
+      
 
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#running-a-parallel-multicore-mpi-job" title="Amarel Guide">Running a parallel (multicore MPI) job</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#running-an-interactive-job" title="Amarel Guide">Running an interactive job</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#monitoring-the-status-of-jobs" title="Amarel Guide">Monitoring the status of jobs</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#killing-cancelling-terminating-jobs" title="Amarel Guide">Killing/ cancelling/ terminating jobs</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#installing-your-own-software" title="Amarel Guide">Installing your own software</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#singularity" title="Amarel Guide"
+          class="">
+        Singularity
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#important-differences-between-docker-and-singularity" title="Amarel Guide">Important differences between Docker and Singularity:</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#importing-a-docker-image" title="Amarel Guide">Importing a Docker image:</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#exporting-your-docker-image" title="Amarel Guide">Exporting your Docker image</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#converting-to-a-singularity-image" title="Amarel Guide">Converting to a Singularity image</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#using-singularity-containers-inside-a-slurm-job" title="Amarel Guide">Using Singularity containers inside a SLURM job</a>
+  </li>
+
+      
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Cluster_Examples/">Examples</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">HowTo</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../howtos/jupyter/">Jupyter</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../howtos/fastx/">FastX</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Workshops</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../workshops/workshop/">Genomics</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../workshops/Lab_1/">Lab I</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../workshops/Lab_2/">Lab II</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../workshops/Lab_3/">Lab III</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../workshops/Lab_4/">Lab IV</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../workshops/Lab_5/">Lab V</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../ressentials/">R tutorial</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../resources/">Resources</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../linux/">CheatSheet</a>
-	    </li>
-          
-        </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#troubleshooting-common-problems" title="Amarel Guide">Troubleshooting/ Common Problems</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#acknowledging-amarel" title="Amarel Guide">Acknowledging Amarel</a>
+  </li>
+
+    
+  </ul>
+
+    
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../Cluster_Examples/" title="Examples"
+      class="">
+    Examples
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">HowTo</p>
+
+
+<ul class="" href="howtos/jupyter">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../howtos/jupyter/" title="Jupyter"
+      class="">
+    Jupyter
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../howtos/fastx/" title="FastX"
+      class="">
+    FastX
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Workshops</p>
+
+
+<ul class="" href="workshops/workshop">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../workshops/workshop/" title="Genomics"
+      class="">
+    Genomics
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../workshops/Labs/" title="Labs"
+      class="">
+    Labs
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+
+
+<ul class="" href="/ressentials/">
+  
+    
+    
+      <li class=" toctree-l1">
+        <a class="" href="/ressentials/">R tutorial</a>
+      </li>
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+
+
+<ul class="" href="/resources/">
+  
+    
+    
+      <li class=" toctree-l1">
+        <a class="" href="/resources/">Resources</a>
+      </li>
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+
+
+<ul class="" href="/CheatSheet/">
+  
+    
+    
+      <li class=" toctree-l1">
+        <a class="" href="/CheatSheet/">CheatSheet</a>
+      </li>
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
       </div>
       &nbsp;
     </nav>
@@ -213,8 +564,7 @@
             <div class="section">
               
                 <h1 id="general-information">General Information</h1>
-<p>_
-Amarel is a CentOS 7 Linux compute cluster that is actively growing through the combination of separate computing clusters into a single, shared resource.</p>
+<p>Amarel is a CentOS 7 Linux compute cluster that is actively growing through the combination of separate computing clusters into a single, shared resource.</p>
 <p>Amarel includes the following hardware (this list may already be outdated since the cluster is actively growing):</p>
 <pre><code>52 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 128 GB RAM
 20 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 256 GB RAM
@@ -232,8 +582,7 @@ Amarel is a CentOS 7 Linux compute cluster that is actively growing through the 
 <p>Default run time = 2 hours in the 'main' partition
 Maximum run time = 3 days in the 'main' partition</p>
 <h1 id="connecting-to-amarel">Connecting to Amarel</h1>
-<p>_
-Amarel is currently accessed using a single hostname, amarel.rutgers.edu</p>
+<p>Amarel is currently accessed using a single hostname, amarel.rutgers.edu</p>
 <p>When you connect to this system, your log-in session (your Linux shell) will begin on one of multiple log-in nodes, named amarel1, amarel2, etc.</p>
 <p>So, while you are logged-in to Amarel, you will see "amarel1" or "amarel2" as the name of the machine you are using.</p>
 <p><code>ssh [your NetID]@amarel.rutgers.edu</code></p>
@@ -464,10 +813,9 @@ srun /scratch/[your NetID]/zipper/2.4.1/bin/zipper &lt; my-input-file.in
 </ul>
 <p>Be sure to configure your environment as needed for running your application/executable. This usually means loading any needed modules before the step where you run your application/executable.</p>
 <p>Here’s how to run a serial batch job, loading modules and using the <strong>sbatch</strong> command:<br />
-<code>sbatch my-job-script.sh</code><br />
-The <strong>sbatch</strong> command reads the contents of your job script and forwards those instructions to the SLURM workload manager. Depending on the level of activity on the cluster, your job may wait in the job queue for minutes or hours before it begins running.</p>
+<code>sbatch my-job-script.sh</code>  </p>
+<p>The <strong>sbatch</strong> command reads the contents of your job script and forwards those instructions to the SLURM workload manager. Depending on the level of activity on the cluster, your job may wait in the job queue for minutes or hours before it begins running.</p>
 <h1 id="running-a-parallel-multicore-mpi-job">Running a parallel (multicore MPI) job</h1>
-<hr />
 <p>Here’s an example of a SLURM job script for a parallel job. See the previous (serial) example for some important details omitted here.</p>
 <pre><code>#!/bin/bash
 
@@ -497,6 +845,9 @@ srun --mpi=pmi2 /scratch/[your NetID]/zipper/2.4.1/bin/zipper &lt; my-input-file
 <li>This job will use 16 CPU cores and nearly 8 GB of RAM per core, so I have requested a total of 124 GB of RAM — it’s a good practice to request only about 2 GB per core for any job unless you know that your job will require more than that.</li>
 <li>Note here that I’m also loading the module for the parallel communication libraries (MPI libraries) needed by my parallel executable.</li>
 </ul>
+<p>Here’s how to run a parallel batch job, loading modules and using the <strong>sbatch</strong> command:<br />
+<code>sbatch my-job-script.sh</code></p>
+<p>Note here that I’m also loading the module for the parallel communication libraries (MPI libraries) needed by my parallel executable.</p>
 <p>Here’s how to run a parallel batch job, loading modules and using the <strong>sbatch</strong> command:<br />
 <code>sbatch my-job-script.sh</code></p>
 <h1 id="running-an-interactive-job">Running an interactive job</h1>
@@ -566,8 +917,7 @@ JobId=244348 JobName=XIoT22
 A job can only be cancelled by the owner of that job. When you terminate a job, a message from the SLURM workload manager will be directed to STDERR and that message will look like this:<br />
 <code>slurmstepd: *** JOB 1633383 ON slepner036 CANCELLED AT 2016-10-04T15:38:07 ***</code></p>
 <h1 id="installing-your-own-software">Installing your own software</h1>
-<p>_
-Package management systems like yum or apt-get, which are used to install software in typical Linux systems, are not available to users of shared computing resources like Amarel. Thus, most packages need to be compiled from their source code and then installed. Further, most packages are generally configured to be installed in /usr or /opt, but these locations are inaccessible to (not writeable for) general users. Special care must be taken by users to ensure that the packages will be installed in their own /home directory (/home/[NetID]).</p>
+<p>Package management systems like yum or apt-get, which are used to install software in typical Linux systems, are not available to users of shared computing resources like Amarel. Thus, most packages need to be compiled from their source code and then installed. Further, most packages are generally configured to be installed in /usr or /opt, but these locations are inaccessible to (not writeable for) general users. Special care must be taken by users to ensure that the packages will be installed in their own /home directory (/home/[NetID]).</p>
 <p>As an example, here are the steps for installing ZIPPER, a generic example package that doesn’t actually exist:</p>
 <ol>
 <li>
@@ -616,14 +966,14 @@ export MANPATH=/home/[NetID]/zipper/4.1.5/share/man:$MANPATH
 <h1 id="singularity">Singularity</h1>
 <p><a href="http://singularity.lbl.gov/">Singularity</a> is a Linux containerization tool suitable for HPC environments. It uses its own container format and also has features that enable importing Docker containers.</p>
 <p><a href="https://www.docker.com/">Docker</a> is a platform that employs features of the Linux kernel to run software in a container. The software housed in a Docker container is not standalone program but an entire OS distribution, or at least enough of the OS to enable the program to work. Docker can be thought of as somewhat like a software distribution mechanism like yum or apt. It also can be thought of as an expanded version of a chroot jail, or a reduced version of a virtual machine.</p>
-<p><strong>Important differences between Docker and Singularity:</strong></p>
+<h2 id="important-differences-between-docker-and-singularity">Important differences between Docker and Singularity:</h2>
 <ul>
 <li>Docker and Singularity have their own container formats.</li>
 <li>Docker containers can be imported and run using Singularity.</li>
 <li>Docker containers usually run as root, which means you cannot run Docker on a  shared computing system (cluster).</li>
 <li>Singularity allows for containers that can be run as a regular user. How? When importing a Docker container, Singularity removes any elements which can only run as root. The resulting containers can be run using a regular user account.</li>
 </ul>
-<p><strong>Importing a Docker image:</strong></p>
+<h2 id="importing-a-docker-image">Importing a Docker image:</h2>
 <p>If you have a pre-built Docker container, you can use Singularity to convert this container to the Singularity format. Once that's done, you can upload your Singularity container to your storage space on Amarel and run jobs using that container.</p>
 <p>Here's an example. NOTE that most of these steps are performed on your local system, not while logged-in on Amarel.</p>
 <p>If you need to use any of Amarel's filesystems inside your container, you will need to make sure the appropriate directories exist in your container so those filesystems can be mounted using those directories.</p>
@@ -632,8 +982,8 @@ export MANPATH=/home/[NetID]/zipper/4.1.5/share/man:$MANPATH
 root@11a87dkw8748:/# mkdir -p /scratch/gc563 /projects/oarc
 </code></pre>
 
-<p><strong>Exporting your Docker image</strong><br />
-Find the name of your Docker image using the 'docker ps' command,</p>
+<h2 id="exporting-your-docker-image">Exporting your Docker image</h2>
+<p>Find the name of your Docker image using the 'docker ps' command,</p>
 <pre><code>$ sudo docker ps
 CONTAINER ID  IMAGE          COMMAND  CREATED        STATUS        NAMES
 11a87dkw8748  ubuntu:latest  &quot;bash&quot;   2 minutes ago  Up 2 minutes  bendakaya_pakodi
@@ -643,8 +993,8 @@ CONTAINER ID  IMAGE          COMMAND  CREATED        STATUS        NAMES
 <pre><code>$ sudo docker export bendakaya_pakodi &gt; ubuntu.tar
 </code></pre>
 
-<p><strong>Converting to a Singularity image</strong><br />
-You will need to have Singularity installed on your local workstation/laptop to prepare your image. The 'create' and 'import' operations of Singularity require root privileges, which you do not have on Amarel.</p>
+<h2 id="converting-to-a-singularity-image">Converting to a Singularity image</h2>
+<p>You will need to have Singularity installed on your local workstation/laptop to prepare your image. The 'create' and 'import' operations of Singularity require root privileges, which you do not have on Amarel.</p>
 <p>Create an empty singularity image, and then import the exported docker image into it,  </p>
 <pre><code>$ sudo singularity create ubuntu.img
 Creating a sparse image with a maximum size of 1024MiB...
@@ -654,8 +1004,8 @@ Done. Image can be found at: ubuntu.img
 $ sudo singularity import ubuntu.img ubuntu.tar
 </code></pre>
 
-<p><strong>Using Singularity containers inside a SLURM job</strong><br />
-<a href="https://rutgers-oarc.github.io/amarel/#movingfiles">Transfer</a> your new Singularity image to Amarel. The following steps are performed while logged-in to Amarel.</p>
+<h2 id="using-singularity-containers-inside-a-slurm-job">Using Singularity containers inside a SLURM job</h2>
+<p><a href="https://rutgers-oarc.github.io/amarel/#movingfiles">Transfer</a> your new Singularity image to Amarel. The following steps are performed while logged-in to Amarel.</p>
 <p>You can run any task/program inside the container by prefacing it with<br />
 <code>singularity exec [your image name]</code> </p>
 <p>Here is a simple example job script that executes commands inside a container,  </p>

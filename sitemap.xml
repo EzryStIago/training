@@ -2,72 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://rutgers-oarc.github.io/training/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rutgers-oarc.github.io/training/Amarel_User_Guide/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rutgers-oarc.github.io/training/Cluster_Examples/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rutgers-oarc.github.io/training/howtos/jupyter/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rutgers-oarc.github.io/training/howtos/fastx/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rutgers-oarc.github.io/training/workshops/workshop/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rutgers-oarc.github.io/training/workshops/Lab_1/</loc>
-     <lastmod>2018-07-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://rutgers-oarc.github.io/training/workshops/Lab_2/</loc>
-     <lastmod>2018-07-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://rutgers-oarc.github.io/training/workshops/Lab_3/</loc>
-     <lastmod>2018-07-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://rutgers-oarc.github.io/training/workshops/Lab_4/</loc>
-     <lastmod>2018-07-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://rutgers-oarc.github.io/training/workshops/Lab_5/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>https://rutgers-oarc.github.io/training/workshops/Labs/</loc>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rutgers-oarc.github.io/training/ressentials/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://rutgers-oarc.github.io/training/resources/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://rutgers-oarc.github.io/training/linux/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>https://rutgers-oarc.github.io/training/CheatSheet/</loc>
+     <lastmod>2018-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
