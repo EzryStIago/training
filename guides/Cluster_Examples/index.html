@@ -212,8 +212,38 @@
   
 
 
+  <li class=" toctree-l2">
+    
+      <a href="#running-tensorflow-with-a-gpu" title="Examples"
+          class="">
+        Running TensorFlow with a GPU
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
   <li class="toctree-l2 toc-item">
-    <a href="#running-tensorflow-with-a-gpu" title="Examples">Running TensorFlow with a GPU</a>
+    <a href="#using-singularity" title="Examples">Using Singularity</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#using-conda" title="Examples">Using conda</a>
+  </li>
+
+      
+    </ul>
   </li>
 
     
@@ -703,6 +733,12 @@ gmx_mpi mdrun -v -s 5EWT_solv_equil.tpr -o 5EWT_solv_equil.trr -c 5EWT_solv_equi
 </code></pre>
 
 <h1 id="running-tensorflow-with-a-gpu">Running TensorFlow with a GPU</h1>
+<p>TensorFlow has two versions of its python package: <code>tensorflow</code> and <code>tensorflow-gpu</code>, but confusingly the command to use it is the same in both cases: <code>import tensorflow as tf</code>  (and not <code>import tensorflow-gpu as tf</code> in case of the GPU version). This means that it really matters which package is installed in your environment. </p>
+<ul>
+<li>you can control your environment using Singularity image (but the problem arises if you need a package not included in the prebuilt image, in which case you need to build the image yourself)</li>
+<li>you can control your environment using conda environments (or virtual-env). </li>
+</ul>
+<h2 id="using-singularity">Using Singularity</h2>
 <p>To do this, you can use the <a href="http://singularity.lbl.gov/">Singularity</a> container manager and a Docker image containing the TensorFlow software. </p>
 <p>Running Singularity can be done in batch mode using a job script. Below is an example job script for this purpose (for this example, we'll name this script <code>TF_gpu.sh</code>)</p>
 <pre><code>#!/bin/bash
@@ -760,6 +796,30 @@ Python 3.5.2
 
 <p>Please remember to exit from your interactive job after you are finished with your calculations.  </p>
 <p>There are several Docker images available on Amarel for use with Singularity. The one used in the example above, tensorflow:1.4.1-gpu, is intended for python 2.7.12. If you want to use Python3, you'll need a different image, docker://tensorflow/tensorflow:1.4.1-gpu-py3, and the Python command will be <code>python3</code> instead of <code>python</code> in your script.</p>
+<h2 id="using-conda">Using conda</h2>
+<p>You can either install your own version of Anaconda in your home directory, or you can use a community module. </p>
+<pre><code>module use /projects/community/modulefiles  #loads community-contributed software packages
+module keyword anaconda                     #search packages with 'anaconda' in description 
+</code></pre>
+
+<p>output: </p>
+<pre><code>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following modules match your search criteria: &quot;anaconda&quot;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  py-data-science-stack: py-data-science-stack/5.1.0-kp807
+    Sets up anaconda 5.1.0 in your environment
+</code></pre>
+
+<p>So here are commands with which you can load tensorflow package: </p>
+<pre><code>module load py-data-science-stack/5.1.0-kp807
+conda env list                                 # be patient
+source activate tensorflow-gpu-1.7.0           #
+</code></pre>
+
+<p>Note that if you try to import tensorflow on a node without a gpu, the import will fail, because it will try to load cuda driver that is not installed (because there is no GPU on the machine). 
+So you need to include this line in a slurm script, where you request a GPU resource in slurm: 
+<code>#SBATCH --gres=gpu:1</code></p>
               
             </div>
           </div>
