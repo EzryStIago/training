@@ -82,7 +82,11 @@ Here, we've simply reversed the order of the local and remote locations.
 For added security, you can use SSH for the data transfer by adding the e option followed by the protocol name (ssh, in this case):  
 ```rsync -trlvpze ssh gc563@amarel.rutgers.edu:/home/gc563/work-dir work-dir```
 
-## Listing available resources
+## OnDemand - GUI for the cluster
+
+For users not familiar with Linux, there is an option to connect to the cluster via a web browser (either from campus or through VPN) until you get more confortable with Linux. Both connecting and moving files can be achieved through this interface](https://ondemand.hpc.rutgers.edu). However, you are strongly encouraged to get comfortable with Linux, as your productivity will soar and a GUI is never as flexible as a command line interface.  
+
+# Listing available resources
 
 Before requesting resources (compute nodes), it’s helpful to see what resources are available and what cluster partitions (job queues) to use for certain resources.
 
@@ -120,9 +124,6 @@ Hal| Hal is a dependable member of the Discovery One crew who does an excellent 
 Pascal| French mathematician and the name of one of NVIDIA's GPU architectures.
 CUDA| This is the name of a parallel computing platform and application programming interface (API) model created by Nvidia
 
-## OnDemand - GUI for the cluster
-
-For users not familiar with Linux, there is an option to connect to the cluster via a web browser (either from campus or through VPN) until you get more confortable with Linux. Both connecting and moving files can be achieved through this interface](https://ondemand.hpc.rutgers.edu). However, you are strongly encouraged to get comfortable with Linux, as your productivity will soar and a GUI is never as flexible as a command line interface.  
 
 # Loading software modules
 
@@ -306,7 +307,7 @@ Note here that I’m also loading the module for the parallel communication libr
 Here’s how to run a parallel batch job, loading modules and using the **sbatch** command:  
 ```sbatch my-job-script.sh```
 
-# Running an interactive job
+## Running an interactive job
 
 An interactive job gives you an active connection to a compute node (or collection of compute nodes) where you will have a login shell and you can run commands directly on the command line. This can be useful for testing, short analysis tasks, computational steering, or for running GUI-based applications.
 

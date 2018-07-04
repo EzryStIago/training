@@ -300,6 +300,13 @@ gmx_mpi mdrun -v -s 5EWT_solv_equil.tpr -o 5EWT_solv_equil.trr -c 5EWT_solv_equi
 ```
 # Running TensorFlow with a GPU
 
+TensorFlow has two versions of its python package: `tensorflow` and `tensorflow-gpu`, but confusingly the command to use it is the same in both cases: `import tensorflow as tf`  (and not `import tensorflow-gpu as tf` in case of the GPU version). This means that it really matters which package is installed in your environment. 
+
+- you can control your environment using Singularity image (but the problem arises if you need a package not included in the prebuilt image, in which case you need to build the image yourself)
+- you can control your environment using conda environments (or virtual-env). 
+
+## Using Singularity
+
 To do this, you can use the [Singularity](http://singularity.lbl.gov/) container manager and a Docker image containing the TensorFlow software. 
 
 Running Singularity can be done in batch mode using a job script. Below is an example job script for this purpose (for this example, we'll name this script `TF_gpu.sh`)
@@ -361,7 +368,32 @@ Please remember to exit from your interactive job after you are finished with yo
 
 There are several Docker images available on Amarel for use with Singularity. The one used in the example above, tensorflow:1.4.1-gpu, is intended for python 2.7.12. If you want to use Python3, you'll need a different image, docker://tensorflow/tensorflow:1.4.1-gpu-py3, and the Python command will be `python3` instead of `python` in your script.
 
+## Using conda
 
+You can either install your own version of Anaconda in your home directory, or you can use a community module. 
+```
+module use /projects/community/modulefiles  #loads community-contributed software packages
+module keyword anaconda                     #search packages with 'anaconda' in description 
+```
+output: 
+```
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following modules match your search criteria: "anaconda"
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  py-data-science-stack: py-data-science-stack/5.1.0-kp807
+    Sets up anaconda 5.1.0 in your environment
+```
+So here are commands with which you can load tensorflow package: 
+```
+module load py-data-science-stack/5.1.0-kp807
+conda env list                                 # be patient
+source activate tensorflow-gpu-1.7.0           #
+```
+
+Note that if you try to import tensorflow on a node without a gpu, the import will fail, because it will try to load cuda driver that is not installed (because there is no GPU on the machine). 
+So you need to include this line in a slurm script, where you request a GPU resource in slurm: 
+```#SBATCH --gres=gpu:1   ```
 
 
 
