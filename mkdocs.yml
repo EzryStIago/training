@@ -3,9 +3,8 @@ site_url: https://rutgers-oarc.github.io/training
 repo_url: https://github.com/rutgers-oarc/training
 pages:
   - Home: 'index.md'
-  - Amarel User Guide:
-      - Amarel Guide: 'Amarel_User_Guide.md'
-      - Examples: 'Cluster_Examples.md'
+  - Cluster Guides: 'Cluster_User_Guide.md'
+  - Examples: 'Cluster_Examples.md'
   - HowTo: 
       - Jupyter: 'howtos/jupyter.md' 
       - FastX: 'howtos/fastx.md'
