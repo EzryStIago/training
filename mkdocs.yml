@@ -11,12 +11,13 @@ pages:
       - FastX: 'howtos/fastx.md'
   - Workshops: 
       - Genomics: 'workshops/workshop.md'
-      - Lab I: 'workshops/Lab_1.md'
-      - Lab II: 'workshops/Lab_2.md'
-      - Lab III: 'workshops/Lab_3.md'
-      - Lab IV: "workshops/Lab_4.md" 
-      - Lab V: 'workshops/Lab_5.md'
+      - Labs: 'workshops/Labs.md'
   - R tutorial: 'ressentials.md'
   - Resources: 'resources.md'
+<<<<<<< HEAD
   - CheatSheet: 'linux.md'
 theme: readthedocs
+=======
+  - CheatSheet: 'CheatSheet.md'
+theme: rtd-dropdown
+>>>>>>> abdullah

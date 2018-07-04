@@ -84,7 +84,10 @@ u-x |take away executing permission
 ---|---
 module avail|  show a list of the core (primary) modules available
 module load *module_name*| loads the named software module 
-module use `/projects/community/projectsmodule use /projects/community/modulefiles/`| Now if you do module avail, it also shows modules uploaded by other users 
-module spider |shows a comprehensive list of all available modules or type name after spider to show details about specific module
+module use `/projects/community/projectsmodule`| Now if you do module avail, it also shows modules created by other users 
+module spider | shows a comprehensive list of all available modules or type name after spider to show details about specific module
+module keyword | looks for a keyword in the description of a module
 module purge| removes all loaded module
 ml| lists modules loaded 
+
+To learm more about environments and modules, see [lmod documenation](https://lmod.readthedocs.io/en/latest/). 

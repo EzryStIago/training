@@ -1,7 +1,7 @@
 # Overview
 
-These are the notes from the workshop on genomics. What's covered in these notes:    
-1.vk1 Setup
+These are notes from the workshop on genomics. What's covered in these notes: 
+1. Setup
 
 
 # Genomic Software
@@ -38,13 +38,12 @@ This is a list of other software you might find useful:
 # Setup
 
 ### Connect to the cluster login node 
-The preferred method to connect to the cluster is through a web browser and fastX client
- - **via FastX**: in your browser, go to `https://amarel.hpc.rutgers.edu:3443
-If the above method doesn't work you may still connect 
+Do this by one of the following methods: 
 
-  - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as `mobaXterm` [link] (https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
+  - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as `putty` or `moba-xterm`. Then from your terminal connect to the cluster by executing the following command:   
 ``` ssh -X <your net id>@amarel.hpc.rutgers.edu```   
-  
+   This is the preferred way, as your copy-pasting will most likely work best. 
+  - **via FastX**: in your browser, go to `https://amarel.hpc.rutgers.edu:3443`
 
 ### Get resources on the compute node 
 
@@ -244,7 +243,7 @@ FastQC produces an html page as output, `fastqc/SRR1039508_1_fastqc.html`, with 
 
         ##view the output, the trim.log file, .e.g.  length=63 55 1 56 7 (the original read length 63, now 55 after trim, 1 base from left end and 7 bases from the right end were trimmed off, 56 bases in middle remained)
  
-        ##you may also try fastx_quality_stats from the FASTX—toolkit
+   ##you may also try fastx_quality_stats from the FASTX—toolkit
 
 ```
 
@@ -262,7 +261,7 @@ Human genome indexing will take hours, we have the reference pre-prepared. Store
 For in class practice, we will do this on E.coli genome
 
 ```
-        cd /scratch/$USER/Genomics_Workshop/
+       cd /scratch/$USER/Genomics_Workshop/
         mkdir Reference
         cd Reference
 
@@ -272,7 +271,7 @@ For in class practice, we will do this on E.coli genome
         module load bowtie2
         bowtie2-build GCA_000005845.2_ASM584v2_genomic.fna GCA_000005845.2_ASM584v2_genomic
 
-        ##if download from ENSEMBLE
+###if download from ENSEMBLE
         wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-38/fasta/bacteria_0_collection/escherichia_coli_str_k_12_substr_mg1655/dna/Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.dna.toplevel.fa.gz
 ```
 
@@ -282,7 +281,7 @@ Now, go to your data folder
         `cd  /scratch/$USER/Genomics_Workshop/untreated`
 
 ```
-        cd  /scratch/$USER/Genomics_Workshop/untreated
+cd  /scratch/$USER/Genomics_Workshop/untreated
         module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
         module load samtools   #bowtie2 is loaded already
         mkdir tophat_out
@@ -290,7 +289,7 @@ Now, go to your data folder
         0k --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/  hg20_transciptome/GR
         Ch38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel
         SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
-        ## you shall modify the -p value to be consistent with the -c value you requested in the beginning
+## you shall modify the -p value to be consistent with the -c value you requested in the beginning
 ```
 You shall see something like:
 ```
@@ -345,10 +344,10 @@ The output folder `tophat_out/untreated_SRR1039508/` shall contain the following
 GO TO WHERE YOUR ALIGNMENT OUTPUT FOLDER IS, FOR EXAMPLE: 
 
 ``` 
-     cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
-     ln –s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/ untreated_SRR1039508/accepted_hits.bam accepted_hits.bam   
+  cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
+  ln –s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.bam accepted_hits.bam   
 
-     ##make a soft link to the full bam file we already prepared, if you didn’t have the bam ready yet
+  ##make a soft link to the full bam file we already prepared, if you didn’t have the bam ready yet
 
      module load samtools intel/17.0.2 python/2.7.12 
      samtools sort -n  accepted_hits.bam | samtools view | htseq-count -m intersection-nonempty -t exon -i gene_id -s no --additional-attr=gene_name  -/projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf > untreated08.txt
@@ -360,11 +359,11 @@ The same way to generate the counts file *untreated12.txt*, *untreated16.txt*,*d
 
 Now,  quality control using RSeQC –a few examples here, please go to the website for more functions `http://rseqc.sourceforge.net/`
 ```
-cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
-module load python/2.7.12
-module load intel/17.0.4
+  cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
+        module load python/2.7.12
+        module load intel/17.0.4
      
-read_distribution.py -i accepted_hits.bam -r /projects/oarc/Genomics_Workshop/
+        $ read_distribution.py -i accepted_hits.bam -r /projects/oarc/Genomics_Workshop/
 Reference/Homo_sapiens.GRCh38.79.bed
 processing/projects/oarc/Genomics_Workshop/Reference/Homo_sapiens.GRCh38.79.bed ... Done
         processing accepted_hits.bam ... Finished
@@ -386,7 +385,7 @@ processing/projects/oarc/Genomics_Workshop/Reference/Homo_sapiens.GRCh38.79.bed 
         TES_down_10kb       268614580           137293              0.51
         =====================================================================
 
-bam_stat.py -i accepted_hits.bam
+ $ bam_stat.py -i accepted_hits.bam
         Load BAM file ...
 
         Done
@@ -417,17 +416,16 @@ bam_stat.py -i accepted_hits.bam
 The script does genebody coverage calculation requires the input bam files to be sorted and indexed (we will do it using samtools). The calculation and plot will require R
 Go to one of the tophat_out sample folder
 ```
-module load intel/17.0.4  R-Project/3.4.1    
-module load samtools
-samtools sort accepted_hits.bam –o accepted_hits.sorted.bam 
-##this may take a while, you may use the one already prepared for you by making a soft link
+$ module load intel/17.0.4  R-Project/3.4.1    
+        $ module load samtools
+        $ samtools sort accepted_hits.bam –o accepted_hits.sorted.bam 
+        ##this may take a while, you may use the one already prepared for you by making a soft link
+        ln –s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.sorted.bam accepted_hits.sorted.bam
 
-ln –s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.sorted.bam accepted_hits.sorted.bam
 
-
-samtools index accepted_hits.sorted.bam
+        $ samtools index accepted_hits.sorted.bam
  
-geneBody_coverage.py -r /projects/oarc/Genomics_Workshop/Reference/hg38.housekeepingGenes.bed -i accepted_hits.sorted.bam -o test
+        $ geneBody_coverage.py -r /projects/oarc/Genomics_Workshop/Reference/hg38.housekeepingGenes.bed -i accepted_hits.sorted.bam -o test
 @ 2018-01-14 13:17:33: Read BED file (reference gene model) ...
 @ 2018-01-14 13:17:33: Total 3802 transcripts loaded
 @ 2018-01-14 13:17:33: Get BAM file(s) ...
