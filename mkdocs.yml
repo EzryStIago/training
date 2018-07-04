@@ -14,10 +14,6 @@ pages:
       - Labs: 'workshops/Labs.md'
   - R tutorial: 'ressentials.md'
   - Resources: 'resources.md'
-<<<<<<< HEAD
-  - CheatSheet: 'linux.md'
-theme: readthedocs
-=======
   - CheatSheet: 'CheatSheet.md'
-theme: rtd-dropdown
->>>>>>> abdullah
+theme: 
+  name: 'rtd-dropdown'
