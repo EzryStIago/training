@@ -8,12 +8,16 @@ These pages are a collection of resources to help you to utilize the cluster mor
 
 # WARNING - READ!
 
-- Do not run large computational jobs on the **login** node. Use slurm to allocate resources on the compute node. 
+- Do not run large computational jobs on the **login** node. Use slurm to allocate resources on the compute node. Failure to respect the golden rule can get your account suspended.
+- Number of jobs to submit should not exceed 5,000 at a time - queue is 10,000 and slurm will go to sleep if that is exceeded
+- Right-size your jobs: jobs may run sooner if the resources requested are smaller and the priority for you is pushed down if you have asked for (even if not used) a lot of resources lately
+- use `-n` option in sbatch only if you know what you are doing. Multithreaded but not multi-node jobs should use `-c` option. 
 - TODO: add more complete list
 
 ## Learning paths
 
-- For users familiar with Linux but new to `slurm`, follow [this path]()
-- For users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets
+- If you understand material in [lmod cheatsheet]() and [slurm cheatsheet]() you are good to go.
+- For users familiar with Linux but new to `slurm`, check out [environment modules]() and [intro to slurm](). 
+- For users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets, or use [OnDemand]() until you feel more comfortable with Linux.
 
 
