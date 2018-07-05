@@ -2,15 +2,15 @@ Welcome to the Office of Advanced Research Computing at Rutgers!
 
 > OARC is a university-wide initiative that aims to develop and implement a strategic vision for centralizing the advanced research computing and data cyberinfrastructure (ACI) ecosystem at Rutgers. OARC has the goal of providing Rutgers researchers with essential computing and data handling capabilities, and students with necessary exposure and training, through centralized resources, services and training.
 
-For more information on OARC, including how to get access or become owners, please visit [our web page](https://oarc.rutgers.edu/)
+For more information on OARC, including how to [get access](https://oarc.rutgers.edu/access) or [become owners](https://oarc.rutgers.edu/services/condo-model/), please visit [our web page](https://oarc.rutgers.edu/)
 
-These pages are a collection of resources to help you to utilize the cluster more effectively. Even if you are a very experienced Linux user, you will want to read [Amarel user guide]() as it has slurm tips and examples. 
+These pages are a collection of resources to help you to utilize the cluster more effectively. Even if you are a very experienced Linux user, you will want to read [cluster user guide](guides/Cluster_User_Guide/) as it has slurm tips and examples. 
 
-# WARNING - READ!
+## WARNING - READ!
 
 - Do not run large computational jobs on the **login** node. Use slurm to allocate resources on the compute node. Failure to respect the golden rule can get your account suspended.
-- Number of jobs to submit should not exceed 5,000 at a time - queue is 10,000 and slurm will go to sleep if that is exceeded
-- Right-size your jobs: jobs may run sooner if the resources requested are smaller and the priority for you is pushed down if you have asked for (even if not used) a lot of resources lately
+- Number of jobs to submit should not exceed 5,000 at a time - queue is currently 10,000 and slurm will go to sleep if that is exceeded.
+- Right-size your jobs: jobs may run sooner if the resources requested are smaller and your future priority is degraded if you have asked for (even if not used) a lot of resources lately.
 - use `-n` option in sbatch only if you know what you are doing. Multithreaded but not multi-node jobs should use `-c` option. 
 - TODO: add more complete list
 
