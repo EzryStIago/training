@@ -1,82 +1,3 @@
-# Linux basic commands
-
-## File tree
-
-| **Command**  | **Meaning** |
-|------------:|:----:|
-|*ls*     |list files and directories|
-|*ls -a*	|list all files and directories|
-|*mkdir*  | make a directory|
-|*cd directory* |	change to named directory|
-|*cd*|    change to home-directory|
-|*cd ~* |	change to home-directory|
-|*cd ..* |	change to parent directory|
-|*pwd*	|     display the path of the current directory |
-
-## Moving and viewing files
-
-|**Command**|**Meaning**|
-|------------:|:----------|
-|cp file1 file2 |	copy file1 and call it file2|
-|mv file1 file2|	move or rename file1 to file2|
-|rm file	|remove a file|
-|rmdir directory |	remove a directory (only if empty)|
-|cat file |	display a file|
-|less file|	display a file a page at a time|
-|head -19 file	|display the first 19 lines of a file|
-|tail -19 file	|display the last 19 lines of a file|
-|grep Finally myfile.txt	|search myfile.txt for word Finally|
-|wc file |	count number of lines/words/characters in file
-
-## Piping
-
-|**Command**	| **Description**
----------|--------------
-command > file |	redirect standard output to a file
-command >> file	|append standard output to a file
-command < file|	redirect standard input from a file
-*command1 &#x7c; command2*	| pipe the output of command1 to the input of command2
-cat file1 file2 > file0	| concatenate file1 and file2 to file0
-sort |	sort data
-who|	list users currently logged in
-*	|match any number of characters
-?	|match one character
-man command|	read the online manual page for a command
-whatis command	|brief description of a command
-apropos keyword|	match commands with keyword in their man pages
-
-## Permissions
-
-**Symbol** |**Description**
----|---
-u |user
-g |group
-o |other
-a |all
-r |read
-w |write (and delete)
-x |execute (and access directory)
-u+x |add executing permission for user
-u-x |take away executing permission
-
-Output of `ls -ltra`  
-``` drwxr-x--x  12 kp807 kp807      4096 Jun 26 23:33 .rstudio ```
-
-- d = it's a directory
-- rwx = first group of permissions, readable, writeable and executable by user
-- r-x = second group of permissions, readable and executable by group, but not writeable by group
-- r-x = third group of permissions, executable by others, but not readable and writeable by others
-- .rstudio = hidden directory
-
-## Linux on the web
-
-- [Galen's tutorial](http://www.rci.rutgers.edu/~gc563/linux/index.html)
-- [Excellent short lessons](http://www.ee.surrey.ac.uk/Teaching/Unix/)
-- [Alexei's course he runs for engineering students every semester](http://linuxcourse.rutgers.edu/)
-- [Cornell virtual workshop](https://cvw.cac.cornell.edu/Linux/) - interactive if you have xsede login; many HPC topics available
-- [Software carpentry](https://software-carpentry.org/lessons/) - list of introductory programming courses
-
-
 # Bash cheatsheet (command line): 
 
 |command | description | usage example |
@@ -165,4 +86,83 @@ Command | Description of which file usage
 `mmlsquota home:foran --block-size=auto` | file usage in the shared folder foran (/projects/foran)
 `mmlsquota -j foran home  --block-size=auto` | quota and usage of the whole fileset foran
 `du -hs /directory/to/query/*`          | human-readable sizes of all 1st-level subdirectories of `/directory/to/query/`
+
+# Linux basic commands
+
+## File tree
+
+| **Command**  | **Meaning** |
+|------------:|:----:|
+|*ls*     |list files and directories|
+|*ls -a*	|list all files and directories|
+|*mkdir*  | make a directory|
+|*cd directory* |	change to named directory|
+|*cd*|    change to home-directory|
+|*cd ~* |	change to home-directory|
+|*cd ..* |	change to parent directory|
+|*pwd*	|     display the path of the current directory |
+
+## Moving and viewing files
+
+|**Command**|**Meaning**|
+|------------:|:----------|
+|cp file1 file2 |	copy file1 and call it file2|
+|mv file1 file2|	move or rename file1 to file2|
+|rm file	|remove a file|
+|rmdir directory |	remove a directory (only if empty)|
+|cat file |	display a file|
+|less file|	display a file a page at a time|
+|head -19 file	|display the first 19 lines of a file|
+|tail -19 file	|display the last 19 lines of a file|
+|grep Finally myfile.txt	|search myfile.txt for word Finally|
+|wc file |	count number of lines/words/characters in file
+
+## Piping
+
+|**Command**	| **Description**
+---------|--------------
+command > file |	redirect standard output to a file
+command >> file	|append standard output to a file
+command < file|	redirect standard input from a file
+*command1 &#x7c; command2*	| pipe the output of command1 to the input of command2
+cat file1 file2 > file0	| concatenate file1 and file2 to file0
+sort |	sort data
+who|	list users currently logged in
+*	|match any number of characters
+?	|match one character
+man command|	read the online manual page for a command
+whatis command	|brief description of a command
+apropos keyword|	match commands with keyword in their man pages
+
+## Permissions
+
+**Symbol** |**Description**
+---|---
+u |user
+g |group
+o |other
+a |all
+r |read
+w |write (and delete)
+x |execute (and access directory)
+u+x |add executing permission for user
+u-x |take away executing permission
+
+Output of `ls -ltra`  
+``` drwxr-x--x  12 kp807 kp807      4096 Jun 26 23:33 .rstudio ```
+
+- d = it's a directory
+- rwx = first group of permissions, readable, writeable and executable by user
+- r-x = second group of permissions, readable and executable by group, but not writeable by group
+- r-x = third group of permissions, executable by others, but not readable and writeable by others
+- .rstudio = hidden directory
+
+## Linux on the web
+
+- [Galen's tutorial](http://www.rci.rutgers.edu/~gc563/linux/index.html)
+- [Excellent short lessons](http://www.ee.surrey.ac.uk/Teaching/Unix/)
+- [Alexei's course he runs for engineering students every semester](http://linuxcourse.rutgers.edu/)
+- [Cornell virtual workshop](https://cvw.cac.cornell.edu/Linux/) - interactive if you have xsede login; many HPC topics available
+- [Software carpentry](https://software-carpentry.org/lessons/) - list of introductory programming courses
+
 
