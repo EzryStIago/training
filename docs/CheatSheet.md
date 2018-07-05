@@ -48,11 +48,11 @@ b = 10; echo $b      #bad - spaces around =
 
 **Command**|**Description**
 ---|---
-`module avail`|  show a list of the core (primary) modules available
-`module load *module_name*`| loads the named software module 
-`module use` /projects/community/projectsmodule`| Now if you do module avail, it also shows modules created by other users 
+`module avail`|  show a list of the modules available
+`module load java`| loads the named software module i.e. java
+`module use /projects/community/modulefiles`| Now if you do module avail, it also shows modules created by other users 
 `module spider` | shows a comprehensive list of all available modules or type name after spider to show details about specific module
-`module keyword` | looks for a keyword in the description of a module
+`module keyword anaconda` | looks for the keyword `anaconda` in the description of a module
 `module purge`| removes all loaded module
 `ml`| lists modules loaded 
 
