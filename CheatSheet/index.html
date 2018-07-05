@@ -285,14 +285,58 @@
   
 
 
-  <li class="current toctree-l2">
+  <li class="toctree-l2 toc-item">
+    <a href="#bash-cheatsheet-command-line" title="CheatSheet">Bash cheatsheet (command line):</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#environment-modules-lmod-cheatsheet" title="CheatSheet">Environment modules (lmod) cheatsheet</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#slurm-cheatsheet" title="CheatSheet">Slurm cheatsheet</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#check-quota-cheatsheet" title="CheatSheet">Check quota cheatsheet</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
     
       <a href="#linux-basic-commands" title="CheatSheet"
-          class="current">
+          class="">
         Linux basic commands
       </a>
     
-    <ul class="current subnav">
+    <ul class=" subnav">
       
         
 
@@ -353,50 +397,6 @@
   </li>
 
     
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#bash-cheatsheet-command-line" title="CheatSheet">Bash cheatsheet (command line):</a>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#environment-modules-lmod-cheatsheet" title="CheatSheet">Environment modules (lmod) cheatsheet</a>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#slurm-cheatsheet" title="CheatSheet">Slurm cheatsheet</a>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#check-quota-cheatsheet" title="CheatSheet">Check quota cheatsheet</a>
-  </li>
-
-    
   </ul>
 
       </li>
@@ -445,225 +445,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="linux-basic-commands">Linux basic commands</h1>
-<h2 id="file-tree">File tree</h2>
-<table>
-<thead>
-<tr>
-<th align="right"><strong>Command</strong></th>
-<th align="center"><strong>Meaning</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right"><em>ls</em></td>
-<td align="center">list files and directories</td>
-</tr>
-<tr>
-<td align="right"><em>ls -a</em></td>
-<td align="center">list all files and directories</td>
-</tr>
-<tr>
-<td align="right"><em>mkdir</em></td>
-<td align="center">make a directory</td>
-</tr>
-<tr>
-<td align="right"><em>cd directory</em></td>
-<td align="center">change to named directory</td>
-</tr>
-<tr>
-<td align="right"><em>cd</em></td>
-<td align="center">change to home-directory</td>
-</tr>
-<tr>
-<td align="right"><em>cd ~</em></td>
-<td align="center">change to home-directory</td>
-</tr>
-<tr>
-<td align="right"><em>cd ..</em></td>
-<td align="center">change to parent directory</td>
-</tr>
-<tr>
-<td align="right"><em>pwd</em></td>
-<td align="center">display the path of the current directory</td>
-</tr>
-</tbody>
-</table>
-<h2 id="moving-and-viewing-files">Moving and viewing files</h2>
-<table>
-<thead>
-<tr>
-<th align="right"><strong>Command</strong></th>
-<th align="left"><strong>Meaning</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">cp file1 file2</td>
-<td align="left">copy file1 and call it file2</td>
-</tr>
-<tr>
-<td align="right">mv file1 file2</td>
-<td align="left">move or rename file1 to file2</td>
-</tr>
-<tr>
-<td align="right">rm file</td>
-<td align="left">remove a file</td>
-</tr>
-<tr>
-<td align="right">rmdir directory</td>
-<td align="left">remove a directory (only if empty)</td>
-</tr>
-<tr>
-<td align="right">cat file</td>
-<td align="left">display a file</td>
-</tr>
-<tr>
-<td align="right">less file</td>
-<td align="left">display a file a page at a time</td>
-</tr>
-<tr>
-<td align="right">head -19 file</td>
-<td align="left">display the first 19 lines of a file</td>
-</tr>
-<tr>
-<td align="right">tail -19 file</td>
-<td align="left">display the last 19 lines of a file</td>
-</tr>
-<tr>
-<td align="right">grep Finally myfile.txt</td>
-<td align="left">search myfile.txt for word Finally</td>
-</tr>
-<tr>
-<td align="right">wc file</td>
-<td align="left">count number of lines/words/characters in file</td>
-</tr>
-</tbody>
-</table>
-<h2 id="piping">Piping</h2>
-<table>
-<thead>
-<tr>
-<th><strong>Command</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>command &gt; file</td>
-<td>redirect standard output to a file</td>
-</tr>
-<tr>
-<td>command &gt;&gt; file</td>
-<td>append standard output to a file</td>
-</tr>
-<tr>
-<td>command &lt; file</td>
-<td>redirect standard input from a file</td>
-</tr>
-<tr>
-<td><em>command1 &#x7c; command2</em></td>
-<td>pipe the output of command1 to the input of command2</td>
-</tr>
-<tr>
-<td>cat file1 file2 &gt; file0</td>
-<td>concatenate file1 and file2 to file0</td>
-</tr>
-<tr>
-<td>sort</td>
-<td>sort data</td>
-</tr>
-<tr>
-<td>who</td>
-<td>list users currently logged in</td>
-</tr>
-<tr>
-<td>*</td>
-<td>match any number of characters</td>
-</tr>
-<tr>
-<td>?</td>
-<td>match one character</td>
-</tr>
-<tr>
-<td>man command</td>
-<td>read the online manual page for a command</td>
-</tr>
-<tr>
-<td>whatis command</td>
-<td>brief description of a command</td>
-</tr>
-<tr>
-<td>apropos keyword</td>
-<td>match commands with keyword in their man pages</td>
-</tr>
-</tbody>
-</table>
-<h2 id="permissions">Permissions</h2>
-<table>
-<thead>
-<tr>
-<th><strong>Symbol</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u</td>
-<td>user</td>
-</tr>
-<tr>
-<td>g</td>
-<td>group</td>
-</tr>
-<tr>
-<td>o</td>
-<td>other</td>
-</tr>
-<tr>
-<td>a</td>
-<td>all</td>
-</tr>
-<tr>
-<td>r</td>
-<td>read</td>
-</tr>
-<tr>
-<td>w</td>
-<td>write (and delete)</td>
-</tr>
-<tr>
-<td>x</td>
-<td>execute (and access directory)</td>
-</tr>
-<tr>
-<td>u+x</td>
-<td>add executing permission for user</td>
-</tr>
-<tr>
-<td>u-x</td>
-<td>take away executing permission</td>
-</tr>
-</tbody>
-</table>
-<p>Output of <code>ls -ltra</code><br />
-<code>drwxr-x--x  12 kp807 kp807      4096 Jun 26 23:33 .rstudio</code></p>
-<ul>
-<li>d = it's a directory</li>
-<li>rwx = first group of permissions, readable, writeable and executable by user</li>
-<li>r-x = second group of permissions, readable and executable by group, but not writeable by group</li>
-<li>r-x = third group of permissions, executable by others, but not readable and writeable by others</li>
-<li>.rstudio = hidden directory</li>
-</ul>
-<h2 id="linux-on-the-web">Linux on the web</h2>
-<ul>
-<li><a href="http://www.rci.rutgers.edu/~gc563/linux/index.html">Galen's tutorial</a></li>
-<li><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">Excellent short lessons</a></li>
-<li><a href="http://linuxcourse.rutgers.edu/">Alexei's course he runs for engineering students every semester</a></li>
-<li><a href="https://cvw.cac.cornell.edu/Linux/">Cornell virtual workshop</a> - interactive if you have xsede login; many HPC topics available</li>
-<li><a href="https://software-carpentry.org/lessons/">Software carpentry</a> - list of introductory programming courses</li>
-</ul>
-<h1 id="bash-cheatsheet-command-line">Bash cheatsheet (command line):</h1>
+                <h1 id="bash-cheatsheet-command-line">Bash cheatsheet (command line):</h1>
 <table>
 <thead>
 <tr>
@@ -909,6 +691,224 @@ b = 10; echo $b      #bad - spaces around =
 </tr>
 </tbody>
 </table>
+<h1 id="linux-basic-commands">Linux basic commands</h1>
+<h2 id="file-tree">File tree</h2>
+<table>
+<thead>
+<tr>
+<th align="right"><strong>Command</strong></th>
+<th align="center"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><em>ls</em></td>
+<td align="center">list files and directories</td>
+</tr>
+<tr>
+<td align="right"><em>ls -a</em></td>
+<td align="center">list all files and directories</td>
+</tr>
+<tr>
+<td align="right"><em>mkdir</em></td>
+<td align="center">make a directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd directory</em></td>
+<td align="center">change to named directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd</em></td>
+<td align="center">change to home-directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd ~</em></td>
+<td align="center">change to home-directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd ..</em></td>
+<td align="center">change to parent directory</td>
+</tr>
+<tr>
+<td align="right"><em>pwd</em></td>
+<td align="center">display the path of the current directory</td>
+</tr>
+</tbody>
+</table>
+<h2 id="moving-and-viewing-files">Moving and viewing files</h2>
+<table>
+<thead>
+<tr>
+<th align="right"><strong>Command</strong></th>
+<th align="left"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">cp file1 file2</td>
+<td align="left">copy file1 and call it file2</td>
+</tr>
+<tr>
+<td align="right">mv file1 file2</td>
+<td align="left">move or rename file1 to file2</td>
+</tr>
+<tr>
+<td align="right">rm file</td>
+<td align="left">remove a file</td>
+</tr>
+<tr>
+<td align="right">rmdir directory</td>
+<td align="left">remove a directory (only if empty)</td>
+</tr>
+<tr>
+<td align="right">cat file</td>
+<td align="left">display a file</td>
+</tr>
+<tr>
+<td align="right">less file</td>
+<td align="left">display a file a page at a time</td>
+</tr>
+<tr>
+<td align="right">head -19 file</td>
+<td align="left">display the first 19 lines of a file</td>
+</tr>
+<tr>
+<td align="right">tail -19 file</td>
+<td align="left">display the last 19 lines of a file</td>
+</tr>
+<tr>
+<td align="right">grep Finally myfile.txt</td>
+<td align="left">search myfile.txt for word Finally</td>
+</tr>
+<tr>
+<td align="right">wc file</td>
+<td align="left">count number of lines/words/characters in file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="piping">Piping</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>command &gt; file</td>
+<td>redirect standard output to a file</td>
+</tr>
+<tr>
+<td>command &gt;&gt; file</td>
+<td>append standard output to a file</td>
+</tr>
+<tr>
+<td>command &lt; file</td>
+<td>redirect standard input from a file</td>
+</tr>
+<tr>
+<td><em>command1 &#x7c; command2</em></td>
+<td>pipe the output of command1 to the input of command2</td>
+</tr>
+<tr>
+<td>cat file1 file2 &gt; file0</td>
+<td>concatenate file1 and file2 to file0</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>sort data</td>
+</tr>
+<tr>
+<td>who</td>
+<td>list users currently logged in</td>
+</tr>
+<tr>
+<td>*</td>
+<td>match any number of characters</td>
+</tr>
+<tr>
+<td>?</td>
+<td>match one character</td>
+</tr>
+<tr>
+<td>man command</td>
+<td>read the online manual page for a command</td>
+</tr>
+<tr>
+<td>whatis command</td>
+<td>brief description of a command</td>
+</tr>
+<tr>
+<td>apropos keyword</td>
+<td>match commands with keyword in their man pages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="permissions">Permissions</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Symbol</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u</td>
+<td>user</td>
+</tr>
+<tr>
+<td>g</td>
+<td>group</td>
+</tr>
+<tr>
+<td>o</td>
+<td>other</td>
+</tr>
+<tr>
+<td>a</td>
+<td>all</td>
+</tr>
+<tr>
+<td>r</td>
+<td>read</td>
+</tr>
+<tr>
+<td>w</td>
+<td>write (and delete)</td>
+</tr>
+<tr>
+<td>x</td>
+<td>execute (and access directory)</td>
+</tr>
+<tr>
+<td>u+x</td>
+<td>add executing permission for user</td>
+</tr>
+<tr>
+<td>u-x</td>
+<td>take away executing permission</td>
+</tr>
+</tbody>
+</table>
+<p>Output of <code>ls -ltra</code><br />
+<code>drwxr-x--x  12 kp807 kp807      4096 Jun 26 23:33 .rstudio</code></p>
+<ul>
+<li>d = it's a directory</li>
+<li>rwx = first group of permissions, readable, writeable and executable by user</li>
+<li>r-x = second group of permissions, readable and executable by group, but not writeable by group</li>
+<li>r-x = third group of permissions, executable by others, but not readable and writeable by others</li>
+<li>.rstudio = hidden directory</li>
+</ul>
+<h2 id="linux-on-the-web">Linux on the web</h2>
+<ul>
+<li><a href="http://www.rci.rutgers.edu/~gc563/linux/index.html">Galen's tutorial</a></li>
+<li><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">Excellent short lessons</a></li>
+<li><a href="http://linuxcourse.rutgers.edu/">Alexei's course he runs for engineering students every semester</a></li>
+<li><a href="https://cvw.cac.cornell.edu/Linux/">Cornell virtual workshop</a> - interactive if you have xsede login; many HPC topics available</li>
+<li><a href="https://software-carpentry.org/lessons/">Software carpentry</a> - list of introductory programming courses</li>
+</ul>
               
             </div>
           </div>
