@@ -5,6 +5,7 @@ pages:
   - Home: 'index.md'
   - Cluster Guides: 'guides/Cluster_User_Guide.md'
   - Examples: 'guides/Cluster_Examples.md'
+  - Amarel Community Resources: 'community_resources.md'
   - HowTo: 
       - Jupyter: 'howtos/jupyter.md' 
       - FastX: 'howtos/fastx.md'
