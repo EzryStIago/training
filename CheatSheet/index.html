@@ -555,14 +555,14 @@ b = 10; echo $b      #bad - spaces around =
 <tbody>
 <tr>
 <td><code>module avail</code></td>
-<td>show a list of the core (primary) modules available</td>
+<td>show a list of the modules available</td>
 </tr>
 <tr>
-<td><code>module load *module_name*</code></td>
-<td>loads the named software module</td>
+<td><code>module load java</code></td>
+<td>loads the named software module i.e. java</td>
 </tr>
 <tr>
-<td><code>module use</code> /projects/community/projectsmodule`</td>
+<td><code>module use /projects/community/modulefiles</code></td>
 <td>Now if you do module avail, it also shows modules created by other users</td>
 </tr>
 <tr>
@@ -570,8 +570,8 @@ b = 10; echo $b      #bad - spaces around =
 <td>shows a comprehensive list of all available modules or type name after spider to show details about specific module</td>
 </tr>
 <tr>
-<td><code>module keyword</code></td>
-<td>looks for a keyword in the description of a module</td>
+<td><code>module keyword anaconda</code></td>
+<td>looks for the keyword <code>anaconda</code> in the description of a module</td>
 </tr>
 <tr>
 <td><code>module purge</code></td>
