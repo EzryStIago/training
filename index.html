@@ -61,6 +61,7 @@
         
   
   
+  
   <ul class="current subnav">
     
       
@@ -70,11 +71,12 @@
   
 
 
-  <li class="current toctree-l2">
+  <li class="toctree-l2 toc-item">
+    <a href="#warning-read" title="Home">WARNING - READ!</a>
+  </li>
+
     
-    <ul class="current subnav">
       
-        
 
   
   
@@ -82,10 +84,6 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#learning-paths" title="Home">Learning paths</a>
-  </li>
-
-      
-    </ul>
   </li>
 
     
@@ -352,13 +350,13 @@
 <blockquote>
 <p>OARC is a university-wide initiative that aims to develop and implement a strategic vision for centralizing the advanced research computing and data cyberinfrastructure (ACI) ecosystem at Rutgers. OARC has the goal of providing Rutgers researchers with essential computing and data handling capabilities, and students with necessary exposure and training, through centralized resources, services and training.</p>
 </blockquote>
-<p>For more information on OARC, including how to get access or become owners, please visit <a href="https://oarc.rutgers.edu/">our web page</a></p>
-<p>These pages are a collection of resources to help you to utilize the cluster more effectively. Even if you are a very experienced Linux user, you will want to read <a href="">Amarel user guide</a> as it has slurm tips and examples. </p>
-<h1 id="warning-read">WARNING - READ!</h1>
+<p>For more information on OARC, including how to <a href="https://oarc.rutgers.edu/access">get access</a> or <a href="https://oarc.rutgers.edu/services/condo-model/">become owners</a>, please visit <a href="https://oarc.rutgers.edu/">our web page</a></p>
+<p>These pages are a collection of resources to help you to utilize the cluster more effectively. Even if you are a very experienced Linux user, you will want to read <a href="./guides/Cluster_User_Guide/">cluster user guide</a> as it has slurm tips and examples. </p>
+<h2 id="warning-read">WARNING - READ!</h2>
 <ul>
 <li>Do not run large computational jobs on the <strong>login</strong> node. Use slurm to allocate resources on the compute node. Failure to respect the golden rule can get your account suspended.</li>
-<li>Number of jobs to submit should not exceed 5,000 at a time - queue is 10,000 and slurm will go to sleep if that is exceeded</li>
-<li>Right-size your jobs: jobs may run sooner if the resources requested are smaller and the priority for you is pushed down if you have asked for (even if not used) a lot of resources lately</li>
+<li>Number of jobs to submit should not exceed 5,000 at a time - queue is currently 10,000 and slurm will go to sleep if that is exceeded.</li>
+<li>Right-size your jobs: jobs may run sooner if the resources requested are smaller and your future priority is degraded if you have asked for (even if not used) a lot of resources lately.</li>
 <li>use <code>-n</code> option in sbatch only if you know what you are doing. Multithreaded but not multi-node jobs should use <code>-c</code> option. </li>
 <li>TODO: add more complete list</li>
 </ul>
@@ -419,5 +417,5 @@
 
 <!--
 MkDocs version : 0.17.4
-Build Date UTC : 2018-07-05 01:54:29
+Build Date UTC : 2018-07-05 02:23:54
 -->
