@@ -275,8 +275,6 @@
   
   
   
-  
-  
   <ul class="current subnav">
     
       
@@ -286,45 +284,49 @@
   
 
 
-  <li class="toctree-l2 toc-item">
-    <a href="#navigating-file-tree" title="CheatSheet">Navigating file tree</a>
-  </li>
-
+  <li class="current toctree-l2">
     
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#viewing-files" title="CheatSheet">Viewing files</a>
-  </li>
-
+      <a href="#linux-basic-commands" title="CheatSheet"
+          class="current">
+        Linux basic commands
+      </a>
     
+    <ul class="current subnav">
       
+        
 
   
   
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#useful-commands" title="CheatSheet">Useful commands:</a>
+    <a href="#file-tree" title="CheatSheet">File tree</a>
   </li>
 
-    
       
+        
 
   
   
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#redirecting" title="CheatSheet">Redirecting</a>
+    <a href="#moving-and-viewing-files" title="CheatSheet">Moving and viewing files</a>
   </li>
 
-    
       
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#piping" title="CheatSheet">Piping</a>
+  </li>
+
+      
+        
 
   
   
@@ -334,6 +336,21 @@
     <a href="#permissions" title="CheatSheet">Permissions</a>
   </li>
 
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#linux-on-the-web" title="CheatSheet">Linux on the web</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
     
       
 
@@ -342,7 +359,29 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#modules" title="CheatSheet">Modules</a>
+    <a href="#bash-cheatsheet-command-line" title="CheatSheet">Bash cheatsheet (command line):</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#environment-modules-lmod-cheatsheet" title="CheatSheet">Environment modules (lmod) cheatsheet</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#slurm-cheatsheet" title="CheatSheet">Slurm cheatsheet</a>
   </li>
 
     
@@ -394,7 +433,8 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="navigating-file-tree">Navigating file tree</h1>
+                <h1 id="linux-basic-commands">Linux basic commands</h1>
+<h2 id="file-tree">File tree</h2>
 <table>
 <thead>
 <tr>
@@ -435,17 +475,9 @@
 <td align="right"><em>pwd</em></td>
 <td align="center">display the path of the current directory</td>
 </tr>
-<tr>
-<td align="right"><em>rm</em></td>
-<td align="center">removes files only</td>
-</tr>
-<tr>
-<td align="right"><em>rmdir</em></td>
-<td align="center">removes directory(make sure its empty)</td>
-</tr>
 </tbody>
 </table>
-<h1 id="viewing-files">Viewing files</h1>
+<h2 id="moving-and-viewing-files">Moving and viewing files</h2>
 <table>
 <thead>
 <tr>
@@ -468,7 +500,7 @@
 </tr>
 <tr>
 <td align="right">rmdir directory</td>
-<td align="left">remove a directory</td>
+<td align="left">remove a directory (only if empty)</td>
 </tr>
 <tr>
 <td align="right">cat file</td>
@@ -479,24 +511,147 @@
 <td align="left">display a file a page at a time</td>
 </tr>
 <tr>
-<td align="right">head file</td>
-<td align="left">display the first few lines of a file</td>
+<td align="right">head -19 file</td>
+<td align="left">display the first 19 lines of a file</td>
 </tr>
 <tr>
-<td align="right">tail file</td>
-<td align="left">display the last few lines of a file</td>
+<td align="right">tail -19 file</td>
+<td align="left">display the last 19 lines of a file</td>
 </tr>
 <tr>
-<td align="right">grep 'keyword'</td>
-<td align="left">file   search a file for keywords</td>
+<td align="right">grep Finally myfile.txt</td>
+<td align="left">search myfile.txt for word Finally</td>
 </tr>
 <tr>
-<td align="right">wc file -l/w</td>
+<td align="right">wc file</td>
 <td align="left">count number of lines/words/characters in file</td>
 </tr>
 </tbody>
 </table>
-<h1 id="useful-commands">Useful commands:</h1>
+<h2 id="piping">Piping</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>command &gt; file</td>
+<td>redirect standard output to a file</td>
+</tr>
+<tr>
+<td>command &gt;&gt; file</td>
+<td>append standard output to a file</td>
+</tr>
+<tr>
+<td>command &lt; file</td>
+<td>redirect standard input from a file</td>
+</tr>
+<tr>
+<td><em>command1 &#x7c; command2</em></td>
+<td>pipe the output of command1 to the input of command2</td>
+</tr>
+<tr>
+<td>cat file1 file2 &gt; file0</td>
+<td>concatenate file1 and file2 to file0</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>sort data</td>
+</tr>
+<tr>
+<td>who</td>
+<td>list users currently logged in</td>
+</tr>
+<tr>
+<td>*</td>
+<td>match any number of characters</td>
+</tr>
+<tr>
+<td>?</td>
+<td>match one character</td>
+</tr>
+<tr>
+<td>man command</td>
+<td>read the online manual page for a command</td>
+</tr>
+<tr>
+<td>whatis command</td>
+<td>brief description of a command</td>
+</tr>
+<tr>
+<td>apropos keyword</td>
+<td>match commands with keyword in their man pages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="permissions">Permissions</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Symbol</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u</td>
+<td>user</td>
+</tr>
+<tr>
+<td>g</td>
+<td>group</td>
+</tr>
+<tr>
+<td>o</td>
+<td>other</td>
+</tr>
+<tr>
+<td>a</td>
+<td>all</td>
+</tr>
+<tr>
+<td>r</td>
+<td>read</td>
+</tr>
+<tr>
+<td>w</td>
+<td>write (and delete)</td>
+</tr>
+<tr>
+<td>x</td>
+<td>execute (and access directory)</td>
+</tr>
+<tr>
+<td>u+x</td>
+<td>add executing permission for user</td>
+</tr>
+<tr>
+<td>u-x</td>
+<td>take away executing permission</td>
+</tr>
+</tbody>
+</table>
+<p>Output of <code>ls -ltra</code><br />
+<code>drwxr-x--x  12 kp807 kp807      4096 Jun 26 23:33 .rstudio</code></p>
+<ul>
+<li>d = it's a directory</li>
+<li>rwx = first group of permissions, readable, writeable and executable by user</li>
+<li>r-x = second group of permissions, readable and executable by group, but not writeable by group</li>
+<li>r-x = third group of permissions, executable by others, but not readable and writeable by others</li>
+<li>.rstudio = hidden directory</li>
+</ul>
+<h2 id="linux-on-the-web">Linux on the web</h2>
+<ul>
+<li><a href="http://www.rci.rutgers.edu/~gc563/linux/index.html">Galen's tutorial</a></li>
+<li><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">Excellent short lessons</a></li>
+<li><a href="http://linuxcourse.rutgers.edu/">Alexei's course he runs for engineering students every semester</a></li>
+<li><a href="https://cvw.cac.cornell.edu/Linux/">Cornell virtual workshop</a> - interactive if you have xsede login; many HPC topics available</li>
+<li><a href="https://software-carpentry.org/lessons/">Software carpentry</a> - list of introductory programming courses</li>
+</ul>
+<h1 id="bash-cheatsheet-command-line">Bash cheatsheet (command line):</h1>
 <table>
 <thead>
 <tr>
@@ -506,6 +661,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td align="left">ls -ltra mydir</td>
+<td align="left">list all files in mydir in descending order of creation, with permissions</td>
+<td align="left">ls -ltra .</td>
+</tr>
 <tr>
 <td align="left">which <command></td>
 <td align="left">see where command is installed</td>
@@ -563,7 +723,7 @@
 </tr>
 <tr>
 <td align="left">chmod</td>
-<td align="left">change permissions on a file or directory</td>
+<td align="left">change permissions on a file or directory, eg. make myscript.sh executable for user</td>
 <td align="left">chmod u+x myscript.sh</td>
 </tr>
 <tr>
@@ -578,152 +738,90 @@
 </tr>
 </tbody>
 </table>
-<h1 id="redirecting">Redirecting</h1>
+<h1 id="environment-modules-lmod-cheatsheet">Environment modules (lmod) cheatsheet</h1>
 <table>
 <thead>
 <tr>
 <th><strong>Command</strong></th>
-<th><strong>Meaning</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>command &gt; file</td>
-<td>redirect standard output to a file</td>
-</tr>
-<tr>
-<td>command &gt;&gt; file</td>
-<td>append standard output to a file</td>
-</tr>
-<tr>
-<td>command &lt; file</td>
-<td>redirect standard input from a file</td>
-</tr>
-<tr>
-<td><em>command1 &#x7c; command2</em></td>
-<td>pipe the output of command1 to the input of command2</td>
-</tr>
-<tr>
-<td>cat file1 file2 &gt; file0</td>
-<td>concatenate file1 and file2 to file0</td>
-</tr>
-<tr>
-<td>sort</td>
-<td>sort data</td>
-</tr>
-<tr>
-<td>who</td>
-<td>list users currently logged in</td>
-</tr>
-<tr>
-<td>*</td>
-<td>match any number of characters</td>
-</tr>
-<tr>
-<td>?</td>
-<td>match one character</td>
-</tr>
-<tr>
-<td>man command</td>
-<td>read the online manual page for a command</td>
-</tr>
-<tr>
-<td>whatis command</td>
-<td>brief description of a command</td>
-</tr>
-<tr>
-<td>apropos keyword</td>
-<td>match commands with keyword in their man pages</td>
-</tr>
-</tbody>
-</table>
-<h1 id="permissions">Permissions</h1>
-<table>
-<thead>
-<tr>
-<th><strong>Symbol</strong></th>
-<th><strong>Meaning</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u</td>
-<td>user</td>
-</tr>
-<tr>
-<td>g</td>
-<td>group</td>
-</tr>
-<tr>
-<td>o</td>
-<td>other</td>
-</tr>
-<tr>
-<td>a</td>
-<td>all</td>
-</tr>
-<tr>
-<td>r</td>
-<td>read</td>
-</tr>
-<tr>
-<td>w</td>
-<td>write (and delete)</td>
-</tr>
-<tr>
-<td>x</td>
-<td>execute (and access directory)</td>
-</tr>
-<tr>
-<td>u+x</td>
-<td>add executing permission for user</td>
-</tr>
-<tr>
-<td>u-x</td>
-<td>take away executing permission</td>
-</tr>
-</tbody>
-</table>
-<h1 id="modules">Modules</h1>
-<table>
-<thead>
-<tr>
-<th><strong>Command</strong></th>
-<th><strong>Meaning</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>module avail</td>
+<td><code>module avail</code></td>
 <td>show a list of the core (primary) modules available</td>
 </tr>
 <tr>
-<td>module load <em>module_name</em></td>
+<td><code>module load *module_name*</code></td>
 <td>loads the named software module</td>
 </tr>
 <tr>
-<td>module use <code>/projects/community/projectsmodule</code></td>
+<td><code>module use</code> /projects/community/projectsmodule`</td>
 <td>Now if you do module avail, it also shows modules created by other users</td>
 </tr>
 <tr>
-<td>module spider</td>
+<td><code>module spider</code></td>
 <td>shows a comprehensive list of all available modules or type name after spider to show details about specific module</td>
 </tr>
 <tr>
-<td>module keyword</td>
+<td><code>module keyword</code></td>
 <td>looks for a keyword in the description of a module</td>
 </tr>
 <tr>
-<td>module purge</td>
+<td><code>module purge</code></td>
 <td>removes all loaded module</td>
 </tr>
 <tr>
-<td>ml</td>
+<td><code>ml</code></td>
 <td>lists modules loaded</td>
 </tr>
 </tbody>
 </table>
 <p>To learm more about environments and modules, see <a href="https://lmod.readthedocs.io/en/latest/">lmod documenation</a>. </p>
+<h1 id="slurm-cheatsheet">Slurm cheatsheet</h1>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sinfo</code></td>
+<td>info about utilization and resources</td>
+</tr>
+<tr>
+<td><code>sbatch my_slurm_script.sh</code></td>
+<td>submit a slurm script</td>
+</tr>
+<tr>
+<td><code>srun -N 1 -c 2 -t 1:00:00 --pty bash</code></td>
+<td>run interactive shell on a compute node for 1 hour</td>
+</tr>
+<tr>
+<td><code>scancel  123456</code></td>
+<td>cancel job 123456 that's currently running or queued</td>
+</tr>
+<tr>
+<td><code>sacct -u kp807 --start=2018-05-02</code></td>
+<td>show all jobs by user kp807 since some date</td>
+</tr>
+<tr>
+<td><code>scontrol show job 123456 -dd</code></td>
+<td>details about job that's running</td>
+</tr>
+<tr>
+<td><code>scontrol show node hal0001</code></td>
+<td>details about node <code>ha0001</code></td>
+</tr>
+<tr>
+<td><code>scontrol --help</code></td>
+<td>generic way to invoke quick help on any command</td>
+</tr>
+</tbody>
+</table>
+<p>To learn more about slurm, see <a href="https://slurm.schedmd.com/">slurm documentation</a></p>
               
             </div>
           </div>

@@ -219,8 +219,38 @@
   
 
 
+  <li class=" toctree-l2">
+    
+      <a href="#loading-software-modules" title="Cluster Guides"
+          class="">
+        Loading software modules
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
   <li class="toctree-l2 toc-item">
-    <a href="#loading-software-modules" title="Cluster Guides">Loading software modules</a>
+    <a href="#lmod-video-walkthrough" title="Cluster Guides">Lmod video walkthrough</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#longer-explanation" title="Cluster Guides">Longer explanation</a>
+  </li>
+
+      
+    </ul>
   </li>
 
     
@@ -238,6 +268,17 @@
       </a>
     
     <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#video-walkthrough" title="Cluster Guides">Video walkthrough</a>
+  </li>
+
       
         
 
@@ -773,6 +814,41 @@ mem          up 3-00:00:00      1  alloc mem001
 </table>
 <h1 id="loading-software-modules">Loading software modules</h1>
 <p>When you first log-in, only basic system-wide tools are available automatically. To use a specific software package that is already installed, you can setup your environment using the module system.</p>
+<h2 id="lmod-video-walkthrough">Lmod video walkthrough</h2>
+<p><a href="https://www.youtube.com/watch?v=tu9cmUrutgE"><img alt="Using module command" src="https://img.youtube.com/vi/tu9cmUrutgE/0.jpg" /></a></p>
+<p>Commands used in the video: </p>
+<pre><code>lmod = https://lmod.readthedocs.io = A New Environment Module System
+Solves the problem of setting environment variables so you can run different software easily
+
+Main commands: 
+module avail                                  # which modules are available
+module spider                                 # find information about a software
+module load                                   # load a particular software
+module use  /projects/community/modulefiles   # user contributed software, unsupported
+module purge                                  # unload all modules
+module list                                   # list currently loaded modules
+
+gotcha: will not show modules until you load up their dependencies - e.g. R-Project
+
+module avail               # available system-installed modules
+which R                    # no results
+module spider R            # too many results
+module spider R-           # keyword search for specific module
+module load intel/17.0.4   # after load, we will see R-Project in the list of modules
+module avail               
+module load R-Project/3.4.1# loading R
+module list
+which R                    # now R is in my path
+
+srun -N 1 -n 1 -c 1 -t 10:00 R --no-save
+
+module use  /projects/community/modulefiles   # user contributed software, unsupported
+module avail                                  # which modules are available
+module load spark/2.3.0-kp807                 # load a particular software
+which spark-shell                             # shows where the software is located
+</code></pre>
+
+<h2 id="longer-explanation">Longer explanation</h2>
 <p>The module avail command will show a list of the core (primary) modules available:</p>
 <pre><code>module avail
 
@@ -879,6 +955,9 @@ Currently Loaded Modules:
 <p>If you always use the same software modules, your <code>~/.bashrc</code> (a hidden login script located in your /home directory) can be configured to load those modules automatically every time you log in. Just add your desired module load command(s) to the end of that file. You can always edit your <code>~/.bashrc</code> file to change or remove those commands later.</p>
 <p><strong>PLEASE NOTE:</strong> Software installed cluster-wide is typically configured with default or standard (basic) options, so special performance-enhancing features may not be enabled. This is because the Amarel cluster comprises a variety of hardware platforms and cluster-wide software installations must be compatible with all of the available hardware (including the older compute nodes). If the performance of the software you use for your research can be enhanced using hardware-specific options (targeting special CPU core instruction sets), you should consider installing your own customized version of that software in your /home directory.</p>
 <h1 id="running-slurm-jobs">Running slurm jobs</h1>
+<h2 id="video-walkthrough">Video walkthrough</h2>
+<p>Demoing <code>sinfo, srun, squeue, scancel</code> commands: </p>
+<p><a href="https://www.youtube.com/watch?v=RY7yeW3X2-U"><img alt="Slurm intro" src="https://img.youtube.com/vi/RY7yeW3X2-U/0.jpg" /></a></p>
 <h2 id="running-a-serial-single-core-job">Running a serial (single-core) job</h2>
 <p>Here’s an example of a SLURM job script for a serial job. I’m running a program called “zipper” which is in my /scratch (temporary work) directory. I plan to run my entire job from within my /scratch directory because that offers the best filesystem I/O performance.</p>
 <pre><code>#!/bin/bash
