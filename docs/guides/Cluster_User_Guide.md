@@ -129,6 +129,45 @@ CUDA| This is the name of a parallel computing platform and application programm
 
 When you first log-in, only basic system-wide tools are available automatically. To use a specific software package that is already installed, you can setup your environment using the module system.
 
+## Lmod video walkthrough
+
+[![Using module command](https://img.youtube.com/vi/tu9cmUrutgE/0.jpg)](https://www.youtube.com/watch?v=tu9cmUrutgE)
+
+Commands used in the video: 
+```
+lmod = https://lmod.readthedocs.io = A New Environment Module System
+Solves the problem of setting environment variables so you can run different software easily
+
+Main commands: 
+module avail                                  # which modules are available
+module spider                                 # find information about a software
+module load                                   # load a particular software
+module use  /projects/community/modulefiles   # user contributed software, unsupported
+module purge                                  # unload all modules
+module list                                   # list currently loaded modules
+
+gotcha: will not show modules until you load up their dependencies - e.g. R-Project
+
+module avail               # available system-installed modules
+which R                    # no results
+module spider R            # too many results
+module spider R-           # keyword search for specific module
+module load intel/17.0.4   # after load, we will see R-Project in the list of modules
+module avail               
+module load R-Project/3.4.1# loading R
+module list
+which R                    # now R is in my path
+
+srun -N 1 -n 1 -c 1 -t 10:00 R --no-save
+
+module use  /projects/community/modulefiles   # user contributed software, unsupported
+module avail                                  # which modules are available
+module load spark/2.3.0-kp807                 # load a particular software
+which spark-shell                             # shows where the software is located
+```
+
+## Longer explanation
+
 The module avail command will show a list of the core (primary) modules available:
 ```
 module avail
@@ -221,6 +260,13 @@ If you always use the same software modules, your `~/.bashrc` (a hidden login sc
 **PLEASE NOTE:** Software installed cluster-wide is typically configured with default or standard (basic) options, so special performance-enhancing features may not be enabled. This is because the Amarel cluster comprises a variety of hardware platforms and cluster-wide software installations must be compatible with all of the available hardware (including the older compute nodes). If the performance of the software you use for your research can be enhanced using hardware-specific options (targeting special CPU core instruction sets), you should consider installing your own customized version of that software in your /home directory.
 
 # Running slurm jobs
+
+## Video walkthrough
+
+Demoing `sinfo, srun, squeue, scancel` commands: 
+
+[![Slurm intro](https://img.youtube.com/vi/RY7yeW3X2-U/0.jpg)](https://www.youtube.com/watch?v=RY7yeW3X2-U)
+
 
 ## Running a serial (single-core) job
 
