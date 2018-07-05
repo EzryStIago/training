@@ -10,7 +10,7 @@ See workshop for explanation of the various options of `srun`
         R
 ```
 
-## Packages used from BioConductor
+# Packages used from BioConductor
 
 If these packages are not installed, you can install them yourself. On login node, start R and inside R copy-paste the following commands: 
 
@@ -42,9 +42,9 @@ In R shell, you can execute these commands to compute gene lengths:
          colnames(Hg20_geneLength) <- paste('geneLength')    
 ```
 
-## Some R essentials
+# Some R essentials
 
-### Arithmetic functions
+## Arithmetic functions
 ```r
         2+2
         3*3
@@ -55,7 +55,7 @@ In R shell, you can execute these commands to compute gene lengths:
         sqrt(81)
 ```
 
-### Creating objects
+## Creating objects
 
 ```r
         ls()  #see what objects are in the workspace
@@ -73,7 +73,7 @@ In R shell, you can execute these commands to compute gene lengths:
 ```
 
 
-### Vector and Matrix
+## Vector and Matrix
 
 ```r
         x1 <- c(1,2,3,4,5)
@@ -96,7 +96,7 @@ In R shell, you can execute these commands to compute gene lengths:
         x
 ```
 
-### Data Frames
+## Data Frames
 
 ```r
         z <- data.frame(A=x[,1], B=rownames(x), C=factor(rownames(x)), D=x[,1]==3, stringsAsFactors=F)
@@ -111,7 +111,7 @@ In R shell, you can execute these commands to compute gene lengths:
         z$C
 ```
 
-### More ways to subset dataframes
+## More ways to subset dataframes
 
 
 ```r
@@ -124,7 +124,7 @@ In R shell, you can execute these commands to compute gene lengths:
 ```
 
 
-### Lists
+## Lists
 
 ```r
         mylist <- list(first=z,second=x,third=c("W","X","Y","Z"))
@@ -136,7 +136,7 @@ In R shell, you can execute these commands to compute gene lengths:
 ```
 
 
-### Functions
+## Functions
 
 ```r
         my.add <- function(a, b) {a - b}
@@ -146,7 +146,7 @@ In R shell, you can execute these commands to compute gene lengths:
         my.add(b = 99, a = 4)
 ```
 
-### Various directory/file/library manipulations
+## Various directory/file/library manipulations
 
 ```r
         library(limma)  #load the limma package
@@ -164,7 +164,7 @@ In R shell, you can execute these commands to compute gene lengths:
 ```
 
 
-### Save all the objects you have created to your workspace
+## Save all the objects you have created to your workspace
 ```r
         save.image()                #creates a default file named ".RData"
         save.image("intro.Rdata")   #creates a named file
@@ -172,7 +172,7 @@ In R shell, you can execute these commands to compute gene lengths:
 
 
 
-### Remove objects from your workspace
+## Remove objects from your workspace
 
 ```r
         ls()
@@ -187,7 +187,7 @@ In R shell, you can execute these commands to compute gene lengths:
 ```
 
 
-### Save a history of all the commands entered
+## Save a history of all the commands entered
 
 ```r
         savehistory("introhistory.Rhistory")
