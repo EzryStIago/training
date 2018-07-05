@@ -275,6 +275,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -382,6 +383,17 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#slurm-cheatsheet" title="CheatSheet">Slurm cheatsheet</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#check-quota-cheatsheet" title="CheatSheet">Check quota cheatsheet</a>
   </li>
 
     
@@ -667,6 +679,11 @@
 <td align="left">ls -ltra .</td>
 </tr>
 <tr>
+<td align="left">du</td>
+<td align="left">disk usage, e.g. how much space does your directory occupy, -h human-readable</td>
+<td align="left">du -h mydir</td>
+</tr>
+<tr>
 <td align="left">which <command></td>
 <td align="left">see where command is installed</td>
 <td align="left">which python</td>
@@ -736,8 +753,38 @@
 <td align="left">list processes</td>
 <td align="left"><code>ps auxw</code></td>
 </tr>
+<tr>
+<td align="left">time myscript.sh</td>
+<td align="left">measure how much time does myscript.sh take to finish execution</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>echo</code> $variable</td>
+<td align="left">output the value of the variable</td>
+<td align="left">echo $USER</td>
+</tr>
 </tbody>
 </table>
+<p>For a more complete cheatsheet including ifs, loops and functions, see <a href="https://devhints.io/bash">this website</a>
+Here is a sample: </p>
+<pre><code>dirname /home/kp807/projects/cluster_reports/cluster.csv       # everything but the last part
+basename /home/kp807/projects/cluster_reports/cluster.csv      # last part of path
+CURRENT_DIR=`pwd` ; echo $CURRENT_DIR                          # backtick for execution of bash command
+echo 'projects_cluster_file.csv' | cut -d '_' -f1              # split name to retain a part of file
+echo $((1 + 2))                                                # double parenthesis for arithmetic expressions
+echo filename_fly{5..10}.csv                                   # list comprehensions   {start..end}
+
+# for-loop: 
+for file in filename_fly{5..10}.csv; do  echo $file ; done     
+
+# if-statement - 2 examples
+if [ 1 -gt 2 ]; then  echo '1 &gt; 2' ; else echo '1&lt;2' ; fi      
+if [ -d &quot;newdir&quot; ]; then  echo 'directory exists' ; else echo 'this directory doesnt exist' ; fi                        
+#variable assignment
+a=10; echo $a        #good - no spaces
+b = 10; echo $b      #bad - spaces around =
+</code></pre>
+
 <h1 id="environment-modules-lmod-cheatsheet">Environment modules (lmod) cheatsheet</h1>
 <table>
 <thead>
@@ -819,9 +866,49 @@
 <td><code>scontrol --help</code></td>
 <td>generic way to invoke quick help on any command</td>
 </tr>
+<tr>
+<td><code>sacct -o MaxRSS,job,jobName,state</code></td>
+<td>keep track of how much memory you are using</td>
+</tr>
+<tr>
+<td><code>sacct -o Elapsed,Start,End,job,jobName</code></td>
+<td>estimate the wall time</td>
+</tr>
 </tbody>
 </table>
 <p>To learn more about slurm, see <a href="https://slurm.schedmd.com/">slurm documentation</a></p>
+<h1 id="check-quota-cheatsheet">Check quota cheatsheet</h1>
+<p>NOTE: <code>/home</code> and <code>/scratch</code> are two different filesystems, with different backup policies. </p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description of which file usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mmlsquota scratch --block-size=auto</code></td>
+<td>file usage on <code>/scratch/netid</code> for the user's netid</td>
+</tr>
+<tr>
+<td><code>mmlsquota home --block-size=auto</code></td>
+<td>file usage on <code>/home/netid</code> for the user's netid</td>
+</tr>
+<tr>
+<td><code>mmlsquota home:foran --block-size=auto</code></td>
+<td>file usage in the shared folder foran (/projects/foran)</td>
+</tr>
+<tr>
+<td><code>mmlsquota -j foran home  --block-size=auto</code></td>
+<td>quota and usage of the whole fileset foran</td>
+</tr>
+<tr>
+<td><code>du -hs /directory/to/query/*</code></td>
+<td>human-readable sizes of all 1st-level subdirectories of <code>/directory/to/query/</code></td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>

@@ -356,13 +356,17 @@
 <p>These pages are a collection of resources to help you to utilize the cluster more effectively. Even if you are a very experienced Linux user, you will want to read <a href="">Amarel user guide</a> as it has slurm tips and examples. </p>
 <h1 id="warning-read">WARNING - READ!</h1>
 <ul>
-<li>Do not run large computational jobs on the <strong>login</strong> node. Use slurm to allocate resources on the compute node. </li>
+<li>Do not run large computational jobs on the <strong>login</strong> node. Use slurm to allocate resources on the compute node. Failure to respect the golden rule can get your account suspended.</li>
+<li>Number of jobs to submit should not exceed 5,000 at a time - queue is 10,000 and slurm will go to sleep if that is exceeded</li>
+<li>Right-size your jobs: jobs may run sooner if the resources requested are smaller and the priority for you is pushed down if you have asked for (even if not used) a lot of resources lately</li>
+<li>use <code>-n</code> option in sbatch only if you know what you are doing. Multithreaded but not multi-node jobs should use <code>-c</code> option. </li>
 <li>TODO: add more complete list</li>
 </ul>
 <h2 id="learning-paths">Learning paths</h2>
 <ul>
-<li>For users familiar with Linux but new to <code>slurm</code>, follow <a href="">this path</a></li>
-<li>For users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets</li>
+<li>If you understand material in <a href="">lmod cheatsheet</a> and <a href="">slurm cheatsheet</a> you are good to go.</li>
+<li>For users familiar with Linux but new to <code>slurm</code>, check out <a href="">environment modules</a> and <a href="">intro to slurm</a>. </li>
+<li>For users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets, or use <a href="">OnDemand</a> until you feel more comfortable with Linux.</li>
 </ul>
               
             </div>
@@ -415,5 +419,5 @@
 
 <!--
 MkDocs version : 0.17.4
-Build Date UTC : 2018-07-05 00:29:55
+Build Date UTC : 2018-07-05 01:43:39
 -->
