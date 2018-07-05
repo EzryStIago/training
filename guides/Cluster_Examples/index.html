@@ -819,7 +819,33 @@ source activate tensorflow-gpu-1.7.0           #
 
 <p>Note that if you try to import tensorflow on a node without a gpu, the import will fail, because it will try to load cuda driver that is not installed (because there is no GPU on the machine). 
 So you need to include this line in a slurm script, where you request a GPU resource in slurm: 
-<code>#SBATCH --gres=gpu:1</code></p>
+<code>#SBATCH --gres=gpu:1</code> and <code>--partition=gpu</code> and perhaps <code>--constraint=pascal</code>. Here is an example of a slurm script that trains mnist: </p>
+<pre><code>#!/bin/bash
+
+#SBATCH --partition=gpu             # Partition (job queue)
+#SBATCH --no-requeue                 # Do not re-run job  if preempted
+#SBATCH --job-name=mnist_p100            # Assign an short name to your job
+#SBATCH --nodes=1                    # Number of nodes you require
+#SBATCH --ntasks=1                   # Total # of tasks across all nodes
+#SBATCH --gres=gpu:1                 # Number of GPUs
+#SBATCH --constraint=pascal          # will look for that architecture
+#SBATCH --mem=6000                  # Real memory (RAM) required (MB)
+#SBATCH --time=03:30:00              # Total run time limit (HH:MM:SS)
+#SBATCH --output=slurm.%N.%j.p100_gpu1.out     # STDOUT output file
+#SBATCH --error=slurm.%N.%j.p100_gpu1.err      # STDERR output file (optional)
+#SBATCH --export=ALL                 # Export you current env to the job env
+
+module purge
+
+module use /projects/community/modulefiles
+module load py-data-science-stack/5.1.0-kp807
+
+source activate tensorflow-gpu-1.7.0
+
+export PYTHONPATH=$PYTHONPATH:/home/kp807/tf/models1.7     #mnist.py needs a package defined in the tensorflow/models, not a standard distribution of TF. 
+
+srun python /home/kp807/tf/benchmarking/mnist.py
+</code></pre>
               
             </div>
           </div>
