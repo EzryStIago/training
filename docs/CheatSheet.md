@@ -154,7 +154,7 @@ Output of `ls -ltra`
 - d = it's a directory
 - rwx = first group of permissions, readable, writeable and executable by user
 - r-x = second group of permissions, readable and executable by group, but not writeable by group
-- r-x = third group of permissions, executable by others, but not readable and writeable by others
+- --x = third group of permissions, executable by others, but not readable and writeable by others
 - .rstudio = hidden directory
 
 ## Linux on the web
