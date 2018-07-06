@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>CheatSheet - OARC-Rutgers</title>
+  <title>Cheat Sheets - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "CheatSheet";
+    var mkdocs_page_name = "Cheat Sheets";
     var mkdocs_page_input_path = "CheatSheet.md";
     var mkdocs_page_url = "/CheatSheet/";
   </script>
@@ -73,40 +73,38 @@
 
   
     
-    
-    
-    
-    
-    
-
-  <p class="caption">Amarel User Guide</p>
 
 
-<ul class="" href="Amarel_User_Guide">
+<ul class="" href="../guides/Cluster_User_Guide/">
   
     
-      
-<li class=" toctree-l1">
-  <a href="../Amarel_User_Guide/" title="Amarel Guide"
-      class="">
-    Amarel Guide
-  </a>
+    
+      <li class=" toctree-l1">
+        <a class="" href="../guides/Cluster_User_Guide/">Cluster Guides</a>
+      </li>
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
 
   
-  
-</li>
     
-      
-<li class=" toctree-l1">
-  <a href="../Cluster_Examples/" title="Examples"
-      class="">
-    Examples
-  </a>
 
+
+<ul class="" href="../guides/Cluster_Examples/">
   
-  
-</li>
     
+    
+      <li class=" toctree-l1">
+        <a class="" href="../guides/Cluster_Examples/">Examples</a>
+      </li>
 </ul>
 
 <!--
@@ -242,37 +240,13 @@
     
 
 
-<ul class="" href="../resources/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../resources/">Resources</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
 <ul class="current" href="./">
   
     
     
       <li class="current toctree-l1">
-        <a class="current" href="./">CheatSheet</a>
+        <a class="current" href="./">Cheat Sheets</a>
         
-  
   
   
   
@@ -289,7 +263,7 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#navigating-file-tree" title="CheatSheet">Navigating file tree</a>
+    <a href="#bash-cheatsheet-command-line" title="Cheat Sheets">Bash cheatsheet (command line):</a>
   </li>
 
     
@@ -300,7 +274,7 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#viewing-files" title="CheatSheet">Viewing files</a>
+    <a href="#environment-modules-lmod-cheatsheet" title="Cheat Sheets">Environment modules (lmod) cheatsheet</a>
   </li>
 
     
@@ -311,7 +285,7 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#useful-commands" title="CheatSheet">Useful commands:</a>
+    <a href="#slurm-cheatsheet" title="Cheat Sheets">Slurm cheatsheet</a>
   </li>
 
     
@@ -322,7 +296,7 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#redirecting" title="CheatSheet">Redirecting</a>
+    <a href="#check-quota-cheatsheet" title="Cheat Sheets">Check quota cheatsheet</a>
   </li>
 
     
@@ -332,19 +306,71 @@
   
 
 
+  <li class=" toctree-l2">
+    
+      <a href="#linux-basic-commands" title="Cheat Sheets"
+          class="">
+        Linux basic commands
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
   <li class="toctree-l2 toc-item">
-    <a href="#permissions" title="CheatSheet">Permissions</a>
+    <a href="#file-tree" title="Cheat Sheets">File tree</a>
   </li>
 
-    
       
+        
 
   
   
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#modules" title="CheatSheet">Modules</a>
+    <a href="#moving-and-viewing-files" title="Cheat Sheets">Moving and viewing files</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#piping" title="Cheat Sheets">Piping</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#permissions" title="Cheat Sheets">Permissions</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#linux-on-the-web" title="Cheat Sheets">Linux on the web</a>
+  </li>
+
+      
+    </ul>
   </li>
 
     
@@ -383,7 +409,7 @@
     
       
     
-    <li>CheatSheet</li>
+    <li>Cheat Sheets</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/rutgers-oarc/training/edit/master/docs/CheatSheet.md"
@@ -396,109 +422,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="navigating-file-tree">Navigating file tree</h1>
-<table>
-<thead>
-<tr>
-<th align="right"><strong>Command</strong></th>
-<th align="center"><strong>Meaning</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right"><em>ls</em></td>
-<td align="center">list files and directories</td>
-</tr>
-<tr>
-<td align="right"><em>ls -a</em></td>
-<td align="center">list all files and directories</td>
-</tr>
-<tr>
-<td align="right"><em>mkdir</em></td>
-<td align="center">make a directory</td>
-</tr>
-<tr>
-<td align="right"><em>cd directory</em></td>
-<td align="center">change to named directory</td>
-</tr>
-<tr>
-<td align="right"><em>cd</em></td>
-<td align="center">change to home-directory</td>
-</tr>
-<tr>
-<td align="right"><em>cd ~</em></td>
-<td align="center">change to home-directory</td>
-</tr>
-<tr>
-<td align="right"><em>cd ..</em></td>
-<td align="center">change to parent directory</td>
-</tr>
-<tr>
-<td align="right"><em>pwd</em></td>
-<td align="center">display the path of the current directory</td>
-</tr>
-<tr>
-<td align="right"><em>rm</em></td>
-<td align="center">removes files only</td>
-</tr>
-<tr>
-<td align="right"><em>rmdir</em></td>
-<td align="center">removes directory(make sure its empty)</td>
-</tr>
-</tbody>
-</table>
-<h1 id="viewing-files">Viewing files</h1>
-<table>
-<thead>
-<tr>
-<th align="right"><strong>Command</strong></th>
-<th align="left"><strong>Meaning</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">cp file1 file2</td>
-<td align="left">copy file1 and call it file2</td>
-</tr>
-<tr>
-<td align="right">mv file1 file2</td>
-<td align="left">move or rename file1 to file2</td>
-</tr>
-<tr>
-<td align="right">rm file</td>
-<td align="left">remove a file</td>
-</tr>
-<tr>
-<td align="right">rmdir directory</td>
-<td align="left">remove a directory</td>
-</tr>
-<tr>
-<td align="right">cat file</td>
-<td align="left">display a file</td>
-</tr>
-<tr>
-<td align="right">less file</td>
-<td align="left">display a file a page at a time</td>
-</tr>
-<tr>
-<td align="right">head file</td>
-<td align="left">display the first few lines of a file</td>
-</tr>
-<tr>
-<td align="right">tail file</td>
-<td align="left">display the last few lines of a file</td>
-</tr>
-<tr>
-<td align="right">grep 'keyword'</td>
-<td align="left">file   search a file for keywords</td>
-</tr>
-<tr>
-<td align="right">wc file -l/w</td>
-<td align="left">count number of lines/words/characters in file</td>
-</tr>
-</tbody>
-</table>
-<h1 id="useful-commands">Useful commands:</h1>
+                <h1 id="bash-cheatsheet-command-line">Bash cheatsheet (command line):</h1>
 <table>
 <thead>
 <tr>
@@ -508,6 +432,16 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td align="left">ls -ltra mydir</td>
+<td align="left">list all files in mydir in descending order of creation, with permissions</td>
+<td align="left">ls -ltra .</td>
+</tr>
+<tr>
+<td align="left">du</td>
+<td align="left">disk usage, e.g. how much space does your directory occupy, -h human-readable</td>
+<td align="left">du -h mydir</td>
+</tr>
 <tr>
 <td align="left">which <command></td>
 <td align="left">see where command is installed</td>
@@ -565,7 +499,7 @@
 </tr>
 <tr>
 <td align="left">chmod</td>
-<td align="left">change permissions on a file or directory</td>
+<td align="left">change permissions on a file or directory, eg. make myscript.sh executable for user</td>
 <td align="left">chmod u+x myscript.sh</td>
 </tr>
 <tr>
@@ -578,14 +512,263 @@
 <td align="left">list processes</td>
 <td align="left"><code>ps auxw</code></td>
 </tr>
+<tr>
+<td align="left">time myscript.sh</td>
+<td align="left">measure how much time does myscript.sh take to finish execution</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>echo</code> $variable</td>
+<td align="left">output the value of the variable</td>
+<td align="left">echo $USER</td>
+</tr>
 </tbody>
 </table>
-<h1 id="redirecting">Redirecting</h1>
+<p>For a more complete cheatsheet including ifs, loops and functions, see <a href="https://devhints.io/bash">this website</a>
+Here is a sample: </p>
+<pre><code>dirname /home/kp807/projects/cluster_reports/cluster.csv       # everything but the last part
+basename /home/kp807/projects/cluster_reports/cluster.csv      # last part of path
+CURRENT_DIR=`pwd` ; echo $CURRENT_DIR                          # backtick for execution of bash command
+echo 'projects_cluster_file.csv' | cut -d '_' -f1              # split name to retain a part of file
+echo $((1 + 2))                                                # double parenthesis for arithmetic expressions
+echo filename_fly{5..10}.csv                                   # list comprehensions   {start..end}
+
+# for-loop: 
+for file in filename_fly{5..10}.csv; do  echo $file ; done     
+
+# if-statement - 2 examples
+if [ 1 -gt 2 ]; then  echo '1 &gt; 2' ; else echo '1&lt;2' ; fi      
+if [ -d &quot;newdir&quot; ]; then  echo 'directory exists' ; else echo 'this directory doesnt exist' ; fi                        
+#variable assignment
+a=10; echo $a        #good - no spaces
+b = 10; echo $b      #bad - spaces around =
+</code></pre>
+
+<h1 id="environment-modules-lmod-cheatsheet">Environment modules (lmod) cheatsheet</h1>
 <table>
 <thead>
 <tr>
 <th><strong>Command</strong></th>
-<th><strong>Meaning</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>module avail</code></td>
+<td>show a list of the modules available</td>
+</tr>
+<tr>
+<td><code>module load java</code></td>
+<td>loads the named software module i.e. java</td>
+</tr>
+<tr>
+<td><code>module use /projects/community/modulefiles</code></td>
+<td>Now if you do module avail, it also shows modules created by other users</td>
+</tr>
+<tr>
+<td><code>module spider</code></td>
+<td>shows a comprehensive list of all available modules or type name after spider to show details about specific module</td>
+</tr>
+<tr>
+<td><code>module keyword anaconda</code></td>
+<td>looks for the keyword <code>anaconda</code> in the description of a module</td>
+</tr>
+<tr>
+<td><code>module purge</code></td>
+<td>removes all loaded module</td>
+</tr>
+<tr>
+<td><code>ml</code></td>
+<td>lists modules loaded</td>
+</tr>
+</tbody>
+</table>
+<p>To learm more about environments and modules, see <a href="https://lmod.readthedocs.io/en/latest/">lmod documenation</a>. </p>
+<h1 id="slurm-cheatsheet">Slurm cheatsheet</h1>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sinfo</code></td>
+<td>info about utilization and resources</td>
+</tr>
+<tr>
+<td><code>sbatch my_slurm_script.sh</code></td>
+<td>submit a slurm script</td>
+</tr>
+<tr>
+<td><code>srun -N 1 -c 2 -t 1:00:00 --pty bash</code></td>
+<td>run interactive shell on a compute node for 1 hour</td>
+</tr>
+<tr>
+<td><code>scancel  123456</code></td>
+<td>cancel job 123456 that's currently running or queued</td>
+</tr>
+<tr>
+<td><code>sacct -u kp807 --start=2018-05-02</code></td>
+<td>show all jobs by user kp807 since some date</td>
+</tr>
+<tr>
+<td><code>scontrol show job 123456 -dd</code></td>
+<td>details about job that's running</td>
+</tr>
+<tr>
+<td><code>scontrol show node hal0001</code></td>
+<td>details about node <code>ha0001</code></td>
+</tr>
+<tr>
+<td><code>scontrol --help</code></td>
+<td>generic way to invoke quick help on any command</td>
+</tr>
+<tr>
+<td><code>sacct -o MaxRSS,job,jobName,state</code></td>
+<td>keep track of how much memory you are using</td>
+</tr>
+<tr>
+<td><code>sacct -o Elapsed,Start,End,job,jobName</code></td>
+<td>estimate the wall time</td>
+</tr>
+</tbody>
+</table>
+<p>To learn more about slurm, see <a href="https://slurm.schedmd.com/">slurm documentation</a></p>
+<h1 id="check-quota-cheatsheet">Check quota cheatsheet</h1>
+<p>NOTE: <code>/home</code> and <code>/scratch</code> are two different filesystems, with different backup policies. </p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description of which file usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mmlsquota scratch --block-size=auto</code></td>
+<td>file usage on <code>/scratch/netid</code> for the user's netid</td>
+</tr>
+<tr>
+<td><code>mmlsquota home --block-size=auto</code></td>
+<td>file usage on <code>/home/netid</code> for the user's netid</td>
+</tr>
+<tr>
+<td><code>mmlsquota home:foran --block-size=auto</code></td>
+<td>file usage in the shared folder foran (/projects/foran)</td>
+</tr>
+<tr>
+<td><code>mmlsquota -j foran home  --block-size=auto</code></td>
+<td>quota and usage of the whole fileset foran</td>
+</tr>
+<tr>
+<td><code>du -hs /directory/to/query/*</code></td>
+<td>human-readable sizes of all 1st-level subdirectories of <code>/directory/to/query/</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="linux-basic-commands">Linux basic commands</h1>
+<h2 id="file-tree">File tree</h2>
+<table>
+<thead>
+<tr>
+<th align="right"><strong>Command</strong></th>
+<th align="center"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><em>ls</em></td>
+<td align="center">list files and directories</td>
+</tr>
+<tr>
+<td align="right"><em>ls -a</em></td>
+<td align="center">list all files and directories</td>
+</tr>
+<tr>
+<td align="right"><em>mkdir</em></td>
+<td align="center">make a directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd directory</em></td>
+<td align="center">change to named directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd</em></td>
+<td align="center">change to home-directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd ~</em></td>
+<td align="center">change to home-directory</td>
+</tr>
+<tr>
+<td align="right"><em>cd ..</em></td>
+<td align="center">change to parent directory</td>
+</tr>
+<tr>
+<td align="right"><em>pwd</em></td>
+<td align="center">display the path of the current directory</td>
+</tr>
+</tbody>
+</table>
+<h2 id="moving-and-viewing-files">Moving and viewing files</h2>
+<table>
+<thead>
+<tr>
+<th align="right"><strong>Command</strong></th>
+<th align="left"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">cp file1 file2</td>
+<td align="left">copy file1 and call it file2</td>
+</tr>
+<tr>
+<td align="right">mv file1 file2</td>
+<td align="left">move or rename file1 to file2</td>
+</tr>
+<tr>
+<td align="right">rm file</td>
+<td align="left">remove a file</td>
+</tr>
+<tr>
+<td align="right">rmdir directory</td>
+<td align="left">remove a directory (only if empty)</td>
+</tr>
+<tr>
+<td align="right">cat file</td>
+<td align="left">display a file</td>
+</tr>
+<tr>
+<td align="right">less file</td>
+<td align="left">display a file a page at a time</td>
+</tr>
+<tr>
+<td align="right">head -19 file</td>
+<td align="left">display the first 19 lines of a file</td>
+</tr>
+<tr>
+<td align="right">tail -19 file</td>
+<td align="left">display the last 19 lines of a file</td>
+</tr>
+<tr>
+<td align="right">grep Finally myfile.txt</td>
+<td align="left">search myfile.txt for word Finally</td>
+</tr>
+<tr>
+<td align="right">wc file</td>
+<td align="left">count number of lines/words/characters in file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="piping">Piping</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -639,12 +822,12 @@
 </tr>
 </tbody>
 </table>
-<h1 id="permissions">Permissions</h1>
+<h2 id="permissions">Permissions</h2>
 <table>
 <thead>
 <tr>
 <th><strong>Symbol</strong></th>
-<th><strong>Meaning</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -686,41 +869,23 @@
 </tr>
 </tbody>
 </table>
-<h1 id="modules">Modules</h1>
-<table>
-<thead>
-<tr>
-<th><strong>Command</strong></th>
-<th><strong>Meaning</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>module avail</td>
-<td>show a list of the core (primary) modules available</td>
-</tr>
-<tr>
-<td>module load <em>module_name</em></td>
-<td>loads the named software module</td>
-</tr>
-<tr>
-<td>module use <code>/projects/community/projectsmodule use /projects/community/modulefiles/</code></td>
-<td>Now if you do module avail, it also shows modules uploaded by other users</td>
-</tr>
-<tr>
-<td>module spider</td>
-<td>shows a comprehensive list of all available modules or type name after spider to show details about specific module</td>
-</tr>
-<tr>
-<td>module purge</td>
-<td>removes all loaded module</td>
-</tr>
-<tr>
-<td>ml</td>
-<td>lists modules loaded</td>
-</tr>
-</tbody>
-</table>
+<p>Output of <code>ls -ltra</code><br />
+<code>drwxr-x--x  12 kp807 kp807      4096 Jun 26 23:33 .rstudio</code></p>
+<ul>
+<li>d = it's a directory</li>
+<li>rwx = first group of permissions, readable, writeable and executable by user</li>
+<li>r-x = second group of permissions, readable and executable by group, but not writeable by group</li>
+<li>--x = third group of permissions, executable by others, but not readable and writeable by others</li>
+<li>.rstudio = hidden directory</li>
+</ul>
+<h2 id="linux-on-the-web">Linux on the web</h2>
+<ul>
+<li><a href="http://www.rci.rutgers.edu/~gc563/linux/index.html">Galen's tutorial</a></li>
+<li><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">Excellent short lessons</a></li>
+<li><a href="http://linuxcourse.rutgers.edu/">Alexei's course he runs for engineering students every semester</a></li>
+<li><a href="https://cvw.cac.cornell.edu/Linux/">Cornell virtual workshop</a> - interactive if you have xsede login; many HPC topics available</li>
+<li><a href="https://software-carpentry.org/lessons/">Software carpentry</a> - list of introductory programming courses</li>
+</ul>
               
             </div>
           </div>
@@ -729,7 +894,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../resources/" class="btn btn-neutral" title="Resources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ressentials/" class="btn btn-neutral" title="R tutorial"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -757,7 +922,7 @@
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../resources/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../ressentials/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>
