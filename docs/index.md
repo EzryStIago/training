@@ -17,7 +17,7 @@ These pages are a collection of resources to help you to utilize the cluster mor
 ## Learning paths
 
 - If you understand material in [lmod cheatsheet](CheatSheet/#environment-modules-lmod-cheatsheet) and [slurm cheatsheet](CheatSheet/#slurm-cheatsheet) you are good to go.
-- For users familiar with Linux but new to `slurm`, check out [environment modules](guides/Cluster_User_Guide/#loading-software-modules) and [intro to slurm](Cluster_User_Guide/#running-slurm-jobs). 
-- For users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets, or use [OnDemand](Cluster_User_Guide/#ondemand-gui-for-the-cluster) until you feel more comfortable with Linux.
+- For users familiar with Linux but new to `slurm`, check out [environment modules](guides/Cluster_User_Guide/#loading-software-modules) and [intro to slurm](guides/Cluster_User_Guide/#running-slurm-jobs). 
+- For users not familiar with Linux, please familiarize yourself with Linux through tutorials and cheatsheets, or use [OnDemand](guides/Cluster_User_Guide/#ondemand-gui-for-the-cluster) until you feel more comfortable with Linux.
 
 
