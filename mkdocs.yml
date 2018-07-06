@@ -12,6 +12,6 @@ pages:
       - Genomics: 'workshops/workshop.md'
       - Labs: 'workshops/Labs.md'
   - R tutorial: 'ressentials.md'
-  - CheatSheet: 'CheatSheet.md'
+  - Cheat Sheets: 'CheatSheet.md'
 theme: 
   name: 'rtd-dropdown'
