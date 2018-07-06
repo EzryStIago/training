@@ -73,38 +73,40 @@
 
   
     
+    
+    
+    
+    
+    
+
+  <p class="caption">Amarel User Guide</p>
 
 
-<ul class="" href="../guides/Cluster_User_Guide/">
+<ul class="" href="Amarel_User_Guide">
   
     
-    
-      <li class=" toctree-l1">
-        <a class="" href="../guides/Cluster_User_Guide/">Cluster Guides</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
+      
+<li class=" toctree-l1">
+  <a href="../Amarel_User_Guide/" title="Amarel Guide"
+      class="">
+    Amarel Guide
+  </a>
 
   
-    
-
-
-<ul class="" href="../guides/Cluster_Examples/">
   
+</li>
     
+      
+<li class=" toctree-l1">
+  <a href="../Cluster_Examples/" title="Examples"
+      class="">
+    Examples
+  </a>
+
+  
+  
+</li>
     
-      <li class=" toctree-l1">
-        <a class="" href="../guides/Cluster_Examples/">Examples</a>
-      </li>
 </ul>
 
 <!--
@@ -226,8 +228,6 @@
         
   
   
-  
-  
   <ul class="current subnav">
     
       
@@ -237,25 +237,20 @@
   
 
 
+  <li class="current toctree-l2">
+    
+    <ul class="current subnav">
+      
+        
+
+  
+  
+
+
   <li class="toctree-l2 toc-item">
-    <a href="#to-start-r-shell-on-the-cluster" title="R tutorial">To start R shell on the cluster</a>
+    <a href="#packages-used-from-bioconductor" title="R tutorial">Packages used from BioConductor</a>
   </li>
 
-    
-      
-
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#packages-used-from-bioconductor" title="R tutorial"
-          class="">
-        Packages used from BioConductor
-      </a>
-    
-    <ul class=" subnav">
       
         
 
@@ -268,25 +263,6 @@
   </li>
 
       
-    </ul>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#some-r-essentials" title="R tutorial"
-          class="">
-        Some R essentials
-      </a>
-    
-    <ul class=" subnav">
-      
         
 
   
@@ -294,73 +270,7 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#arithmetic-functions" title="R tutorial">Arithmetic functions</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#creating-objects" title="R tutorial">Creating objects</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#vector-and-matrix" title="R tutorial">Vector and Matrix</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#data-frames" title="R tutorial">Data Frames</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#more-ways-to-subset-dataframes" title="R tutorial">More ways to subset dataframes</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#lists" title="R tutorial">Lists</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#functions" title="R tutorial">Functions</a>
+    <a href="#some-r-essentials" title="R tutorial">Some R essentials</a>
   </li>
 
       
@@ -375,45 +285,35 @@
   </li>
 
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#save-all-the-objects-you-have-created-to-your-workspace" title="R tutorial">Save all the objects you have created to your workspace</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#remove-objects-from-your-workspace" title="R tutorial">Remove objects from your workspace</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#save-a-history-of-all-the-commands-entered" title="R tutorial">Save a history of all the commands entered</a>
-  </li>
-
-      
     </ul>
   </li>
 
     
   </ul>
 
+      </li>
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+
+
+<ul class="" href="../resources/">
+  
+    
+    
+      <li class=" toctree-l1">
+        <a class="" href="../resources/">Resources</a>
       </li>
 </ul>
 
@@ -493,7 +393,7 @@
         R
 </code></pre>
 
-<h1 id="packages-used-from-bioconductor">Packages used from BioConductor</h1>
+<h2 id="packages-used-from-bioconductor">Packages used from BioConductor</h2>
 <p>If these packages are not installed, you can install them yourself. On login node, start R and inside R copy-paste the following commands: </p>
 <pre><code class="r">        source(&quot;https://bioconductor.org/biocLite.R&quot;) 
         biocLite(&quot;ape&quot;)
@@ -519,8 +419,8 @@
          colnames(Hg20_geneLength) &lt;- paste('geneLength')    
 </code></pre>
 
-<h1 id="some-r-essentials">Some R essentials</h1>
-<h2 id="arithmetic-functions">Arithmetic functions</h2>
+<h2 id="some-r-essentials">Some R essentials</h2>
+<h4 id="arithmetic-functions">Arithmetic functions</h4>
 <pre><code class="r">        2+2
         3*3
         3*8+2
@@ -530,7 +430,7 @@
         sqrt(81)
 </code></pre>
 
-<h2 id="creating-objects">Creating objects</h2>
+<h4 id="creating-objects">Creating objects</h4>
 <pre><code class="r">        ls()  #see what objects are in the workspace
         x &lt;- 4
         x
@@ -545,7 +445,7 @@
         ls()
 </code></pre>
 
-<h2 id="vector-and-matrix">Vector and Matrix</h2>
+<h4 id="vector-and-matrix">Vector and Matrix</h4>
 <pre><code class="r">        x1 &lt;- c(1,2,3,4,5)
         x1
         class(x1)
@@ -566,7 +466,7 @@
         x
 </code></pre>
 
-<h2 id="data-frames">Data Frames</h2>
+<h4 id="data-frames">Data Frames</h4>
 <pre><code class="r">        z &lt;- data.frame(A=x[,1], B=rownames(x), C=factor(rownames(x)), D=x[,1]==3, stringsAsFactors=F)
         class(z)
         names(z)
@@ -579,7 +479,7 @@
         z$C
 </code></pre>
 
-<h2 id="more-ways-to-subset-dataframes">More ways to subset dataframes</h2>
+<h4 id="more-ways-to-subset-dataframes">More ways to subset dataframes</h4>
 <pre><code class="r">        z$B
         z[[2]]
         z[,2]   #these first 3 give equivalent results
@@ -588,7 +488,7 @@
         z[c(1,3:5),]
 </code></pre>
 
-<h2 id="lists">Lists</h2>
+<h4 id="lists">Lists</h4>
 <pre><code class="r">        mylist &lt;- list(first=z,second=x,third=c(&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;))
         class(mylist)
         mylist
@@ -597,7 +497,7 @@
         class(mylist$second)
 </code></pre>
 
-<h2 id="functions">Functions</h2>
+<h4 id="functions">Functions</h4>
 <pre><code class="r">        my.add &lt;- function(a, b) {a - b}
         class(my.add)
         my.add(4,99)
@@ -620,12 +520,12 @@
         write.csv(z, file=&quot;test.csv&quot;)
 </code></pre>
 
-<h2 id="save-all-the-objects-you-have-created-to-your-workspace">Save all the objects you have created to your workspace</h2>
+<h4 id="save-all-the-objects-you-have-created-to-your-workspace">Save all the objects you have created to your workspace</h4>
 <pre><code class="r">        save.image()                #creates a default file named &quot;.RData&quot;
         save.image(&quot;intro.Rdata&quot;)   #creates a named file
 </code></pre>
 
-<h2 id="remove-objects-from-your-workspace">Remove objects from your workspace</h2>
+<h4 id="remove-objects-from-your-workspace">Remove objects from your workspace</h4>
 <pre><code class="r">        ls()
         rm(x)          #remove a single object by name
         ls()
@@ -637,7 +537,7 @@
         ls()
 </code></pre>
 
-<h2 id="save-a-history-of-all-the-commands-entered">Save a history of all the commands entered</h2>
+<h4 id="save-a-history-of-all-the-commands-entered">Save a history of all the commands entered</h4>
 <pre><code class="r">        savehistory(&quot;introhistory.Rhistory&quot;)
 </code></pre>
               
@@ -647,7 +547,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../CheatSheet/" class="btn btn-neutral float-right" title="CheatSheet">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../resources/" class="btn btn-neutral float-right" title="Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../workshops/Labs/" class="btn btn-neutral" title="Labs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -681,7 +581,7 @@
         <span><a href="../workshops/Labs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../CheatSheet/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../resources/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
