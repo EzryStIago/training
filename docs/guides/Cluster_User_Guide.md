@@ -84,7 +84,18 @@ For added security, you can use SSH for the data transfer by adding the e option
 
 ## OnDemand - GUI for the cluster
 
-For users not familiar with Linux, there is an option to connect to the cluster via a web browser (either from campus or through VPN) until you get more confortable with Linux. Both connecting and moving files can be achieved through this interface](https://ondemand.hpc.rutgers.edu). However, you are strongly encouraged to get comfortable with Linux, as your productivity will soar and a GUI is never as flexible as a command line interface.  
+For users not familiar with Linux, there is an option to connect to the cluster via a web browser (either from campus or through VPN) until you get more confortable with Linux. Both connecting and moving files can be achieved through [this interface](https://ondemand.hpc.rutgers.edu). However, you are strongly encouraged to get comfortable with Linux, as your productivity will soar and a GUI is never as flexible as a command line interface.  
+
+Functionalities of OnDemand: 
+
+ - file upload
+ - file editor
+ - linux shell 
+ - launch Jupyter notebook
+ - launch RStudio
+ - compose slurm job from a template
+ - submit slurm job
+ - view job queue 
 
 # Listing available resources
 
