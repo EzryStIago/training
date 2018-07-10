@@ -1,4 +1,4 @@
-Here are some resources you might want to consult to learn more about how to use an HPC cluster
+Here are some resources you might want to consult to learn more about how to use an HPC cluster.
 
 # Slurm 
 
