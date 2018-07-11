@@ -5,10 +5,13 @@ pages:
   - Home: 'index.md'
   - Cluster Guides: 'guides/Cluster_User_Guide.md'
   - Examples: 'guides/Cluster_Examples.md'
-  - Amarel Community Resources: 'community_resources.md'
   - HowTo: 
       - Jupyter: 'howtos/jupyter.md' 
       - FastX: 'howtos/fastx.md'
+  - Workshops: 
+      - Genomics 1: 'workshops/genomics_1.md'
+      - Genomics 2: 'workshops/genomics_2.md'
+      - Labs: 'workshops/Labs.md'
   - R tutorial: 'ressentials.md'
   - Cheat Sheets: 'CheatSheet.md'
 theme: 
