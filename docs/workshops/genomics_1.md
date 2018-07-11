@@ -11,7 +11,7 @@ This is a list of software to install for the workshop
 
 |software|description|link|
 |------|-----------------------------|-----------------------|
-|Seqtk|very handy and fast for processing fastq/a files|[link](https://github.com/lh3/seqtk)|
+|seqtk|very handy and fast for processing fastq/a files|[link](https://github.com/lh3/seqtk)|
 |sratoolkit|downloading and processing data from GEO/SRA database|[link](http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz)|
 |htseq-count|counting the  reads mapped on to genomics feature|[link](http://htseq.readthedocs.io/en/master/install.html)|
 |fastQC|widely used for sequencing read QC|[link](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
@@ -22,8 +22,8 @@ This is a list of software already available on the cluster and the command you 
 
 |software|description|load it on the cluster|
 |------|-----------------------------|-----------------------|
-|Samtools||`module load samtools`|
-|Bedtools||`module load bedtools2./2.25.0`|
+|samtools||`module load samtools`|
+|bedtools||`module load bedtools2./2.25.0`|
 |bowtie2| alignment software|`module load bowtie2`|
 |tophat2| alignment software|`module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0`|
 |R|language for statistical analysis|`module load intel/17.0.4 R-Project/3.4.1`|
@@ -41,10 +41,10 @@ This is a list of other software you might find useful:
 ## Connect to the cluster login node 
 The preferred method to connect to the cluster is through a web browser and fastX client
 
- - **via FastX**: in your browser, go to [this website](https://amarel.hpc.rutgers.edu:3443) . (It will only work from campus or if you are connected via VPN.) See [Fastx](../howtos/fastx) for a walkthrough that includes a tip on pasting commands. 
+ - **via FastX**: in your browser, go to https://amarel.hpc.rutgers.edu:3443 or [click here](https://amarel.hpc.rutgers.edu:3443). (It will only work from campus or if you are connected via VPN.) See [Fastx](https://rutgers-oarc.github.io/training/howtos/fastx/) for a walkthrough that includes a tip on pasting commands. 
 
   - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm] (https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
-``` ssh -X <your net id>@amarel.hpc.rutgers.edu```   
+``` ssh -X <your netid>@amarel.hpc.rutgers.edu```   
   
 
 ## Get resources on the compute node 
