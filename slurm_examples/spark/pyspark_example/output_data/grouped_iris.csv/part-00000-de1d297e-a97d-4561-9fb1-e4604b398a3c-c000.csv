@@ -1,0 +1,4 @@
+species,avg(sepal_length)
+Iris-virginica,6.587999999999998
+Iris-setosa,5.005999999999999
+Iris-versicolor,5.936
