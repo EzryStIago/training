@@ -43,7 +43,7 @@ The preferred method to connect to the cluster is through a web browser and fast
 
  - **via FastX**: in your browser, go to https://amarel.hpc.rutgers.edu:3443 or [click here](https://amarel.hpc.rutgers.edu:3443). (It will only work from campus or if you are connected via VPN [link](https://ssl-vpn.rutgers.edu/dana-na/auth/url_default/welcome.cgi).) See [FastX](https://rutgers-oarc.github.io/training/howtos/fastx/) for a walkthrough that includes a tip on copying/pasting commands. 
  
- |Login page|Select New Session|Use XFCE desktop|
+ |Login page|Click on Launch Session and Select XFCE desktop|Open new terminal|
 |------|-----------------------------|-----------------------|
 | ![](https://github.com/rutgers-oarc/training/blob/master/workshops/fastX_web.png "FastX web interface")     | ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_clipboard.png "FastX web clipboard")| ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_srun.png "FastX terminal srun") |
  
