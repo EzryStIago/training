@@ -32,7 +32,7 @@ This is a list of other software you might find useful:
 
 |Software|Description|URL|
 |------|-----------------------------|-----------------------|
-| GSEA     | genome set enrichment analysis| [link](http://software.broadinstitute.org/gsea/index.jsp) |
+| GSEA     | Genome set enrichment analysis| [link](http://software.broadinstitute.org/gsea/index.jsp) |
 | IGV      | Interactive Genome Viewer      | [link](http://software.broadinstitute.org/software/igv/)|
 | Cytoscape| Network visualization softwar   | [link](http://www.cytoscape.org/)|
 
