@@ -25,7 +25,7 @@ This is a list of software already available on the cluster and the command you 
 |samtools|utilities for short DNA seq alignments [[link]](http://samtools.sourceforge.net/) |`module load samtools/1.3.1`|
 |bedtools|tools for a wide-range of genomics analysis [[link]](http://bedtools.readthedocs.io/en/latest/)|`module load bedtools2/2.25.0`|
 |bowtie2| alignment software [[link]](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)|`module load bowtie2/2.2.9`|
-|tophat2| a fast splice junction mapper for RNA-Seq reads [[link]](https://ccb.jhu.edu/software/tophat/index.shtml)|`module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0`|
+|tophat2| a fast splice junction mapper for RNA-Seq reads [[link]](https://ccb.jhu.edu/software/tophat/index.shtml)|`module load mvapich2/2.1  boost/1.59.0 tophat2/2.1.0`|
 |R|language for statistical analysis|`module load intel/17.0.4 R-Project/3.4.1`|
 
 This is a list of other software you might find useful:
@@ -41,7 +41,7 @@ This is a list of other software you might find useful:
 ## Connect to the cluster login node 
 The preferred method to connect to the cluster is through a web browser and fastX client
 
- - **via FastX**: in your browser, go to https://amarel.hpc.rutgers.edu:3443 or [click here](https://amarel.hpc.rutgers.edu:3443). (It will only work from campus or if you are connected via VPN.) See [Fastx](https://rutgers-oarc.github.io/training/howtos/fastx/) for a walkthrough that includes a tip on pasting commands. 
+ - **via FastX**: in your browser, go to https://amarel.hpc.rutgers.edu:3443 or [click here](https://amarel.hpc.rutgers.edu:3443). (It will only work from campus or if you are connected via VPN.) See [FastX](https://rutgers-oarc.github.io/training/howtos/fastx/) for a walkthrough that includes a tip on pasting commands. 
 
   - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm] (https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
 ``` ssh -X <your netid>@amarel.hpc.rutgers.edu```   
