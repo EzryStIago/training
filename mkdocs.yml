@@ -8,7 +8,6 @@ pages:
   - HowTo: 
       - Jupyter: 'howtos/jupyter.md' 
       - FastX: 'howtos/fastx.md'
-  - Workshops: 
   - R tutorial: 'ressentials.md'
   - Cheat Sheets: 'CheatSheet.md'
 theme: 
