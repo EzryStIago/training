@@ -25,44 +25,51 @@ This is a list of software already available on the cluster and the command you 
 |samtools|utilities for short DNA seq alignments [[link]](http://samtools.sourceforge.net/) |`module load samtools/1.3.1`|
 |bedtools|tools for a wide-range of genomics analysis [[link]](http://bedtools.readthedocs.io/en/latest/)|`module load bedtools2/2.25.0`|
 |bowtie2| alignment software [[link]](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)|`module load bowtie2/2.2.9`|
-|tophat2| a fast splice junction mapper for RNA-Seq reads [[link]](https://ccb.jhu.edu/software/tophat/index.shtml)|`module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0`|
+|tophat2| a fast splice junction mapper for RNA-Seq reads [[link]](https://ccb.jhu.edu/software/tophat/index.shtml)|`module load mvapich2/2.1  boost/1.59.0 tophat2/2.1.0`|
 |R|language for statistical analysis|`module load intel/17.0.4 R-Project/3.4.1`|
 
 This is a list of other software you might find useful:
 
 |Software|Description|URL|
 |------|-----------------------------|-----------------------|
-| GSEA     | genome set enrichment analysis| [link](http://software.broadinstitute.org/gsea/index.jsp) |
-| IGV      | Interactive Genome Viewer      | [link](http://software.broadinstitute.org/software/igv/)|
-| Cytoscape| Network visualization softwar   | [link](http://www.cytoscape.org/)|
+| GSEA     | Genome set enrichment analysis| [[link]](http://software.broadinstitute.org/gsea/index.jsp) |
+| IGV      | Interactive Genome Viewer      | [[link]](http://software.broadinstitute.org/software/igv/)|
+| Cytoscape| Network visualization softwar   | [[link]](http://www.cytoscape.org/)|
 
 # Setup
 
 ## Connect to the cluster login node 
 The preferred method to connect to the cluster is through a web browser and fastX client
 
- - **via FastX**: in your browser, go to https://amarel.hpc.rutgers.edu:3443 or [click here](https://amarel.hpc.rutgers.edu:3443). (It will only work from campus or if you are connected via VPN.) See [Fastx](https://rutgers-oarc.github.io/training/howtos/fastx/) for a walkthrough that includes a tip on pasting commands. 
+ - **via FastX**: in your browser, go to https://amarel.hpc.rutgers.edu:3443 or [click here](https://amarel.hpc.rutgers.edu:3443). (It will only work from campus or if you are connected via VPN [link](https://ssl-vpn.rutgers.edu/dana-na/auth/url_default/welcome.cgi).) See [FastX](https://rutgers-oarc.github.io/training/howtos/fastx/) for a walkthrough that includes a tip on copying/pasting commands. 
+ 
+ |Login page|Click on Launch Session and Select XFCE desktop|Open new terminal, copy text from your computer into clipboard window and click on Send to Remote. Put cursor into a terminal and click Edit->Paste. The text from a clipboard appears in the terminal. Hit Return to submit a job to a compute node. Notice that the jobid number has been assigned and resources have been allocated. The command prompt in the treminal will also change from a login node netid@amarel to a compute node netid@slepner or netid@hal. 
+|------|-----------------------------|-----------------------|
+| ![](https://github.com/rutgers-oarc/training/blob/master/workshops/fastX_web.png "FastX web interface")     | ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_newsession.png "FastX new session")| ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_srun.png "FastX terminal srun") |
+ 
 
-  - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm] (https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
+  - **via a terminal**: if you have a Mac or Linux, a terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm](https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
 ``` ssh -X <your netid>@amarel.hpc.rutgers.edu```   
   
 
+## DO NOT RUN ANY COMPUTATIONAL JOBS ON THE LOGIN NODE 
 ## Get resources on the compute node 
 
 You get to the cluster to execute your computations by running the following command in your terminal:    
-```srun  -p main --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --export=ALL --pty /bin/bash```   
-Notice that the name in your terminal will change from `amarel` to node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. The following table explains the parts of this command: 
+```srun  -p main --x11 --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash -i```   
+Notice that the name in your terminal will change from `amarel` to a node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. The following table explains the parts of this command: 
 
 |command part| meaning|
 |----|----|
 |`srun`| `slurm` run, i.e. allocate resources and run via `slurm` scheduler | 
 |`-p main` | on the main partition, one of several queues on the cluster|
-|`--reservation=genomics`| we reserved some compute nodes for this workshop to not wait long for resources|
-|`-N 1`| ask for one node|
-|`-c 2`| ask for two cores|
-|`-n 1`| this will be 1 most times|
+|`--x11` | it allows the graphical output from a compute node, e.g. GUI of the program|
+|`--reservation=genomics`| we reserved some compute nodes for this workshop to avoid waiting in the queue|
+|`-N 1`| ask for one compute node|
+|`-c 2`| ask for two cpu cores|
+|`-n 1`| tells slurm that the job will be run as  1 task ( for parallel MPI jobs it could be more than 1|
 |`-t 01:40:00`| run this for a maximum time of 1 hour 40 minutes|
-|`--pty /bin/bash`| run the terminal shell in an interactive mode|
+|`--pty /bin/bash -i`| run the terminal shell in an interactive mode|
 
 ### Prepare some directories for the data
 
