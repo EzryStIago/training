@@ -12,11 +12,11 @@ This is a list of software to install for the workshop
 |software|description|link|
 |------|-----------------------------|-----------------------|
 |seqtk|very handy and fast for processing fastq/a files|[link](https://github.com/lh3/seqtk)|
-|sratoolkit|downloading and processing data from GEO/SRA database|[link](http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz)|
+|sratoolkit|downloading and processing data from GEO/SRA database|[download](http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz)|
 |htseq-count|counting the  reads mapped on to genomics feature|[link](http://htseq.readthedocs.io/en/master/install.html)|
-|fastQC|widely used for sequencing read QC|[link](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
+|fastQC|widely used for sequencing read QC|[link](https://www.bioinformatics.babraham.ac.uk/projects/fastqc) [download](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
 |RSeQC-2.6.4|An RNA-seq quality control package, multiple functions|python package|
-|trimmomatic|fastq quality trim and adaptor removal|[link](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip)|
+|trimmomatic|fastq quality trim and adaptor removal|[link](http://www.usadellab.org/cms/?page=trimmomatic) [download](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip)|
 
 This is a list of software already available on the cluster and the command you need to execute to load it in your environment: 
 
