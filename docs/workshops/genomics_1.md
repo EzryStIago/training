@@ -22,9 +22,9 @@ This is a list of software already available on the cluster and the command you 
 
 |software|description|load it on the cluster|
 |------|-----------------------------|-----------------------|
-|samtools||`module load samtools`|
-|bedtools||`module load bedtools2./2.25.0`|
-|bowtie2| alignment software|`module load bowtie2`|
+|samtools||`module load samtools/1.3.1`|
+|bedtools||`module load bedtools2/2.25.0`|
+|bowtie2| alignment software|`module load bowtie2/2.2.9`|
 |tophat2| alignment software|`module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0`|
 |R|language for statistical analysis|`module load intel/17.0.4 R-Project/3.4.1`|
 
