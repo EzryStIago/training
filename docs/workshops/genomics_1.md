@@ -9,28 +9,28 @@ These are the notes from the workshop on genomics. What's covered in these notes
 
 This is a list of software to install for the workshop
 
-|software|description|link|
+|Software|Description|URL|
 |------|-----------------------------|-----------------------|
-|Seqtk|very handy and fast for processing fastq/a files|[link](https://github.com/lh3/seqtk)|
-|sratoolkit|downloading and processing data from GEO/SRA database|[link](http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz)|
-|htseq-count|counting the  reads mapped on to genomics feature|[link](http://htseq.readthedocs.io/en/master/install.html)|
-|fastQC|widely used for sequencing read QC|[link](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
-|RSeQC-2.6.4|An RNA-seq quality control package, multiple functions|python package|
-|trimmomatic|fastq quality trim and adaptor removal|[link](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip)|
+|seqtk|very handy and fast for processing fastq/a files|[[link]](https://github.com/lh3/seqtk)|
+|sratoolkit|downloading and processing data from GEO/SRA database|[[link]](https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/) [[download]](http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz)|
+|htseq-count|counting the  reads mapped on to genomics feature|[[link]](http://htseq.readthedocs.io/en/master/install.html)|
+|fastQC|widely used for sequencing read QC|[[link]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc) [[download]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
+|RSeQC-2.6.4|An RNA-seq quality control package, multiple functions|[[link]](http://rseqc.sourceforge.net/)|
+|trimmomatic|fastq quality trim and adaptor removal|[[link]](http://www.usadellab.org/cms/?page=trimmomatic) [[download]](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip)|
 
 This is a list of software already available on the cluster and the command you need to execute to load it in your environment: 
 
-|software|description|load it on the cluster|
+|Software|Description|Access on the cluster|
 |------|-----------------------------|-----------------------|
-|Samtools||`module load samtools`|
-|Bedtools||`module load bedtools2./2.25.0`|
-|bowtie2| alignment software|`module load bowtie2`|
-|tophat2| alignment software|`module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0`|
+|samtools|utilities for short DNA seq alignments [[link]](http://samtools.sourceforge.net/) |`module load samtools/1.3.1`|
+|bedtools|tools for a wide-range of genomics analysis [[link]](http://bedtools.readthedocs.io/en/latest/)|`module load bedtools2/2.25.0`|
+|bowtie2| alignment software [[link]](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)|`module load bowtie2/2.2.9`|
+|tophat2| a fast splice junction mapper for RNA-Seq reads [[link]](https://ccb.jhu.edu/software/tophat/index.shtml)|`module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0`|
 |R|language for statistical analysis|`module load intel/17.0.4 R-Project/3.4.1`|
 
 This is a list of other software you might find useful:
 
-|software|description|link|
+|Software|Description|URL|
 |------|-----------------------------|-----------------------|
 | GSEA     | genome set enrichment analysis| [link](http://software.broadinstitute.org/gsea/index.jsp) |
 | IGV      | Interactive Genome Viewer      | [link](http://software.broadinstitute.org/software/igv/)|
@@ -41,10 +41,10 @@ This is a list of other software you might find useful:
 ## Connect to the cluster login node 
 The preferred method to connect to the cluster is through a web browser and fastX client
 
- - **via FastX**: in your browser, go to [this website](https://amarel.hpc.rutgers.edu:3443) . (It will only work from campus or if you are connected via VPN.) See [Fastx](../howtos/fastx) for a walkthrough that includes a tip on pasting commands. 
+ - **via FastX**: in your browser, go to https://amarel.hpc.rutgers.edu:3443 or [click here](https://amarel.hpc.rutgers.edu:3443). (It will only work from campus or if you are connected via VPN.) See [Fastx](https://rutgers-oarc.github.io/training/howtos/fastx/) for a walkthrough that includes a tip on pasting commands. 
 
   - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm] (https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
-``` ssh -X <your net id>@amarel.hpc.rutgers.edu```   
+``` ssh -X <your netid>@amarel.hpc.rutgers.edu```   
   
 
 ## Get resources on the compute node 
@@ -472,8 +472,6 @@ Fraction of reads failed to determine: 0.1406
 Fraction of reads explained by "1++,1--,2+-,2-+": 0.4302
 Fraction of reads explained by "1+-,1-+,2++,2--": 0.4292
 ```
-
-
 
 
 
