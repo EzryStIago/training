@@ -11,5 +11,6 @@ pages:
       - FastX: 'howtos/fastx.md'
   - R tutorial: 'ressentials.md'
   - Cheat Sheets: 'CheatSheet.md'
+  - Resources: 'resources.md'
 theme: 
   name: 'rtd-dropdown'
