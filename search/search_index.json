@@ -419,6 +419,36 @@
             "location": "/CheatSheet/#linux-on-the-web",
             "text": "Galen's tutorial  Excellent short lessons  Alexei's course he runs for engineering students every semester  Cornell virtual workshop  - interactive if you have xsede login; many HPC topics available  Software carpentry  - list of introductory programming courses",
             "title": "Linux on the web"
+        },
+        {
+            "location": "/resources/",
+            "text": "Resources on the web\n\n\nServices\n\n\n\n\nRutgers free web pages\n - WordPress-based websites hosting, free for Rutgers community\n\n\n\n\nTools\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown\n\n\n\n\nEducation\n\n\n\n\nCornell virtual workshops\n - A number of courses designed to get you up to speed using HPC and programming. \n\n\nSoftware Carpentry\n - Software Carpentry has a number of lectures and workshops on many computing subjects\n\n\n\n\nExamples\n\n\n\n\nOARC-provided slurm examples\n - collection of slurm batch scripts that can serve as templates for your jobs",
+            "title": "Resources"
+        },
+        {
+            "location": "/resources/#resources-on-the-web",
+            "text": "",
+            "title": "Resources on the web"
+        },
+        {
+            "location": "/resources/#services",
+            "text": "Rutgers free web pages  - WordPress-based websites hosting, free for Rutgers community",
+            "title": "Services"
+        },
+        {
+            "location": "/resources/#tools",
+            "text": "markdown editor  - lets you view the finished (rendered) markdown side by side with raw markdown",
+            "title": "Tools"
+        },
+        {
+            "location": "/resources/#education",
+            "text": "Cornell virtual workshops  - A number of courses designed to get you up to speed using HPC and programming.   Software Carpentry  - Software Carpentry has a number of lectures and workshops on many computing subjects",
+            "title": "Education"
+        },
+        {
+            "location": "/resources/#examples",
+            "text": "OARC-provided slurm examples  - collection of slurm batch scripts that can serve as templates for your jobs",
+            "title": "Examples"
         }
     ]
 }
