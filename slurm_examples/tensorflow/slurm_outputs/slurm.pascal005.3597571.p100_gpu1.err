@@ -1,0 +1,2011 @@
+INFO:tensorflow:Using default config.
+INFO:tensorflow:Using config: {'_model_dir': '/home/aag193/tmp/', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fd7cdeb26d8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:40:47.517148: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-11 15:40:47.746478: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:06:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-11 15:40:47.905455: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:86:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-11 15:40:47.905713: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:40:48.442808: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:40:48.443035: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:40:48.443096: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:40:48.443151: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:40:48.443812: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:40:48.598345: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-24000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 24001 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.139571e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 4.139571e-05, step = 24000
+INFO:tensorflow:global_step/sec: 131.122
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.000569064, train_accuracy = 1.0 (0.763 sec)
+INFO:tensorflow:loss = 0.000569064, step = 24100 (0.763 sec)
+INFO:tensorflow:global_step/sec: 259.027
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.4442375e-05, train_accuracy = 1.0 (0.386 sec)
+INFO:tensorflow:loss = 3.4442375e-05, step = 24200 (0.386 sec)
+INFO:tensorflow:global_step/sec: 261.808
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00045017208, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 0.00045017208, step = 24300 (0.382 sec)
+INFO:tensorflow:global_step/sec: 262.513
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0005681464, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0005681464, step = 24400 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.763
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.004266975, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.004266975, step = 24500 (0.381 sec)
+INFO:tensorflow:Saving checkpoints for 24600 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 5.7440197e-05.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:40:54
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:40:55.039499: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:40:55.039664: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:40:55.039733: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:40:55.039789: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:40:55.039841: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:40:55.040159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:40:55.040305: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-24600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:40:55
+INFO:tensorflow:Saving dict for global step 24600: accuracy = 0.9923, global_step = 24600, loss = 0.030755283
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:40:56.053246: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:40:56.053414: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:40:56.053493: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:40:56.053550: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:40:56.053604: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:40:56.053908: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:40:56.054066: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-24600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 24601 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0015569523, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0015569523, step = 24600
+INFO:tensorflow:global_step/sec: 132.192
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00090448523, train_accuracy = 1.0 (0.757 sec)
+INFO:tensorflow:loss = 0.00090448523, step = 24700 (0.757 sec)
+INFO:tensorflow:global_step/sec: 260.335
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0023094388, train_accuracy = 1.0 (0.384 sec)
+INFO:tensorflow:loss = 0.0023094388, step = 24800 (0.384 sec)
+INFO:tensorflow:global_step/sec: 262.684
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0015473205, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0015473205, step = 24900 (0.381 sec)
+INFO:tensorflow:global_step/sec: 258.578
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0002355245, train_accuracy = 1.0 (0.387 sec)
+INFO:tensorflow:loss = 0.0002355245, step = 25000 (0.387 sec)
+INFO:tensorflow:global_step/sec: 255.706
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0008359636, train_accuracy = 1.0 (0.391 sec)
+INFO:tensorflow:loss = 0.0008359636, step = 25100 (0.391 sec)
+INFO:tensorflow:Saving checkpoints for 25200 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00058659393.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:01
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:01.105668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:01.105834: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:01.105903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:01.105958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:01.106011: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:01.106331: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:01.106494: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-25200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:01
+INFO:tensorflow:Saving dict for global step 25200: accuracy = 0.9921, global_step = 25200, loss = 0.028967576
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:02.194500: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:02.194679: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:02.194764: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:02.194820: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:02.194873: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:02.195168: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:02.195320: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-25200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 25201 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00028325102, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00028325102, step = 25200
+INFO:tensorflow:global_step/sec: 135.973
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00069793017, train_accuracy = 1.0 (0.736 sec)
+INFO:tensorflow:loss = 0.00069793017, step = 25300 (0.736 sec)
+INFO:tensorflow:global_step/sec: 259.075
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.133168e-05, train_accuracy = 1.0 (0.386 sec)
+INFO:tensorflow:loss = 4.133168e-05, step = 25400 (0.386 sec)
+INFO:tensorflow:global_step/sec: 261.631
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00011536045, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 0.00011536045, step = 25500 (0.382 sec)
+INFO:tensorflow:global_step/sec: 261.399
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.005758008, train_accuracy = 1.0 (0.383 sec)
+INFO:tensorflow:loss = 0.005758008, step = 25600 (0.383 sec)
+INFO:tensorflow:global_step/sec: 263.308
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00081593805, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.00081593805, step = 25700 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 25800 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00032719746.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:07
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:07.130660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:07.130832: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:07.130896: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:07.130956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:07.131010: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:07.131337: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:07.131493: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-25800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:07
+INFO:tensorflow:Saving dict for global step 25800: accuracy = 0.9927, global_step = 25800, loss = 0.029369272
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:08.094358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:08.094533: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:08.094599: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:08.094656: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:08.094710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:08.094996: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:08.095151: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-25800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 25801 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.944544e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 3.944544e-05, step = 25800
+INFO:tensorflow:global_step/sec: 136.533
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00014807445, train_accuracy = 1.0 (0.733 sec)
+INFO:tensorflow:loss = 0.00014807445, step = 25900 (0.733 sec)
+INFO:tensorflow:global_step/sec: 262.939
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.012843338, train_accuracy = 0.99666667 (0.380 sec)
+INFO:tensorflow:loss = 0.012843338, step = 26000 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.828
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0017098183, train_accuracy = 0.9975 (0.380 sec)
+INFO:tensorflow:loss = 0.0017098183, step = 26100 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.314
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.474673e-05, train_accuracy = 0.998 (0.381 sec)
+INFO:tensorflow:loss = 2.474673e-05, step = 26200 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.349
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0068501644, train_accuracy = 0.99833333 (0.381 sec)
+INFO:tensorflow:loss = 0.0068501644, step = 26300 (0.381 sec)
+INFO:tensorflow:Saving checkpoints for 26400 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.019193633.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:12
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:12.997454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:12.997620: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:12.997687: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:12.997758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:12.997811: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:12.998090: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:12.998240: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-26400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:13
+INFO:tensorflow:Saving dict for global step 26400: accuracy = 0.992, global_step = 26400, loss = 0.03020647
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:14.084093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:14.084268: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:14.084337: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:14.084396: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:14.084459: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:14.084754: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:14.084917: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-26400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 26401 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00085031916, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00085031916, step = 26400
+INFO:tensorflow:global_step/sec: 134.574
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00013161692, train_accuracy = 1.0 (0.743 sec)
+INFO:tensorflow:loss = 0.00013161692, step = 26500 (0.743 sec)
+INFO:tensorflow:global_step/sec: 262.694
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00042493545, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.00042493545, step = 26600 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.708
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0006314396, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0006314396, step = 26700 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.543
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0013932021, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0013932021, step = 26800 (0.381 sec)
+INFO:tensorflow:global_step/sec: 263.27
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0030401123, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0030401123, step = 26900 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 27000 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00018619314.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:18
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:19.044568: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:19.044735: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:19.044801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:19.044858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:19.044911: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:19.045192: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:19.045360: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-27000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:19
+INFO:tensorflow:Saving dict for global step 27000: accuracy = 0.9938, global_step = 27000, loss = 0.027061017
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:20.011675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:20.011853: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:20.011919: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:20.011976: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:20.012030: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:20.012357: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:20.012530: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-27000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 27001 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.000217972, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.000217972, step = 27000
+INFO:tensorflow:global_step/sec: 137.374
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0017068638, train_accuracy = 1.0 (0.728 sec)
+INFO:tensorflow:loss = 0.0017068638, step = 27100 (0.728 sec)
+INFO:tensorflow:global_step/sec: 263.665
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.8921e-05, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 9.8921e-05, step = 27200 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.492
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00023163987, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.00023163987, step = 27300 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.836
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.3575365e-05, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 2.3575365e-05, step = 27400 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.978
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0024696265, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.0024696265, step = 27500 (0.379 sec)
+INFO:tensorflow:Saving checkpoints for 27600 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0022343802.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:24
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:24.990939: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:24.991105: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:24.991171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:24.991228: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:24.991282: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:24.991562: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:24.991723: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-27600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:25
+INFO:tensorflow:Saving dict for global step 27600: accuracy = 0.9928, global_step = 27600, loss = 0.026501853
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:25.956625: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:25.956790: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:25.956855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:25.956911: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:25.956966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:25.957239: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:25.957398: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-27600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 27601 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.000112907896, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.000112907896, step = 27600
+INFO:tensorflow:global_step/sec: 136.686
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0026027749, train_accuracy = 1.0 (0.732 sec)
+INFO:tensorflow:loss = 0.0026027749, step = 27700 (0.732 sec)
+INFO:tensorflow:global_step/sec: 263.185
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.7471272e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 4.7471272e-05, step = 27800 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.411
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.317031e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 4.317031e-05, step = 27900 (0.380 sec)
+INFO:tensorflow:global_step/sec: 261.814
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.007388e-05, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 4.007388e-05, step = 28000 (0.382 sec)
+INFO:tensorflow:global_step/sec: 262.607
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.372193e-05, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 6.372193e-05, step = 28100 (0.381 sec)
+INFO:tensorflow:Saving checkpoints for 28200 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.012889421.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:30
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:30.995025: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:30.995189: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:30.995255: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:30.995311: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:30.995366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:30.995646: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:30.995804: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-28200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:31
+INFO:tensorflow:Saving dict for global step 28200: accuracy = 0.9925, global_step = 28200, loss = 0.031257357
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:31.959392: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:31.959561: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:31.959629: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:31.959687: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:31.959755: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:31.960028: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:31.960181: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-28200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 28201 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0006387606, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0006387606, step = 28200
+INFO:tensorflow:global_step/sec: 138.616
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.64479e-05, train_accuracy = 1.0 (0.722 sec)
+INFO:tensorflow:loss = 1.64479e-05, step = 28300 (0.722 sec)
+INFO:tensorflow:global_step/sec: 262.764
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.949317e-06, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 4.949317e-06, step = 28400 (0.381 sec)
+INFO:tensorflow:global_step/sec: 259.659
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00021716102, train_accuracy = 1.0 (0.385 sec)
+INFO:tensorflow:loss = 0.00021716102, step = 28500 (0.385 sec)
+INFO:tensorflow:global_step/sec: 261.545
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.383019e-06, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 3.383019e-06, step = 28600 (0.382 sec)
+INFO:tensorflow:global_step/sec: 261.256
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.000813713, train_accuracy = 1.0 (0.383 sec)
+INFO:tensorflow:loss = 0.000813713, step = 28700 (0.383 sec)
+INFO:tensorflow:Saving checkpoints for 28800 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.005962972.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:36
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:36.979656: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:36.979828: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:36.979894: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:36.979951: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:36.980005: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:36.980281: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:36.980428: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-28800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:37
+INFO:tensorflow:Saving dict for global step 28800: accuracy = 0.993, global_step = 28800, loss = 0.02852387
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:37.947190: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:37.947359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:37.947432: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:37.947491: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:37.947547: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:37.947829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:37.947988: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-28800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 28801 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00014474036, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00014474036, step = 28800
+INFO:tensorflow:global_step/sec: 137.583
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0004748641, train_accuracy = 1.0 (0.727 sec)
+INFO:tensorflow:loss = 0.0004748641, step = 28900 (0.727 sec)
+INFO:tensorflow:global_step/sec: 263.069
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.3217554e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 7.3217554e-05, step = 29000 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.725
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.5846395e-05, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 3.5846395e-05, step = 29100 (0.381 sec)
+INFO:tensorflow:global_step/sec: 263.51
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0004384173, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.0004384173, step = 29200 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.733
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0014128116, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.0014128116, step = 29300 (0.379 sec)
+INFO:tensorflow:Saving checkpoints for 29400 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 4.4796307e-06.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:42
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:42.793454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:42.793627: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:42.793693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:42.793749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:42.793802: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:42.794090: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:42.794236: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-29400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:43
+INFO:tensorflow:Saving dict for global step 29400: accuracy = 0.993, global_step = 29400, loss = 0.027110942
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:43.847402: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:43.847587: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:43.847654: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:43.847710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:43.847764: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:43.848056: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:43.848210: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-29400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 29401 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00029127256, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00029127256, step = 29400
+INFO:tensorflow:global_step/sec: 134.721
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.641324e-05, train_accuracy = 1.0 (0.743 sec)
+INFO:tensorflow:loss = 7.641324e-05, step = 29500 (0.742 sec)
+INFO:tensorflow:global_step/sec: 262.899
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00020607474, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.00020607474, step = 29600 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.847
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0013061857, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0013061857, step = 29700 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.195
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.001119584, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.001119584, step = 29800 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.156
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0024704372, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0024704372, step = 29900 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 30000 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00038277148.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:48
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:48.817245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:48.817428: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:48.817496: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:48.817552: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:48.817606: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:48.817929: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:48.818085: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-30000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:49
+INFO:tensorflow:Saving dict for global step 30000: accuracy = 0.9929, global_step = 30000, loss = 0.026781272
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:49.779347: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:49.779528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:49.779596: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:49.779654: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:49.779709: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:49.780005: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:49.780161: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-30000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 30001 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0011583887, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0011583887, step = 30000
+INFO:tensorflow:global_step/sec: 137.873
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0130260745, train_accuracy = 0.995 (0.726 sec)
+INFO:tensorflow:loss = 0.0130260745, step = 30100 (0.726 sec)
+INFO:tensorflow:global_step/sec: 262.67
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.9753714e-06, train_accuracy = 0.99666667 (0.381 sec)
+INFO:tensorflow:loss = 6.9753714e-06, step = 30200 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.556
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 8.47654e-05, train_accuracy = 0.9975 (0.381 sec)
+INFO:tensorflow:loss = 8.47654e-05, step = 30300 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.856
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00031614368, train_accuracy = 0.998 (0.380 sec)
+INFO:tensorflow:loss = 0.00031614368, step = 30400 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.022
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00047196457, train_accuracy = 0.99833333 (0.380 sec)
+INFO:tensorflow:loss = 0.00047196457, step = 30500 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 30600 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 2.1528379e-06.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:41:54
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:54.658962: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:54.659135: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:54.659202: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:54.659258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:54.659312: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:54.659607: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:54.659762: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-30600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:41:55
+INFO:tensorflow:Saving dict for global step 30600: accuracy = 0.9924, global_step = 30600, loss = 0.029124089
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:41:55.659522: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:41:55.659698: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:41:55.659765: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:41:55.659822: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:41:55.659876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:41:55.660165: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:41:55.660321: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-30600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 30601 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.007263418, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.007263418, step = 30600
+INFO:tensorflow:global_step/sec: 137.467
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00018276634, train_accuracy = 1.0 (0.728 sec)
+INFO:tensorflow:loss = 0.00018276634, step = 30700 (0.728 sec)
+INFO:tensorflow:global_step/sec: 263.423
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0007230258, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0007230258, step = 30800 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.497
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0025372421, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0025372421, step = 30900 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.118
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.835014e-05, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 3.835014e-05, step = 31000 (0.382 sec)
+INFO:tensorflow:global_step/sec: 260.747
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00053829374, train_accuracy = 1.0 (0.384 sec)
+INFO:tensorflow:loss = 0.00053829374, step = 31100 (0.384 sec)
+INFO:tensorflow:Saving checkpoints for 31200 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00049879076.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:00
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:00.581998: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:00.582171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:00.582238: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:00.582294: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:00.582347: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:00.582639: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:00.582795: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-31200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:01
+INFO:tensorflow:Saving dict for global step 31200: accuracy = 0.9916, global_step = 31200, loss = 0.038972743
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:01.547312: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:01.547495: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:01.547566: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:01.547624: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:01.547680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:01.547978: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:01.548135: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-31200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 31201 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0011341256, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0011341256, step = 31200
+INFO:tensorflow:global_step/sec: 136.271
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0015025614, train_accuracy = 1.0 (0.734 sec)
+INFO:tensorflow:loss = 0.0015025614, step = 31300 (0.734 sec)
+INFO:tensorflow:global_step/sec: 262.241
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0010621051, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0010621051, step = 31400 (0.381 sec)
+INFO:tensorflow:global_step/sec: 261.815
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00066908717, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 0.00066908717, step = 31500 (0.382 sec)
+INFO:tensorflow:global_step/sec: 261.508
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0009447744, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 0.0009447744, step = 31600 (0.382 sec)
+INFO:tensorflow:global_step/sec: 263.237
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.8229816e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 4.8229816e-05, step = 31700 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 31800 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00011676622.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:06
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:06.542154: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:06.542331: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:06.542399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:06.542464: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:06.542524: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:06.542840: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:06.543009: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-31800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:07
+INFO:tensorflow:Saving dict for global step 31800: accuracy = 0.9925, global_step = 31800, loss = 0.03208072
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:07.515284: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:07.515484: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:07.515554: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:07.515613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:07.515669: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:07.515979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:07.516137: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-31800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 31801 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.013116168, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.013116168, step = 31800
+INFO:tensorflow:global_step/sec: 137.837
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.9914877e-05, train_accuracy = 0.995 (0.726 sec)
+INFO:tensorflow:loss = 4.9914877e-05, step = 31900 (0.726 sec)
+INFO:tensorflow:global_step/sec: 263.575
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0021684305, train_accuracy = 0.99666667 (0.379 sec)
+INFO:tensorflow:loss = 0.0021684305, step = 32000 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.706
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0005654518, train_accuracy = 0.9975 (0.379 sec)
+INFO:tensorflow:loss = 0.0005654518, step = 32100 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.42
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00067027775, train_accuracy = 0.998 (0.380 sec)
+INFO:tensorflow:loss = 0.00067027775, step = 32200 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.808
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0024146237, train_accuracy = 0.99833333 (0.379 sec)
+INFO:tensorflow:loss = 0.0024146237, step = 32300 (0.379 sec)
+INFO:tensorflow:Saving checkpoints for 32400 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 7.200372e-05.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:12
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:12.464199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:12.464378: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:12.464464: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:12.464524: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:12.464580: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:12.464925: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:12.465072: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-32400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:13
+INFO:tensorflow:Saving dict for global step 32400: accuracy = 0.9925, global_step = 32400, loss = 0.027373264
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:13.435195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:13.435369: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:13.435440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:13.435499: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:13.435553: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:13.435843: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:13.435996: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-32400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 32401 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.7158086e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 4.7158086e-05, step = 32400
+INFO:tensorflow:global_step/sec: 135.432
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0014843966, train_accuracy = 1.0 (0.726 sec)
+INFO:tensorflow:loss = 0.0014843966, step = 32500 (0.726 sec)
+INFO:tensorflow:global_step/sec: 263.154
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0026829403, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0026829403, step = 32600 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.766
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00016839443, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.00016839443, step = 32700 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.101
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.3343105e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 4.3343105e-05, step = 32800 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.185
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00028005813, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.00028005813, step = 32900 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 33000 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.000412263.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:18
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:18.525127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:18.525300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:18.525367: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:18.525427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:18.525484: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:18.525772: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:18.525925: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-33000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:19
+INFO:tensorflow:Saving dict for global step 33000: accuracy = 0.9926, global_step = 33000, loss = 0.028198423
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:19.496977: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:19.497153: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:19.497220: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:19.497277: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:19.497332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:19.497631: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:19.497793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-33000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 33001 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.320061e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 7.320061e-05, step = 33000
+INFO:tensorflow:global_step/sec: 138.164
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.000108570915, train_accuracy = 1.0 (0.724 sec)
+INFO:tensorflow:loss = 0.000108570915, step = 33100 (0.724 sec)
+INFO:tensorflow:global_step/sec: 262.775
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.444619e-06, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 9.444619e-06, step = 33200 (0.381 sec)
+INFO:tensorflow:global_step/sec: 263.256
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 8.36044e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 8.36044e-05, step = 33300 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.059
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 5.89403e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 5.89403e-05, step = 33400 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.467
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0005000193, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0005000193, step = 33500 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 33600 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00063592865.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:24
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:24.447571: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:24.447746: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:24.447815: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:24.447873: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:24.447928: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:24.448235: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:24.448392: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-33600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:25
+INFO:tensorflow:Saving dict for global step 33600: accuracy = 0.9931, global_step = 33600, loss = 0.02737837
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:25.422065: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:25.422255: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:25.422322: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:25.422380: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:25.422439: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:25.422748: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:25.422903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-33600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 33601 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 8.546651e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 8.546651e-05, step = 33600
+INFO:tensorflow:global_step/sec: 138.064
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0010939792, train_accuracy = 1.0 (0.725 sec)
+INFO:tensorflow:loss = 0.0010939792, step = 33700 (0.724 sec)
+INFO:tensorflow:global_step/sec: 262.357
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0006056466, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0006056466, step = 33800 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.641
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0009062267, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0009062267, step = 33900 (0.381 sec)
+INFO:tensorflow:global_step/sec: 263.292
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00018856021, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.00018856021, step = 34000 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.63
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.069903e-05, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 2.069903e-05, step = 34100 (0.379 sec)
+INFO:tensorflow:Saving checkpoints for 34200 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.006112616.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:30
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:30.445684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:30.445858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:30.445924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:30.445980: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:30.446034: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:30.446342: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:30.446500: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-34200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:30
+INFO:tensorflow:Saving dict for global step 34200: accuracy = 0.992, global_step = 34200, loss = 0.032001026
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:31.411148: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:31.411321: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:31.411387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:31.411449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:31.411528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:31.411823: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:31.412002: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-34200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 34201 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.23769e-06, train_accuracy = 1.0
+INFO:tensorflow:loss = 4.23769e-06, step = 34200
+INFO:tensorflow:global_step/sec: 134.404
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00011046212, train_accuracy = 1.0 (0.744 sec)
+INFO:tensorflow:loss = 0.00011046212, step = 34300 (0.744 sec)
+INFO:tensorflow:global_step/sec: 261.85
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.0558883e-05, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 6.0558883e-05, step = 34400 (0.382 sec)
+INFO:tensorflow:global_step/sec: 261.904
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00023054244, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 0.00023054244, step = 34500 (0.382 sec)
+INFO:tensorflow:global_step/sec: 261.55
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.0545421e-05, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 1.0545421e-05, step = 34600 (0.382 sec)
+INFO:tensorflow:global_step/sec: 259.329
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.638993e-05, train_accuracy = 1.0 (0.386 sec)
+INFO:tensorflow:loss = 4.638993e-05, step = 34700 (0.386 sec)
+INFO:tensorflow:Saving checkpoints for 34800 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.026435072.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:36
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:36.339375: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:36.339551: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:36.339618: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:36.339676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:36.339730: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:36.340044: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:36.340191: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-34800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:36
+INFO:tensorflow:Saving dict for global step 34800: accuracy = 0.9926, global_step = 34800, loss = 0.026679669
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:37.381168: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:37.381343: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:37.381409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:37.381472: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:37.381527: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:37.381830: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:37.381990: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-34800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 34801 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.4052555e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 3.4052555e-05, step = 34800
+INFO:tensorflow:global_step/sec: 138.916
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.122213e-06, train_accuracy = 1.0 (0.720 sec)
+INFO:tensorflow:loss = 9.122213e-06, step = 34900 (0.720 sec)
+INFO:tensorflow:global_step/sec: 260.612
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00028585945, train_accuracy = 1.0 (0.384 sec)
+INFO:tensorflow:loss = 0.00028585945, step = 35000 (0.384 sec)
+INFO:tensorflow:global_step/sec: 261.27
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.313237e-05, train_accuracy = 1.0 (0.383 sec)
+INFO:tensorflow:loss = 3.313237e-05, step = 35100 (0.383 sec)
+INFO:tensorflow:global_step/sec: 262.255
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.036829915, train_accuracy = 0.998 (0.381 sec)
+INFO:tensorflow:loss = 0.036829915, step = 35200 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.94
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00027330982, train_accuracy = 0.99833333 (0.380 sec)
+INFO:tensorflow:loss = 0.00027330982, step = 35300 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 35400 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.020534867.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:42
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:42.294061: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:42.294249: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:42.294315: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:42.294372: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:42.294446: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:42.294757: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:42.294903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-35400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:42
+INFO:tensorflow:Saving dict for global step 35400: accuracy = 0.9936, global_step = 35400, loss = 0.024210531
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:43.246277: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:43.246459: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:43.246526: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:43.246583: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:43.246637: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:43.246926: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:43.247083: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-35400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 35401 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00027309233, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00027309233, step = 35400
+INFO:tensorflow:global_step/sec: 135.779
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.4586965e-05, train_accuracy = 1.0 (0.737 sec)
+INFO:tensorflow:loss = 1.4586965e-05, step = 35500 (0.737 sec)
+INFO:tensorflow:global_step/sec: 262.823
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 8.672575e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 8.672575e-05, step = 35600 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.053
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0006779544, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0006779544, step = 35700 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.542
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00014097379, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.00014097379, step = 35800 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.897
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.319229e-06, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 7.319229e-06, step = 35900 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 36000 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00037986875.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:48
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:48.210231: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:48.210404: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:48.210477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:48.210534: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:48.210588: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:48.210899: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:48.211068: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-36000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:48
+INFO:tensorflow:Saving dict for global step 36000: accuracy = 0.9934, global_step = 36000, loss = 0.024723286
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:49.278521: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:49.278700: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:49.278767: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:49.278824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:49.278879: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:49.279169: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:49.279330: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-36000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 36001 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00040930248, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00040930248, step = 36000
+INFO:tensorflow:global_step/sec: 136.965
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.4906232e-05, train_accuracy = 1.0 (0.731 sec)
+INFO:tensorflow:loss = 3.4906232e-05, step = 36100 (0.730 sec)
+INFO:tensorflow:global_step/sec: 262.555
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0005331491, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0005331491, step = 36200 (0.381 sec)
+INFO:tensorflow:global_step/sec: 263.005
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0003961704, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0003961704, step = 36300 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.429
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00010785227, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.00010785227, step = 36400 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.948
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.42557e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 6.42557e-05, step = 36500 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 36600 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 7.5056882e-06.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:42:54
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:54.205982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:54.206159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:54.206227: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:54.206285: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:54.206340: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:54.206642: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:54.206800: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-36600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:42:54
+INFO:tensorflow:Saving dict for global step 36600: accuracy = 0.9926, global_step = 36600, loss = 0.029230304
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:42:55.170595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:42:55.170772: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:42:55.170839: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:42:55.170898: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:42:55.170953: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:42:55.171251: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:42:55.171407: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-36600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 36601 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.8740562e-06, train_accuracy = 1.0
+INFO:tensorflow:loss = 2.8740562e-06, step = 36600
+INFO:tensorflow:global_step/sec: 134.82
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 8.7955865e-05, train_accuracy = 1.0 (0.742 sec)
+INFO:tensorflow:loss = 8.7955865e-05, step = 36700 (0.742 sec)
+INFO:tensorflow:global_step/sec: 263.141
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.1924685e-06, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 9.1924685e-06, step = 36800 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.08
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.1702944e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 6.1702944e-05, step = 36900 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.291
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.3648597e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 4.3648597e-05, step = 37000 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.144
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00079629774, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.00079629774, step = 37100 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 37200 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00023861844.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:00
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:00.332478: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:00.332654: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:00.332719: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:00.332775: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:00.332829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:00.333157: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:00.333319: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-37200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:00
+INFO:tensorflow:Saving dict for global step 37200: accuracy = 0.9926, global_step = 37200, loss = 0.029248584
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:01.313710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:01.313884: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:01.313950: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:01.314008: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:01.314063: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:01.314354: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:01.314515: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-37200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 37201 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.021877611, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.021877611, step = 37200
+INFO:tensorflow:global_step/sec: 136.236
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.2002111e-05, train_accuracy = 0.995 (0.734 sec)
+INFO:tensorflow:loss = 1.2002111e-05, step = 37300 (0.734 sec)
+INFO:tensorflow:global_step/sec: 263.271
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.4819596e-06, train_accuracy = 0.99666667 (0.380 sec)
+INFO:tensorflow:loss = 6.4819596e-06, step = 37400 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.42
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00038515546, train_accuracy = 0.9975 (0.380 sec)
+INFO:tensorflow:loss = 0.00038515546, step = 37500 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.273
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.000108853805, train_accuracy = 0.998 (0.380 sec)
+INFO:tensorflow:loss = 0.000108853805, step = 37600 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.895
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00012866262, train_accuracy = 0.99833333 (0.379 sec)
+INFO:tensorflow:loss = 0.00012866262, step = 37700 (0.379 sec)
+INFO:tensorflow:Saving checkpoints for 37800 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 8.758174e-05.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:06
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:06.329588: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:06.329758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:06.329824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:06.329880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:06.329934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:06.330223: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:06.330369: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-37800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:06
+INFO:tensorflow:Saving dict for global step 37800: accuracy = 0.9939, global_step = 37800, loss = 0.027919447
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:07.288963: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:07.289138: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:07.289203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:07.289259: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:07.289313: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:07.289611: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:07.289770: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-37800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 37801 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.47053e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 7.47053e-05, step = 37800
+INFO:tensorflow:global_step/sec: 138.813
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.904827e-05, train_accuracy = 1.0 (0.721 sec)
+INFO:tensorflow:loss = 7.904827e-05, step = 37900 (0.721 sec)
+INFO:tensorflow:global_step/sec: 263.533
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0011883926, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.0011883926, step = 38000 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.602
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00092500093, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.00092500093, step = 38100 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.678
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.7333947e-06, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 2.7333947e-06, step = 38200 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.881
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.6732816e-05, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 9.6732816e-05, step = 38300 (0.379 sec)
+INFO:tensorflow:Saving checkpoints for 38400 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00248467.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:12
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:12.278159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:12.278333: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:12.278399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:12.278461: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:12.278516: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:12.278805: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:12.278958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-38400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:12
+INFO:tensorflow:Saving dict for global step 38400: accuracy = 0.9927, global_step = 38400, loss = 0.030535571
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:13.247655: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:13.247847: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:13.247911: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:13.247966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:13.248020: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:13.248309: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:13.248487: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-38400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 38401 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.1135787e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 3.1135787e-05, step = 38400
+INFO:tensorflow:global_step/sec: 138.463
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.1978656e-06, train_accuracy = 1.0 (0.723 sec)
+INFO:tensorflow:loss = 4.1978656e-06, step = 38500 (0.722 sec)
+INFO:tensorflow:global_step/sec: 262.116
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0012060633, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0012060633, step = 38600 (0.381 sec)
+INFO:tensorflow:global_step/sec: 261.255
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 5.4736283e-06, train_accuracy = 1.0 (0.383 sec)
+INFO:tensorflow:loss = 5.4736283e-06, step = 38700 (0.383 sec)
+INFO:tensorflow:global_step/sec: 261.773
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00030937325, train_accuracy = 1.0 (0.382 sec)
+INFO:tensorflow:loss = 0.00030937325, step = 38800 (0.382 sec)
+INFO:tensorflow:global_step/sec: 261.409
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.0846524e-05, train_accuracy = 1.0 (0.383 sec)
+INFO:tensorflow:loss = 3.0846524e-05, step = 38900 (0.383 sec)
+INFO:tensorflow:Saving checkpoints for 39000 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0007578252.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:18
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:18.134480: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:18.134659: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:18.134727: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:18.134786: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:18.134842: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:18.135148: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:18.135310: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-39000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:18
+INFO:tensorflow:Saving dict for global step 39000: accuracy = 0.9906, global_step = 39000, loss = 0.042797793
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:19.155086: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:19.155261: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:19.155326: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:19.155382: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:19.155440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:19.155731: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:19.155885: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-39000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 39001 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.03430953, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.03430953, step = 39000
+INFO:tensorflow:global_step/sec: 134.95
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 5.6666442e-05, train_accuracy = 0.995 (0.741 sec)
+INFO:tensorflow:loss = 5.6666442e-05, step = 39100 (0.741 sec)
+INFO:tensorflow:global_step/sec: 262.65
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.190941e-06, train_accuracy = 0.99666667 (0.381 sec)
+INFO:tensorflow:loss = 9.190941e-06, step = 39200 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.758
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0025626067, train_accuracy = 0.9975 (0.381 sec)
+INFO:tensorflow:loss = 0.0025626067, step = 39300 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.606
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.07121244, train_accuracy = 0.996 (0.381 sec)
+INFO:tensorflow:loss = 0.07121244, step = 39400 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.733
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00017282202, train_accuracy = 0.99666667 (0.381 sec)
+INFO:tensorflow:loss = 0.00017282202, step = 39500 (0.381 sec)
+INFO:tensorflow:Saving checkpoints for 39600 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00034647778.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:24
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:24.098851: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:24.099024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:24.099090: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:24.099148: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:24.099203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:24.099497: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:24.099659: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-39600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:24
+INFO:tensorflow:Saving dict for global step 39600: accuracy = 0.9934, global_step = 39600, loss = 0.026428558
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:25.053273: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:25.053446: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:25.053513: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:25.053586: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:25.053641: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:25.053927: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:25.054097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-39600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 39601 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0001342259, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0001342259, step = 39600
+INFO:tensorflow:global_step/sec: 133.509
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.877335e-06, train_accuracy = 1.0 (0.749 sec)
+INFO:tensorflow:loss = 6.877335e-06, step = 39700 (0.749 sec)
+INFO:tensorflow:global_step/sec: 263.105
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0006858123, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0006858123, step = 39800 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.976
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 5.4479133e-06, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 5.4479133e-06, step = 39900 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.09
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.6740614e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 3.6740614e-05, step = 40000 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.345
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.7600864e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 4.7600864e-05, step = 40100 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 40200 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00050688157.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:29
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:30.001563: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:30.001726: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:30.001792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:30.001849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:30.001903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:30.002184: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:30.002328: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-40200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:30
+INFO:tensorflow:Saving dict for global step 40200: accuracy = 0.9938, global_step = 40200, loss = 0.028439691
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:31.053054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:31.053223: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:31.053289: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:31.053345: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:31.053398: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:31.053686: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:31.053866: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-40200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 40201 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.2041836e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 6.2041836e-05, step = 40200
+INFO:tensorflow:global_step/sec: 135.268
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.3522438e-05, train_accuracy = 1.0 (0.739 sec)
+INFO:tensorflow:loss = 2.3522438e-05, step = 40300 (0.739 sec)
+INFO:tensorflow:global_step/sec: 263.427
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.3742228e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 2.3742228e-05, step = 40400 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.391
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.838327e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 6.838327e-05, step = 40500 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.925
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.000107201806, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.000107201806, step = 40600 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.652
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.000134946, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.000134946, step = 40700 (0.379 sec)
+INFO:tensorflow:Saving checkpoints for 40800 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 2.246954e-05.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:36
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:36.220362: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:36.220547: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:36.220614: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:36.220670: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:36.220725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:36.221016: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:36.221164: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-40800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:36
+INFO:tensorflow:Saving dict for global step 40800: accuracy = 0.9936, global_step = 40800, loss = 0.028842354
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:37.207693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:37.207876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:37.207943: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:37.208000: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:37.208055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:37.208346: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:37.208501: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-40800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 40801 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 5.3935666e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 5.3935666e-05, step = 40800
+INFO:tensorflow:global_step/sec: 134.509
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.3583922e-05, train_accuracy = 1.0 (0.744 sec)
+INFO:tensorflow:loss = 2.3583922e-05, step = 40900 (0.743 sec)
+INFO:tensorflow:global_step/sec: 263.493
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 5.0600224e-06, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 5.0600224e-06, step = 41000 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.435
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0003351344, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0003351344, step = 41100 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.512
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.368402e-05, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 9.368402e-05, step = 41200 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.435
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.9635448e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 2.9635448e-05, step = 41300 (0.380 sec)
+INFO:tensorflow:Saving checkpoints for 41400 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 5.2100736e-06.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:42
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:42.432572: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:42.432749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:42.432815: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:42.432871: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:42.432924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:42.433223: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:42.433380: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-41400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:42
+INFO:tensorflow:Saving dict for global step 41400: accuracy = 0.9931, global_step = 41400, loss = 0.029758932
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:43.402006: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:43.402183: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:43.402248: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:43.402304: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:43.402357: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:43.402651: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:43.402809: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-41400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 41401 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00011961917, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00011961917, step = 41400
+INFO:tensorflow:global_step/sec: 138.412
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 8.438106e-06, train_accuracy = 1.0 (0.723 sec)
+INFO:tensorflow:loss = 8.438106e-06, step = 41500 (0.723 sec)
+INFO:tensorflow:global_step/sec: 263.228
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 8.6399334e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 8.6399334e-05, step = 41600 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.256
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0046244888, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0046244888, step = 41700 (0.380 sec)
+INFO:tensorflow:global_step/sec: 262.573
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0029828555, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0029828555, step = 41800 (0.381 sec)
+INFO:tensorflow:global_step/sec: 262.797
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0026936412, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.0026936412, step = 41900 (0.381 sec)
+INFO:tensorflow:Saving checkpoints for 42000 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0034615076.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:48
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:48.271652: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:48.271838: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:48.271903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:48.271959: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:48.272013: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:48.272305: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:48.272462: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-42000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:48
+INFO:tensorflow:Saving dict for global step 42000: accuracy = 0.9931, global_step = 42000, loss = 0.029754113
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:49.238215: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:49.238402: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:49.238485: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:49.238542: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:49.238598: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:49.238901: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:49.239058: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-42000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 42001 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00030399353, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00030399353, step = 42000
+INFO:tensorflow:global_step/sec: 138.16
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00018522512, train_accuracy = 1.0 (0.724 sec)
+INFO:tensorflow:loss = 0.00018522512, step = 42100 (0.724 sec)
+INFO:tensorflow:global_step/sec: 263.03
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 8.1657157e-07, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 8.1657157e-07, step = 42200 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.78
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.1153515e-06, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 9.1153515e-06, step = 42300 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.881
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00015508101, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.00015508101, step = 42400 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.71
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00022175454, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.00022175454, step = 42500 (0.379 sec)
+INFO:tensorflow:Saving checkpoints for 42600 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00013279499.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:43:54
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:54.219725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:54.219896: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:54.219961: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:54.220018: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:54.220071: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:54.220358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:54.220519: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-42600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:43:54
+INFO:tensorflow:Saving dict for global step 42600: accuracy = 0.9939, global_step = 42600, loss = 0.026726892
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:43:55.191319: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:43:55.191529: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:43:55.191599: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:43:55.191658: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:43:55.191715: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:43:55.192019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:43:55.192176: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-42600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 42601 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.3908004e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 2.3908004e-05, step = 42600
+INFO:tensorflow:global_step/sec: 137.829
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0043843165, train_accuracy = 1.0 (0.726 sec)
+INFO:tensorflow:loss = 0.0043843165, step = 42700 (0.726 sec)
+INFO:tensorflow:global_step/sec: 262.985
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0010704785, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 0.0010704785, step = 42800 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.452
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.0128395e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 2.0128395e-05, step = 42900 (0.380 sec)
+INFO:tensorflow:global_step/sec: 263.648
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0009154779, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.0009154779, step = 43000 (0.379 sec)
+INFO:tensorflow:global_step/sec: 263.643
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00018245316, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.00018245316, step = 43100 (0.379 sec)
+INFO:tensorflow:Saving checkpoints for 43200 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00018753491.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:44:00
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:00.074129: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:00.074299: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:00.074365: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:00.074427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:00.074485: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:00.074774: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:00.074920: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-43200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:44:00
+INFO:tensorflow:Saving dict for global step 43200: accuracy = 0.9943, global_step = 43200, loss = 0.028492603
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:01.115883: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:01.116064: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:01.116129: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:01.116185: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:01.116238: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:01.116537: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:01.116699: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-43200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 43201 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.568313e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 1.568313e-05, step = 43200
+INFO:tensorflow:global_step/sec: 138.203
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00015759928, train_accuracy = 1.0 (0.724 sec)
+INFO:tensorflow:loss = 0.00015759928, step = 43300 (0.724 sec)
+INFO:tensorflow:global_step/sec: 262.956
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.121953e-05, train_accuracy = 1.0 (0.380 sec)
+INFO:tensorflow:loss = 3.121953e-05, step = 43400 (0.380 sec)
+INFO:tensorflow:global_step/sec: 266.056
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00020303238, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 0.00020303238, step = 43500 (0.376 sec)
+INFO:tensorflow:global_step/sec: 265.855
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.4912346e-06, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 1.4912346e-06, step = 43600 (0.376 sec)
+INFO:tensorflow:global_step/sec: 265.882
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.5460593e-06, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 1.5460593e-06, step = 43700 (0.376 sec)
+INFO:tensorflow:Saving checkpoints for 43800 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.012535253.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:44:05
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:05.999366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:05.999522: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:05.999588: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:05.999645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:05.999699: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:05.999970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:06.000102: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-43800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:44:06
+INFO:tensorflow:Saving dict for global step 43800: accuracy = 0.9917, global_step = 43800, loss = 0.03331171
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:06.932248: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:06.932387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:06.932457: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:06.932514: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:06.932567: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:06.932829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:06.932951: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-43800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 43801 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.4957062e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 1.4957062e-05, step = 43800
+INFO:tensorflow:global_step/sec: 138.897
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.3795692e-05, train_accuracy = 1.0 (0.720 sec)
+INFO:tensorflow:loss = 2.3795692e-05, step = 43900 (0.720 sec)
+INFO:tensorflow:global_step/sec: 265.414
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0020299712, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 0.0020299712, step = 44000 (0.377 sec)
+INFO:tensorflow:global_step/sec: 266.113
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.1441605e-05, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 1.1441605e-05, step = 44100 (0.376 sec)
+INFO:tensorflow:global_step/sec: 265.612
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.2445083e-06, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 1.2445083e-06, step = 44200 (0.376 sec)
+INFO:tensorflow:global_step/sec: 265.542
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 5.106999e-05, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 5.106999e-05, step = 44300 (0.377 sec)
+INFO:tensorflow:Saving checkpoints for 44400 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00025604328.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:44:11
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:11.583369: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:11.583546: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:11.583612: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:11.583668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:11.583721: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:11.584009: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:11.584161: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-44400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:44:12
+INFO:tensorflow:Saving dict for global step 44400: accuracy = 0.9928, global_step = 44400, loss = 0.032804094
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:12.629911: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:12.630083: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:12.630148: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:12.630205: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:12.630258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:12.630559: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:12.630710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-44400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 44401 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.3705577e-06, train_accuracy = 1.0
+INFO:tensorflow:loss = 4.3705577e-06, step = 44400
+INFO:tensorflow:global_step/sec: 141.544
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.9049404e-05, train_accuracy = 1.0 (0.707 sec)
+INFO:tensorflow:loss = 2.9049404e-05, step = 44500 (0.707 sec)
+INFO:tensorflow:global_step/sec: 265.671
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.739216e-05, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 3.739216e-05, step = 44600 (0.376 sec)
+INFO:tensorflow:global_step/sec: 264.871
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.729622e-06, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 7.729622e-06, step = 44700 (0.377 sec)
+INFO:tensorflow:global_step/sec: 265.741
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.084807e-05, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 4.084807e-05, step = 44800 (0.376 sec)
+INFO:tensorflow:global_step/sec: 266.062
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.1447605e-05, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 7.1447605e-05, step = 44900 (0.376 sec)
+INFO:tensorflow:Saving checkpoints for 45000 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 9.9439174e-05.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:44:17
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:17.248096: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:17.248263: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:17.248327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:17.248381: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:17.248453: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:17.248796: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:17.248940: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-45000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:44:17
+INFO:tensorflow:Saving dict for global step 45000: accuracy = 0.994, global_step = 45000, loss = 0.031176813
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:18.210405: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:18.210566: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:18.210633: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:18.210691: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:18.210759: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:18.211026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:18.211149: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-45000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 45001 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0001096068, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0001096068, step = 45000
+INFO:tensorflow:global_step/sec: 140.26
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.0992418e-05, train_accuracy = 1.0 (0.713 sec)
+INFO:tensorflow:loss = 4.0992418e-05, step = 45100 (0.713 sec)
+INFO:tensorflow:global_step/sec: 265.138
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.2294653e-06, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 6.2294653e-06, step = 45200 (0.377 sec)
+INFO:tensorflow:global_step/sec: 264.714
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0001255104, train_accuracy = 1.0 (0.378 sec)
+INFO:tensorflow:loss = 0.0001255104, step = 45300 (0.378 sec)
+INFO:tensorflow:global_step/sec: 265.25
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.065892e-06, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 4.065892e-06, step = 45400 (0.377 sec)
+INFO:tensorflow:global_step/sec: 265.373
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.6269665e-05, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 2.6269665e-05, step = 45500 (0.377 sec)
+INFO:tensorflow:Saving checkpoints for 45600 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 1.8262373e-06.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:44:22
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:22.855980: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:22.856153: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:22.856216: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:22.856271: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:22.856322: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:22.856613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:22.856760: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-45600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:44:23
+INFO:tensorflow:Saving dict for global step 45600: accuracy = 0.9935, global_step = 45600, loss = 0.030056654
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:23.780534: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:23.780675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:23.780738: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:23.780792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:23.780843: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:23.781106: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:23.781223: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-45600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 45601 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.011691e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 9.011691e-05, step = 45600
+INFO:tensorflow:global_step/sec: 141.749
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.4547096e-05, train_accuracy = 1.0 (0.706 sec)
+INFO:tensorflow:loss = 1.4547096e-05, step = 45700 (0.706 sec)
+INFO:tensorflow:global_step/sec: 266.08
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00026947225, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 0.00026947225, step = 45800 (0.376 sec)
+INFO:tensorflow:global_step/sec: 266.407
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.771001e-07, train_accuracy = 1.0 (0.375 sec)
+INFO:tensorflow:loss = 6.771001e-07, step = 45900 (0.375 sec)
+INFO:tensorflow:global_step/sec: 265.121
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00047334898, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 0.00047334898, step = 46000 (0.377 sec)
+INFO:tensorflow:global_step/sec: 265.971
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.361314e-06, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 1.361314e-06, step = 46100 (0.376 sec)
+INFO:tensorflow:Saving checkpoints for 46200 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00024462762.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:44:28
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:28.376512: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:28.376671: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:28.376752: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:28.376809: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:28.376863: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:28.377159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:28.377285: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-46200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:44:28
+INFO:tensorflow:Saving dict for global step 46200: accuracy = 0.9933, global_step = 46200, loss = 0.029200118
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:29.302354: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:29.302505: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:29.302574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:29.302632: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:29.302700: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:29.302969: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:29.303091: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-46200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 46201 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.8897552e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 1.8897552e-05, step = 46200
+INFO:tensorflow:global_step/sec: 136.043
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.1182306e-05, train_accuracy = 1.0 (0.735 sec)
+INFO:tensorflow:loss = 2.1182306e-05, step = 46300 (0.735 sec)
+INFO:tensorflow:global_step/sec: 262.416
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.9521063e-05, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 1.9521063e-05, step = 46400 (0.381 sec)
+INFO:tensorflow:global_step/sec: 264.129
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00017283503, train_accuracy = 1.0 (0.379 sec)
+INFO:tensorflow:loss = 0.00017283503, step = 46500 (0.379 sec)
+INFO:tensorflow:global_step/sec: 262.658
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00015610228, train_accuracy = 1.0 (0.381 sec)
+INFO:tensorflow:loss = 0.00015610228, step = 46600 (0.381 sec)
+INFO:tensorflow:global_step/sec: 265.503
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.660594e-06, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 2.660594e-06, step = 46700 (0.377 sec)
+INFO:tensorflow:Saving checkpoints for 46800 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0011979628.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:44:34
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:34.108373: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:34.108538: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:34.108607: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:34.108666: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:34.108736: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:34.109011: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:34.109146: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-46800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:44:34
+INFO:tensorflow:Saving dict for global step 46800: accuracy = 0.9932, global_step = 46800, loss = 0.035514962
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:35.039406: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:35.039573: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:35.039641: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:35.039699: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:35.039769: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:35.040037: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:35.040160: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-46800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 46801 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.6622922e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 1.6622922e-05, step = 46800
+INFO:tensorflow:global_step/sec: 140.339
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 4.8961815e-06, train_accuracy = 1.0 (0.713 sec)
+INFO:tensorflow:loss = 4.8961815e-06, step = 46900 (0.713 sec)
+INFO:tensorflow:global_step/sec: 265.076
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0017367203, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 0.0017367203, step = 47000 (0.377 sec)
+INFO:tensorflow:global_step/sec: 265.121
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0003990021, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 0.0003990021, step = 47100 (0.377 sec)
+INFO:tensorflow:global_step/sec: 265.113
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00018908437, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 0.00018908437, step = 47200 (0.377 sec)
+INFO:tensorflow:global_step/sec: 265.873
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00022594858, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 0.00022594858, step = 47300 (0.376 sec)
+INFO:tensorflow:Saving checkpoints for 47400 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 5.0358576e-05.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:44:39
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:39.666113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:39.666286: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:39.666351: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:39.666407: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:39.666467: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:39.666756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:39.666920: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-47400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:44:40
+INFO:tensorflow:Saving dict for global step 47400: accuracy = 0.9926, global_step = 47400, loss = 0.030664794
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:40.600658: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:40.600804: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:40.600869: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:40.600925: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:40.600980: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:40.601256: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:40.601379: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-47400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 47401 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.9273514e-07, train_accuracy = 1.0
+INFO:tensorflow:loss = 7.9273514e-07, step = 47400
+INFO:tensorflow:global_step/sec: 141.461
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.2278277e-06, train_accuracy = 1.0 (0.707 sec)
+INFO:tensorflow:loss = 1.2278277e-06, step = 47500 (0.707 sec)
+INFO:tensorflow:global_step/sec: 264.833
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00070038997, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 0.00070038997, step = 47600 (0.378 sec)
+INFO:tensorflow:global_step/sec: 265.376
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00280514, train_accuracy = 1.0 (0.377 sec)
+INFO:tensorflow:loss = 0.00280514, step = 47700 (0.377 sec)
+INFO:tensorflow:global_step/sec: 265.792
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 7.5815626e-07, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 7.5815626e-07, step = 47800 (0.376 sec)
+INFO:tensorflow:global_step/sec: 265.797
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.025115e-05, train_accuracy = 1.0 (0.376 sec)
+INFO:tensorflow:loss = 6.025115e-05, step = 47900 (0.376 sec)
+INFO:tensorflow:Saving checkpoints for 48000 into /home/aag193/tmp/model.ckpt.
+INFO:tensorflow:Loss for final step: 2.6615373e-05.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-11-19:44:45
+INFO:tensorflow:Graph was finalized.
+2018-07-11 15:44:45.334941: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-07-11 15:44:45.335107: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 15:44:45.335170: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-07-11 15:44:45.335224: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-07-11 15:44:45.335276: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-07-11 15:44:45.335561: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2018-07-11 15:44:45.335706: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15131 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /home/aag193/tmp/model.ckpt-48000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-11-19:44:45
+INFO:tensorflow:Saving dict for global step 48000: accuracy = 0.9927, global_step = 48000, loss = 0.031728227

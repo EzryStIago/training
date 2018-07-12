@@ -1,0 +1,164 @@
+Downloading https://storage.googleapis.com/cvdf-datasets/mnist/train-images-idx3-ubyte.gz to /tmp/mnist_data/train-images-idx3-ubyte.gz
+Downloading https://storage.googleapis.com/cvdf-datasets/mnist/train-labels-idx1-ubyte.gz to /tmp/mnist_data/train-labels-idx1-ubyte.gz
+Downloading https://storage.googleapis.com/cvdf-datasets/mnist/t10k-images-idx3-ubyte.gz to /tmp/mnist_data/t10k-images-idx3-ubyte.gz
+Downloading https://storage.googleapis.com/cvdf-datasets/mnist/t10k-labels-idx1-ubyte.gz to /tmp/mnist_data/t10k-labels-idx1-ubyte.gz
+
+Evaluation results:
+	{'accuracy': 0.9696, 'loss': 0.1066359, 'global_step': 600}
+
+
+Evaluation results:
+	{'accuracy': 0.9788, 'loss': 0.06615804, 'global_step': 1200}
+
+
+Evaluation results:
+	{'accuracy': 0.9844, 'loss': 0.04647793, 'global_step': 1800}
+
+
+Evaluation results:
+	{'accuracy': 0.9859, 'loss': 0.04072304, 'global_step': 2400}
+
+
+Evaluation results:
+	{'accuracy': 0.9883, 'loss': 0.03521132, 'global_step': 3000}
+
+
+Evaluation results:
+	{'accuracy': 0.9901, 'loss': 0.029841553, 'global_step': 3600}
+
+
+Evaluation results:
+	{'accuracy': 0.9891, 'loss': 0.029571535, 'global_step': 4200}
+
+
+Evaluation results:
+	{'accuracy': 0.9906, 'loss': 0.027179962, 'global_step': 4800}
+
+
+Evaluation results:
+	{'accuracy': 0.9906, 'loss': 0.027761452, 'global_step': 5400}
+
+
+Evaluation results:
+	{'accuracy': 0.9918, 'loss': 0.023429774, 'global_step': 6000}
+
+
+Evaluation results:
+	{'accuracy': 0.9918, 'loss': 0.022690587, 'global_step': 6600}
+
+
+Evaluation results:
+	{'accuracy': 0.9928, 'loss': 0.021346152, 'global_step': 7200}
+
+
+Evaluation results:
+	{'accuracy': 0.9922, 'loss': 0.021763938, 'global_step': 7800}
+
+
+Evaluation results:
+	{'accuracy': 0.9928, 'loss': 0.020362487, 'global_step': 8400}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.02063705, 'global_step': 9000}
+
+
+Evaluation results:
+	{'accuracy': 0.9924, 'loss': 0.020149058, 'global_step': 9600}
+
+
+Evaluation results:
+	{'accuracy': 0.9928, 'loss': 0.020759372, 'global_step': 10200}
+
+
+Evaluation results:
+	{'accuracy': 0.9922, 'loss': 0.022000482, 'global_step': 10800}
+
+
+Evaluation results:
+	{'accuracy': 0.9917, 'loss': 0.022758955, 'global_step': 11400}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.022480108, 'global_step': 12000}
+
+
+Evaluation results:
+	{'accuracy': 0.993, 'loss': 0.022244887, 'global_step': 12600}
+
+
+Evaluation results:
+	{'accuracy': 0.993, 'loss': 0.020459976, 'global_step': 13200}
+
+
+Evaluation results:
+	{'accuracy': 0.9919, 'loss': 0.026219413, 'global_step': 13800}
+
+
+Evaluation results:
+	{'accuracy': 0.9933, 'loss': 0.022020431, 'global_step': 14400}
+
+
+Evaluation results:
+	{'accuracy': 0.9925, 'loss': 0.022496376, 'global_step': 15000}
+
+
+Evaluation results:
+	{'accuracy': 0.9931, 'loss': 0.022860482, 'global_step': 15600}
+
+
+Evaluation results:
+	{'accuracy': 0.9934, 'loss': 0.021644773, 'global_step': 16200}
+
+
+Evaluation results:
+	{'accuracy': 0.9921, 'loss': 0.026920319, 'global_step': 16800}
+
+
+Evaluation results:
+	{'accuracy': 0.9935, 'loss': 0.021266453, 'global_step': 17400}
+
+
+Evaluation results:
+	{'accuracy': 0.9931, 'loss': 0.023544582, 'global_step': 18000}
+
+
+Evaluation results:
+	{'accuracy': 0.9922, 'loss': 0.024883075, 'global_step': 18600}
+
+
+Evaluation results:
+	{'accuracy': 0.9926, 'loss': 0.027913513, 'global_step': 19200}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.024382226, 'global_step': 19800}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.0252503, 'global_step': 20400}
+
+
+Evaluation results:
+	{'accuracy': 0.9926, 'loss': 0.027216602, 'global_step': 21000}
+
+
+Evaluation results:
+	{'accuracy': 0.9929, 'loss': 0.023279719, 'global_step': 21600}
+
+
+Evaluation results:
+	{'accuracy': 0.9929, 'loss': 0.023798931, 'global_step': 22200}
+
+
+Evaluation results:
+	{'accuracy': 0.9931, 'loss': 0.023209136, 'global_step': 22800}
+
+
+Evaluation results:
+	{'accuracy': 0.9931, 'loss': 0.028911564, 'global_step': 23400}
+
+
+Evaluation results:
+	{'accuracy': 0.9931, 'loss': 0.026735282, 'global_step': 24000}
+

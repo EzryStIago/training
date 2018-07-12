@@ -1,0 +1,64 @@
+INFO:tensorflow:Using default config.
+INFO:tensorflow:Using config: {'_model_dir': '/tmp/mnist_model', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f415e5ef6a0>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+2018-07-11 13:47:17.724595: E tensorflow/core/util/events_writer.cc:104] Write failed because file could not be opened.
+2018-07-11 13:47:17.745934: E tensorflow/core/util/events_writer.cc:104] Write failed because file could not be opened.
+INFO:tensorflow:Graph was finalized.
+2018-07-11 13:47:17.838432: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-11 13:47:18.013792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:06:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2018-07-11 13:47:18.013951: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2018-07-11 13:47:18.278264: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-11 13:47:18.278423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2018-07-11 13:47:18.278481: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2018-07-11 13:47:18.278839: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15131 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-25200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+Traceback (most recent call last):
+  File "/home/aag193/python_mnist/mnist_1.8.py", line 262, in <module>
+    main(argv=sys.argv)
+  File "/home/aag193/python_mnist/mnist_1.8.py", line 230, in main
+    mnist_classifier.train(input_fn=train_input_fn, hooks=train_hooks)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/estimator/estimator.py", line 363, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/estimator/estimator.py", line 843, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/estimator/estimator.py", line 859, in _train_model_default
+    saving_listeners)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/estimator/estimator.py", line 1059, in _train_with_estimator_spec
+    _, loss = mon_sess.run([estimator_spec.train_op, estimator_spec.loss])
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/training/monitored_session.py", line 567, in run
+    run_metadata=run_metadata)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/training/monitored_session.py", line 1043, in run
+    run_metadata=run_metadata)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/training/monitored_session.py", line 1134, in run
+    raise six.reraise(*original_exc_info)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/training/monitored_session.py", line 1119, in run
+    return self._sess.run(*args, **kwargs)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/training/monitored_session.py", line 1183, in run
+    feed_dict, options)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/training/monitored_session.py", line 1209, in _call_hook_before_run
+    request = hook.before_run(run_context)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/training/basic_session_run_hooks.py", line 445, in before_run
+    "graph.pbtxt")
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/framework/graph_io.py", line 71, in write_graph
+    text_format.MessageToString(graph_def))
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/lib/io/file_io.py", line 429, in atomic_write_string_to_file
+    write_string_to_file(temp_pathname, contents)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/lib/io/file_io.py", line 309, in write_string_to_file
+    f.write(file_content)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/lib/io/file_io.py", line 103, in write
+    self._prewrite_check()
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/lib/io/file_io.py", line 89, in _prewrite_check
+    compat.as_bytes(self.__name), compat.as_bytes(self.__mode), status)
+  File "/projects/community/py-data-science-stack/5.1.0/kp807/envs/tensorflow-gpu-1.8.0/lib/python3.6/site-packages/tensorflow/python/framework/errors_impl.py", line 519, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.PermissionDeniedError: /tmp/mnist_model/graph.pbtxt.tmp2ff05066706b4f3eb84df3fe7f6547ff; Permission denied
+srun: error: pascal005: task 0: Exited with exit code 1
