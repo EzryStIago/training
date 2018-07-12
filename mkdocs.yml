@@ -5,11 +5,16 @@ pages:
   - Home: 'index.md'
   - Cluster Guides: 'guides/Cluster_User_Guide.md'
   - Examples: 'guides/Cluster_Examples.md'
+<<<<<<< HEAD
   - Amarel Community Resources: 'community_resources.md'
+=======
+  - Community: 'guides/community_resources.md'
+>>>>>>> 2e3492d2abce5d3152bcbe044a54529d446fe819
   - HowTo: 
       - Jupyter: 'howtos/jupyter.md' 
       - FastX: 'howtos/fastx.md'
   - R tutorial: 'ressentials.md'
   - Cheat Sheets: 'CheatSheet.md'
+  - Resources: 'resources.md'
 theme: 
   name: 'rtd-dropdown'

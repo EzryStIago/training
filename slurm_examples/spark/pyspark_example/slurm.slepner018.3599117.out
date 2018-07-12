@@ -1,0 +1,657 @@
+2018-07-11 18:15:34 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-07-11 18:15:35 INFO  SparkContext:54 - Running Spark version 2.3.0
+2018-07-11 18:15:35 INFO  SparkContext:54 - Submitted application: GroupIrises
+2018-07-11 18:15:35 INFO  SecurityManager:54 - Changing view acls to: kp807
+2018-07-11 18:15:35 INFO  SecurityManager:54 - Changing modify acls to: kp807
+2018-07-11 18:15:35 INFO  SecurityManager:54 - Changing view acls groups to: 
+2018-07-11 18:15:35 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2018-07-11 18:15:35 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(kp807); groups with view permissions: Set(); users  with modify permissions: Set(kp807); groups with modify permissions: Set()
+2018-07-11 18:15:35 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 37057.
+2018-07-11 18:15:35 INFO  SparkEnv:54 - Registering MapOutputTracker
+2018-07-11 18:15:35 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2018-07-11 18:15:35 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2018-07-11 18:15:35 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2018-07-11 18:15:35 INFO  DiskBlockManager:54 - Created local directory at /scratch/kp807/tmp/blockmgr-0aa9afe2-de83-41b8-b5d6-a20f63d4e81d
+2018-07-11 18:15:35 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2018-07-11 18:15:36 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2018-07-11 18:15:36 INFO  log:192 - Logging initialized @2448ms
+2018-07-11 18:15:36 INFO  Server:346 - jetty-9.3.z-SNAPSHOT
+2018-07-11 18:15:36 INFO  Server:414 - Started @2548ms
+2018-07-11 18:15:36 INFO  AbstractConnector:278 - Started ServerConnector@460b7a67{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-07-11 18:15:36 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@15206235{/jobs,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5da18691{/jobs/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5808f47{/jobs/job,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@375b9982{/jobs/job/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@669f04f6{/stages,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@67e445d5{/stages/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@283d8e74{/stages/stage,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1868bdc6{/stages/stage/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5c62de91{/stages/pool,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1347fa20{/stages/pool/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@72cb840b{/storage,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2f109119{/storage/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@65cc443c{/storage/rdd,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4976345f{/storage/rdd/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@67331aa6{/environment,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4c80d700{/environment/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4bea9708{/executors,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@334696e6{/executors/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4c5f4c02{/executors/threadDump,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@62daa5e{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@19e02f44{/static,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2e7031f2{/,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4e612f5a{/api,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7d6a5c0e{/jobs/job/kill,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2e5ebd08{/stages/stage/kill,null,AVAILABLE,@Spark}
+2018-07-11 18:15:36 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://slepner018.amarel.rutgers.edu:4040
+2018-07-11 18:15:36 INFO  SparkContext:54 - Added file file:/home/kp807/pyspark_example/run_pyspark.py at file:/home/kp807/pyspark_example/run_pyspark.py with timestamp 1531347336525
+2018-07-11 18:15:36 INFO  Utils:54 - Copying /home/kp807/pyspark_example/run_pyspark.py to /scratch/kp807/tmp/spark-4d26a9dc-6b41-4f8c-8d4e-fbeee7851ea2/userFiles-d042e635-b389-4629-b172-2a84c90e724b/run_pyspark.py
+2018-07-11 18:15:36 INFO  Executor:54 - Starting executor ID driver on host localhost
+2018-07-11 18:15:36 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46853.
+2018-07-11 18:15:36 INFO  NettyBlockTransferService:54 - Server created on slepner018.amarel.rutgers.edu:46853
+2018-07-11 18:15:36 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2018-07-11 18:15:36 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, slepner018.amarel.rutgers.edu, 46853, None)
+2018-07-11 18:15:36 INFO  BlockManagerMasterEndpoint:54 - Registering block manager slepner018.amarel.rutgers.edu:46853 with 366.3 MB RAM, BlockManagerId(driver, slepner018.amarel.rutgers.edu, 46853, None)
+2018-07-11 18:15:36 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, slepner018.amarel.rutgers.edu, 46853, None)
+2018-07-11 18:15:36 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, slepner018.amarel.rutgers.edu, 46853, None)
+2018-07-11 18:15:36 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@192e2a93{/metrics/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:37 INFO  SharedState:54 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/kp807/pyspark_example/spark-warehouse/').
+2018-07-11 18:15:37 INFO  SharedState:54 - Warehouse path is 'file:/home/kp807/pyspark_example/spark-warehouse/'.
+2018-07-11 18:15:37 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1f520779{/SQL,null,AVAILABLE,@Spark}
+2018-07-11 18:15:37 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1564f0fd{/SQL/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:37 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4f0a835e{/SQL/execution,null,AVAILABLE,@Spark}
+2018-07-11 18:15:37 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6d76fa78{/SQL/execution/json,null,AVAILABLE,@Spark}
+2018-07-11 18:15:37 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@20145c6d{/static/sql,null,AVAILABLE,@Spark}
+2018-07-11 18:15:37 INFO  StateStoreCoordinatorRef:54 - Registered StateStoreCoordinator endpoint
+2018-07-11 18:15:39 INFO  FileSourceStrategy:54 - Pruning directories with: 
+2018-07-11 18:15:39 INFO  FileSourceStrategy:54 - Post-Scan Filters: (length(trim(value#0, None)) > 0)
+2018-07-11 18:15:39 INFO  FileSourceStrategy:54 - Output Data Schema: struct<value: string>
+2018-07-11 18:15:39 INFO  FileSourceScanExec:54 - Pushed Filters: 
+2018-07-11 18:15:40 INFO  CodeGenerator:54 - Code generated in 283.132406 ms
+2018-07-11 18:15:40 INFO  CodeGenerator:54 - Code generated in 30.210259 ms
+2018-07-11 18:15:40 INFO  MemoryStore:54 - Block broadcast_0 stored as values in memory (estimated size 277.4 KB, free 366.0 MB)
+2018-07-11 18:15:40 INFO  MemoryStore:54 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.0 MB)
+2018-07-11 18:15:40 INFO  BlockManagerInfo:54 - Added broadcast_0_piece0 in memory on slepner018.amarel.rutgers.edu:46853 (size: 23.3 KB, free: 366.3 MB)
+2018-07-11 18:15:40 INFO  SparkContext:54 - Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
+2018-07-11 18:15:40 INFO  FileSourceScanExec:54 - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2018-07-11 18:15:40 INFO  SparkContext:54 - Starting job: csv at NativeMethodAccessorImpl.java:0
+2018-07-11 18:15:40 INFO  DAGScheduler:54 - Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+2018-07-11 18:15:40 INFO  DAGScheduler:54 - Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
+2018-07-11 18:15:40 INFO  DAGScheduler:54 - Parents of final stage: List()
+2018-07-11 18:15:40 INFO  DAGScheduler:54 - Missing parents: List()
+2018-07-11 18:15:40 INFO  DAGScheduler:54 - Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+2018-07-11 18:15:40 INFO  MemoryStore:54 - Block broadcast_1 stored as values in memory (estimated size 9.3 KB, free 366.0 MB)
+2018-07-11 18:15:40 INFO  MemoryStore:54 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.5 KB, free 366.0 MB)
+2018-07-11 18:15:40 INFO  BlockManagerInfo:54 - Added broadcast_1_piece0 in memory on slepner018.amarel.rutgers.edu:46853 (size: 4.5 KB, free: 366.3 MB)
+2018-07-11 18:15:40 INFO  SparkContext:54 - Created broadcast 1 from broadcast at DAGScheduler.scala:1039
+2018-07-11 18:15:40 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+2018-07-11 18:15:40 INFO  TaskSchedulerImpl:54 - Adding task set 0.0 with 1 tasks
+2018-07-11 18:15:40 INFO  TaskSetManager:54 - Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8319 bytes)
+2018-07-11 18:15:40 INFO  Executor:54 - Running task 0.0 in stage 0.0 (TID 0)
+2018-07-11 18:15:40 INFO  Executor:54 - Fetching file:/home/kp807/pyspark_example/run_pyspark.py with timestamp 1531347336525
+2018-07-11 18:15:40 INFO  Utils:54 - /home/kp807/pyspark_example/run_pyspark.py has been previously copied to /scratch/kp807/tmp/spark-4d26a9dc-6b41-4f8c-8d4e-fbeee7851ea2/userFiles-d042e635-b389-4629-b172-2a84c90e724b/run_pyspark.py
+2018-07-11 18:15:41 INFO  FileScanRDD:54 - Reading File path: file:///home/kp807/pyspark_example/input_data/iris.csv, range: 0-4608, partition values: [empty row]
+2018-07-11 18:15:41 INFO  CodeGenerator:54 - Code generated in 12.964907 ms
+2018-07-11 18:15:41 INFO  Executor:54 - Finished task 0.0 in stage 0.0 (TID 0). 1308 bytes result sent to driver
+2018-07-11 18:15:41 INFO  TaskSetManager:54 - Finished task 0.0 in stage 0.0 (TID 0) in 193 ms on localhost (executor driver) (1/1)
+2018-07-11 18:15:41 INFO  TaskSchedulerImpl:54 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 0.289 s
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 0.342013 s
+2018-07-11 18:15:41 INFO  FileSourceStrategy:54 - Pruning directories with: 
+2018-07-11 18:15:41 INFO  FileSourceStrategy:54 - Post-Scan Filters: 
+2018-07-11 18:15:41 INFO  FileSourceStrategy:54 - Output Data Schema: struct<value: string>
+2018-07-11 18:15:41 INFO  FileSourceScanExec:54 - Pushed Filters: 
+2018-07-11 18:15:41 INFO  CodeGenerator:54 - Code generated in 9.490864 ms
+2018-07-11 18:15:41 INFO  MemoryStore:54 - Block broadcast_2 stored as values in memory (estimated size 277.4 KB, free 365.7 MB)
+2018-07-11 18:15:41 INFO  MemoryStore:54 - Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.7 MB)
+2018-07-11 18:15:41 INFO  BlockManagerInfo:54 - Added broadcast_2_piece0 in memory on slepner018.amarel.rutgers.edu:46853 (size: 23.3 KB, free: 366.3 MB)
+2018-07-11 18:15:41 INFO  SparkContext:54 - Created broadcast 2 from csv at NativeMethodAccessorImpl.java:0
+2018-07-11 18:15:41 INFO  FileSourceScanExec:54 - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2018-07-11 18:15:41 INFO  SparkContext:54 - Starting job: csv at NativeMethodAccessorImpl.java:0
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Got job 1 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Final stage: ResultStage 1 (csv at NativeMethodAccessorImpl.java:0)
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Parents of final stage: List()
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Missing parents: List()
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Submitting ResultStage 1 (MapPartitionsRDD[8] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+2018-07-11 18:15:41 INFO  MemoryStore:54 - Block broadcast_3 stored as values in memory (estimated size 14.6 KB, free 365.7 MB)
+2018-07-11 18:15:41 INFO  MemoryStore:54 - Block broadcast_3_piece0 stored as bytes in memory (estimated size 8.5 KB, free 365.7 MB)
+2018-07-11 18:15:41 INFO  BlockManagerInfo:54 - Added broadcast_3_piece0 in memory on slepner018.amarel.rutgers.edu:46853 (size: 8.5 KB, free: 366.2 MB)
+2018-07-11 18:15:41 INFO  SparkContext:54 - Created broadcast 3 from broadcast at DAGScheduler.scala:1039
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+2018-07-11 18:15:41 INFO  TaskSchedulerImpl:54 - Adding task set 1.0 with 1 tasks
+2018-07-11 18:15:41 INFO  TaskSetManager:54 - Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 8319 bytes)
+2018-07-11 18:15:41 INFO  Executor:54 - Running task 0.0 in stage 1.0 (TID 1)
+2018-07-11 18:15:41 INFO  FileScanRDD:54 - Reading File path: file:///home/kp807/pyspark_example/input_data/iris.csv, range: 0-4608, partition values: [empty row]
+2018-07-11 18:15:41 INFO  Executor:54 - Finished task 0.0 in stage 1.0 (TID 1). 1581 bytes result sent to driver
+2018-07-11 18:15:41 INFO  TaskSetManager:54 - Finished task 0.0 in stage 1.0 (TID 1) in 46 ms on localhost (executor driver) (1/1)
+2018-07-11 18:15:41 INFO  TaskSchedulerImpl:54 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - ResultStage 1 (csv at NativeMethodAccessorImpl.java:0) finished in 0.074 s
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Job 1 finished: csv at NativeMethodAccessorImpl.java:0, took 0.079620 s
+2018-07-11 18:15:41 INFO  FileSourceStrategy:54 - Pruning directories with: 
+2018-07-11 18:15:41 INFO  FileSourceStrategy:54 - Post-Scan Filters: 
+2018-07-11 18:15:41 INFO  FileSourceStrategy:54 - Output Data Schema: struct<sepal_length: double, species: string>
+2018-07-11 18:15:41 INFO  FileSourceScanExec:54 - Pushed Filters: 
+2018-07-11 18:15:41 WARN  ParseMode:66 - overwrite is not a valid parse mode. Using PERMISSIVE.
+2018-07-11 18:15:41 INFO  FileOutputCommitter:108 - File Output Committer Algorithm version is 1
+2018-07-11 18:15:41 INFO  SQLHadoopMapReduceCommitProtocol:54 - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2018-07-11 18:15:41 INFO  CodeGenerator:54 - Code generated in 39.732139 ms
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 8
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 53
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 24
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 42
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 56
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 61
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 40
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 11
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 37
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 28
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 29
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 39
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 60
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 38
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 23
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 58
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 46
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 10
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 15
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 27
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 49
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 43
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 13
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 51
+2018-07-11 18:15:41 INFO  BlockManagerInfo:54 - Removed broadcast_1_piece0 on slepner018.amarel.rutgers.edu:46853 in memory (size: 4.5 KB, free: 366.2 MB)
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 41
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 22
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 7
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 50
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 55
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 48
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 52
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 57
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 18
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 62
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 21
+2018-07-11 18:15:41 INFO  BlockManagerInfo:54 - Removed broadcast_3_piece0 on slepner018.amarel.rutgers.edu:46853 in memory (size: 8.5 KB, free: 366.3 MB)
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 12
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 30
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 31
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 44
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 59
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 17
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 54
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 25
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 19
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 9
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 16
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 47
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 20
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 26
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 14
+2018-07-11 18:15:41 INFO  ContextCleaner:54 - Cleaned accumulator 45
+2018-07-11 18:15:41 INFO  CodeGenerator:54 - Code generated in 98.033034 ms
+2018-07-11 18:15:41 INFO  MemoryStore:54 - Block broadcast_4 stored as values in memory (estimated size 277.7 KB, free 365.4 MB)
+2018-07-11 18:15:41 INFO  MemoryStore:54 - Block broadcast_4_piece0 stored as bytes in memory (estimated size 23.4 KB, free 365.4 MB)
+2018-07-11 18:15:41 INFO  BlockManagerInfo:54 - Added broadcast_4_piece0 in memory on slepner018.amarel.rutgers.edu:46853 (size: 23.4 KB, free: 366.2 MB)
+2018-07-11 18:15:41 INFO  SparkContext:54 - Created broadcast 4 from csv at NativeMethodAccessorImpl.java:0
+2018-07-11 18:15:41 INFO  FileSourceScanExec:54 - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2018-07-11 18:15:41 INFO  SparkContext:54 - Starting job: csv at NativeMethodAccessorImpl.java:0
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Registering RDD 11 (csv at NativeMethodAccessorImpl.java:0)
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Got job 2 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Final stage: ResultStage 3 (csv at NativeMethodAccessorImpl.java:0)
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Parents of final stage: List(ShuffleMapStage 2)
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Missing parents: List(ShuffleMapStage 2)
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Submitting ShuffleMapStage 2 (MapPartitionsRDD[11] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+2018-07-11 18:15:41 INFO  MemoryStore:54 - Block broadcast_5 stored as values in memory (estimated size 32.3 KB, free 365.4 MB)
+2018-07-11 18:15:41 INFO  MemoryStore:54 - Block broadcast_5_piece0 stored as bytes in memory (estimated size 15.4 KB, free 365.4 MB)
+2018-07-11 18:15:41 INFO  BlockManagerInfo:54 - Added broadcast_5_piece0 in memory on slepner018.amarel.rutgers.edu:46853 (size: 15.4 KB, free: 366.2 MB)
+2018-07-11 18:15:41 INFO  SparkContext:54 - Created broadcast 5 from broadcast at DAGScheduler.scala:1039
+2018-07-11 18:15:41 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[11] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+2018-07-11 18:15:41 INFO  TaskSchedulerImpl:54 - Adding task set 2.0 with 1 tasks
+2018-07-11 18:15:41 INFO  TaskSetManager:54 - Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, PROCESS_LOCAL, 8308 bytes)
+2018-07-11 18:15:41 INFO  Executor:54 - Running task 0.0 in stage 2.0 (TID 2)
+2018-07-11 18:15:42 INFO  CodeGenerator:54 - Code generated in 9.431545 ms
+2018-07-11 18:15:42 INFO  CodeGenerator:54 - Code generated in 9.11513 ms
+2018-07-11 18:15:42 INFO  CodeGenerator:54 - Code generated in 12.738803 ms
+2018-07-11 18:15:42 INFO  FileScanRDD:54 - Reading File path: file:///home/kp807/pyspark_example/input_data/iris.csv, range: 0-4608, partition values: [empty row]
+2018-07-11 18:15:42 INFO  CodeGenerator:54 - Code generated in 10.085115 ms
+2018-07-11 18:15:42 INFO  Executor:54 - Finished task 0.0 in stage 2.0 (TID 2). 2417 bytes result sent to driver
+2018-07-11 18:15:42 INFO  TaskSetManager:54 - Finished task 0.0 in stage 2.0 (TID 2) in 876 ms on localhost (executor driver) (1/1)
+2018-07-11 18:15:42 INFO  TaskSchedulerImpl:54 - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2018-07-11 18:15:42 INFO  DAGScheduler:54 - ShuffleMapStage 2 (csv at NativeMethodAccessorImpl.java:0) finished in 0.946 s
+2018-07-11 18:15:42 INFO  DAGScheduler:54 - looking for newly runnable stages
+2018-07-11 18:15:42 INFO  DAGScheduler:54 - running: Set()
+2018-07-11 18:15:42 INFO  DAGScheduler:54 - waiting: Set(ResultStage 3)
+2018-07-11 18:15:42 INFO  DAGScheduler:54 - failed: Set()
+2018-07-11 18:15:42 INFO  DAGScheduler:54 - Submitting ResultStage 3 (CoalescedRDD[15] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+2018-07-11 18:15:42 INFO  MemoryStore:54 - Block broadcast_6 stored as values in memory (estimated size 166.9 KB, free 365.2 MB)
+2018-07-11 18:15:42 INFO  MemoryStore:54 - Block broadcast_6_piece0 stored as bytes in memory (estimated size 62.1 KB, free 365.1 MB)
+2018-07-11 18:15:42 INFO  BlockManagerInfo:54 - Added broadcast_6_piece0 in memory on slepner018.amarel.rutgers.edu:46853 (size: 62.1 KB, free: 366.2 MB)
+2018-07-11 18:15:42 INFO  SparkContext:54 - Created broadcast 6 from broadcast at DAGScheduler.scala:1039
+2018-07-11 18:15:42 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 3 (CoalescedRDD[15] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+2018-07-11 18:15:42 INFO  TaskSchedulerImpl:54 - Adding task set 3.0 with 1 tasks
+2018-07-11 18:15:42 INFO  TaskSetManager:54 - Starting task 0.0 in stage 3.0 (TID 3, localhost, executor driver, partition 0, ANY, 13204 bytes)
+2018-07-11 18:15:42 INFO  Executor:54 - Running task 0.0 in stage 3.0 (TID 3)
+2018-07-11 18:15:42 INFO  FileOutputCommitter:108 - File Output Committer Algorithm version is 1
+2018-07-11 18:15:42 INFO  SQLHadoopMapReduceCommitProtocol:54 - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 5 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 3 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 1 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 2 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 1 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 2 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 1 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 1 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Getting 0 non-empty blocks out of 1 blocks
+2018-07-11 18:15:43 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 0 ms
+2018-07-11 18:15:43 INFO  FileOutputCommitter:535 - Saved output of task 'attempt_20180711181542_0003_m_000000_0' to file:/home/kp807/pyspark_example/output_data/grouped_iris.csv/_temporary/0/task_20180711181542_0003_m_000000
+2018-07-11 18:15:43 INFO  SparkHadoopMapRedUtil:54 - attempt_20180711181542_0003_m_000000_0: Committed
+2018-07-11 18:15:43 INFO  Executor:54 - Finished task 0.0 in stage 3.0 (TID 3). 3775 bytes result sent to driver
+2018-07-11 18:15:43 INFO  TaskSetManager:54 - Finished task 0.0 in stage 3.0 (TID 3) in 620 ms on localhost (executor driver) (1/1)
+2018-07-11 18:15:43 INFO  TaskSchedulerImpl:54 - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2018-07-11 18:15:43 INFO  DAGScheduler:54 - ResultStage 3 (csv at NativeMethodAccessorImpl.java:0) finished in 0.651 s
+2018-07-11 18:15:43 INFO  DAGScheduler:54 - Job 2 finished: csv at NativeMethodAccessorImpl.java:0, took 1.618051 s
+2018-07-11 18:15:43 INFO  FileFormatWriter:54 - Job null committed.
+2018-07-11 18:15:43 INFO  FileFormatWriter:54 - Finished processing stats for job null.
+2018-07-11 18:15:43 INFO  AbstractConnector:318 - Stopped Spark@460b7a67{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2018-07-11 18:15:43 INFO  SparkUI:54 - Stopped Spark web UI at http://slepner018.amarel.rutgers.edu:4040
+2018-07-11 18:15:43 INFO  MapOutputTrackerMasterEndpoint:54 - MapOutputTrackerMasterEndpoint stopped!
+2018-07-11 18:15:43 INFO  MemoryStore:54 - MemoryStore cleared
+2018-07-11 18:15:43 INFO  BlockManager:54 - BlockManager stopped
+2018-07-11 18:15:43 INFO  BlockManagerMaster:54 - BlockManagerMaster stopped
+2018-07-11 18:15:43 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:54 - OutputCommitCoordinator stopped!
+2018-07-11 18:15:43 INFO  SparkContext:54 - Successfully stopped SparkContext
+2018-07-11 18:15:43 INFO  ShutdownHookManager:54 - Shutdown hook called
+2018-07-11 18:15:43 INFO  ShutdownHookManager:54 - Deleting directory /scratch/kp807/tmp/spark-4d26a9dc-6b41-4f8c-8d4e-fbeee7851ea2/pyspark-1c871cba-4fa0-4335-b22e-b1de8300d7b2
+2018-07-11 18:15:43 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-e4580119-f47d-41f5-8e38-7e9f836a01a9
+2018-07-11 18:15:43 INFO  ShutdownHookManager:54 - Deleting directory /scratch/kp807/tmp/spark-4d26a9dc-6b41-4f8c-8d4e-fbeee7851ea2
