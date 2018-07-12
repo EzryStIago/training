@@ -1,5 +1,8 @@
 
-# Resources on the web
+
+## Code Examples
+
+- [OARC-provided slurm examples](https://github.com/rutgers-oarc/training/tree/master/slurm_examples) - collection of slurm batch scripts that can serve as templates for your jobs
 
 ## Services
 
@@ -11,10 +14,7 @@
 
 ## Education
 
+- [OARC events](https://oarc.rutgers.edu/events/) - OARC holds a number of workshops on Linux, HPC, genomics and others
 - [Cornell virtual workshops](https://cvw.cac.cornell.edu/topics) - A number of courses designed to get you up to speed using HPC and programming. 
 - [Software Carpentry](http://swcarpentry.github.io/shell-novice/) - Software Carpentry has a number of lectures and workshops on many computing subjects
-
-## Examples
-
-- [OARC-provided slurm examples](https://github.com/rutgers-oarc/training/tree/master/slurm_examples) - collection of slurm batch scripts that can serve as templates for your jobs
 
