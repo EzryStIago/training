@@ -422,13 +422,13 @@
         },
         {
             "location": "/resources/",
-            "text": "Resources on the web\n\n\nServices\n\n\n\n\nRutgers free web pages\n - WordPress-based websites hosting, free for Rutgers community\n\n\n\n\nTools\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown\n\n\n\n\nEducation\n\n\n\n\nCornell virtual workshops\n - A number of courses designed to get you up to speed using HPC and programming. \n\n\nSoftware Carpentry\n - Software Carpentry has a number of lectures and workshops on many computing subjects\n\n\n\n\nExamples\n\n\n\n\nOARC-provided slurm examples\n - collection of slurm batch scripts that can serve as templates for your jobs",
+            "text": "Code Examples\n\n\n\n\nOARC-provided slurm examples\n - collection of slurm batch scripts that can serve as templates for your jobs\n\n\n\n\nServices\n\n\n\n\nRutgers free web pages\n - WordPress-based websites hosting, free for Rutgers community\n\n\n\n\nTools\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown\n\n\n\n\nEducation\n\n\n\n\nOARC events\n - OARC holds a number of workshops on Linux, HPC, genomics and others\n\n\nCornell virtual workshops\n - A number of courses designed to get you up to speed using HPC and programming. \n\n\nSoftware Carpentry\n - Software Carpentry has a number of lectures and workshops on many computing subjects",
             "title": "Resources"
         },
         {
-            "location": "/resources/#resources-on-the-web",
-            "text": "",
-            "title": "Resources on the web"
+            "location": "/resources/#code-examples",
+            "text": "OARC-provided slurm examples  - collection of slurm batch scripts that can serve as templates for your jobs",
+            "title": "Code Examples"
         },
         {
             "location": "/resources/#services",
@@ -442,13 +442,8 @@
         },
         {
             "location": "/resources/#education",
-            "text": "Cornell virtual workshops  - A number of courses designed to get you up to speed using HPC and programming.   Software Carpentry  - Software Carpentry has a number of lectures and workshops on many computing subjects",
+            "text": "OARC events  - OARC holds a number of workshops on Linux, HPC, genomics and others  Cornell virtual workshops  - A number of courses designed to get you up to speed using HPC and programming.   Software Carpentry  - Software Carpentry has a number of lectures and workshops on many computing subjects",
             "title": "Education"
-        },
-        {
-            "location": "/resources/#examples",
-            "text": "OARC-provided slurm examples  - collection of slurm batch scripts that can serve as templates for your jobs",
-            "title": "Examples"
         }
     ]
 }
