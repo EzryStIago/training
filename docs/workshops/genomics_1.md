@@ -47,7 +47,7 @@ The preferred method to connect to the cluster is through a web browser and fast
 |------|-----------------------------|-----------------------|
 | ![](https://github.com/rutgers-oarc/training/blob/master/workshops/fastX_web.png "FastX web interface")     | ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_newsession.png "FastX new session")| ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_srun.png "FastX terminal srun") |
  
-
+On rare occasions, especially if the user has a modified .bashrc file,  FastX doesn't work. If it is the case, you can still use a terminal but the connection will be much slower for graphical outputs.
   - **via a terminal**: if you have a Mac or Linux, a terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm](https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
 ``` ssh -X <your netid>@amarel.hpc.rutgers.edu```   
   
@@ -89,7 +89,28 @@ You have two main spaces on the Amarel cluster. These are:
    
    For curious one, here is the content of the script
    ########################################################
-   
+ ```  
+ #!/bin/bash
+
+mkdir -p /home/$USER/Genomics_Workshop/
+echo "Copying files... Please wait"
+
+cp  -r /projects/oarc/Genomics_Workshop/Programs/ /home/$USER/Genomics_Workshop/
+
+echo '## Genomics_Workshop specific settings 07/16/2018' >> ~/.bashrc
+echo 'export PATH=$HOME/Genomics_Workshop/Programs/seqtk:$PATH' >> ~/.bashrc
+echo 'export PATH=$HOME/Genomics_Workshop/Programs/sratoolkit.2.8.2-centos_linux64/bin:$PATH' >> ~/.bashrc
+echo 'export PATH=$HOME/Genomics_Workshop/Programs/FastQC:$PATH' >> ~/.bashrc
+source ~/.bashrc
+
+
+module load intel/17.0.2 python/2.7.12
+pip install HTSeq --user
+wait
+pip install bx-python==0.7.3 --user
+wait
+pip install RSeQC --user
+```
    ########################################################<br>
    
 
