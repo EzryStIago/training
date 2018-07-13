@@ -102,8 +102,8 @@ We will download human RNA-seq data with [GEO accession GSE52778](https://www.nc
                 mkdir dex_treated 
 
 We will use **sratoolkit** programs to download data but first we need to configure a location where all data files will be stored. <br>
-`vdb-config` is a configuration subprogram for `sratoolkit`. We will use it to specify the directory where `sratoolkit` fetches data. You will need to type in the followingt path, but remember to replace `netID` with your own `Rutgers netid`  `/scratch/your_netID/Genomics_Workshop/download`.  Do not copy blindly! So your downloads will always go to this directory and you will need to move it out to wherever you want to have them. 
-
+`vdb-config` is a configuration subprogram for `sratoolkit`. We will use it to specify the directory where `sratoolkit` fetches data. You will need to type in the followingt path, but remember to replace `netID` with your own `Rutgers netid`  `/scratch/your_netID/Genomics_Workshop/download`.  Do not copy blindly!
+Remember that  **sratoolkit**  is not designed to handle complex downloads. All data will be placed in one folder. You will need to move downloaded files for further analysis/manipulation into different locations manually.
 ```
                 vdb-config   --interactive-mode textual     ### dash-dash before interactive-mode 
 ## Now in the program:
