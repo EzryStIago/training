@@ -47,7 +47,7 @@ The preferred method to connect to the cluster is through a web browser and fast
 |------|-----------------------------|-----------------------|
 | ![](https://github.com/rutgers-oarc/training/blob/master/workshops/fastX_web.png "FastX web interface")     | ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_newsession.png "FastX new session")| ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_srun.png "FastX terminal srun") |
  
-On rare occasions, especially if the user has a modified .bashrc file,  FastX doesn't work. If it is the case, you can still use a terminal but the connection will be much slower for graphical outputs.
+
   - **via a terminal**: if you have a Mac or Linux, a terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm](https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
 ``` ssh -X <your netid>@amarel.hpc.rutgers.edu```   
   
@@ -89,28 +89,7 @@ You have two main spaces on the Amarel cluster. These are:
    
    For curious one, here is the content of the script
    ########################################################
- ```  
- #!/bin/bash
-
-mkdir -p /home/$USER/Genomics_Workshop/
-echo "Copying files... Please wait"
-
-cp  -r /projects/oarc/Genomics_Workshop/Programs/ /home/$USER/Genomics_Workshop/
-
-echo '## Genomics_Workshop specific settings 07/16/2018' >> ~/.bashrc
-echo 'export PATH=$HOME/Genomics_Workshop/Programs/seqtk:$PATH' >> ~/.bashrc
-echo 'export PATH=$HOME/Genomics_Workshop/Programs/sratoolkit.2.8.2-centos_linux64/bin:$PATH' >> ~/.bashrc
-echo 'export PATH=$HOME/Genomics_Workshop/Programs/FastQC:$PATH' >> ~/.bashrc
-source ~/.bashrc
-
-
-module load intel/17.0.2 python/2.7.12
-pip install HTSeq --user
-wait
-pip install bx-python==0.7.3 --user
-wait
-pip install RSeQC --user
-```
+   
    ########################################################<br>
    
 
@@ -123,8 +102,8 @@ We will download human RNA-seq data with [GEO accession GSE52778](https://www.nc
                 mkdir dex_treated 
 
 We will use **sratoolkit** programs to download data but first we need to configure a location where all data files will be stored. <br>
-`vdb-config` is a configuration subprogram for `sratoolkit`. We will use it to specify the directory where `sratoolkit` fetches data. You will need to type in the followingt path, but remember to replace `netID` with your own `Rutgers netid`  `/scratch/your_netID/Genomics_Workshop/download`.  Do not copy blindly!
-Remember that  **sratoolkit**  is not designed to handle complex downloads. All data will be placed in one folder. You will need to move downloaded files for further analysis/manipulation into different locations manually.
+`vdb-config` is a configuration subprogram for `sratoolkit`. We will use it to specify the directory where `sratoolkit` fetches data. You will need to type in the followingt path, but remember to replace `netID` with your own `Rutgers netid`  `/scratch/your_netID/Genomics_Workshop/download`.  Do not copy blindly! So your downloads will always go to this directory and you will need to move it out to wherever you want to have them. 
+
 ```
                 vdb-config   --interactive-mode textual     ### dash-dash before interactive-mode 
 ## Now in the program:
