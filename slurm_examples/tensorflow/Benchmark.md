@@ -10,5 +10,6 @@ job|           time      | machine | cores | tf version | gpu | gpunum | gputype
 3597554|00:04:21|pascal005|1|1.8.0|yes|1| P100|amarel
 3597571|00:04:10|pascal005|1|1.8.0|yes|1|P100| amarel
 3679409|00:05:42 |gpu006|1|1.7.0|yes|1|Quadro M6000|amarel
+3747776|  00:05:46| gpu006|1|1.8.0|yes|1|Quadro M6000|amarel
 7008077|       00:07:56  | cuda001  | 1     | 1.7.0      | yes |  1 | K80|perceval
 home   |       00:08:48  | home     | 1     | 1.7.0   | yes |  1 | GTX 1060|none  

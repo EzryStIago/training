@@ -17,13 +17,14 @@
 module purge
 
 module use /projects/community/modulefiles
-module load py-data-science-stack/5.1.0-kp807 #loads the community module provided by Dr.Kristina that contains Tensorflow environment
+module load py-data-science-stack/5.1.0-kp807 #loads the community Python module that contains Tensorflow environment
 
-source activate tensorflow-1.8.0
-export PYTHONPATH=$PYTHONPATH:/home/aag193/python_mnist/tf/models_1.8 #Tells python where to look for, for required packages 
-																	# change to models_1.7 if you wish to run that version
+source activate tensorflow-1.8.0 #change to 1.7.0 of you wish to run that version of tensorflow
+export PYTHONPATH=$PYTHONPATH:/home/aag193/python_mnist/tf/models_1.8 
+#Tells python where to look for, for required packages 
+# change to models_1.7 if you wish to run that versionmnist_1.8.0.py
 
 
-srun python /home/aag193/python_mnist/mnist_1.8.py  # --export_dir '/home/aag193/tmp/' --train_epochs 2
+srun python /home/aag193/python_mnist/mnist_1.8.0.py # --export_dir '/home/aag193/tmp/' --train_epochs 2
 
 
