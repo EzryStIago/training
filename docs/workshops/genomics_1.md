@@ -152,20 +152,19 @@ prefetch -v SRR1039509
 prefetch -v SRR1039513  
 prefetch -v SRR1039517                          
 ```
-To unpack the original sequence files can be a bit tricky at first. Please put them in different directories:<br>
-               
-                cd /scratch/$USER/Genomics_Workshop/download/  
+Next step is to unpack sra files and convert them to more suitable *fastq* format with  `fastq-dump` program <br>
+To unpack the original sequence files can be a bit tricky at first. We need to put them into different directories:<br>
+*508,512,516* into /scratch/$USER/Genomics_Workshop/download/untreated and <br> 
+ *509,513,517* into /scratch/$USER/Genomics_Workshop/download/dex_treated <br>
+ Luckily `fastq-dumpp` can do processing and output results into specified folders at the same time. 
 
-Then you need to move files into corresponding folders: <br>*508,512,516* into /scratch/$USER/Genomics_Workshop/download/untreated and <br> 
- *509,513,517* into /scratch/$USER/Genomics_Workshop/download/dex_treated
- ```
- mv *508.* *512.* *516.* ../untreated
- mv *509.* *513.* *517.* ../dex_treated
+```
+cd /scratch/$USER/Genomics_Workshop/download/sra
+fastq-dump --outdir /scratch/$USER/Genomics_Workshop/untreated --gzip --split-files SRR1039508.sra SRR1039512.sra SRR1039516.sra
+fastq-dump --outdir /scratch/$USER/Genomics_Workshop/dex_treated --gzip --split-files SRR1039509.sra SRR1039513.sra SRR1039517.sra
+```
 
- 
-```
-fastq-dump --gzip --split-files SRR1039508       # ???? 
-```
+
 You have to pay attention to where you are putting your data. So these two commands will actually be several: 
 ```
                 cd  untreated                       # now you are in /scratch/..../Genomics_Workshop/untreated
