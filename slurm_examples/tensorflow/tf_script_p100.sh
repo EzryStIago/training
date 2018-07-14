@@ -5,10 +5,9 @@
 #SBATCH --job-name=mnist_p100_gpu1            # Assign an short name to your job
 #SBATCH --nodes=1                    # Number of nodes you require
 #SBATCH --ntasks=1                   # Total # of tasks across all nodes
-#SBATCH --gres=gpu:2  # Number of GPUs
-#SBATCH --nodelist=gpu[005-006]                
-#SBATCH --constraint=pascal
-#SBATCH --nodelist=pascal005	# specifies to use the Pacal Node which has the P100 GPU 
+#SBATCH --gres=gpu:2  # Number of GPUs               
+#SBATCH --constraint=pascal		# specifies to use the Pacal Node which has the P100 GPU 
+#SBATCH --nodelist=pascal005	
 #SBATCH --mem=6000                  # Real memory (RAM) required (MB)
 #SBATCH --time=03:30:00              # Total run time limit (HH:MM:SS)
 #SBATCH --output=slurm.%N.%j.p100_gpu1.out     # STDOUT output file
