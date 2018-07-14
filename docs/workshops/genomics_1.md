@@ -135,6 +135,7 @@ Remember that  **sratoolkit**  is not designed to handle complex downloads. All 
 ## type new path in
                         /scratch/your_netID/Genomics_Workshop/download
                         Your choice > Y
+## Hit Enter and exit the program
 ```
 
 Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools.<br>
