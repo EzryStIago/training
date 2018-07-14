@@ -1,6 +1,6 @@
 # Tensorflow Example
 
-This directory contains examples of how to train your neural networks with tensorflow using the MNIST and CIFAR-10 dataset
+This directory contains examples of how to train your neural networks with tensorflow using the MNIST dataset
   * For a more detailed explaination check out the tensorflow [website](https://www.tensorflow.org/versions/r1.0/get_started/mnist/beginners)
   * Make sure to clone the github [repo](https://github.com/tensorflow/models/tree/r1.8.0) for this model to a directory on the cluster and switch the branch to the version required, to ensure you have the correct packages or copy paste the commands below 
   ```
