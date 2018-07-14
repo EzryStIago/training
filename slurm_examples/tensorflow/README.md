@@ -1,5 +1,5 @@
 # Tensorflow Example
-___
+
 This directory contains examples of how to train your neural networks with tensorflow using the MNIST and CIFAR-10 dataset
   * For a more detailed explaination check out the tensorflow [website](https://www.tensorflow.org/versions/r1.0/get_started/mnist/beginners)
   * Make sure to clone the github [repo](https://github.com/tensorflow/models/tree/r1.8.0) for this model to a directory on the cluster and switch the branch to the version required, to ensure you have the correct packages or copy paste the commands below 
@@ -15,12 +15,12 @@ This directory contains examples of how to train your neural networks with tenso
   * All training/jobs were ran for a standard of 40 epochs.
 
 ## Understanding the Code 
-___
+
   * There are slight nuances between the ``mnist_1.8.0.py`` and ``mnist_1.7.0.py`` scripts.
   * Each code block is explained with comments detailing what is going on
 
 ## Understanding the Script
-___
+
   * The ``tf_script_broadwell_4.sh`` trains the network on CPU. You can ask to be allocated more or less cores by specifying ``#SBATCH -c 8 # Number of cores``
   * The ``tf_script_p100.sh`` and ``tf_script_m6000`` trains the network on GPU. The difference being that one uses the P100, while the other utilizes the M6000 GPU.
   * You can change the number of GPUS allocated by specifying ``#SBATCH --gres=gpu:2       # Number of GPUs``
