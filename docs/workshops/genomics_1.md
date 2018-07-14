@@ -55,9 +55,9 @@ On rare occasions, especially if the user has a modified .bashrc file,  FastX do
 ## DO NOT RUN ANY COMPUTATIONAL JOBS ON THE LOGIN NODE 
 ## Get resources on the compute node 
 
-You get to the cluster to execute your computations by running the following command in your terminal:    
+When you login to the cluster you are on the login node. Jobs are not allowed to be run on the loging node, intstead you need to request a resource on the compute node for your job. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. You can do so by running the following command in your terminal:    
 ```srun  -p main --x11 --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash -i```   
-Notice that the name in your terminal will change from `amarel` to a node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. The following table explains the parts of this command: 
+Notice that the name in your terminal will change from `amarel` to a node name like `hal0025` or `slepner086`.  The following table explains the parts of this command: 
 
 |command part| meaning|
 |----|----|
@@ -78,7 +78,7 @@ You have two main spaces on the Amarel cluster. These are:
 - your home directory (100Gb) - `/home/netid/` 
 - your scratch directory (500Gb)- `/scratch/netid/` 
 
-  They differ in how often they are backed up and by read/write speed. So we will install programs in `/home`, while the data and output will be in `/scratch`. 
+  They differ in how often they are backed up and by read/write speed. So we will install programs in `/home`, while the data and computational output will be held in `/scratch`. 
 
 ## Install programs and create a workspace for the workshop
 
@@ -93,6 +93,10 @@ You have two main spaces on the Amarel cluster. These are:
  #!/bin/bash
 
 mkdir -p /home/$USER/Genomics_Workshop/
+mkdir -p /scratch/$USER/Genomics_Workshop/download
+mkdir -p /scratch/$USER/Genomics_Workshop/untreated
+mkdir -p /scratch/$USER/Genomics_Workshop/dex_treated
+
 echo "Copying files... Please wait"
 
 cp  -r /projects/oarc/Genomics_Workshop/Programs/ /home/$USER/Genomics_Workshop/
@@ -116,11 +120,7 @@ pip install RSeQC --user
 
 ## Download data
 
-We will download human RNA-seq data with [GEO accession GSE52778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778). The samples we download are in NCBI's short read archive format (SRA). To unpack the original sequence files can be a bit tricky at first. Please put them in different directories:<br>
-               
-                cd /scratch/$USER/Genomics_Workshop/ 
-                mkdir untreated 
-                mkdir dex_treated 
+We will download human RNA-seq data with [GEO accession GSE52778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778). The samples  are in NCBI's short read archive format (SRA). 
 
 We will use **sratoolkit** programs to download data but first we need to configure a location where all data files will be stored. <br>
 `vdb-config` is a configuration subprogram for `sratoolkit`. We will use it to specify the directory where `sratoolkit` fetches data. You will need to type in the followingt path, but remember to replace `netID` with your own `Rutgers netid`  `/scratch/your_netID/Genomics_Workshop/download`.  Do not copy blindly!
@@ -148,8 +148,17 @@ prefetch -v SRR1039509
 prefetch -v SRR1039513  
 prefetch -v SRR1039517                          
 ```
+To unpack the original sequence files can be a bit tricky at first. Please put them in different directories:<br>
+               
+                cd /scratch/$USER/Genomics_Workshop/download  
+
 Then you need to move files into corresponding folders: <br>*508,512,516* into /scratch/$USER/Genomics_Workshop/download/untreated and <br> 
  *509,513,517* into /scratch/$USER/Genomics_Workshop/download/dex_treated
+ ```
+ mv *508.* *512.* *516.* ../untreated
+ mv *509.* *513.* *517.* ../dex_treated
+
+ 
 ```
 fastq-dump --gzip --split-files SRR1039508       # ???? 
 ```
