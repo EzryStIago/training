@@ -127,6 +127,8 @@ We will use **sratoolkit** programs to download data but first we need to config
 Remember that  **sratoolkit**  is not designed to handle complex downloads. All data will be placed in one folder. You will need to move downloaded files for further analysis/manipulation into different locations manually.
 ```
                 vdb-config   --interactive-mode textual     ### dash-dash before interactive-mode 
+```
+```
 ## Now in the program:
                 
                          Your choice > 4
@@ -135,7 +137,8 @@ Remember that  **sratoolkit**  is not designed to handle complex downloads. All 
                         Your choice > Y
 ```
 
-Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools. Downloading can take some time! [TODO: check how much time for these files!]<br>
+Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools.<br>
+Downloading can be time consuming, it takes about 3 minutes per file. Thus we already downloaded files and placed them in your /scratch/$USER/Genomics_Workshop/untreated and dex_treated folders. Skim through this section to understand how we dit it and continue with 'fast-dump' below.  <br>
 
 ```
 # fetch the SRA data
@@ -150,7 +153,7 @@ prefetch -v SRR1039517
 ```
 To unpack the original sequence files can be a bit tricky at first. Please put them in different directories:<br>
                
-                cd /scratch/$USER/Genomics_Workshop/download  
+                cd /scratch/$USER/Genomics_Workshop/download/  
 
 Then you need to move files into corresponding folders: <br>*508,512,516* into /scratch/$USER/Genomics_Workshop/download/untreated and <br> 
  *509,513,517* into /scratch/$USER/Genomics_Workshop/download/dex_treated
