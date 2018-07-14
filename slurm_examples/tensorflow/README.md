@@ -17,7 +17,7 @@ This directory contains examples of how to train your neural networks with tenso
 ## Understanding the Code 
 
   * There are slight nuances between the ``mnist_1.8.0.py`` and ``mnist_1.7.0.py`` scripts.
-  * Each code block is explained with comments detailing what is going on
+  * Each code block is explained with comments detailing how the network is set up and trained
 
 ## Understanding the Script
 
