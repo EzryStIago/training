@@ -139,7 +139,7 @@ Remember that  **sratoolkit**  is not designed to handle complex downloads. All 
 ```
 
 Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools.<br>
-Downloading can be time consuming, it takes about 3 minutes per file. Thus we already downloaded files and placed them in your /scratch/$USER/Genomics_Workshop/untreated and dex_treated folders. Skim through this section to understand how we dit it and continue with 'fast-dump' below.  <br>
+Downloading can be time consuming, it takes about 3 minutes per file. Thus we already downloaded files and placed them in your /scratch/$USER/Genomics_Workshop/download/sra folder. Skim through this section to understand how we did it and continue with 'fast-dump' below.  <br>
 
 ```
 # fetch the SRA data
@@ -156,28 +156,21 @@ Next step is to unpack sra files and convert them to more suitable *fastq* forma
 To unpack the original sequence files can be a bit tricky at first. We need to put them into different directories:<br>
 *508,512,516* into /scratch/$USER/Genomics_Workshop/download/untreated and <br> 
  *509,513,517* into /scratch/$USER/Genomics_Workshop/download/dex_treated <br>
- Luckily `fastq-dumpp` can do processing and output results into specified folders at the same time. 
+ Luckily `fastq-dump` can do processing and output results into specified folders at the same time. 
 
 ```
 cd /scratch/$USER/Genomics_Workshop/download/sra
-fastq-dump --outdir /scratch/$USER/Genomics_Workshop/untreated --gzip --split-files SRR1039508.sra SRR1039512.sra SRR1039516.sra
-fastq-dump --outdir /scratch/$USER/Genomics_Workshop/dex_treated --gzip --split-files SRR1039509.sra SRR1039513.sra SRR1039517.sra
+fastq-dump --outdir /scratch/$USER/Genomics_Workshop/untreated --split-files  --gzip SRR10395{08,12,16}.sra
+fastq-dump --outdir /scratch/$USER/Genomics_Workshop/untreated --split-files  SRR10395{08,12,16}.sra
+fastq-dump --outdir /scratch/$USER/Genomics_Workshop/dex_treated --split-files  --gzip SRR10395{09,13,17}.sra
+```
+It takes a while to convert sra files. To save time, files are already converted for you. 
+Run the following command to copy files into your /scratch/ directories.
+```
+sra_fastq.sh
 ```
 
 
-You have to pay attention to where you are putting your data. So these two commands will actually be several: 
-```
-                cd  untreated                       # now you are in /scratch/..../Genomics_Workshop/untreated
-                prefetch -v SRR1039508
-                mv /scratch/$USER/Genomics_Workshop/download/sra/SRR1039508.sra .  # moving from download to actual directory 
-                fastq-dump --gzip --split-files SRR1039516
-``` 
-
-The commands above showed how to do it for one sample. You need to do it for 6 samples total. 
-```
-                SRR1039508  SRR1039512 SRR1039516   (untreated)
-                SRR1039509  SRR1039513  SRR1039517  (dex_treated)
-```
 
 # Running bioinformatics jobs
 
