@@ -84,7 +84,7 @@ You have two main spaces on the Amarel cluster. These are:
 
    Each program has slightly different installation instructions. 
    You do not need to install programs manually.  Instead just run the following scirpt:
-   `/projects/oarc/Genomics_Workshop/Labs/misc/labI.sh` <br>
+   `/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Labs/lab_PartI.sh` <br>
    It will install neccessary programs and creates folders for this workshop.
    
    For curious one, here is the content of the script
@@ -101,7 +101,7 @@ echo '## Genomics_Workshop specific settings 07/16/2018' >> ~/.bashrc
 echo 'export PATH=$HOME/Genomics_Workshop/Programs/seqtk:$PATH' >> ~/.bashrc
 echo 'export PATH=$HOME/Genomics_Workshop/Programs/sratoolkit.2.8.2-centos_linux64/bin:$PATH' >> ~/.bashrc
 echo 'export PATH=$HOME/Genomics_Workshop/Programs/FastQC:$PATH' >> ~/.bashrc
-source ~/.bashrc
+source ~/.bashrc 
 
 
 module load intel/17.0.2 python/2.7.12
