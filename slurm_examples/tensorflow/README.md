@@ -1,7 +1,9 @@
 # Tensorflow Example
 TensorFlow is an open-source machine learning library for research and production. TensorFlow offers APIs for beginners and experts to develop for desktop, mobile, web, and cloud
 
-This directory contains examples of how to train your neural networks with tensorflow using the MNIST dataset. MNIST is a simple computer vision dataset. It consists of images of handwritten digits. In this tutorial, we're going to train a model to look at images and predict what digits they are.
+This directory contains examples of how to build and train your neural networks with tensorflow using the MNIST dataset. MNIST is a simple computer vision dataset. It consists of images of handwritten digits. 
+
+In this tutorial, we're going to train a model to look at images and predict what digits they are.
 
   * For a more detailed explaination check out the tensorflow [website](https://www.tensorflow.org/versions/r1.0/get_started/mnist/beginners)
   * Make sure to clone the github [repo](https://github.com/tensorflow/models/tree/r1.8.0) for this model to a directory on the cluster and switch the branch to the version required to ensure you have the correct packages or copy paste the commands below 
