@@ -56,7 +56,13 @@ On rare occasions, especially if the user has a modified .bashrc file,  FastX do
 ## Get resources on the compute node 
 
 When you login to the cluster you are on the login node. Jobs are not allowed to be run on the loging node, intstead you need to request a resource on the compute node for your job. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. You can do so by running the following command in your terminal:    
-```srun  -p main --x11 --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash -i```   
+```
+srun  -p main --x11 --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash -i
+```  
+<br> or just run this script
+```
+node_request.sh
+```
 Notice that the name in your terminal will change from `amarel` to a node name like `hal0025` or `slepner086`.  The following table explains the parts of this command: 
 
 |command part| meaning|
@@ -239,7 +245,7 @@ You may run FastQC again on the cleaned by trimmomatic reads and compare new res
 Human genome indexing will take hours.  We have the reference prepared and  stored at <br>
 `/projects/oarc/Genomics_Workshop/Reference/ `
 <br>
-For in class practice, we will do this on E.coli genome
+For in class practice we demonstrate genome indexing  on E.coli genome
 
 ```
         cd /scratch/$USER/Genomics_Workshop/Reference
@@ -257,6 +263,16 @@ run_bowtie2.sh
 
 
 ## 7. Mapping with tophat2, (STAR, HISAT2)
+Before we start mapping, make sure that you DON'T run  on a login node.
+tophat2 jobs are computationally intensive and may require hours to be completed.
+Also tophat2 is a multithreaded program, which means it can utilize more than one cpu-core, thus it is better to request more resources with srun command ( so far  we used `srun -c 2` (two cpu-cores).  For tophat2 jobs it is advisable to request more cpu-cores. For the convenience of this workshop we will use `-c 7`, however you may request more cpu-cores for your research.<br>
+Exit the current interactive session: type ```exit``` in the terminal wondow. You should see that the prompt in the terminal changed from a compute node to a login node.
+`netid@hal0011` to `netid@amarel`
+Start a new interactive session requesting more cpu-cores (-c 7) <br>
+```
+srun  -p main --x11 --reservation=genomics -N 1 -c 7 -n 1 -t 01:40:00 --pty /bin/bash -i
+```
+Notice that the prompt changed to a compute node, e.g. `netid@hal0011` 
 
 Now, go to your data folder
         `cd  /scratch/$USER/Genomics_Workshop/untreated`
