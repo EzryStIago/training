@@ -283,14 +283,14 @@ Notice that the prompt changed to a compute node, e.g. `netid@hal0011`
         module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
         module load samtools  bowtie2 
         mkdir tophat_out
-        tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508_1
-        0k --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/  hg20_transciptome/GR
-        Ch38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel
-        SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
+        tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508_10k --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/  hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
 ```
+For your convenience we put these commands into a bash script, thus you may just type
+```
+run_tophat2.sh
+``` 
 
-
-You shall see something like:
+You should see a similar output:
 ```
    [2018-03-30 11:48:57] Beginning TopHat run (v2.1.0)
 -----------------------------------------------
@@ -318,9 +318,9 @@ oplevel with Bowtie2
 [2018-03-30 11:50:25] Mapping right_kept_reads.m2g_um_seg2 to genome Homo_sapiens.GRCh38.dna.toplevel with Bowtie2 (2/2)
 ……………………………………………………….
 ```
-The transcriptome index was built  by pointing to gtf file first,  here we have it prepared already, just so we can save time.  The following would be the command to generate the transcriptome index while running tophat alignment.
+The transcriptome index was built  by pointing to gtf file first. Here we have it prepared already, just so we can save time.  The following would be the command to generate the transcriptome index while running tophat alignment.
 ```
-   tophat2 -p 10 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039516 –GTF /projects/oarc/Genomics_Workshop/Reference/hg20/ Homo_sapiens.GRCh38.78.gtf --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039516_1.fastq.pairedOut.fastq SRR1039516_2.fastq.pairedOut.fastq
+   tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508 –GTF /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039508_1.fastq.pairedOut.fastq SRR1039508_2.fastq.pairedOut.fastq
 
 ```
 The output folder `tophat_out/untreated_SRR1039508/` shall contain the following files/folder (in blue):  
