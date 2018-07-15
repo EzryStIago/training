@@ -274,20 +274,22 @@ srun  -p main --x11 --reservation=genomics -N 1 -c 7 -n 1 -t 01:40:00 --pty /bin
 ```
 Notice that the prompt changed to a compute node, e.g. `netid@hal0011` 
 
-Now, go to your data folder
-        `cd  /scratch/$USER/Genomics_Workshop/untreated`
+ Go to your folder with data.
+ You should match the `tophat2 -p` option  to be consistent with the number of cores `srun -c` that you requested
+        
 
 ```
         cd  /scratch/$USER/Genomics_Workshop/untreated
         module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
-        module load samtools   #bowtie2 is loaded already
+        module load samtools  bowtie2 
         mkdir tophat_out
-        tophat2 -p 10 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508_1
+        tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508_1
         0k --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/  hg20_transciptome/GR
         Ch38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel
         SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
-        ## you shall modify the -p value to be consistent with the -c value you requested in the beginning
 ```
+
+
 You shall see something like:
 ```
    [2018-03-30 11:48:57] Beginning TopHat run (v2.1.0)
