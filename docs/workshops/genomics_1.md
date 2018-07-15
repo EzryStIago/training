@@ -250,8 +250,10 @@ For in class practice, we will do this on E.coli genome
         module load bowtie2
         bowtie2-build GCA_000005845.2_ASM584v2_genomic.fna GCA_000005845.2_ASM584v2_genomic
 ```
-*If you prefer to download from ENSEMBLE, the command is <br>
-        wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-38/fasta/bacteria_0_collection/escherichia_coli_str_k_12_substr_mg1655/dna/Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.dna.toplevel.fa.gz*
+For your convenience we put these commands into a bash script, thus you may just type
+```
+run_bowtie2.sh
+``` 
 
 
 ## Mapping with tophat2, (STAR, HISAT2)
