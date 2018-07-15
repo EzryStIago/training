@@ -80,7 +80,7 @@ You have two main spaces on the Amarel cluster. These are:
 
   They differ in how often they are backed up and by read/write speed. So we will install programs in `/home`, while the data and computational output will be held in `/scratch`. 
 
-## Install programs and create a workspace for the workshop
+## 1. Install programs and create a workspace for the workshop
 
    Each program has slightly different installation instructions. 
    You do not need to install programs manually.  Instead just run the following scirpt:
@@ -118,7 +118,7 @@ pip install RSeQC --user
    ########################################################<br>
    
 
-## Download data
+## 2.  Download data
 
 We will download human RNA-seq data with [GEO accession GSE52778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778). The samples  are in NCBI's short read archive format (SRA). 
 
@@ -173,32 +173,32 @@ sra_fastq.sh
 
 # Running bioinformatics jobs
 
-## FastQC - raw data QC 
+## 3. FastQC - raw data QC 
 
-Explain what is fastqc is doing here - TODO
+FastQC performs a quality control checks on raw sequence data and produces various graphical outputs for visual analysis.
 ```
         cd /scratch/$USER/Genomics_Workshop/untreated         
         module load java  ## fastqc is written in java; we need to load java before using fastqc
         mkdir fastqc      ## create a folder to store the QC output 
         fastqc -o fastqc SRR1039508_1.fastq SRR1039508_2.fastq
 ```
-FastQC produces an html page as output in `fastqc/SRR1039508_1_fastqc.html`, with different kinds of views of data (and Phred scores). You can open this file in Firefox browser. 
+FastQC produces html pages in `fastqc/SRR1039508_1(2)_fastqc.html`, with different kinds of views of data (and Phred scores). You can open this file in Firefox browser. 
 ```
        firefox fastqc/SRR1039508_1_fastqc.html
 ```
-It is also possible to download this file to your local machine and open it in browser there.  To see more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/FastQC_details.pdf
+To learn more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/FastQC_details.pdf
 
-## Trimmomatic - quality trim/adaptor removal
+## 4. Trimmomatic - quality trim/adaptor removal
 
         ##for demonstration purpose, we will take a small subset data using seqtk
         cd /scratch/$USER/Genomics_Workshop/untreated
         seqtk sample -s100  SRR1039508_1.fastq 10000 > SRR1039508_1_10k.fastq 
         seqtk sample -s100  SRR1039508_2.fastq 10000 > SRR1039508_2_10k.fastq 
-        ## /projects/oarc/Genomics_Workshop/Labs/Seqtk_Examples.docx
+        ## /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/Seqtk_Examples
         ## This file contains useful examples how to use seqtk 
 
         ##now, run trimmomatic to trim the read quality , and remove adaptor
-        module load java    ### because trimmomatic
+        module load java    ### needed for trimmomatic
         java -jar /home/$USER/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar PE -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/$USER/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
 
 **NOTE:**  the above is a one line command, illustrated as the following:
@@ -210,7 +210,7 @@ It is also possible to download this file to your local machine and open it in b
         output_2_paired.fq  output_2_unpaired.fq \
         ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35 / 
 
-        ## Once it started run, you shall see the following:
+        ## Once it started run, you should see the following:
         TrimmomaticPE: Started with arguments:
         -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/yc759/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
         Multiple cores found: Using 2 threads
@@ -225,7 +225,7 @@ It is also possible to download this file to your local machine and open it in b
 
 ```
 
-## FastQC - Run on cleaned reads, compare result
+## 5. FastQC - Run on cleaned reads, compare result
 ```
      module load java
      fastqc -o fastqc SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
@@ -233,7 +233,7 @@ It is also possible to download this file to your local machine and open it in b
      ## /projects/oarc/Genomics_Workshop/Labs/FastQC_details.pdf , helpful in viewing and interpreting the output
 ```
 
-## Download reference and reference indexing 
+## 6. Download reference and reference indexing 
 
 Human genome indexing will take hours, we have the reference pre-prepared. Stored at  `/projects/oarc/Genomics_Workshop/Reference/ `
 For in class practice, we will do this on E.coli genome
