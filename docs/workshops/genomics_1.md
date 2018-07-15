@@ -160,9 +160,8 @@ To unpack the original sequence files can be a bit tricky at first. We need to p
 
 ```
 cd /scratch/$USER/Genomics_Workshop/download/sra
-fastq-dump --outdir /scratch/$USER/Genomics_Workshop/untreated --split-files  --gzip SRR10395{08,12,16}.sra
 fastq-dump --outdir /scratch/$USER/Genomics_Workshop/untreated --split-files  SRR10395{08,12,16}.sra
-fastq-dump --outdir /scratch/$USER/Genomics_Workshop/dex_treated --split-files  --gzip SRR10395{09,13,17}.sra
+fastq-dump --outdir /scratch/$USER/Genomics_Workshop/dex_treated --split-files  SRR10395{09,13,17}.sra
 ```
 It takes a while to convert sra files. To save time, files are already converted for you. 
 Run the following command to copy files into your /scratch/ directories.
