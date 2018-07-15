@@ -236,23 +236,23 @@ You may run FastQC again on the cleaned by trimmomatic reads and compare new res
 
 ## 6. Download reference and reference indexing 
 
-Human genome indexing will take hours, we have the reference pre-prepared. Stored at  `/projects/oarc/Genomics_Workshop/Reference/ `
+Human genome indexing will take hours.  We have the reference prepared and  stored at <br>
+`/projects/oarc/Genomics_Workshop/Reference/ `
+<br>
 For in class practice, we will do this on E.coli genome
 
 ```
-        cd /scratch/$USER/Genomics_Workshop/
-        mkdir Reference
-        cd Reference
+        cd /scratch/$USER/Genomics_Workshop/Reference
 
         wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Escherichia_coli/latest_assembly_versions/GCA_000005845.2_ASM584v2/GCA_000005845.2_ASM584v2_genomic.fna.gz
 
         gunzip GCA_000005845.2_ASM584v2_genomic.fna.gz
         module load bowtie2
         bowtie2-build GCA_000005845.2_ASM584v2_genomic.fna GCA_000005845.2_ASM584v2_genomic
-
-        ##if download from ENSEMBLE
-        wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-38/fasta/bacteria_0_collection/escherichia_coli_str_k_12_substr_mg1655/dna/Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.dna.toplevel.fa.gz
 ```
+*If you prefer to download from ENSEMBLE, the command is <br>
+        wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-38/fasta/bacteria_0_collection/escherichia_coli_str_k_12_substr_mg1655/dna/Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.dna.toplevel.fa.gz*
+
 
 ## Mapping with tophat2, (STAR, HISAT2)
 
