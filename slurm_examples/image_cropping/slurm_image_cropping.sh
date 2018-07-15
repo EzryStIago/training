@@ -3,11 +3,11 @@
 #SBATCH --partition=main             # Partition (job queue)
 #SBATCH --no-requeue                 # Do not re-run job  if preempted
 #SBATCH --job-name=img-crop          # Assign an short name to your job
-#SBATCH --nodes=1                    # Number of nodes you require
-#SBATCH --ntasks=1                   # Total # of tasks across all nodes
-#SBATCH --cpus-per-task=1
-#SBATCH --mem=6000                   # Real memory (RAM) required (MB)
-#SBATCH --time=03:00:00              # Total run time limit (HH:MM:SS)
+#SBATCH --nodes=1                    # Number of nodes you require per task in the array
+#SBATCH --ntasks=1                   # 
+#SBATCH --cpus-per-task=1            #
+#SBATCH --mem=6000                   # Real memory (RAM) required (MB) - not total, but per task! 
+#SBATCH --time=03:00:00              # Total run time limit (HH:MM:SS) for the task
 #SBATCH --output=slurm.%N.%j.out     # STDOUT output file
 #SBATCH --error=slurm.%N.%A_%a.err   # STDERR output file. Note we output one error file per task with %A %a
 #SBATCH --export=ALL                 # Export you current env to the job env
