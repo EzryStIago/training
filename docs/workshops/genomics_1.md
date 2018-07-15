@@ -182,7 +182,11 @@ Explain what is fastqc is doing here - TODO
         mkdir fastqc      ## create a folder to store the QC output 
         fastqc -o fastqc SRR1039508_1.fastq SRR1039508_2.fastq
 ```
-FastQC produces an html page as output, `fastqc/SRR1039508_1_fastqc.html`, with different kinds of views of data (and Phred scores). You can download this file to your local machine and open it in browser. It is also possible to open browser on the cluster, but the cluster is not really designed for that. To see more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop/Labs/FastQC_details.pdf
+FastQC produces an html page as output in `fastqc/SRR1039508_1_fastqc.html`, with different kinds of views of data (and Phred scores). You can open this file in Firefox browser. 
+```
+       firefox fastqc/SRR1039508_1_fastqc.html
+```
+It is also possible to download this file to your local machine and open it in browser there.  To see more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/FastQC_details.pdf
 
 ## Trimmomatic - quality trim/adaptor removal
 
