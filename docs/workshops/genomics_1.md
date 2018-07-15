@@ -55,9 +55,15 @@ On rare occasions, especially if the user has a modified .bashrc file,  FastX do
 ## DO NOT RUN ANY COMPUTATIONAL JOBS ON THE LOGIN NODE 
 ## Get resources on the compute node 
 
-You get to the cluster to execute your computations by running the following command in your terminal:    
-```srun  -p main --x11 --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash -i```   
-Notice that the name in your terminal will change from `amarel` to a node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. The following table explains the parts of this command: 
+When you login to the cluster you are on the login node. Jobs are not allowed to be run on the loging node, intstead you need to request a resource on the compute node for your job. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. You can do so by running the following command in your terminal:    
+```
+srun  -p main --x11 --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash -i
+```  
+<br> or just run this script
+```
+node_request.sh
+```
+Notice that the name in your terminal will change from `amarel` to a node name like `hal0025` or `slepner086`.  The following table explains the parts of this command: 
 
 |command part| meaning|
 |----|----|
@@ -78,13 +84,13 @@ You have two main spaces on the Amarel cluster. These are:
 - your home directory (100Gb) - `/home/netid/` 
 - your scratch directory (500Gb)- `/scratch/netid/` 
 
-  They differ in how often they are backed up and by read/write speed. So we will install programs in `/home`, while the data and output will be in `/scratch`. 
+  They differ in how often they are backed up and by read/write speed. So we will install programs in `/home`, while the data and computational output will be held in `/scratch`. 
 
-## Install programs and create a workspace for the workshop
+## 1. Install programs and create a workspace for the workshop
 
    Each program has slightly different installation instructions. 
    You do not need to install programs manually.  Instead just run the following scirpt:
-   `/projects/oarc/Genomics_Workshop/Labs/misc/labI.sh` <br>
+   `/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Labs/lab_PartI.sh` <br>
    It will install neccessary programs and creates folders for this workshop.
    
    For curious one, here is the content of the script
@@ -93,6 +99,10 @@ You have two main spaces on the Amarel cluster. These are:
  #!/bin/bash
 
 mkdir -p /home/$USER/Genomics_Workshop/
+mkdir -p /scratch/$USER/Genomics_Workshop/download
+mkdir -p /scratch/$USER/Genomics_Workshop/untreated
+mkdir -p /scratch/$USER/Genomics_Workshop/dex_treated
+
 echo "Copying files... Please wait"
 
 cp  -r /projects/oarc/Genomics_Workshop/Programs/ /home/$USER/Genomics_Workshop/
@@ -101,7 +111,7 @@ echo '## Genomics_Workshop specific settings 07/16/2018' >> ~/.bashrc
 echo 'export PATH=$HOME/Genomics_Workshop/Programs/seqtk:$PATH' >> ~/.bashrc
 echo 'export PATH=$HOME/Genomics_Workshop/Programs/sratoolkit.2.8.2-centos_linux64/bin:$PATH' >> ~/.bashrc
 echo 'export PATH=$HOME/Genomics_Workshop/Programs/FastQC:$PATH' >> ~/.bashrc
-source ~/.bashrc
+source ~/.bashrc 
 
 
 module load intel/17.0.2 python/2.7.12
@@ -114,28 +124,28 @@ pip install RSeQC --user
    ########################################################<br>
    
 
-## Download data
+## 2.  Download data
 
-We will download human RNA-seq data with [GEO accession GSE52778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778). The samples we download are in NCBI's short read archive format (SRA). To unpack the original sequence files can be a bit tricky at first. Please put them in different directories:<br>
-               
-                cd /scratch/$USER/Genomics_Workshop/ 
-                mkdir untreated 
-                mkdir dex_treated 
+We will download human RNA-seq data with [GEO accession GSE52778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778). The samples  are in NCBI's short read archive format (SRA). 
 
 We will use **sratoolkit** programs to download data but first we need to configure a location where all data files will be stored. <br>
 `vdb-config` is a configuration subprogram for `sratoolkit`. We will use it to specify the directory where `sratoolkit` fetches data. You will need to type in the followingt path, but remember to replace `netID` with your own `Rutgers netid`  `/scratch/your_netID/Genomics_Workshop/download`.  Do not copy blindly!
 Remember that  **sratoolkit**  is not designed to handle complex downloads. All data will be placed in one folder. You will need to move downloaded files for further analysis/manipulation into different locations manually.
 ```
                 vdb-config   --interactive-mode textual     ### dash-dash before interactive-mode 
+```
+```
 ## Now in the program:
                 
                          Your choice > 4
 ## type new path in
                         /scratch/your_netID/Genomics_Workshop/download
                         Your choice > Y
+## Hit Enter and exit the program
 ```
 
-Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools. Downloading can take some time! [TODO: check how much time for these files!]<br>
+Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools.<br>
+Downloading can be time consuming, it takes about 3 minutes per file. Thus we already downloaded files and placed them in your /scratch/$USER/Genomics_Workshop/download/sra folder. Skim through this section to understand how we did it and continue with 'fast-dump' below.  <br>
 
 ```
 # fetch the SRA data
@@ -148,120 +158,139 @@ prefetch -v SRR1039509
 prefetch -v SRR1039513  
 prefetch -v SRR1039517                          
 ```
-Then you need to move files into corresponding folders: <br>*508,512,516* into /scratch/$USER/Genomics_Workshop/download/untreated and <br> 
- *509,513,517* into /scratch/$USER/Genomics_Workshop/download/dex_treated
-```
-fastq-dump --gzip --split-files SRR1039508       # ???? 
-```
-You have to pay attention to where you are putting your data. So these two commands will actually be several: 
-```
-                cd  untreated                       # now you are in /scratch/..../Genomics_Workshop/untreated
-                prefetch -v SRR1039508
-                mv /scratch/$USER/Genomics_Workshop/download/sra/SRR1039508.sra .  # moving from download to actual directory 
-                fastq-dump --gzip --split-files SRR1039516
-``` 
+Next step is to unpack sra files and convert them to more suitable *fastq* format with  `fastq-dump` program <br>
+To unpack the original sequence files can be a bit tricky at first. We need to put them into different directories:<br>
+*508,512,516* into /scratch/$USER/Genomics_Workshop/download/untreated and <br> 
+ *509,513,517* into /scratch/$USER/Genomics_Workshop/download/dex_treated <br>
+ Luckily `fastq-dump` can do processing and output results into specified folders at the same time. 
 
-The commands above showed how to do it for one sample. You need to do it for 6 samples total. 
 ```
-                SRR1039508  SRR1039512 SRR1039516   (untreated)
-                SRR1039509  SRR1039513  SRR1039517  (dex_treated)
+cd /scratch/$USER/Genomics_Workshop/download/sra
+fastq-dump --outdir /scratch/$USER/Genomics_Workshop/untreated --split-files  SRR10395{08,12,16}.sra
+fastq-dump --outdir /scratch/$USER/Genomics_Workshop/dex_treated --split-files  SRR10395{09,13,17}.sra
+```
+It takes a while to convert sra files. To save time, files are already converted for you. 
+Run the following command to copy files into your /scratch/ directories.
+```
+sra_fastq.sh
 ```
 
 # Running bioinformatics jobs
 
-## FastQC - raw data QC 
+## 3. FastQC - raw data QC 
 
-Explain what is fastqc is doing here - TODO
+FastQC performs a quality control checks on raw sequence data and produces various graphical outputs for visual analysis.
 ```
         cd /scratch/$USER/Genomics_Workshop/untreated         
         module load java  ## fastqc is written in java; we need to load java before using fastqc
         mkdir fastqc      ## create a folder to store the QC output 
         fastqc -o fastqc SRR1039508_1.fastq SRR1039508_2.fastq
 ```
-FastQC produces an html page as output, `fastqc/SRR1039508_1_fastqc.html`, with different kinds of views of data (and Phred scores). You can download this file to your local machine and open it in browser. It is also possible to open browser on the cluster, but the cluster is not really designed for that. To see more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop/Labs/FastQC_details.pdf
+FastQC produces html pages in `fastqc/SRR1039508_1(2)_fastqc.html`, with different kinds of views of data (and Phred scores). You can open this file in Firefox browser. 
+```
+       firefox fastqc/SRR1039508_1_fastqc.html
+```
+To learn more about FastQC, see this pdf file <br>
+/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/FastQC_details.pdf <br>
+Close Firefox when you are done.
 
-## Trimmomatic - quality trim/adaptor removal
+## 4. Trimmomatic - quality trim/adaptor removal
 
-        ##for demonstration purpose, we will take a small subset data using seqtk
+For demonstration purpose, we will take a small subset data using `seqtk` program
+```
         cd /scratch/$USER/Genomics_Workshop/untreated
         seqtk sample -s100  SRR1039508_1.fastq 10000 > SRR1039508_1_10k.fastq 
         seqtk sample -s100  SRR1039508_2.fastq 10000 > SRR1039508_2_10k.fastq 
-        ## /projects/oarc/Genomics_Workshop/Labs/Seqtk_Examples.docx
-        ## This file contains useful examples how to use seqtk 
+```   
+More details and examples how to use `seqtk` can be found in <br> 
+/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/Seqtk_Examples
 
-        ##now, run trimmomatic to trim the read quality , and remove adaptor
-        module load java    ### because trimmomatic
-        java -jar /home/$USER/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar PE -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/$USER/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
+Now, run `trimmomatic` to trim the read quality, and remove adaptor<br>
 
-**NOTE:**  the above is a one line command, illustrated as the following:
+**NOTE:**  trimmomatic command starting with `java -jar` is a one line command, move the slider to the right to see the whole line.
 ```
-        java -jar trimmomatic-0.36.jar PE \
-        -phred33 -trimlog trim.log \
-        input_1.fq  input_2.fq \
-        output_1_paired.fq  output_1_unpaired.fq \
-        output_2_paired.fq  output_2_unpaired.fq \
-        ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35 / 
+        module load java    ### needed for trimmomatic
+        java -jar /home/$USER/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar PE -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/$USER/Genomics_Workshop/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
+``` 
+For your convenience we put this command into a bash script, thus you may just type
+```
+run_trimmo.sh
+``` 
 
-        ## Once it started run, you shall see the following:
+Once it started run, you should see the following:
+```
         TrimmomaticPE: Started with arguments:
         -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/yc759/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
         Multiple cores found: Using 2 threads
         Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
         ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
         Input Read Pairs: 100000 Both Surviving: 96596 (96.60%) Forward Only Surviving: 1542 (1.54%) Reverse Only Surviving: 1467 (1.47%) Dropped: 395 (0.40%)
-        TrimmomaticPE: Completed successfully
-
-        ##view the output, the trim.log file, .e.g.  length=63 55 1 56 7 (the original read length 63, now 55 after trim, 1 base from left end and 7 bases from the right end were trimmed off, 56 bases in middle remained)
- 
-        ##you may also try fastx_quality_stats from the FASTX—toolkit
-
+        TrimmomaticPE: Completed surccessfully 
 ```
 
-## FastQC - Run on cleaned reads, compare result
+View the output, the trim.log file, .e.g.  length=63 55 1 56 7 (the original read length 63, now 55 after trim, 1 base from left end and 7 bases from the right end were trimmed off, 56 bases in middle remained)
+ 
+Alternatively, you may also use `fastx_quality_stats` from *the FASTX—toolkit* ( not covered in this workshop).
+
+
+## 5. FastQC - Run on cleaned reads
+You may run FastQC again on the cleaned by trimmomatic reads and compare new results with results for raw data, step 3 above.
 ```
      module load java
      fastqc -o fastqc SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
-
-     ## /projects/oarc/Genomics_Workshop/Labs/FastQC_details.pdf , helpful in viewing and interpreting the output
 ```
 
-## Download reference and reference indexing 
+## 6. Download reference and reference indexing 
 
-Human genome indexing will take hours, we have the reference pre-prepared. Stored at  `/projects/oarc/Genomics_Workshop/Reference/ `
-For in class practice, we will do this on E.coli genome
+Human genome indexing will take hours.  We have the reference prepared and  stored at <br>
+`/projects/oarc/Genomics_Workshop/Reference/ `
+<br>
+For in class practice we demonstrate how to do genome indexing  on E.coli genome
 
 ```
-        cd /scratch/$USER/Genomics_Workshop/
-        mkdir Reference
-        cd Reference
+        cd /scratch/$USER/Genomics_Workshop/Reference
 
         wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Escherichia_coli/latest_assembly_versions/GCA_000005845.2_ASM584v2/GCA_000005845.2_ASM584v2_genomic.fna.gz
 
         gunzip GCA_000005845.2_ASM584v2_genomic.fna.gz
         module load bowtie2
         bowtie2-build GCA_000005845.2_ASM584v2_genomic.fna GCA_000005845.2_ASM584v2_genomic
-
-        ##if download from ENSEMBLE
-        wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-38/fasta/bacteria_0_collection/escherichia_coli_str_k_12_substr_mg1655/dna/Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.dna.toplevel.fa.gz
 ```
+For your convenience we put these commands into a bash script, thus you may just type
+```
+run_bowtie2.sh
+``` 
 
-## Mapping with tophat2, (STAR, HISAT2)
 
-Now, go to your data folder
-        `cd  /scratch/$USER/Genomics_Workshop/untreated`
+## 7. Mapping with tophat2, (STAR, HISAT2)
+Before we start mapping, make sure that you DON'T run  on a login node.
+tophat2 jobs are computationally intensive and may require hours to be completed.
+Also tophat2 is a multithreaded program, which means it can utilize more than one cpu-core, thus it is better to request more resources with srun command ( so far  we used `srun -c 2` (two cpu-cores).  For tophat2 jobs it is advisable to request more cpu-cores. For the convenience of this workshop we will use `-c 7`, however you may request more cpu-cores for your research.<br>
+Exit the current interactive session: type ```exit``` in the terminal wondow. You should see that the prompt in the terminal changed from a compute node to a login node.
+`netid@hal0011` to `netid@amarel`
+Start a new interactive session requesting more cpu-cores (-c 7) <br>
+```
+srun  -p main --x11 --reservation=genomics -N 1 -c 7 -n 1 -t 01:40:00 --pty /bin/bash -i
+```
+Notice that the prompt changed to a compute node, e.g. `netid@hal0011` 
+
+ Go to your folder with data.
+ You should match the `tophat2 -p` option  to be consistent with the number of cores `srun -c` that you requested
+        
 
 ```
         cd  /scratch/$USER/Genomics_Workshop/untreated
         module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
-        module load samtools   #bowtie2 is loaded already
+        module load samtools  bowtie2 
         mkdir tophat_out
-        tophat2 -p 10 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508_1
-        0k --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/  hg20_transciptome/GR
-        Ch38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel
-        SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
-        ## you shall modify the -p value to be consistent with the -c value you requested in the beginning
+        tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508_10k --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/  hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
 ```
-You shall see something like:
+For your convenience we put these commands into a bash script, thus you may just type
+```
+run_tophat2.sh
+``` 
+
+You should see a similar output:
 ```
    [2018-03-30 11:48:57] Beginning TopHat run (v2.1.0)
 -----------------------------------------------
@@ -289,17 +318,12 @@ oplevel with Bowtie2
 [2018-03-30 11:50:25] Mapping right_kept_reads.m2g_um_seg2 to genome Homo_sapiens.GRCh38.dna.toplevel with Bowtie2 (2/2)
 ……………………………………………………….
 ```
-The transcriptome index was built  by pointing to gtf file first,  here we have it prepared already, just so we can save time.  The following would be the command to generate the transcriptome index while running tophat alignment.
+The transcriptome index was built  by pointing to gtf file first. Here we have it prepared already, just so we can save time.  The following would be the command to generate the transcriptome index while running tophat alignment.
 ```
-   tophat2 -p 10 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039516 –GTF /projects/oarc/Genomics_Workshop/Reference/hg20/ Homo_sapiens.GRCh38.78.gtf --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039516_1.fastq.pairedOut.fastq SRR1039516_2.fastq.pairedOut.fastq
-
+   tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508 –GTF /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039508_1.fastq.pairedOut.fastq SRR1039508_2.fastq.pairedOut.fastq
 ```
-The output folder `tophat_out/untreated_SRR1039508/` shall contain the following files/folder (in blue):  
-```cd  /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508```
-List the contents of this directory: 
+The output folder `tophat_out/untreated_SRR1039508/` shall contain the following files/folders:  
 ```
-$ ll
-   total 2183632
  -rw-rw-r-- 1 yc759 oarc 2174796848 Jan 16 21:57 accepted_hits.bam
  -rw-rw-r-- 1 yc759 oarc        565 Jan 16 21:57 align_summary.txt
  -rw-rw-r-- 1 yc759 oarc    1921529 Jan 16 21:57 deletions.bed
@@ -310,23 +334,23 @@ $ ll
  -rw-rw-r-- 1 yc759 oarc   42846571 Jan 16 21:57 unmapped.bam
 ```
 
-## Read counts using htseq-count
+## 8. Read counts using htseq-count
 
-Remember where your alignment output folder is. Previously it was `/scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508`. If you managed to produce the bam file yourself great. If not, let's link the one we prepared for you. We use `ln -s` command to do "soft link" which makes it possible to refer to the data without physically copying it. 
+Remember where your alignment output folder is. Previously it was `/scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508`. If you managed to produce the bam file yourself, it's great. If not, let's copy files that we prepared for you. 
 
 ``` 
      cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
-     ln -s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.bam accepted_hits.bam   
+     cp /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.bam accepted_hits.bam   
 ```
 
-Next, we will use samtools to sort the bam file by name:  because htseq-count accepts bam file sorted by **name** as default, but tophat generates bam sorted by **coordinates** by default. 
+Next, we will use samtools to sort the bam file by name:  because htseq-count accepts bam file sorted by **name** as default, but tophat generates bam sorted by **coordinates** as default. 
 ```
      module load samtools intel/17.0.2 python/2.7.12   #loads the software
-     samtools sort -n  accepted_hits.bam | samtools view | htseq-count -m intersection-nonempty -t exon -i gene_id -s no --additional-attr=gene_name  -/projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf > untreated08.txt
+     samtools sort -n  accepted_hits.bam | samtools view | htseq-count -m intersection-nonempty -t exon -i gene_id -s no --additional-attr=gene_name  /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf > untreated08.txt
 ```
 In the same way, generate the counts file `untreated12.txt`, `untreated16.txt`,`dex09.txt`, `dex13.txt`, `dex17.txt`. 
 
-## Perform Mapping QC using RSeQC
+## 9. Perform Mapping QC using RSeQC
 
 Now,  quality control using RSeQC - a few examples are given here, please go to the [rseqc website](http://rseqc.sourceforge.net/) for more functions. Execute:   
 ```
@@ -466,3 +490,5 @@ module load bowtie2
 module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
 module load intel/17.0.4 R-Project/3.4.1
 ```
+
+adding something
