@@ -169,8 +169,6 @@ Run the following command to copy files into your /scratch/ directories.
 sra_fastq.sh
 ```
 
-
-
 # Running bioinformatics jobs
 
 ## 3. FastQC - raw data QC 
@@ -187,9 +185,9 @@ FastQC produces html pages in `fastqc/SRR1039508_1(2)_fastqc.html`, with differe
        firefox fastqc/SRR1039508_1_fastqc.html
 ```
 To learn more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/FastQC_details.pdf
+Close Firefox when you are done.
 
 ## 4. Trimmomatic - quality trim/adaptor removal
-
         ##for demonstration purpose, we will take a small subset data using seqtk
         cd /scratch/$USER/Genomics_Workshop/untreated
         seqtk sample -s100  SRR1039508_1.fastq 10000 > SRR1039508_1_10k.fastq 
