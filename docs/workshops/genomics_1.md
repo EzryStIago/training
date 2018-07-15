@@ -256,7 +256,7 @@ run_bowtie2.sh
 ``` 
 
 
-## Mapping with tophat2, (STAR, HISAT2)
+## 7. Mapping with tophat2, (STAR, HISAT2)
 
 Now, go to your data folder
         `cd  /scratch/$USER/Genomics_Workshop/untreated`
@@ -321,7 +321,7 @@ $ ll
  -rw-rw-r-- 1 yc759 oarc   42846571 Jan 16 21:57 unmapped.bam
 ```
 
-## Read counts using htseq-count
+## 8. Read counts using htseq-count
 
 Remember where your alignment output folder is. Previously it was `/scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508`. If you managed to produce the bam file yourself great. If not, let's link the one we prepared for you. We use `ln -s` command to do "soft link" which makes it possible to refer to the data without physically copying it. 
 
@@ -337,7 +337,7 @@ Next, we will use samtools to sort the bam file by name:  because htseq-count ac
 ```
 In the same way, generate the counts file `untreated12.txt`, `untreated16.txt`,`dex09.txt`, `dex13.txt`, `dex17.txt`. 
 
-## Perform Mapping QC using RSeQC
+## 9. Perform Mapping QC using RSeQC
 
 Now,  quality control using RSeQC - a few examples are given here, please go to the [rseqc website](http://rseqc.sourceforge.net/) for more functions. Execute:   
 ```
