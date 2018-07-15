@@ -184,7 +184,8 @@ FastQC produces html pages in `fastqc/SRR1039508_1(2)_fastqc.html`, with differe
 ```
        firefox fastqc/SRR1039508_1_fastqc.html
 ```
-To learn more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/FastQC_details.pdf
+To learn more about FastQC, see this pdf file <br>
+/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/FastQC_details.pdf <br>
 Close Firefox when you are done.
 
 ## 4. Trimmomatic - quality trim/adaptor removal
@@ -195,7 +196,7 @@ For demonstration purpose, we will take a small subset data using `seqtk` progra
         seqtk sample -s100  SRR1039508_1.fastq 10000 > SRR1039508_1_10k.fastq 
         seqtk sample -s100  SRR1039508_2.fastq 10000 > SRR1039508_2_10k.fastq 
 ```   
-More details and examples how to use `seqtk` can be found in 
+More details and examples how to use `seqtk` can be found in <br> 
 /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/Seqtk_Examples
 
 Now, run `trimmomatic` to trim the read quality, and remove adaptor
@@ -207,30 +208,23 @@ Now, run `trimmomatic` to trim the read quality, and remove adaptor
 For your convenience we put this command into a bash script, thus you may just type
 ```
 run_trimmo.sh
-```
-illustrated as the following:
-```
-        java -jar trimmomatic-0.36.jar PE \
-        -phred33 -trimlog trim.log \
-        input_1.fq  input_2.fq \
-        output_1_paired.fq  output_1_unpaired.fq \
-        output_2_paired.fq  output_2_unpaired.fq \
-        ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35 / 
+``` 
 
-        ## Once it started run, you should see the following:
+Once it started run, you should see the following:
+```
         TrimmomaticPE: Started with arguments:
         -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/yc759/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
         Multiple cores found: Using 2 threads
         Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
         ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
         Input Read Pairs: 100000 Both Surviving: 96596 (96.60%) Forward Only Surviving: 1542 (1.54%) Reverse Only Surviving: 1467 (1.47%) Dropped: 395 (0.40%)
-        TrimmomaticPE: Completed successfully
+        TrimmomaticPE: Completed surccessfully 
+```
 
-        ##view the output, the trim.log file, .e.g.  length=63 55 1 56 7 (the original read length 63, now 55 after trim, 1 base from left end and 7 bases from the right end were trimmed off, 56 bases in middle remained)
+View the output, the trim.log file, .e.g.  length=63 55 1 56 7 (the original read length 63, now 55 after trim, 1 base from left end and 7 bases from the right end were trimmed off, 56 bases in middle remained)
  
         ##you may also try fastx_quality_stats from the FASTX—toolkit
 
-```
 
 ## 5. FastQC - Run on cleaned reads, compare result
 ```
