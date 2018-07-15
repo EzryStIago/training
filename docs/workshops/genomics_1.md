@@ -224,15 +224,14 @@ Once it started run, you should see the following:
 
 View the output, the trim.log file, .e.g.  length=63 55 1 56 7 (the original read length 63, now 55 after trim, 1 base from left end and 7 bases from the right end were trimmed off, 56 bases in middle remained)
  
-        ##you may also try fastx_quality_stats from the FASTX—toolkit
+Alternatively, you may also use `fastx_quality_stats` from *the FASTX—toolkit* ( not covered in this workshop).
 
 
-## 5. FastQC - Run on cleaned reads, compare result
+## 5. FastQC - Run on cleaned reads
+You may run FastQC again on the cleaned by trimmomatic reads and compare new results with results for raw data, step 3 above.
 ```
      module load java
      fastqc -o fastqc SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
-
-     ## /projects/oarc/Genomics_Workshop/Labs/FastQC_details.pdf , helpful in viewing and interpreting the output
 ```
 
 ## 6. Download reference and reference indexing 
