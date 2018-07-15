@@ -188,18 +188,27 @@ To learn more about FastQC, see this pdf file - /projects/oarc/Genomics_Workshop
 Close Firefox when you are done.
 
 ## 4. Trimmomatic - quality trim/adaptor removal
-        ##for demonstration purpose, we will take a small subset data using seqtk
+
+For demonstration purpose, we will take a small subset data using `seqtk` program
+```
         cd /scratch/$USER/Genomics_Workshop/untreated
         seqtk sample -s100  SRR1039508_1.fastq 10000 > SRR1039508_1_10k.fastq 
         seqtk sample -s100  SRR1039508_2.fastq 10000 > SRR1039508_2_10k.fastq 
-        ## /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/Seqtk_Examples
-        ## This file contains useful examples how to use seqtk 
+```   
+More details and examples how to use `seqtk` can be found in 
+/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/misc/Seqtk_Examples
 
-        ##now, run trimmomatic to trim the read quality , and remove adaptor
+Now, run `trimmomatic` to trim the read quality, and remove adaptor
+```
         module load java    ### needed for trimmomatic
         java -jar /home/$USER/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar PE -phred33 -trimlog trim.log SRR1039508_1_10k.fastq SRR1039508_2_10k.fastq SRR1039508_1.paired.fastq SRR1039508_1.unpaired.fastq SRR1039508_2.paired.fastq SRR1039508_2.unpaired.fastq ILLUMINACLIP:/home/$USER/Programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:35
-
-**NOTE:**  the above is a one line command, illustrated as the following:
+```
+**NOTE:**  trimmomatic command above is a one line command. 
+For your convenience we put this command into a bash script, thus you may just type
+```
+run_trimmo.sh
+```
+illustrated as the following:
 ```
         java -jar trimmomatic-0.36.jar PE \
         -phred33 -trimlog trim.log \
