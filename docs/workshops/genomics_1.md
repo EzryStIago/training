@@ -321,14 +321,9 @@ oplevel with Bowtie2
 The transcriptome index was built  by pointing to gtf file first. Here we have it prepared already, just so we can save time.  The following would be the command to generate the transcriptome index while running tophat alignment.
 ```
    tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508 –GTF /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039508_1.fastq.pairedOut.fastq SRR1039508_2.fastq.pairedOut.fastq
-
 ```
-The output folder `tophat_out/untreated_SRR1039508/` shall contain the following files/folder (in blue):  
-```cd  /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508```
-List the contents of this directory: 
+The output folder `tophat_out/untreated_SRR1039508/` shall contain the following files/folders:  
 ```
-$ ll
-   total 2183632
  -rw-rw-r-- 1 yc759 oarc 2174796848 Jan 16 21:57 accepted_hits.bam
  -rw-rw-r-- 1 yc759 oarc        565 Jan 16 21:57 align_summary.txt
  -rw-rw-r-- 1 yc759 oarc    1921529 Jan 16 21:57 deletions.bed
@@ -341,17 +336,17 @@ $ ll
 
 ## 8. Read counts using htseq-count
 
-Remember where your alignment output folder is. Previously it was `/scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508`. If you managed to produce the bam file yourself great. If not, let's link the one we prepared for you. We use `ln -s` command to do "soft link" which makes it possible to refer to the data without physically copying it. 
+Remember where your alignment output folder is. Previously it was `/scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508`. If you managed to produce the bam file yourself, it's great. If not, let's copy files that we prepared for you. 
 
 ``` 
      cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
-     ln -s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.bam accepted_hits.bam   
+     cp /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.bam accepted_hits.bam   
 ```
 
-Next, we will use samtools to sort the bam file by name:  because htseq-count accepts bam file sorted by **name** as default, but tophat generates bam sorted by **coordinates** by default. 
+Next, we will use samtools to sort the bam file by name:  because htseq-count accepts bam file sorted by **name** as default, but tophat generates bam sorted by **coordinates** as default. 
 ```
      module load samtools intel/17.0.2 python/2.7.12   #loads the software
-     samtools sort -n  accepted_hits.bam | samtools view | htseq-count -m intersection-nonempty -t exon -i gene_id -s no --additional-attr=gene_name  -/projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf > untreated08.txt
+     samtools sort -n  accepted_hits.bam | samtools view | htseq-count -m intersection-nonempty -t exon -i gene_id -s no --additional-attr=gene_name  /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf > untreated08.txt
 ```
 In the same way, generate the counts file `untreated12.txt`, `untreated16.txt`,`dex09.txt`, `dex13.txt`, `dex17.txt`. 
 
