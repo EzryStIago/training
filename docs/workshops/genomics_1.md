@@ -245,7 +245,7 @@ You may run FastQC again on the cleaned by trimmomatic reads and compare new res
 Human genome indexing will take hours.  We have the reference prepared and  stored at <br>
 `/projects/oarc/Genomics_Workshop/Reference/ `
 <br>
-For in class practice we demonstrate genome indexing  on E.coli genome
+For in class practice we demonstrate how to do genome indexing  on E.coli genome
 
 ```
         cd /scratch/$USER/Genomics_Workshop/Reference
