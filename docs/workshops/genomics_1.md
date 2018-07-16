@@ -288,7 +288,7 @@ Notice that the prompt changed again to a compute node, e.g. `netid@hal0011`
         module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
         module load samtools  bowtie2 
         mkdir tophat_out
-        tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508_10k --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/  hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
+        tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508_10k --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039508_1.paired.fastq SRR1039508_2.paired.fastq
 ```
 For your convenience we put these commands into a bash script, thus you may just type
 ```
