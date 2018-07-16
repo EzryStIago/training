@@ -264,7 +264,7 @@ run_bowtie2.sh
 ## 7. Mapping with tophat2, (STAR, HISAT2)
 Before we start mapping job, make sure that you WON'T start a job on a login node.
 tophat2 jobs are computationally intensive and may require hours to be completed. <br>
-**NOTE** We do not expect you to complete mapping in the class. You may start it to get familiar with the procedure, but do not wait till the completion. You may however do it as a homework for a preparation for the next session ( Genomics Workshop part II).<br>
+- **NOTE: We do not expect you to complete mapping in the class. You may start it to get familiar with the procedure, but do not wait till the completion. You may however do it as a homework for a preparation for the next session ( Genomics Workshop part II).**<br>
 Also tophat2 is a multithreaded program, which means it can utilize more than one cpu-core, thus it is better to request more resources with srun command ( so far  we used `srun -c 2` (two cpu-cores).  For tophat2 jobs it is advisable to request more cpu-cores. For the convenience of this workshop we will use `-c 7`, however you may request more cpu-cores for your research.<br>
 Exit the current interactive session: type ```exit``` in the terminal wondow. You should see that the prompt in the terminal changed from a compute node to a login node.
 `netid@hal0011` to `netid@amarel`
