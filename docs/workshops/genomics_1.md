@@ -96,9 +96,11 @@ You have two main spaces on the Amarel cluster. These are:
  #!/bin/bash
 
 mkdir -p /home/$USER/Genomics_Workshop/
+mkdir -p /scratch/$USER/Genomics_Workshop/scripts
 mkdir -p /scratch/$USER/Genomics_Workshop/download
 mkdir -p /scratch/$USER/Genomics_Workshop/untreated
 mkdir -p /scratch/$USER/Genomics_Workshop/dex_treated
+mkdir -p /scratch/$USER/Genomocs_Workshop/Reference
 
 echo "Copying files... Please wait"
 
