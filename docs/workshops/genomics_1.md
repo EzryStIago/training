@@ -267,8 +267,7 @@ tophat2 jobs are computationally intensive and may require hours to be completed
 
 - **NOTE: We do not expect you to complete mapping in the class. You may start it to get familiar with the procedure, but do not wait till the completion. You may however do it as a homework for a preparation for the next session ( Genomics Workshop part II).** <br>
 
-
-<br>Also tophat2 is a multithreaded program, which means it can utilize more than one cpu-core, thus it is better to request more resources with srun command ( so far  we used `srun -c 2` (two cpu-cores).  For tophat2 jobs it is advisable to request more cpu-cores. For the convenience of this workshop we will use `-c 7`, however you may request more cpu-cores for your research.<br>
+Also tophat2 is a multithreaded program, which means it can utilize more than one cpu-core, thus it is better to request more resources with srun command ( so far  we used `srun -c 2` (two cpu-cores).  For tophat2 jobs it is advisable to request more cpu-cores. For the convenience of this workshop we will use `-c 7`, however you may request more cpu-cores for your research.<br>
 Exit the current interactive session: type ```exit``` in the terminal wondow. You should see that the prompt in the terminal changed from a compute node to a login node.
 `netid@hal0011` to `netid@amarel`
 Start a new interactive session requesting more cpu-cores (-c 7) <br>
@@ -282,7 +281,7 @@ tophat2_node_request.sh
 Notice that the prompt changed again to a compute node, e.g. `netid@hal0011` 
 
  Go to your folder with data.<br>
- Remember that you should match the `tophat2 -p` option  to be consistent with the number of cores `srun -c` that you requested, thus we use `tophat2 -p 7`, because we requested `srun -c 7`.
+ Remember that you should match the `tophat2 -p` option  to be consistent with the number of cores `srun -c` that you requested, thus we use `tophat2 -p 7`, because we requested `srun -c 7`. <br>
 **NOTE:**  tophat2 command starting with `tophat2 -p 7` is a one line command, move the slider to the right to see the whole line.        
 ```
         cd  /scratch/$USER/Genomics_Workshop/untreated
