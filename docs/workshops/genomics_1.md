@@ -78,7 +78,10 @@ You have two main spaces on the Amarel cluster. These are:
 - your home directory (100Gb) - `/home/netid/` 
 - your scratch directory (500Gb)- `/scratch/netid/` 
 
-  They differ in how often they are backed up and by read/write speed. So we will install programs in `/home`, while the data and computational output will be held in `/scratch`. 
+  They differ in how often they are backed up and by read/write speed. <br> 
+  So we will install programs in  `/home/$USER/Genomics_Workshop`, <br>
+  while the data and computational output will be held in `/scratch/$USER/Genomics_Workshop`. 
+  
 
 ## 1. Install programs and create a workspace for the workshop
 
