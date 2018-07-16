@@ -360,7 +360,7 @@ run_htseq_count.sh
 ## 9. Perform Mapping QC using RSeQC
 
 Now,  quality control using RSeQC - a few examples are given here, please go to the [rseqc website](http://rseqc.sourceforge.net/) for more functions.<br> 
--Example 1 <br>
+- Example 1 <br>
 Execute:   
 ```
 cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
@@ -392,7 +392,7 @@ Output:
         TES_down_10kb       268614580           137293              0.51
         =====================================================================
 ```
--Example 2 <br>
+- Example 2 <br>
 Execute:  
 ```
 bam_stat.py -i accepted_hits.bam
@@ -427,7 +427,7 @@ Output:
         Proper-paired reads map to different chrom:312
 
 ```
--Example 3 <br>
+- Example 3 <br>
 In this  example we calculate the RNA-seq reads coverage over gene body using `geneBody_coverage.py`.
 However, this script requires  that bam files to be sorted and indexed. We will do it using `samtools`. Moreover for calculations and generation of  graphical outputs  R-package is needed.<br>
 Load `samtools` and `R-Project` modules and go to the tophat_out sample folder
