@@ -1,10 +1,4 @@
 # Overview
-
-These are the notes from the workshop on genomics. What's covered in these notes:    
-1. Setup
-2. Analysis
-3. Labs
-
 ## Genomic Software
 
 This is a list of software to install for the workshop
