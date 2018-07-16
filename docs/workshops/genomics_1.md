@@ -459,15 +459,16 @@ null device
           1
 ```
 output files:<br>
-test.geneBodyCoverage.r
-test.geneBodyCoverage.txt
-log.txt
-test.geneBodyCoverage.curves.pdf
-
-Download the gene.bed files :  `https://sourceforge.net/projects/rseqc/files/BED/Human_Homo_sapiens/ `  
-Be careful that the genome version, be consistent between reference genome used in mapping and now. For now, you may use what’s provided 
+test.geneBodyCoverage.r <br>
+test.geneBodyCoverage.txt <br>
+log.txt <br>
+test.geneBodyCoverage.curves.pdf <br>
 
 Checking  whether the sequencing read is strand specific or not <br>
+Download the gene.bed files :  `https://sourceforge.net/projects/rseqc/files/BED/Human_Homo_sapiens/`  
+**NOTE** Be careful, the genome version has to  be consistent with the  reference genome used in mapping.   <br>
+
+
 Execute:
 ```
 infer_experiment.py -r  /projects/oarc/Genomics_Workshop/Reference/ Homo_sapiens.GRCh38.79.bed -i accepted_hits.bam
