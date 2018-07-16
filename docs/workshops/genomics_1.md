@@ -272,7 +272,7 @@ srun  -p main --x11 --reservation=genomics -N 1 -c 7 -n 1 -t 01:40:00 --pty /bin
 Notice that the prompt changed to a compute node, e.g. `netid@hal0011` 
 
  Go to your folder with data.
- You should match the `tophat2 -p` option  to be consistent with the number of cores `srun -c` that you requested
+ You should match the `tophat2 -p` option  to be consistent with the number of cores `srun -c` that you requested, thus we use tophat 2 -p 7, because we requested srun -c 7.
         
 
 ```
