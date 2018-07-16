@@ -359,7 +359,9 @@ run_htseq_count.sh
 
 ## 9. Perform Mapping QC using RSeQC
 
-Now,  quality control using RSeQC - a few examples are given here, please go to the [rseqc website](http://rseqc.sourceforge.net/) for more functions. Execute:   
+Now,  quality control using RSeQC - a few examples are given here, please go to the [rseqc website](http://rseqc.sourceforge.net/) for more functions.<br> 
+-Example 1 <br>
+Execute:   
 ```
 cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 
 module load python/2.7.12
@@ -390,6 +392,7 @@ Output:
         TES_down_10kb       268614580           137293              0.51
         =====================================================================
 ```
+-Example 2 <br>
 Execute:  
 ```
 bam_stat.py -i accepted_hits.bam
@@ -424,7 +427,8 @@ Output:
         Proper-paired reads map to different chrom:312
 
 ```
-In the next example we calculate the RNA-seq reads coverage over gene body using `geneBody_coverage.py`.
+-Example 3 <br>
+In this  example we calculate the RNA-seq reads coverage over gene body using `geneBody_coverage.py`.
 However, this script requires  that bam files to be sorted and indexed. We will do it using `samtools`. Moreover for calculations and generation of  graphical outputs  R-package is needed.<br>
 Load `samtools` and `R-Project` modules and go to the tophat_out sample folder
 
@@ -464,10 +468,10 @@ test.geneBodyCoverage.txt <br>
 log.txt <br>
 test.geneBodyCoverage.curves.pdf <br>
 
+- Example 4 <br>
 Checking  whether the sequencing read is strand specific or not <br>
 Download the gene.bed files :  `https://sourceforge.net/projects/rseqc/files/BED/Human_Homo_sapiens/`  
 **NOTE** Be careful, the genome version has to  be consistent with the  reference genome used in mapping.   <br>
-
 
 Execute:
 ```
