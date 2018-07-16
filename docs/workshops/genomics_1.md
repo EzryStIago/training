@@ -87,7 +87,7 @@ You have two main spaces on the Amarel cluster. These are:
 
    Each program has slightly different installation instructions. 
    You do not need to install programs manually.  Instead just run the following scirpt:
-   `/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Labs/lab_PartI.sh` <br>
+   **/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Labs/lab_PartI.sh**<br>
    It will install neccessary programs and creates folders for this workshop.
    
    For curious one, here is the content of the script
@@ -241,10 +241,10 @@ You may run FastQC again on the cleaned by trimmomatic reads and compare new res
 
 ## 6. Download reference and reference indexing 
 
-Human genome indexing will take hours.  We have the reference prepared and  stored at <br>
+Indexing of Human genome may take hours. Thus we have the reference genome prepared and ready for use in <br>
 `/projects/oarc/Genomics_Workshop/Reference/ `
 <br>
-For in class practice we demonstrate how to do genome indexing  on E.coli genome
+For in class practice we demonstrate how to do genome indexing  with E.coli genome
 
 ```
         cd /scratch/$USER/Genomics_Workshop/Reference
@@ -262,7 +262,7 @@ run_bowtie2.sh
 
 
 ## 7. Mapping with tophat2, (STAR, HISAT2)
-Before we start mapping, make sure that you DON'T run  on a login node.
+Before we start mapping job, make sure that you WON'T start a job on a login node.
 tophat2 jobs are computationally intensive and may require hours to be completed.
 Also tophat2 is a multithreaded program, which means it can utilize more than one cpu-core, thus it is better to request more resources with srun command ( so far  we used `srun -c 2` (two cpu-cores).  For tophat2 jobs it is advisable to request more cpu-cores. For the convenience of this workshop we will use `-c 7`, however you may request more cpu-cores for your research.<br>
 Exit the current interactive session: type ```exit``` in the terminal wondow. You should see that the prompt in the terminal changed from a compute node to a login node.
@@ -275,12 +275,11 @@ For your convenience we put this command into a bash script, thus you may just t
 ```
 tophat2_node_request.sh
 ``` 
-Notice that the prompt changed to a compute node, e.g. `netid@hal0011` 
+Notice that the prompt changed again to a compute node, e.g. `netid@hal0011` 
 
- Go to your folder with data.
- You should match the `tophat2 -p` option  to be consistent with the number of cores `srun -c` that you requested, thus we use tophat 2 -p 7, because we requested srun -c 7.
-        
-
+ Go to your folder with data.<br>
+ Remember that you should match the `tophat2 -p` option  to be consistent with the number of cores `srun -c` that you requested, thus we use `tophat2 -p 7`, because we requested `srun -c 7`.
+**NOTE:**  tophat2 command starting with `tophat2 -p 7` is a one line command, move the slider to the right to see the whole line.        
 ```
         cd  /scratch/$USER/Genomics_Workshop/untreated
         module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
@@ -322,6 +321,7 @@ oplevel with Bowtie2
 ……………………………………………………….
 ```
 The transcriptome index was built  by pointing to gtf file first. Here we have it prepared already, just so we can save time.  The following would be the command to generate the transcriptome index while running tophat alignment.
+**NOTE:**  tophat2 command starting with `tophat2 -p 7` is a one line command, move the slider to the right to see the whole line. 
 ```
    tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508 –GTF /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039508_1.fastq.pairedOut.fastq SRR1039508_2.fastq.pairedOut.fastq
 ```
