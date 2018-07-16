@@ -425,17 +425,17 @@ Output:
 
 ```
 In the next example we calculate the RNA-seq reads coverage over gene body using `geneBody_coverage.py`.
-However for the input this script requires  bam files to be sorted and indexed. We will do it using samtools. Moreover for calculations and providing a graphical outputs  R-package is needed.<br>
+However, this script requires  that bam files to be sorted and indexed. We will do it using `samtools`. Moreover for calculations and generation of  graphical outputs  R-package is needed.<br>
 Load `samtools` and `R-Project` modules and go to the tophat_out sample folder
 
 ```
 module load intel/17.0.4  R-Project/3.4.1    
 module load samtools
-samtools sort accepted_hits.bam –o accepted_hits.sorted.bam 
+samtools sort accepted_hits.bam -o accepted_hits.sorted.bam 
 ```
-This may take some time, instead you may use the one already prepared for you by making a soft link to it:
+This may take some time, thus you may use instead one of already prepared files by making a soft link to it:
 ```
-ln -s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.sorted.bam accepted_hits.sorted.bam
+ln -s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.sorted.ba accepted_hits.sorted.bam
 ```
 
 ```
