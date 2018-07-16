@@ -437,12 +437,13 @@ This may take some time, thus you may use instead one of already prepared files 
 ```
 ln -s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.sorted.ba accepted_hits.sorted.bam
 ```
-
+Execute:
 ```
-
-
-samtools index accepted_hits.sorted.bam 
-  -r /projects/oarc/Genomics_Workshop/Reference/hg38.housekeepingGenes.bed -i accepted_hits.sorted.bam -o test
+samtools index accepted_hits.sorted.bam
+geneBody_coverage.py -r /projects/oarc/Genomics_Workshop/Reference/hg38.housekeepingGenes.bed -i accepted_hits.sorted.bam -o test
+```
+Output:
+```
 @ 2018-01-14 13:17:33: Read BED file (reference gene model) ...
 @ 2018-01-14 13:17:33: Total 3802 transcripts loaded
 @ 2018-01-14 13:17:33: Get BAM file(s) ...
@@ -456,28 +457,215 @@ samtools index accepted_hits.sorted.bam
 @ 2018-01-14 13:28:59: Running R script ...
 null device
           1
-
 ```
-output files:        test.geneBodyCoverage.r
-                                test.geneBodyCoverage.txt
-                log.txt
-                test.geneBodyCoverage.curves.pdf
+output files:<br>
+test.geneBodyCoverage.r
+test.geneBodyCoverage.txt
+log.txt
+test.geneBodyCoverage.curves.pdf
 
-download the gene.bed files :  `https://sourceforge.net/projects/rseqc/files/BED/Human_Homo_sapiens/ `  
+Download the gene.bed files :  `https://sourceforge.net/projects/rseqc/files/BED/Human_Homo_sapiens/ `  
 Be careful that the genome version, be consistent between reference genome used in mapping and now. For now, you may use what’s provided 
 
-if you want to find out whether the sequencing read is strand specific or not, do:
+Checking  whether the sequencing read is strand specific or not <br>
+Execute:
 ```
-        $ infer_experiment.py -r  /projects/oarc/Genomics_Workshop/Reference/ Homo_sapiens.GRCh38.79.bed -i accepted_hits.bam
-
-    Reading reference gene model /projects/oarc/Genomics_Workshop/Reference/Homo_sapiens.GRCh38.79.bed ... Done
-    Loading SAM/BAM file ...  Total 200000 usable reads were sampled
-
+infer_experiment.py -r  /projects/oarc/Genomics_Workshop/Reference/ Homo_sapiens.GRCh38.79.bed -i accepted_hits.bam
+```
+Output:
+```
+Reading reference gene model /projects/oarc/Genomics_Workshop/Reference/Homo_sapiens.GRCh38.79.bed ... Done
+Loading SAM/BAM file ...  Total 200000 usable reads were sampled
 
 This is PairEnd Data
 Fraction of reads failed to determine: 0.1406
 Fraction of reads explained by "1++,1--,2+-,2-+": 0.4302
 Fraction of reads explained by "1+-,1-+,2++,2--": 0.4292
 ```
+
+## 10. R practice 
+
+	a). Install needed packages
+	##exit from the computer node, START R ON LOGIN NODE, install some packages
+	exit  ##do exit, only if you are on a computer node
+	module load intel/17.0.4
+	module load R-Project/3.4.1
+	R
+
+	source("https://bioconductor.org/biocLite.R") 
+	biocLite("ape")
+	biocLite("MKmisc")
+	biocLite("Heatplus")
+	biocLite("affycoretools")
+	biocLite("flashClust")
+	biocLite("affy")
+	##yes (for personal library)
+
+	b). Calculate gene length  
+
+	###A way to calculate the gene length:
+
+	###cp  the Homo_sapiens.GRCh38.78.gtf to your own Reference folder  
+	cp /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf /scratch/$USER/Genomics_Workshop/Reference/. 
+
+
+	###The following shows how we download it from ENSEMBLE, version 78, version 91  ###
+	wget ftp://ftp.ensembl.org/pub/release-78/gtf/homo_sapiens/Homo_sapiens.GRCh38.78.gtf.gz
+	###The most current one is release 91
+	wget ftp://ftp.ensembl.org/pub/release-91/gtf/homo_sapiens/Homo_sapiens.GRCh38.91.gtf.gz
+
+	module load intel/17.0.4
+	module load R-Project/3.4.1
+	##start R on computer node now
+	srun --x11 -p main --reservation=ddclass -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash
+
+
+	> library(GenomicFeatures)
+	> gtfdb <- makeTxDbFromGFF("Homo_sapiens.GRCh38.78.gtf",format="gtf")
+	> exons.list.per.gene <- exonsBy(gtfdb,by="gene")
+	> exonic.gene.sizes <- lapply(exons.list.per.gene,function(x){sum(width(reduce(x)))})
+	> class(exonic.gene.sizes)
+
+	> Hg20_geneLength <-do.call(rbind, exonic.gene.sizes)
+	> colnames(Hg20_geneLength) <- paste('geneLength')    
+	### the gene length is defined to be the total length of all exons in the gene, including the 3'UTR###
+
+	c). More self practice 
+
+               ##at R prompt
+
+	  
+         > options(stringsAsFactors = FALSE)   #this will prevent R from reading in character data as factor data
+
+
+	#### Arithmetic functions
+
+	2+2
+	3*3
+	3*8+2
+	log10(1000)
+	log2(8)
+	abs(-10)
+	sqrt(81)
+
+
+	#### Creating objects
+
+	ls()  #see what objects are in the workspace
+	x <- 4
+	x
+	x = 3  #a single = is an assignment operator
+	x
+	x == 5 #a double == asks "is the left side equivalent to the right side?"
+	x + 2   #objects can be used in equations
+	y <- "anyname"
+	y
+	class(x)
+	class(y)
+	ls()
+
+
+	#### Vector and Matrix
+
+	x1 <- c(1,2,3,4,5)
+	x1
+	class(x1)
+	length(x1)
+	x <- cbind(x1, x1+1)    #1 will be added to all the numbers in x1
+	x
+	class(x)       #what kind of object is x?
+	dim(x)         #the dimension of matrix
+	x1[1:3]        #use [] to get subsets of a vector
+	x[1,]          #use [,] to get subsets of a matrix (or dataframe)
+	x[,1]
+	x[,-1]
+	x[c(1,2),]
+	x[-c(1,3),]
+	colnames(x)
+	colnames(x) <-c("A","B")
+	rownames(x) <-c("C","D","E","F","G")
+	x
+
+	#### Data Frames
+
+	z <- data.frame(A=x[,1], B=rownames(x), C=factor(rownames(x)), D=x[,1]==3, stringsAsFactors=F)
+	class(z)
+	names(z)
+	dim(z)
+	class(z$A)
+	class(z$B)
+	class(z$C)
+	class(z$D)
+	z$B
+	z$C
+
+
+	#### More ways to subset dataframes
+
+	z$B
+	z[[2]]
+	z[,2]   #these first 3 give equivalent results
+	z[,1:2]
+	z[,c(1,3)]
+	z[c(1,3:5),]
+
+
+	#### Lists
+
+	mylist <- list(first=z,second=x,third=c("W","X","Y","Z"))
+	class(mylist)
+	mylist
+	names(mylist)
+	class(mylist$first)
+	class(mylist$second)
+
+
+	#### Functions
+
+	my.add <- function(a, b) {a - b}
+	class(my.add)
+	my.add(4,99)
+	my.add(99,4)
+	my.add(b = 99, a = 4)
+
+
+	library(limma)  #load the limma package
+
+
+	#### Make sure the working directory is set to your file on the computer;
+
+	getwd()  #see what the current working directory is
+	setwd("????????????????")  #change the working directory
+
+
+	#### Output a single object as a comma separated value file
+
+	write.csv(z, file="test.csv")
+
+
+
+	#### Save all the objects you have created to your workspace
+
+	save.image()                #creates a default file named ".RData"
+	save.image("intro.Rdata")   #creates a named file
+
+
+	#### Remove objects from your workspace
+
+	ls()
+	rm(x)          #remove a single object by name
+	ls()
+	rm(z,x1)       #remove multiple objects by name
+	ls()
+	load("intro.Rdata")
+	ls()
+	rm(list=ls())  #remove all objects
+	ls()
+
+
+	#### Save a history of all the commands entered
+
+	savehistory("introhistory.Rhistory")
+
 
 
