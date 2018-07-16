@@ -271,6 +271,10 @@ Start a new interactive session requesting more cpu-cores (-c 7) <br>
 ```
 srun  -p main --x11 --reservation=genomics -N 1 -c 7 -n 1 -t 01:40:00 --pty /bin/bash -i
 ```
+For your convenience we put this command into a bash script, thus you may just type
+```
+tophat2_node_request.sh
+``` 
 Notice that the prompt changed to a compute node, e.g. `netid@hal0011` 
 
  Go to your folder with data.
