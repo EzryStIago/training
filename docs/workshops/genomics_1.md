@@ -53,7 +53,7 @@ When you login to the cluster you are on the login node. Jobs are not allowed to
 ```
 srun  -p main --x11 --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash -i
 ```  
-<br> or just run this script
+ or just run this script
 ```
 node_request.sh
 ```
