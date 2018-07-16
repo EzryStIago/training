@@ -424,21 +424,25 @@ Output:
         Proper-paired reads map to different chrom:312
 
 ```
+In the next example we calculate the RNA-seq reads coverage over gene body using `geneBody_coverage.py`.
+However for the input this script requires  bam files to be sorted and indexed. We will do it using samtools. Moreover for calculations and providing a graphical outputs  R-package is needed.<br>
+Load `samtools` and `R-Project` modules and go to the tophat_out sample folder
 
-The script does genebody coverage calculation requires the input bam files to be sorted and indexed (we will do it using samtools). The calculation and plot will require R
-Go to one of the tophat_out sample folder
 ```
 module load intel/17.0.4  R-Project/3.4.1    
 module load samtools
 samtools sort accepted_hits.bam –o accepted_hits.sorted.bam 
-##this may take a while, you may use the one already prepared for you by making a soft link
-
+```
+This may take some time, instead you may use the one already prepared for you by making a soft link to it:
+```
 ln -s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.sorted.bam accepted_hits.sorted.bam
+```
+
+```
 
 
-samtools index accepted_hits.sorted.bam
- 
-geneBody_coverage.py -r /projects/oarc/Genomics_Workshop/Reference/hg38.housekeepingGenes.bed -i accepted_hits.sorted.bam -o test
+samtools index accepted_hits.sorted.bam 
+  -r /projects/oarc/Genomics_Workshop/Reference/hg38.housekeepingGenes.bed -i accepted_hits.sorted.bam -o test
 @ 2018-01-14 13:17:33: Read BED file (reference gene model) ...
 @ 2018-01-14 13:17:33: Total 3802 transcripts loaded
 @ 2018-01-14 13:17:33: Get BAM file(s) ...
@@ -477,29 +481,3 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.4292
 ```
 
 
-Execute these commands: 
-```
-                cd ~                      # change directory to your home directory
-                mkdir Genomics_Workshop
-                cd Genomics_Workshop
-                mkdir Programs            # download and install programs here
-```
-
-```
-                mkdir -p  /scratch/$USER/Genomics_Workshop/
-                cd /scratch/$USER/Genomics_Workshop/
-                mkdir untreated  
-                mkdir dex_treated
-```
-
-Moreover, execute the following commands to load system-installed sofware so the system knows where to find it (i.e. `samtools` command will work if you execute `module load samtools`): 
-
-```
-module load samtools       
-module load bedtools2./2.25.0
-module load bowtie2
-module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
-module load intel/17.0.4 R-Project/3.4.1
-```
-
-adding something
