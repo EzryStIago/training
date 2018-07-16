@@ -475,7 +475,7 @@ Download the gene.bed files :  `https://sourceforge.net/projects/rseqc/files/BED
 
 Execute:
 ```
-infer_experiment.py -r  /projects/oarc/Genomics_Workshop/Reference/ Homo_sapiens.GRCh38.79.bed -i accepted_hits.bam
+infer_experiment.py -r  /projects/oarc/Genomics_Workshop/Reference/Homo_sapiens.GRCh38.79.bed -i accepted_hits.bam
 ```
 Output:
 ```
