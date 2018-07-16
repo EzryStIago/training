@@ -367,6 +367,7 @@ module load intel/17.0.4
      
 read_distribution.py -i accepted_hits.bam -r /projects/oarc/Genomics_Workshop/Reference/Homo_sapiens.GRCh38.79.bed
 ```
+Provided a BAM/SAM file and reference gene model, `read_distribution.py` will calculate how mapped reads were distributed over genome feature (like CDS exon, 5’UTR exon, 3’ UTR exon, Intron, Intergenic regions).<br>
 Output: 
 ```
         processing/projects/oarc/Genomics_Workshop/Reference/Homo_sapiens.GRCh38.79.bed ... Done
@@ -391,6 +392,7 @@ Output:
 ```
 Execute:  
 ```bam_stat.py -i accepted_hits.bam```
+It will summarize mapping statistics of a BAM or SAM file.<br>
 Output: 
 ```
         Load BAM file ...
