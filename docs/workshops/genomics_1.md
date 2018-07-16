@@ -435,7 +435,7 @@ samtools sort accepted_hits.bam -o accepted_hits.sorted.bam
 ```
 This may take some time, thus you may use instead one of already prepared files by making a soft link to it:
 ```
-ln -s /projects/oarc/Genomics_Workshop/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.sorted.ba accepted_hits.sorted.bam
+ln -s /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/SRA_data/untreated/tophat_out/untreated_SRR1039508/accepted_hits.sorted.ba accepted_hits.sorted.bam
 ```
 Execute:
 ```
