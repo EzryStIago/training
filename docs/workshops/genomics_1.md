@@ -391,7 +391,9 @@ Output:
         =====================================================================
 ```
 Execute:  
-```bam_stat.py -i accepted_hits.bam```
+```
+bam_stat.py -i accepted_hits.bam
+```
 It will summarize mapping statistics of a BAM or SAM file.<br>
 Output: 
 ```
