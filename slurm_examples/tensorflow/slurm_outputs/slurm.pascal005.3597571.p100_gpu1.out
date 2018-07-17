@@ -1,0 +1,160 @@
+
+Evaluation results:
+	{'accuracy': 0.9923, 'loss': 0.030755283, 'global_step': 24600}
+
+
+Evaluation results:
+	{'accuracy': 0.9921, 'loss': 0.028967576, 'global_step': 25200}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.029369272, 'global_step': 25800}
+
+
+Evaluation results:
+	{'accuracy': 0.992, 'loss': 0.03020647, 'global_step': 26400}
+
+
+Evaluation results:
+	{'accuracy': 0.9938, 'loss': 0.027061017, 'global_step': 27000}
+
+
+Evaluation results:
+	{'accuracy': 0.9928, 'loss': 0.026501853, 'global_step': 27600}
+
+
+Evaluation results:
+	{'accuracy': 0.9925, 'loss': 0.031257357, 'global_step': 28200}
+
+
+Evaluation results:
+	{'accuracy': 0.993, 'loss': 0.02852387, 'global_step': 28800}
+
+
+Evaluation results:
+	{'accuracy': 0.993, 'loss': 0.027110942, 'global_step': 29400}
+
+
+Evaluation results:
+	{'accuracy': 0.9929, 'loss': 0.026781272, 'global_step': 30000}
+
+
+Evaluation results:
+	{'accuracy': 0.9924, 'loss': 0.029124089, 'global_step': 30600}
+
+
+Evaluation results:
+	{'accuracy': 0.9916, 'loss': 0.038972743, 'global_step': 31200}
+
+
+Evaluation results:
+	{'accuracy': 0.9925, 'loss': 0.03208072, 'global_step': 31800}
+
+
+Evaluation results:
+	{'accuracy': 0.9925, 'loss': 0.027373264, 'global_step': 32400}
+
+
+Evaluation results:
+	{'accuracy': 0.9926, 'loss': 0.028198423, 'global_step': 33000}
+
+
+Evaluation results:
+	{'accuracy': 0.9931, 'loss': 0.02737837, 'global_step': 33600}
+
+
+Evaluation results:
+	{'accuracy': 0.992, 'loss': 0.032001026, 'global_step': 34200}
+
+
+Evaluation results:
+	{'accuracy': 0.9926, 'loss': 0.026679669, 'global_step': 34800}
+
+
+Evaluation results:
+	{'accuracy': 0.9936, 'loss': 0.024210531, 'global_step': 35400}
+
+
+Evaluation results:
+	{'accuracy': 0.9934, 'loss': 0.024723286, 'global_step': 36000}
+
+
+Evaluation results:
+	{'accuracy': 0.9926, 'loss': 0.029230304, 'global_step': 36600}
+
+
+Evaluation results:
+	{'accuracy': 0.9926, 'loss': 0.029248584, 'global_step': 37200}
+
+
+Evaluation results:
+	{'accuracy': 0.9939, 'loss': 0.027919447, 'global_step': 37800}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.030535571, 'global_step': 38400}
+
+
+Evaluation results:
+	{'accuracy': 0.9906, 'loss': 0.042797793, 'global_step': 39000}
+
+
+Evaluation results:
+	{'accuracy': 0.9934, 'loss': 0.026428558, 'global_step': 39600}
+
+
+Evaluation results:
+	{'accuracy': 0.9938, 'loss': 0.028439691, 'global_step': 40200}
+
+
+Evaluation results:
+	{'accuracy': 0.9936, 'loss': 0.028842354, 'global_step': 40800}
+
+
+Evaluation results:
+	{'accuracy': 0.9931, 'loss': 0.029758932, 'global_step': 41400}
+
+
+Evaluation results:
+	{'accuracy': 0.9931, 'loss': 0.029754113, 'global_step': 42000}
+
+
+Evaluation results:
+	{'accuracy': 0.9939, 'loss': 0.026726892, 'global_step': 42600}
+
+
+Evaluation results:
+	{'accuracy': 0.9943, 'loss': 0.028492603, 'global_step': 43200}
+
+
+Evaluation results:
+	{'accuracy': 0.9917, 'loss': 0.03331171, 'global_step': 43800}
+
+
+Evaluation results:
+	{'accuracy': 0.9928, 'loss': 0.032804094, 'global_step': 44400}
+
+
+Evaluation results:
+	{'accuracy': 0.994, 'loss': 0.031176813, 'global_step': 45000}
+
+
+Evaluation results:
+	{'accuracy': 0.9935, 'loss': 0.030056654, 'global_step': 45600}
+
+
+Evaluation results:
+	{'accuracy': 0.9933, 'loss': 0.029200118, 'global_step': 46200}
+
+
+Evaluation results:
+	{'accuracy': 0.9932, 'loss': 0.035514962, 'global_step': 46800}
+
+
+Evaluation results:
+	{'accuracy': 0.9926, 'loss': 0.030664794, 'global_step': 47400}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.031728227, 'global_step': 48000}
+

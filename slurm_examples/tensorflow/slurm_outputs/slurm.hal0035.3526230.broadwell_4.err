@@ -1,0 +1,1442 @@
+INFO:tensorflow:Using default config.
+INFO:tensorflow:Using config: {'_model_dir': '/tmp/mnist_model', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': None, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f99ed1a5908>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2018-07-10 14:04:32.877261: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 1 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.3022988, train_accuracy = 0.13
+INFO:tensorflow:loss = 2.3022988, step = 1
+INFO:tensorflow:global_step/sec: 5.30192
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.38092476, train_accuracy = 0.52 (18.861 sec)
+INFO:tensorflow:loss = 0.38092476, step = 101 (18.861 sec)
+INFO:tensorflow:global_step/sec: 5.54311
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.3268162, train_accuracy = 0.64666665 (18.040 sec)
+INFO:tensorflow:loss = 0.3268162, step = 201 (18.040 sec)
+INFO:tensorflow:global_step/sec: 5.55153
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.32513696, train_accuracy = 0.715 (18.013 sec)
+INFO:tensorflow:loss = 0.32513696, step = 301 (18.013 sec)
+INFO:tensorflow:global_step/sec: 5.54574
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.12817262, train_accuracy = 0.758 (18.032 sec)
+INFO:tensorflow:loss = 0.12817262, step = 401 (18.032 sec)
+INFO:tensorflow:global_step/sec: 5.55701
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.16549838, train_accuracy = 0.79 (17.995 sec)
+INFO:tensorflow:loss = 0.16549838, step = 501 (17.995 sec)
+INFO:tensorflow:Saving checkpoints for 600 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.113675006.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:06:27
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:06:33
+INFO:tensorflow:Saving dict for global step 600: accuracy = 0.9676, global_step = 600, loss = 0.10955266
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 601 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.11222471, train_accuracy = 0.96
+INFO:tensorflow:loss = 0.11222471, step = 601
+INFO:tensorflow:global_step/sec: 5.40923
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.26155543, train_accuracy = 0.945 (18.487 sec)
+INFO:tensorflow:loss = 0.26155543, step = 701 (18.487 sec)
+INFO:tensorflow:global_step/sec: 5.53909
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.10763643, train_accuracy = 0.96 (18.054 sec)
+INFO:tensorflow:loss = 0.10763643, step = 801 (18.054 sec)
+INFO:tensorflow:global_step/sec: 5.54863
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.1350368, train_accuracy = 0.9675 (18.022 sec)
+INFO:tensorflow:loss = 0.1350368, step = 901 (18.022 sec)
+INFO:tensorflow:global_step/sec: 5.45146
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.06489019, train_accuracy = 0.968 (18.344 sec)
+INFO:tensorflow:loss = 0.06489019, step = 1001 (18.344 sec)
+INFO:tensorflow:global_step/sec: 5.31638
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0880783, train_accuracy = 0.9683333 (18.810 sec)
+INFO:tensorflow:loss = 0.0880783, step = 1101 (18.810 sec)
+INFO:tensorflow:Saving checkpoints for 1200 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.06368217.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:08:27
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-1200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:08:33
+INFO:tensorflow:Saving dict for global step 1200: accuracy = 0.9796, global_step = 1200, loss = 0.065359265
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-1200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 1201 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.043997068, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.043997068, step = 1201
+INFO:tensorflow:global_step/sec: 5.09859
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.09233549, train_accuracy = 0.985 (19.614 sec)
+INFO:tensorflow:loss = 0.09233549, step = 1301 (19.614 sec)
+INFO:tensorflow:global_step/sec: 5.25741
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.11632433, train_accuracy = 0.9766667 (19.021 sec)
+INFO:tensorflow:loss = 0.11632433, step = 1401 (19.021 sec)
+INFO:tensorflow:global_step/sec: 5.13546
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.02092537, train_accuracy = 0.9825 (19.472 sec)
+INFO:tensorflow:loss = 0.02092537, step = 1501 (19.472 sec)
+INFO:tensorflow:global_step/sec: 5.21097
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.030030096, train_accuracy = 0.984 (19.190 sec)
+INFO:tensorflow:loss = 0.030030096, step = 1601 (19.190 sec)
+INFO:tensorflow:global_step/sec: 5.13278
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.06900572, train_accuracy = 0.98333335 (19.483 sec)
+INFO:tensorflow:loss = 0.06900572, step = 1701 (19.483 sec)
+INFO:tensorflow:Saving checkpoints for 1800 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.10872379.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:10:32
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-1800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:10:39
+INFO:tensorflow:Saving dict for global step 1800: accuracy = 0.9826, global_step = 1800, loss = 0.049698595
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-1800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 1801 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.13373628, train_accuracy = 0.95
+INFO:tensorflow:loss = 0.13373628, step = 1801
+INFO:tensorflow:global_step/sec: 5.14461
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.098989576, train_accuracy = 0.965 (19.438 sec)
+INFO:tensorflow:loss = 0.098989576, step = 1901 (19.438 sec)
+INFO:tensorflow:global_step/sec: 5.21311
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.09327858, train_accuracy = 0.96666664 (19.182 sec)
+INFO:tensorflow:loss = 0.09327858, step = 2001 (19.182 sec)
+INFO:tensorflow:global_step/sec: 5.20994
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.030338576, train_accuracy = 0.9725 (19.194 sec)
+INFO:tensorflow:loss = 0.030338576, step = 2101 (19.194 sec)
+INFO:tensorflow:global_step/sec: 5.21295
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.022484861, train_accuracy = 0.978 (19.183 sec)
+INFO:tensorflow:loss = 0.022484861, step = 2201 (19.183 sec)
+INFO:tensorflow:global_step/sec: 5.23061
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.07257024, train_accuracy = 0.98 (19.118 sec)
+INFO:tensorflow:loss = 0.07257024, step = 2301 (19.118 sec)
+INFO:tensorflow:Saving checkpoints for 2400 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.07112044.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:12:37
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-2400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:12:44
+INFO:tensorflow:Saving dict for global step 2400: accuracy = 0.9875, global_step = 2400, loss = 0.037212238
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-2400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 2401 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.042835508, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.042835508, step = 2401
+INFO:tensorflow:global_step/sec: 5.18226
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.09727554, train_accuracy = 0.985 (19.297 sec)
+INFO:tensorflow:loss = 0.09727554, step = 2501 (19.297 sec)
+INFO:tensorflow:global_step/sec: 5.34768
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.067835465, train_accuracy = 0.9866667 (18.699 sec)
+INFO:tensorflow:loss = 0.067835465, step = 2601 (18.699 sec)
+INFO:tensorflow:global_step/sec: 5.32518
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.06559984, train_accuracy = 0.98 (18.779 sec)
+INFO:tensorflow:loss = 0.06559984, step = 2701 (18.779 sec)
+INFO:tensorflow:global_step/sec: 5.33678
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.03740837, train_accuracy = 0.982 (18.738 sec)
+INFO:tensorflow:loss = 0.03740837, step = 2801 (18.738 sec)
+INFO:tensorflow:global_step/sec: 5.28823
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.013397886, train_accuracy = 0.985 (18.910 sec)
+INFO:tensorflow:loss = 0.013397886, step = 2901 (18.910 sec)
+INFO:tensorflow:Saving checkpoints for 3000 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.01144788.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:14:40
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-3000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:14:46
+INFO:tensorflow:Saving dict for global step 3000: accuracy = 0.9877, global_step = 3000, loss = 0.03713714
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-3000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 3001 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.059134386, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.059134386, step = 3001
+INFO:tensorflow:global_step/sec: 5.22369
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.07940367, train_accuracy = 0.985 (19.144 sec)
+INFO:tensorflow:loss = 0.07940367, step = 3101 (19.144 sec)
+INFO:tensorflow:global_step/sec: 5.24382
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.021229453, train_accuracy = 0.9866667 (19.070 sec)
+INFO:tensorflow:loss = 0.021229453, step = 3201 (19.070 sec)
+INFO:tensorflow:global_step/sec: 5.34467
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.027872544, train_accuracy = 0.99 (18.710 sec)
+INFO:tensorflow:loss = 0.027872544, step = 3301 (18.711 sec)
+INFO:tensorflow:global_step/sec: 5.33164
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.007946111, train_accuracy = 0.992 (18.756 sec)
+INFO:tensorflow:loss = 0.007946111, step = 3401 (18.756 sec)
+INFO:tensorflow:global_step/sec: 5.34786
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.066129535, train_accuracy = 0.99 (18.699 sec)
+INFO:tensorflow:loss = 0.066129535, step = 3501 (18.699 sec)
+INFO:tensorflow:Saving checkpoints for 3600 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.015747966.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:16:42
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-3600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:16:49
+INFO:tensorflow:Saving dict for global step 3600: accuracy = 0.9891, global_step = 3600, loss = 0.030374384
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-3600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 3601 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.03570868, train_accuracy = 0.98
+INFO:tensorflow:loss = 0.03570868, step = 3601
+INFO:tensorflow:global_step/sec: 5.17465
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.030365348, train_accuracy = 0.985 (19.325 sec)
+INFO:tensorflow:loss = 0.030365348, step = 3701 (19.325 sec)
+INFO:tensorflow:global_step/sec: 5.31358
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0057816575, train_accuracy = 0.99 (18.819 sec)
+INFO:tensorflow:loss = 0.0057816575, step = 3801 (18.819 sec)
+INFO:tensorflow:global_step/sec: 5.27161
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.016018149, train_accuracy = 0.9925 (18.970 sec)
+INFO:tensorflow:loss = 0.016018149, step = 3901 (18.970 sec)
+INFO:tensorflow:global_step/sec: 5.3273
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.005955655, train_accuracy = 0.994 (18.771 sec)
+INFO:tensorflow:loss = 0.005955655, step = 4001 (18.771 sec)
+INFO:tensorflow:global_step/sec: 5.27724
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0067863744, train_accuracy = 0.995 (18.949 sec)
+INFO:tensorflow:loss = 0.0067863744, step = 4101 (18.949 sec)
+INFO:tensorflow:Saving checkpoints for 4200 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.1284504.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:18:45
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-4200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:18:52
+INFO:tensorflow:Saving dict for global step 4200: accuracy = 0.9912, global_step = 4200, loss = 0.029632134
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-4200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 4201 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.015217223, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.015217223, step = 4201
+INFO:tensorflow:global_step/sec: 5.1417
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.016052833, train_accuracy = 0.995 (19.449 sec)
+INFO:tensorflow:loss = 0.016052833, step = 4301 (19.449 sec)
+INFO:tensorflow:global_step/sec: 5.19286
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.015276942, train_accuracy = 0.99333334 (19.257 sec)
+INFO:tensorflow:loss = 0.015276942, step = 4401 (19.257 sec)
+INFO:tensorflow:global_step/sec: 5.22381
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.019192118, train_accuracy = 0.9925 (19.143 sec)
+INFO:tensorflow:loss = 0.019192118, step = 4501 (19.143 sec)
+INFO:tensorflow:global_step/sec: 5.17077
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.07070797, train_accuracy = 0.986 (19.339 sec)
+INFO:tensorflow:loss = 0.07070797, step = 4601 (19.339 sec)
+INFO:tensorflow:global_step/sec: 5.23501
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.02902013, train_accuracy = 0.9866667 (19.102 sec)
+INFO:tensorflow:loss = 0.02902013, step = 4701 (19.102 sec)
+INFO:tensorflow:Saving checkpoints for 4800 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.006464145.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:20:50
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-4800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:20:57
+INFO:tensorflow:Saving dict for global step 4800: accuracy = 0.9898, global_step = 4800, loss = 0.027696013
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-4800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 4801 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.018240621, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.018240621, step = 4801
+INFO:tensorflow:global_step/sec: 5.28911
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0071474146, train_accuracy = 0.995 (18.907 sec)
+INFO:tensorflow:loss = 0.0071474146, step = 4901 (18.907 sec)
+INFO:tensorflow:global_step/sec: 5.57063
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.019151092, train_accuracy = 0.99666667 (17.951 sec)
+INFO:tensorflow:loss = 0.019151092, step = 5001 (17.951 sec)
+INFO:tensorflow:global_step/sec: 5.57238
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.018025849, train_accuracy = 0.995 (17.946 sec)
+INFO:tensorflow:loss = 0.018025849, step = 5101 (17.946 sec)
+INFO:tensorflow:global_step/sec: 5.57592
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.01819906, train_accuracy = 0.996 (17.934 sec)
+INFO:tensorflow:loss = 0.01819906, step = 5201 (17.934 sec)
+INFO:tensorflow:global_step/sec: 5.36858
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.020033179, train_accuracy = 0.995 (18.627 sec)
+INFO:tensorflow:loss = 0.020033179, step = 5301 (18.627 sec)
+INFO:tensorflow:Saving checkpoints for 5400 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0098847635.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:22:50
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-5400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:22:57
+INFO:tensorflow:Saving dict for global step 5400: accuracy = 0.9915, global_step = 5400, loss = 0.025150668
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-5400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 5401 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.004659583, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.004659583, step = 5401
+INFO:tensorflow:global_step/sec: 5.10249
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.017162388, train_accuracy = 1.0 (19.599 sec)
+INFO:tensorflow:loss = 0.017162388, step = 5501 (19.599 sec)
+INFO:tensorflow:global_step/sec: 5.30213
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.003136873, train_accuracy = 1.0 (18.860 sec)
+INFO:tensorflow:loss = 0.003136873, step = 5601 (18.860 sec)
+INFO:tensorflow:global_step/sec: 5.28877
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.027175047, train_accuracy = 0.9975 (18.908 sec)
+INFO:tensorflow:loss = 0.027175047, step = 5701 (18.908 sec)
+INFO:tensorflow:global_step/sec: 5.28921
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00885072, train_accuracy = 0.998 (18.906 sec)
+INFO:tensorflow:loss = 0.00885072, step = 5801 (18.906 sec)
+INFO:tensorflow:global_step/sec: 5.17209
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.025786798, train_accuracy = 0.99666667 (19.335 sec)
+INFO:tensorflow:loss = 0.025786798, step = 5901 (19.335 sec)
+INFO:tensorflow:Saving checkpoints for 6000 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.025374146.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:24:54
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-6000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:25:01
+INFO:tensorflow:Saving dict for global step 6000: accuracy = 0.9914, global_step = 6000, loss = 0.023525674
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-6000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 6001 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.08142811, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.08142811, step = 6001
+INFO:tensorflow:global_step/sec: 5.08106
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.019882213, train_accuracy = 0.99 (19.681 sec)
+INFO:tensorflow:loss = 0.019882213, step = 6101 (19.681 sec)
+INFO:tensorflow:global_step/sec: 5.31113
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.02957184, train_accuracy = 0.99 (18.828 sec)
+INFO:tensorflow:loss = 0.02957184, step = 6201 (18.828 sec)
+INFO:tensorflow:global_step/sec: 5.27235
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.008114841, train_accuracy = 0.9925 (18.967 sec)
+INFO:tensorflow:loss = 0.008114841, step = 6301 (18.967 sec)
+INFO:tensorflow:global_step/sec: 5.30345
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.011858387, train_accuracy = 0.994 (18.856 sec)
+INFO:tensorflow:loss = 0.011858387, step = 6401 (18.856 sec)
+INFO:tensorflow:global_step/sec: 5.28779
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.026785253, train_accuracy = 0.9916667 (18.911 sec)
+INFO:tensorflow:loss = 0.026785253, step = 6501 (18.911 sec)
+INFO:tensorflow:Saving checkpoints for 6600 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.019075805.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:26:58
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-6600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:27:05
+INFO:tensorflow:Saving dict for global step 6600: accuracy = 0.9913, global_step = 6600, loss = 0.023217577
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-6600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 6601 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.048022877, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.048022877, step = 6601
+INFO:tensorflow:global_step/sec: 5.16234
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.04043559, train_accuracy = 0.99 (19.371 sec)
+INFO:tensorflow:loss = 0.04043559, step = 6701 (19.371 sec)
+INFO:tensorflow:global_step/sec: 5.3059
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.009252476, train_accuracy = 0.99333334 (18.847 sec)
+INFO:tensorflow:loss = 0.009252476, step = 6801 (18.847 sec)
+INFO:tensorflow:global_step/sec: 5.29045
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.017028134, train_accuracy = 0.9925 (18.902 sec)
+INFO:tensorflow:loss = 0.017028134, step = 6901 (18.902 sec)
+INFO:tensorflow:global_step/sec: 5.26959
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.003058242, train_accuracy = 0.994 (18.977 sec)
+INFO:tensorflow:loss = 0.003058242, step = 7001 (18.977 sec)
+INFO:tensorflow:global_step/sec: 5.29357
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.004254067, train_accuracy = 0.995 (18.891 sec)
+INFO:tensorflow:loss = 0.004254067, step = 7101 (18.891 sec)
+INFO:tensorflow:Saving checkpoints for 7200 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0019175258.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:29:01
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-7200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:29:08
+INFO:tensorflow:Saving dict for global step 7200: accuracy = 0.992, global_step = 7200, loss = 0.022694437
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-7200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 7201 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.004913232, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.004913232, step = 7201
+INFO:tensorflow:global_step/sec: 5.05714
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0075596874, train_accuracy = 1.0 (19.774 sec)
+INFO:tensorflow:loss = 0.0075596874, step = 7301 (19.774 sec)
+INFO:tensorflow:global_step/sec: 5.24549
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.029888794, train_accuracy = 0.99666667 (19.064 sec)
+INFO:tensorflow:loss = 0.029888794, step = 7401 (19.064 sec)
+INFO:tensorflow:global_step/sec: 5.24543
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0020851356, train_accuracy = 0.9975 (19.064 sec)
+INFO:tensorflow:loss = 0.0020851356, step = 7501 (19.064 sec)
+INFO:tensorflow:global_step/sec: 5.18018
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.017600197, train_accuracy = 0.996 (19.304 sec)
+INFO:tensorflow:loss = 0.017600197, step = 7601 (19.304 sec)
+INFO:tensorflow:global_step/sec: 5.24057
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.004856691, train_accuracy = 0.99666667 (19.082 sec)
+INFO:tensorflow:loss = 0.004856691, step = 7701 (19.082 sec)
+INFO:tensorflow:Saving checkpoints for 7800 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0062087774.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:31:06
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-7800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:31:13
+INFO:tensorflow:Saving dict for global step 7800: accuracy = 0.9918, global_step = 7800, loss = 0.02387386
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-7800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 7801 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.020725556, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.020725556, step = 7801
+INFO:tensorflow:global_step/sec: 5.14714
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0033733845, train_accuracy = 1.0 (19.428 sec)
+INFO:tensorflow:loss = 0.0033733845, step = 7901 (19.428 sec)
+INFO:tensorflow:global_step/sec: 5.29806
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.02691207, train_accuracy = 0.99666667 (18.875 sec)
+INFO:tensorflow:loss = 0.02691207, step = 8001 (18.875 sec)
+INFO:tensorflow:global_step/sec: 5.27927
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0024631764, train_accuracy = 0.9975 (18.942 sec)
+INFO:tensorflow:loss = 0.0024631764, step = 8101 (18.942 sec)
+INFO:tensorflow:global_step/sec: 5.24126
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0039430666, train_accuracy = 0.998 (19.079 sec)
+INFO:tensorflow:loss = 0.0039430666, step = 8201 (19.079 sec)
+INFO:tensorflow:global_step/sec: 5.25731
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.016277295, train_accuracy = 0.99666667 (19.021 sec)
+INFO:tensorflow:loss = 0.016277295, step = 8301 (19.021 sec)
+INFO:tensorflow:Saving checkpoints for 8400 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.02273249.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:33:10
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-8400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:33:17
+INFO:tensorflow:Saving dict for global step 8400: accuracy = 0.9917, global_step = 8400, loss = 0.0224975
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-8400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 8401 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.008087399, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.008087399, step = 8401
+INFO:tensorflow:global_step/sec: 5.17896
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0021235682, train_accuracy = 1.0 (19.309 sec)
+INFO:tensorflow:loss = 0.0021235682, step = 8501 (19.309 sec)
+INFO:tensorflow:global_step/sec: 5.30896
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0032233011, train_accuracy = 1.0 (18.836 sec)
+INFO:tensorflow:loss = 0.0032233011, step = 8601 (18.836 sec)
+INFO:tensorflow:global_step/sec: 5.325
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0027977515, train_accuracy = 1.0 (18.780 sec)
+INFO:tensorflow:loss = 0.0027977515, step = 8701 (18.780 sec)
+INFO:tensorflow:global_step/sec: 5.24226
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0027262473, train_accuracy = 1.0 (19.076 sec)
+INFO:tensorflow:loss = 0.0027262473, step = 8801 (19.076 sec)
+INFO:tensorflow:global_step/sec: 5.33114
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0019673624, train_accuracy = 1.0 (18.758 sec)
+INFO:tensorflow:loss = 0.0019673624, step = 8901 (18.758 sec)
+INFO:tensorflow:Saving checkpoints for 9000 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0024858296.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:35:13
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-9000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:35:20
+INFO:tensorflow:Saving dict for global step 9000: accuracy = 0.9923, global_step = 9000, loss = 0.020992966
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-9000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 9001 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00840439, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00840439, step = 9001
+INFO:tensorflow:global_step/sec: 5.30753
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.015175946, train_accuracy = 0.995 (18.841 sec)
+INFO:tensorflow:loss = 0.015175946, step = 9101 (18.841 sec)
+INFO:tensorflow:global_step/sec: 5.52649
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00093577115, train_accuracy = 0.99666667 (18.095 sec)
+INFO:tensorflow:loss = 0.00093577115, step = 9201 (18.095 sec)
+INFO:tensorflow:global_step/sec: 5.56233
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.01724595, train_accuracy = 0.995 (17.978 sec)
+INFO:tensorflow:loss = 0.01724595, step = 9301 (17.978 sec)
+INFO:tensorflow:global_step/sec: 5.60188
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.03192266, train_accuracy = 0.994 (17.851 sec)
+INFO:tensorflow:loss = 0.03192266, step = 9401 (17.851 sec)
+INFO:tensorflow:global_step/sec: 5.59355
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0040872856, train_accuracy = 0.995 (17.878 sec)
+INFO:tensorflow:loss = 0.0040872856, step = 9501 (17.878 sec)
+INFO:tensorflow:Saving checkpoints for 9600 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0065436526.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:37:11
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-9600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:37:18
+INFO:tensorflow:Saving dict for global step 9600: accuracy = 0.9924, global_step = 9600, loss = 0.022271417
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-9600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 9601 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.09614641, train_accuracy = 0.98
+INFO:tensorflow:loss = 0.09614641, step = 9601
+INFO:tensorflow:global_step/sec: 5.42179
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0012909728, train_accuracy = 0.99 (18.444 sec)
+INFO:tensorflow:loss = 0.0012909728, step = 9701 (18.444 sec)
+INFO:tensorflow:global_step/sec: 5.56466
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0027066248, train_accuracy = 0.99333334 (17.971 sec)
+INFO:tensorflow:loss = 0.0027066248, step = 9801 (17.971 sec)
+INFO:tensorflow:global_step/sec: 5.53449
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0044880463, train_accuracy = 0.995 (18.068 sec)
+INFO:tensorflow:loss = 0.0044880463, step = 9901 (18.068 sec)
+INFO:tensorflow:global_step/sec: 5.56057
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.022914616, train_accuracy = 0.994 (17.984 sec)
+INFO:tensorflow:loss = 0.022914616, step = 10001 (17.984 sec)
+INFO:tensorflow:global_step/sec: 5.55695
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.02537154, train_accuracy = 0.9916667 (17.995 sec)
+INFO:tensorflow:loss = 0.02537154, step = 10101 (17.995 sec)
+INFO:tensorflow:Saving checkpoints for 10200 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0019395213.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:39:09
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-10200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:39:15
+INFO:tensorflow:Saving dict for global step 10200: accuracy = 0.9923, global_step = 10200, loss = 0.021838041
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-10200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 10201 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0201573, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.0201573, step = 10201
+INFO:tensorflow:global_step/sec: 5.41751
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0025450278, train_accuracy = 0.995 (18.459 sec)
+INFO:tensorflow:loss = 0.0025450278, step = 10301 (18.459 sec)
+INFO:tensorflow:global_step/sec: 5.56865
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.018586766, train_accuracy = 0.99333334 (17.958 sec)
+INFO:tensorflow:loss = 0.018586766, step = 10401 (17.958 sec)
+INFO:tensorflow:global_step/sec: 5.56021
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.012734452, train_accuracy = 0.9925 (17.985 sec)
+INFO:tensorflow:loss = 0.012734452, step = 10501 (17.985 sec)
+INFO:tensorflow:global_step/sec: 5.56328
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.009765303, train_accuracy = 0.992 (17.975 sec)
+INFO:tensorflow:loss = 0.009765303, step = 10601 (17.975 sec)
+INFO:tensorflow:global_step/sec: 5.56223
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.005646346, train_accuracy = 0.99333334 (17.978 sec)
+INFO:tensorflow:loss = 0.005646346, step = 10701 (17.978 sec)
+INFO:tensorflow:Saving checkpoints for 10800 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0035717385.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:41:06
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-10800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:41:13
+INFO:tensorflow:Saving dict for global step 10800: accuracy = 0.9929, global_step = 10800, loss = 0.021627838
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-10800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 10801 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00072570494, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00072570494, step = 10801
+INFO:tensorflow:global_step/sec: 5.41096
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.006929816, train_accuracy = 1.0 (18.481 sec)
+INFO:tensorflow:loss = 0.006929816, step = 10901 (18.481 sec)
+INFO:tensorflow:global_step/sec: 5.579
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.029511072, train_accuracy = 0.99666667 (17.924 sec)
+INFO:tensorflow:loss = 0.029511072, step = 11001 (17.924 sec)
+INFO:tensorflow:global_step/sec: 5.56875
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.002168884, train_accuracy = 0.9975 (17.957 sec)
+INFO:tensorflow:loss = 0.002168884, step = 11101 (17.957 sec)
+INFO:tensorflow:global_step/sec: 5.53634
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0012846923, train_accuracy = 0.998 (18.063 sec)
+INFO:tensorflow:loss = 0.0012846923, step = 11201 (18.063 sec)
+INFO:tensorflow:global_step/sec: 5.56422
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0009988627, train_accuracy = 0.99833333 (17.972 sec)
+INFO:tensorflow:loss = 0.0009988627, step = 11301 (17.972 sec)
+INFO:tensorflow:Saving checkpoints for 11400 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.026894908.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:43:04
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-11400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:43:11
+INFO:tensorflow:Saving dict for global step 11400: accuracy = 0.9916, global_step = 11400, loss = 0.025885511
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-11400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 11401 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0030443438, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0030443438, step = 11401
+INFO:tensorflow:global_step/sec: 5.46661
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00060914055, train_accuracy = 1.0 (18.293 sec)
+INFO:tensorflow:loss = 0.00060914055, step = 11501 (18.293 sec)
+INFO:tensorflow:global_step/sec: 5.56396
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.011663108, train_accuracy = 1.0 (17.973 sec)
+INFO:tensorflow:loss = 0.011663108, step = 11601 (17.973 sec)
+INFO:tensorflow:global_step/sec: 5.55885
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.01573751, train_accuracy = 0.9975 (17.989 sec)
+INFO:tensorflow:loss = 0.01573751, step = 11701 (17.989 sec)
+INFO:tensorflow:global_step/sec: 5.559
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00055772945, train_accuracy = 0.998 (17.989 sec)
+INFO:tensorflow:loss = 0.00055772945, step = 11801 (17.989 sec)
+INFO:tensorflow:global_step/sec: 5.57755
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.004965033, train_accuracy = 0.99833333 (17.929 sec)
+INFO:tensorflow:loss = 0.004965033, step = 11901 (17.929 sec)
+INFO:tensorflow:Saving checkpoints for 12000 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.011303321.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:45:01
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-12000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:45:08
+INFO:tensorflow:Saving dict for global step 12000: accuracy = 0.9924, global_step = 12000, loss = 0.023167534
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-12000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 12001 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0055212253, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0055212253, step = 12001
+INFO:tensorflow:global_step/sec: 5.43668
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0010514959, train_accuracy = 1.0 (18.394 sec)
+INFO:tensorflow:loss = 0.0010514959, step = 12101 (18.394 sec)
+INFO:tensorflow:global_step/sec: 5.56327
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.008017311, train_accuracy = 1.0 (17.975 sec)
+INFO:tensorflow:loss = 0.008017311, step = 12201 (17.975 sec)
+INFO:tensorflow:global_step/sec: 5.58039
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0009213497, train_accuracy = 1.0 (17.920 sec)
+INFO:tensorflow:loss = 0.0009213497, step = 12301 (17.920 sec)
+INFO:tensorflow:global_step/sec: 5.5852
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.016949745, train_accuracy = 0.998 (17.905 sec)
+INFO:tensorflow:loss = 0.016949745, step = 12401 (17.905 sec)
+INFO:tensorflow:global_step/sec: 5.58916
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0022829014, train_accuracy = 0.99833333 (17.892 sec)
+INFO:tensorflow:loss = 0.0022829014, step = 12501 (17.892 sec)
+INFO:tensorflow:Saving checkpoints for 12600 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0016459929.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:46:59
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-12600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:47:06
+INFO:tensorflow:Saving dict for global step 12600: accuracy = 0.9934, global_step = 12600, loss = 0.019199353
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-12600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 12601 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0113617, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0113617, step = 12601
+INFO:tensorflow:global_step/sec: 5.44411
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0008798623, train_accuracy = 1.0 (18.369 sec)
+INFO:tensorflow:loss = 0.0008798623, step = 12701 (18.369 sec)
+INFO:tensorflow:global_step/sec: 5.55666
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.021971198, train_accuracy = 0.99666667 (17.997 sec)
+INFO:tensorflow:loss = 0.021971198, step = 12801 (17.997 sec)
+INFO:tensorflow:global_step/sec: 5.55434
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0011352361, train_accuracy = 0.9975 (18.004 sec)
+INFO:tensorflow:loss = 0.0011352361, step = 12901 (18.004 sec)
+INFO:tensorflow:global_step/sec: 5.56738
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0009956644, train_accuracy = 0.998 (17.962 sec)
+INFO:tensorflow:loss = 0.0009956644, step = 13001 (17.962 sec)
+INFO:tensorflow:global_step/sec: 5.55886
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.001112203, train_accuracy = 0.99833333 (17.989 sec)
+INFO:tensorflow:loss = 0.001112203, step = 13101 (17.989 sec)
+INFO:tensorflow:Saving checkpoints for 13200 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0041603213.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:48:56
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-13200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:49:03
+INFO:tensorflow:Saving dict for global step 13200: accuracy = 0.9933, global_step = 13200, loss = 0.019908153
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-13200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 13201 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0027180417, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0027180417, step = 13201
+INFO:tensorflow:global_step/sec: 5.41341
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.002221362, train_accuracy = 1.0 (18.473 sec)
+INFO:tensorflow:loss = 0.002221362, step = 13301 (18.473 sec)
+INFO:tensorflow:global_step/sec: 5.57354
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0037724907, train_accuracy = 1.0 (17.942 sec)
+INFO:tensorflow:loss = 0.0037724907, step = 13401 (17.942 sec)
+INFO:tensorflow:global_step/sec: 5.56092
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0009944618, train_accuracy = 1.0 (17.983 sec)
+INFO:tensorflow:loss = 0.0009944618, step = 13501 (17.983 sec)
+INFO:tensorflow:global_step/sec: 5.56544
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00050876767, train_accuracy = 1.0 (17.968 sec)
+INFO:tensorflow:loss = 0.00050876767, step = 13601 (17.968 sec)
+INFO:tensorflow:global_step/sec: 5.57398
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.024764612, train_accuracy = 0.99666667 (17.941 sec)
+INFO:tensorflow:loss = 0.024764612, step = 13701 (17.941 sec)
+INFO:tensorflow:Saving checkpoints for 13800 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0074652242.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:50:54
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-13800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:51:00
+INFO:tensorflow:Saving dict for global step 13800: accuracy = 0.993, global_step = 13800, loss = 0.01982
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-13800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 13801 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0052931886, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0052931886, step = 13801
+INFO:tensorflow:global_step/sec: 5.4576
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0056805555, train_accuracy = 1.0 (18.323 sec)
+INFO:tensorflow:loss = 0.0056805555, step = 13901 (18.323 sec)
+INFO:tensorflow:global_step/sec: 5.58703
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0008538709, train_accuracy = 1.0 (17.899 sec)
+INFO:tensorflow:loss = 0.0008538709, step = 14001 (17.899 sec)
+INFO:tensorflow:global_step/sec: 5.59661
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0046410817, train_accuracy = 1.0 (17.868 sec)
+INFO:tensorflow:loss = 0.0046410817, step = 14101 (17.868 sec)
+INFO:tensorflow:global_step/sec: 5.60705
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0029777258, train_accuracy = 1.0 (17.835 sec)
+INFO:tensorflow:loss = 0.0029777258, step = 14201 (17.835 sec)
+INFO:tensorflow:global_step/sec: 5.59911
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.005698346, train_accuracy = 1.0 (17.860 sec)
+INFO:tensorflow:loss = 0.005698346, step = 14301 (17.860 sec)
+INFO:tensorflow:Saving checkpoints for 14400 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0008115484.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:52:51
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-14400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:52:57
+INFO:tensorflow:Saving dict for global step 14400: accuracy = 0.9927, global_step = 14400, loss = 0.023004454
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-14400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 14401 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0018384153, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0018384153, step = 14401
+INFO:tensorflow:global_step/sec: 5.46637
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.000845371, train_accuracy = 1.0 (18.294 sec)
+INFO:tensorflow:loss = 0.000845371, step = 14501 (18.294 sec)
+INFO:tensorflow:global_step/sec: 5.56374
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0009975054, train_accuracy = 1.0 (17.973 sec)
+INFO:tensorflow:loss = 0.0009975054, step = 14601 (17.973 sec)
+INFO:tensorflow:global_step/sec: 5.57444
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0007339662, train_accuracy = 1.0 (17.939 sec)
+INFO:tensorflow:loss = 0.0007339662, step = 14701 (17.939 sec)
+INFO:tensorflow:global_step/sec: 5.57821
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0016766521, train_accuracy = 1.0 (17.927 sec)
+INFO:tensorflow:loss = 0.0016766521, step = 14801 (17.927 sec)
+INFO:tensorflow:global_step/sec: 5.57882
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.018939348, train_accuracy = 0.99833333 (17.925 sec)
+INFO:tensorflow:loss = 0.018939348, step = 14901 (17.925 sec)
+INFO:tensorflow:Saving checkpoints for 15000 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00031036508.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:54:48
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-15000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:54:54
+INFO:tensorflow:Saving dict for global step 15000: accuracy = 0.9929, global_step = 15000, loss = 0.020396214
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-15000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 15001 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0014736855, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0014736855, step = 15001
+INFO:tensorflow:global_step/sec: 5.46299
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.001801222, train_accuracy = 1.0 (18.305 sec)
+INFO:tensorflow:loss = 0.001801222, step = 15101 (18.305 sec)
+INFO:tensorflow:global_step/sec: 5.60561
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0014546611, train_accuracy = 1.0 (17.839 sec)
+INFO:tensorflow:loss = 0.0014546611, step = 15201 (17.839 sec)
+INFO:tensorflow:global_step/sec: 5.60573
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0037345968, train_accuracy = 1.0 (17.839 sec)
+INFO:tensorflow:loss = 0.0037345968, step = 15301 (17.839 sec)
+INFO:tensorflow:global_step/sec: 5.60834
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0022637735, train_accuracy = 1.0 (17.830 sec)
+INFO:tensorflow:loss = 0.0022637735, step = 15401 (17.830 sec)
+INFO:tensorflow:global_step/sec: 5.62577
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0021341636, train_accuracy = 1.0 (17.775 sec)
+INFO:tensorflow:loss = 0.0021341636, step = 15501 (17.775 sec)
+INFO:tensorflow:Saving checkpoints for 15600 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00065034156.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:56:45
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-15600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:56:51
+INFO:tensorflow:Saving dict for global step 15600: accuracy = 0.9927, global_step = 15600, loss = 0.023557073
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-15600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 15601 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0027633247, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0027633247, step = 15601
+INFO:tensorflow:global_step/sec: 5.37854
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00068008865, train_accuracy = 1.0 (18.593 sec)
+INFO:tensorflow:loss = 0.00068008865, step = 15701 (18.593 sec)
+INFO:tensorflow:global_step/sec: 5.56125
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0002559141, train_accuracy = 1.0 (17.981 sec)
+INFO:tensorflow:loss = 0.0002559141, step = 15801 (17.981 sec)
+INFO:tensorflow:global_step/sec: 5.58421
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.013599852, train_accuracy = 1.0 (17.908 sec)
+INFO:tensorflow:loss = 0.013599852, step = 15901 (17.908 sec)
+INFO:tensorflow:global_step/sec: 5.56668
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0032619608, train_accuracy = 1.0 (17.964 sec)
+INFO:tensorflow:loss = 0.0032619608, step = 16001 (17.964 sec)
+INFO:tensorflow:global_step/sec: 5.57173
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.03839267, train_accuracy = 0.99833333 (17.948 sec)
+INFO:tensorflow:loss = 0.03839267, step = 16101 (17.948 sec)
+INFO:tensorflow:Saving checkpoints for 16200 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00084915117.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-18:58:42
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-16200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-18:58:49
+INFO:tensorflow:Saving dict for global step 16200: accuracy = 0.9928, global_step = 16200, loss = 0.02264173
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-16200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 16201 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.009014041, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.009014041, step = 16201
+INFO:tensorflow:global_step/sec: 5.43928
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0033600274, train_accuracy = 0.995 (18.385 sec)
+INFO:tensorflow:loss = 0.0033600274, step = 16301 (18.385 sec)
+INFO:tensorflow:global_step/sec: 5.55727
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.002303029, train_accuracy = 0.99666667 (17.995 sec)
+INFO:tensorflow:loss = 0.002303029, step = 16401 (17.995 sec)
+INFO:tensorflow:global_step/sec: 5.40487
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.362501e-05, train_accuracy = 0.9975 (18.502 sec)
+INFO:tensorflow:loss = 3.362501e-05, step = 16501 (18.502 sec)
+INFO:tensorflow:global_step/sec: 5.40963
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0033747263, train_accuracy = 0.998 (18.486 sec)
+INFO:tensorflow:loss = 0.0033747263, step = 16601 (18.486 sec)
+INFO:tensorflow:global_step/sec: 5.40244
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.004305381, train_accuracy = 0.99833333 (18.510 sec)
+INFO:tensorflow:loss = 0.004305381, step = 16701 (18.510 sec)
+INFO:tensorflow:Saving checkpoints for 16800 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0030254156.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:00:42
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-16800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:00:49
+INFO:tensorflow:Saving dict for global step 16800: accuracy = 0.9931, global_step = 16800, loss = 0.023345675
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-16800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 16801 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0037445726, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0037445726, step = 16801
+INFO:tensorflow:global_step/sec: 5.07624
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0044830353, train_accuracy = 1.0 (19.700 sec)
+INFO:tensorflow:loss = 0.0044830353, step = 16901 (19.700 sec)
+INFO:tensorflow:global_step/sec: 5.2168
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0001568669, train_accuracy = 1.0 (19.169 sec)
+INFO:tensorflow:loss = 0.0001568669, step = 17001 (19.169 sec)
+INFO:tensorflow:global_step/sec: 5.24954
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.002172525, train_accuracy = 1.0 (19.049 sec)
+INFO:tensorflow:loss = 0.002172525, step = 17101 (19.049 sec)
+INFO:tensorflow:global_step/sec: 5.36973
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0031959955, train_accuracy = 1.0 (18.623 sec)
+INFO:tensorflow:loss = 0.0031959955, step = 17201 (18.623 sec)
+INFO:tensorflow:global_step/sec: 5.50856
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00047697796, train_accuracy = 1.0 (18.153 sec)
+INFO:tensorflow:loss = 0.00047697796, step = 17301 (18.153 sec)
+INFO:tensorflow:Saving checkpoints for 17400 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0014491362.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:02:45
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-17400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:02:51
+INFO:tensorflow:Saving dict for global step 17400: accuracy = 0.9924, global_step = 17400, loss = 0.023008943
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-17400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 17401 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00093315984, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00093315984, step = 17401
+INFO:tensorflow:global_step/sec: 5.45033
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00047258846, train_accuracy = 1.0 (18.348 sec)
+INFO:tensorflow:loss = 0.00047258846, step = 17501 (18.347 sec)
+INFO:tensorflow:global_step/sec: 5.59263
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0055162283, train_accuracy = 1.0 (17.881 sec)
+INFO:tensorflow:loss = 0.0055162283, step = 17601 (17.881 sec)
+INFO:tensorflow:global_step/sec: 5.57764
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0015504421, train_accuracy = 1.0 (17.929 sec)
+INFO:tensorflow:loss = 0.0015504421, step = 17701 (17.929 sec)
+INFO:tensorflow:global_step/sec: 5.54312
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.002715291, train_accuracy = 1.0 (18.040 sec)
+INFO:tensorflow:loss = 0.002715291, step = 17801 (18.040 sec)
+INFO:tensorflow:global_step/sec: 5.5633
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.002589708, train_accuracy = 1.0 (17.975 sec)
+INFO:tensorflow:loss = 0.002589708, step = 17901 (17.975 sec)
+INFO:tensorflow:Saving checkpoints for 18000 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.01487586.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:04:42
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-18000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:04:48
+INFO:tensorflow:Saving dict for global step 18000: accuracy = 0.9924, global_step = 18000, loss = 0.020792186
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-18000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 18001 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0044851215, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0044851215, step = 18001
+INFO:tensorflow:global_step/sec: 5.4449
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0036164278, train_accuracy = 1.0 (18.366 sec)
+INFO:tensorflow:loss = 0.0036164278, step = 18101 (18.366 sec)
+INFO:tensorflow:global_step/sec: 5.56219
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00072577986, train_accuracy = 1.0 (17.978 sec)
+INFO:tensorflow:loss = 0.00072577986, step = 18201 (17.978 sec)
+INFO:tensorflow:global_step/sec: 5.57719
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00017647404, train_accuracy = 1.0 (17.930 sec)
+INFO:tensorflow:loss = 0.00017647404, step = 18301 (17.930 sec)
+INFO:tensorflow:global_step/sec: 5.55521
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0010895199, train_accuracy = 1.0 (18.001 sec)
+INFO:tensorflow:loss = 0.0010895199, step = 18401 (18.001 sec)
+INFO:tensorflow:global_step/sec: 5.54876
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.001344153, train_accuracy = 1.0 (18.022 sec)
+INFO:tensorflow:loss = 0.001344153, step = 18501 (18.022 sec)
+INFO:tensorflow:Saving checkpoints for 18600 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00055316114.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:06:39
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-18600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:06:46
+INFO:tensorflow:Saving dict for global step 18600: accuracy = 0.9929, global_step = 18600, loss = 0.023238776
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-18600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 18601 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.004840674, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.004840674, step = 18601
+INFO:tensorflow:global_step/sec: 5.42292
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0001203605, train_accuracy = 1.0 (18.440 sec)
+INFO:tensorflow:loss = 0.0001203605, step = 18701 (18.440 sec)
+INFO:tensorflow:global_step/sec: 5.57315
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0017474234, train_accuracy = 1.0 (17.943 sec)
+INFO:tensorflow:loss = 0.0017474234, step = 18801 (17.943 sec)
+INFO:tensorflow:global_step/sec: 5.55664
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0013912617, train_accuracy = 1.0 (17.996 sec)
+INFO:tensorflow:loss = 0.0013912617, step = 18901 (17.996 sec)
+INFO:tensorflow:global_step/sec: 5.55445
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0001810718, train_accuracy = 1.0 (18.004 sec)
+INFO:tensorflow:loss = 0.0001810718, step = 19001 (18.004 sec)
+INFO:tensorflow:global_step/sec: 5.55893
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.009631252, train_accuracy = 1.0 (17.989 sec)
+INFO:tensorflow:loss = 0.009631252, step = 19101 (17.989 sec)
+INFO:tensorflow:Saving checkpoints for 19200 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0034784325.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:08:37
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-19200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:08:44
+INFO:tensorflow:Saving dict for global step 19200: accuracy = 0.9937, global_step = 19200, loss = 0.021522755
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-19200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 19201 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.002698648, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.002698648, step = 19201
+INFO:tensorflow:global_step/sec: 5.4503
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00039031773, train_accuracy = 1.0 (18.348 sec)
+INFO:tensorflow:loss = 0.00039031773, step = 19301 (18.348 sec)
+INFO:tensorflow:global_step/sec: 5.54759
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00026703504, train_accuracy = 1.0 (18.026 sec)
+INFO:tensorflow:loss = 0.00026703504, step = 19401 (18.026 sec)
+INFO:tensorflow:global_step/sec: 5.55263
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 1.6898239e-05, train_accuracy = 1.0 (18.009 sec)
+INFO:tensorflow:loss = 1.6898239e-05, step = 19501 (18.009 sec)
+INFO:tensorflow:global_step/sec: 5.56852
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 9.385187e-05, train_accuracy = 1.0 (17.958 sec)
+INFO:tensorflow:loss = 9.385187e-05, step = 19601 (17.958 sec)
+INFO:tensorflow:global_step/sec: 5.57014
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.005480541, train_accuracy = 1.0 (17.953 sec)
+INFO:tensorflow:loss = 0.005480541, step = 19701 (17.953 sec)
+INFO:tensorflow:Saving checkpoints for 19800 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.06417965.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:10:35
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-19800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:10:41
+INFO:tensorflow:Saving dict for global step 19800: accuracy = 0.9936, global_step = 19800, loss = 0.021644905
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-19800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 19801 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.014554764, train_accuracy = 0.99
+INFO:tensorflow:loss = 0.014554764, step = 19801
+INFO:tensorflow:global_step/sec: 5.4746
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0004352874, train_accuracy = 0.995 (18.267 sec)
+INFO:tensorflow:loss = 0.0004352874, step = 19901 (18.267 sec)
+INFO:tensorflow:global_step/sec: 5.59853
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00022400763, train_accuracy = 0.99666667 (17.862 sec)
+INFO:tensorflow:loss = 0.00022400763, step = 20001 (17.862 sec)
+INFO:tensorflow:global_step/sec: 5.59598
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0002896025, train_accuracy = 0.9975 (17.870 sec)
+INFO:tensorflow:loss = 0.0002896025, step = 20101 (17.870 sec)
+INFO:tensorflow:global_step/sec: 5.61115
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0010458413, train_accuracy = 0.998 (17.822 sec)
+INFO:tensorflow:loss = 0.0010458413, step = 20201 (17.822 sec)
+INFO:tensorflow:global_step/sec: 5.61379
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00017514783, train_accuracy = 0.99833333 (17.813 sec)
+INFO:tensorflow:loss = 0.00017514783, step = 20301 (17.813 sec)
+INFO:tensorflow:Saving checkpoints for 20400 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00082151813.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:12:31
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-20400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:12:38
+INFO:tensorflow:Saving dict for global step 20400: accuracy = 0.9927, global_step = 20400, loss = 0.027003791
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-20400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 20401 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0003358041, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0003358041, step = 20401
+INFO:tensorflow:global_step/sec: 5.32717
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0030708653, train_accuracy = 1.0 (18.772 sec)
+INFO:tensorflow:loss = 0.0030708653, step = 20501 (18.772 sec)
+INFO:tensorflow:global_step/sec: 5.45312
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00041939103, train_accuracy = 1.0 (18.338 sec)
+INFO:tensorflow:loss = 0.00041939103, step = 20601 (18.338 sec)
+INFO:tensorflow:global_step/sec: 5.47731
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 3.724026e-06, train_accuracy = 1.0 (18.257 sec)
+INFO:tensorflow:loss = 3.724026e-06, step = 20701 (18.257 sec)
+INFO:tensorflow:global_step/sec: 5.50608
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00092233776, train_accuracy = 1.0 (18.162 sec)
+INFO:tensorflow:loss = 0.00092233776, step = 20801 (18.162 sec)
+INFO:tensorflow:global_step/sec: 5.48727
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.6742311e-05, train_accuracy = 1.0 (18.224 sec)
+INFO:tensorflow:loss = 2.6742311e-05, step = 20901 (18.224 sec)
+INFO:tensorflow:Saving checkpoints for 21000 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0027800668.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:14:31
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-21000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:14:37
+INFO:tensorflow:Saving dict for global step 21000: accuracy = 0.993, global_step = 21000, loss = 0.02458213
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-21000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 21001 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0020568336, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0020568336, step = 21001
+INFO:tensorflow:global_step/sec: 5.42746
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0004158085, train_accuracy = 1.0 (18.425 sec)
+INFO:tensorflow:loss = 0.0004158085, step = 21101 (18.425 sec)
+INFO:tensorflow:global_step/sec: 5.5223
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00056240516, train_accuracy = 1.0 (18.108 sec)
+INFO:tensorflow:loss = 0.00056240516, step = 21201 (18.108 sec)
+INFO:tensorflow:global_step/sec: 5.54146
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0004186576, train_accuracy = 1.0 (18.046 sec)
+INFO:tensorflow:loss = 0.0004186576, step = 21301 (18.046 sec)
+INFO:tensorflow:global_step/sec: 5.57598
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00028000269, train_accuracy = 1.0 (17.934 sec)
+INFO:tensorflow:loss = 0.00028000269, step = 21401 (17.934 sec)
+INFO:tensorflow:global_step/sec: 5.54418
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.005061583, train_accuracy = 1.0 (18.037 sec)
+INFO:tensorflow:loss = 0.005061583, step = 21501 (18.037 sec)
+INFO:tensorflow:Saving checkpoints for 21600 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 3.9804796e-05.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:16:28
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-21600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:16:35
+INFO:tensorflow:Saving dict for global step 21600: accuracy = 0.9944, global_step = 21600, loss = 0.018587422
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-21600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 21601 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00041887574, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.00041887574, step = 21601
+INFO:tensorflow:global_step/sec: 5.44824
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0016634623, train_accuracy = 1.0 (18.355 sec)
+INFO:tensorflow:loss = 0.0016634623, step = 21701 (18.355 sec)
+INFO:tensorflow:global_step/sec: 5.58088
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0009151312, train_accuracy = 1.0 (17.918 sec)
+INFO:tensorflow:loss = 0.0009151312, step = 21801 (17.918 sec)
+INFO:tensorflow:global_step/sec: 5.56132
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0017744107, train_accuracy = 1.0 (17.981 sec)
+INFO:tensorflow:loss = 0.0017744107, step = 21901 (17.981 sec)
+INFO:tensorflow:global_step/sec: 5.572
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0012865801, train_accuracy = 1.0 (17.947 sec)
+INFO:tensorflow:loss = 0.0012865801, step = 22001 (17.947 sec)
+INFO:tensorflow:global_step/sec: 5.58329
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0003615046, train_accuracy = 1.0 (17.910 sec)
+INFO:tensorflow:loss = 0.0003615046, step = 22101 (17.910 sec)
+INFO:tensorflow:Saving checkpoints for 22200 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.002198919.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:18:26
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-22200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:18:32
+INFO:tensorflow:Saving dict for global step 22200: accuracy = 0.9938, global_step = 22200, loss = 0.021829851
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-22200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 22201 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0002253191, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0002253191, step = 22201
+INFO:tensorflow:global_step/sec: 5.46313
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.005318601, train_accuracy = 1.0 (18.305 sec)
+INFO:tensorflow:loss = 0.005318601, step = 22301 (18.305 sec)
+INFO:tensorflow:global_step/sec: 5.61063
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0036227342, train_accuracy = 1.0 (17.823 sec)
+INFO:tensorflow:loss = 0.0036227342, step = 22401 (17.823 sec)
+INFO:tensorflow:global_step/sec: 5.60884
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00060308556, train_accuracy = 1.0 (17.829 sec)
+INFO:tensorflow:loss = 0.00060308556, step = 22501 (17.829 sec)
+INFO:tensorflow:global_step/sec: 5.60026
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0001717235, train_accuracy = 1.0 (17.856 sec)
+INFO:tensorflow:loss = 0.0001717235, step = 22601 (17.856 sec)
+INFO:tensorflow:global_step/sec: 5.60542
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.7500453e-05, train_accuracy = 1.0 (17.840 sec)
+INFO:tensorflow:loss = 2.7500453e-05, step = 22701 (17.840 sec)
+INFO:tensorflow:Saving checkpoints for 22800 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 9.110873e-05.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:20:23
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-22800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:20:29
+INFO:tensorflow:Saving dict for global step 22800: accuracy = 0.9926, global_step = 22800, loss = 0.026177336
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-22800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 22801 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0012727277, train_accuracy = 1.0
+INFO:tensorflow:loss = 0.0012727277, step = 22801
+INFO:tensorflow:global_step/sec: 5.40127
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 6.7208086e-05, train_accuracy = 1.0 (18.515 sec)
+INFO:tensorflow:loss = 6.7208086e-05, step = 22901 (18.514 sec)
+INFO:tensorflow:global_step/sec: 5.57435
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.00042529166, train_accuracy = 1.0 (17.939 sec)
+INFO:tensorflow:loss = 0.00042529166, step = 23001 (17.939 sec)
+INFO:tensorflow:global_step/sec: 5.55674
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.6130251e-06, train_accuracy = 1.0 (17.996 sec)
+INFO:tensorflow:loss = 2.6130251e-06, step = 23101 (17.996 sec)
+INFO:tensorflow:global_step/sec: 5.56761
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0037215566, train_accuracy = 1.0 (17.961 sec)
+INFO:tensorflow:loss = 0.0037215566, step = 23201 (17.961 sec)
+INFO:tensorflow:global_step/sec: 5.57332
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0010756223, train_accuracy = 1.0 (17.943 sec)
+INFO:tensorflow:loss = 0.0010756223, step = 23301 (17.943 sec)
+INFO:tensorflow:Saving checkpoints for 23400 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0006331479.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:22:20
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-23400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:22:27
+INFO:tensorflow:Saving dict for global step 23400: accuracy = 0.993, global_step = 23400, loss = 0.027078994
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-23400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 23401 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 2.214364e-05, train_accuracy = 1.0
+INFO:tensorflow:loss = 2.214364e-05, step = 23401
+INFO:tensorflow:global_step/sec: 5.42523
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.014061059, train_accuracy = 0.995 (18.433 sec)
+INFO:tensorflow:loss = 0.014061059, step = 23501 (18.433 sec)
+INFO:tensorflow:global_step/sec: 5.57536
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0075717317, train_accuracy = 0.99666667 (17.936 sec)
+INFO:tensorflow:loss = 0.0075717317, step = 23601 (17.936 sec)
+INFO:tensorflow:global_step/sec: 5.57094
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0048486358, train_accuracy = 0.9975 (17.950 sec)
+INFO:tensorflow:loss = 0.0048486358, step = 23701 (17.950 sec)
+INFO:tensorflow:global_step/sec: 5.58412
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0007180873, train_accuracy = 0.998 (17.908 sec)
+INFO:tensorflow:loss = 0.0007180873, step = 23801 (17.908 sec)
+INFO:tensorflow:global_step/sec: 5.57029
+INFO:tensorflow:learning_rate = 1e-04, cross_entropy = 0.0026958003, train_accuracy = 0.99833333 (17.953 sec)
+INFO:tensorflow:loss = 0.0026958003, step = 23901 (17.953 sec)
+INFO:tensorflow:Saving checkpoints for 24000 into /tmp/mnist_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.002471665.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2018-07-10-19:24:17
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /tmp/mnist_model/model.ckpt-24000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2018-07-10-19:24:24
+INFO:tensorflow:Saving dict for global step 24000: accuracy = 0.9934, global_step = 24000, loss = 0.02373286
