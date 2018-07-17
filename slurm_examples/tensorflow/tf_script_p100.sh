@@ -21,7 +21,10 @@ module load py-data-science-stack/5.1.0-kp807 # #loads the community Python modu
 
 source activate tensorflow-gpu-1.8.0 #activates tensorflow 1.8.0 with GPU 
 
-export PYTHONPATH=$PYTHONPATH:/home/$USER/python_mnist/tf/models_1.8 #Tells python where to look for, for required packages 
+export PYTHONPATH=$PYTHONPATH:/home/$USER/python_mnist/tf/models_1.8 
+#Tells python where to look for, for required packages 
+#change path to where you saved packages when you cloned the github repo
+
 																	# change to models_1.7 if you wish to run that version
 
 
