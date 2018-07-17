@@ -13,7 +13,6 @@
 
  module load bowtie2		 # load the module from the already available list of modules
 
-bowtie2-build chrI.fa chrI.fa    # To run bowtie2, we first need to build a database (also known as an index) for our reference genome. To make the bowtie2 index, we can use the 				   #bowtie2-build command. It is usually easiest to name the index the same as the FASTA file-
-
+bowtie2-build chrI.fa chrI.fa    # To run bowtie2, we first need to build a database (also known as an index) for our reference genome.
  # Now we can align some Illumina reads from yeast to chromosome I from the yeast reference genome.
 bowtie2 --no-unal -x chrI.fa -U yeast.fastq -S yeast.sam  
