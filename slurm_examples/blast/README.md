@@ -10,7 +10,7 @@ blastp |protein	  | protein
 blastx |nucleotide|protein
 tblastn|protein	  | nucleotide
 
-## Whats happening
+## What's happening
   * To perform a local BLAST search we need a BLAST database and a FASTA file containing our query sequence
 
   * In this example, we will search the 16s ribosomal RNA sequence against the E. coli genome, both of which we have as FASTA files.
@@ -19,7 +19,7 @@ tblastn|protein	  | nucleotide
 
   * If you type: ``blastn -help`` it will print a list of command-line options, including all possible ways to modify the output format
 
-## Whats contained in the Directory
+## What's contained in the Directory
 Instead of performing a local BLAST search you might want to search a sequence against a very large database, containing sequences from many different species, rather than a specific genome.
  The NCBI mantains such a database of updated DNA and protien sequences.
 To perform a remote BLAST search, which sends your query to the NCBI servers which then perform the search against the most recent version of the database is pretty starightforward from the command line.
