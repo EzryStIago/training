@@ -3,7 +3,7 @@
 BLAST finds regions of similarity between biological sequences. The program compares nucleotide or protein	sequences to sequence databases and calculates the statistical significance. Learn more [here](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 The table summarizes the different types of BLAST searches that we can perform:
 
-    command |query	  |database
+command |query	  |database
 -------|----------|-------------
 blastn |nucleotide|nucleotide
 blastp |protein	  | protein
