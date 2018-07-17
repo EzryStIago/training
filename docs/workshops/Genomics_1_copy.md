@@ -9,180 +9,127 @@ These are the notes from the workshop on genomics. What's covered in these notes
 
 This is a list of software to install for the workshop
 
-|software|description|link|
+|Software|Description|URL|
 |------|-----------------------------|-----------------------|
-|Seqtk|very handy and fast for processing fastq/a files|[link](https://github.com/lh3/seqtk)|
-|sratoolkit|downloading and processing data from GEO/SRA database|[link](http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz)|
-|htseq-count|counting the  reads mapped on to genomics feature|[link](http://htseq.readthedocs.io/en/master/install.html)|
-|fastQC|widely used for sequencing read QC|[link](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
-|RSeQC-2.6.4|An RNA-seq quality control package, multiple functions|python package|
-|trimmomatic|fastq quality trim and adaptor removal|[link](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip)|
+|seqtk|very handy and fast for processing fastq/a files|[[link]](https://github.com/lh3/seqtk)|
+|sratoolkit|downloading and processing data from GEO/SRA database|[[link]](https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/) [[download]](http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz)|
+|htseq-count|counting the  reads mapped on to genomics feature|[[link]](http://htseq.readthedocs.io/en/master/install.html)|
+|fastQC|widely used for sequencing read QC|[[link]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc) [[download]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
+|RSeQC-2.6.4|An RNA-seq quality control package, multiple functions|[[link]](http://rseqc.sourceforge.net/)|
+|trimmomatic|fastq quality trim and adaptor removal|[[link]](http://www.usadellab.org/cms/?page=trimmomatic) [[download]](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip)|
 
 This is a list of software already available on the cluster and the command you need to execute to load it in your environment: 
 
-|software|description|load it on the cluster|
+|Software|Description|Access on the cluster|
 |------|-----------------------------|-----------------------|
-|Samtools||`module load samtools`|
-|Bedtools||`module load bedtools2./2.25.0`|
-|bowtie2| alignment software|`module load bowtie2`|
-|tophat2| alignment software|`module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0`|
+|samtools|utilities for short DNA seq alignments [[link]](http://samtools.sourceforge.net/) |`module load samtools/1.3.1`|
+|bedtools|tools for a wide-range of genomics analysis [[link]](http://bedtools.readthedocs.io/en/latest/)|`module load bedtools2/2.25.0`|
+|bowtie2| alignment software [[link]](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)|`module load bowtie2/2.2.9`|
+|tophat2| a fast splice junction mapper for RNA-Seq reads [[link]](https://ccb.jhu.edu/software/tophat/index.shtml)|`module load mvapich2/2.1  boost/1.59.0 tophat2/2.1.0`|
 |R|language for statistical analysis|`module load intel/17.0.4 R-Project/3.4.1`|
 
 This is a list of other software you might find useful:
 
-|software|description|link|
+|Software|Description|URL|
 |------|-----------------------------|-----------------------|
-| GSEA     | genome set enrichment analysis| [link](http://software.broadinstitute.org/gsea/index.jsp) |
-| IGV      | Interactive Genome Viewer      | [link](http://software.broadinstitute.org/software/igv/)|
-| Cytoscape| Network visualization softwar   | [link](http://www.cytoscape.org/)|
+| GSEA     | Genome set enrichment analysis| [[link]](http://software.broadinstitute.org/gsea/index.jsp) |
+| IGV      | Interactive Genome Viewer      | [[link]](http://software.broadinstitute.org/software/igv/)|
+| Cytoscape| Network visualization softwar   | [[link]](http://www.cytoscape.org/)|
 
 # Setup
 
 ## Connect to the cluster login node 
 The preferred method to connect to the cluster is through a web browser and fastX client
 
- - **via FastX**: in your browser, go to [this website](https://amarel.hpc.rutgers.edu:3443) . (It will only work from campus or if you are connected via VPN.) See [Fastx](../howtos/fastx) for a walkthrough that includes a tip on pasting commands. 
+ - **via FastX**: in your browser, go to https://amarel.hpc.rutgers.edu:3443 or [click here](https://amarel.hpc.rutgers.edu:3443). (It will only work from campus or if you are connected via VPN [link](https://ssl-vpn.rutgers.edu/dana-na/auth/url_default/welcome.cgi).) See [FastX](https://rutgers-oarc.github.io/training/howtos/fastx/) for a walkthrough that includes a tip on copying/pasting commands. 
+ 
+ |Login page|Click on Launch Session and Select XFCE desktop|Open new terminal, copy text from your computer into clipboard window and click on Send to Remote. Put cursor into a terminal and click Edit->Paste. The text from a clipboard appears in the terminal. Hit Return to submit a job to a compute node. Notice that the jobid number has been assigned and resources have been allocated. The command prompt in the treminal will also change from a login node netid@amarel to a compute node netid@slepner or netid@hal. 
+|------|-----------------------------|-----------------------|
+| ![](https://github.com/rutgers-oarc/training/blob/master/workshops/fastX_web.png "FastX web interface")     | ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_newsession.png "FastX new session")| ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_srun.png "FastX terminal srun") |
+ 
 
-  - **via a terminal**: if you have a Mac or Linux, terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm] (https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
-``` ssh -X <your net id>@amarel.hpc.rutgers.edu```   
+  - **via a terminal**: if you have a Mac or Linux, a terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm](https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
+``` ssh -X <your netid>@amarel.hpc.rutgers.edu```   
   
 
+## DO NOT RUN ANY COMPUTATIONAL JOBS ON THE LOGIN NODE 
 ## Get resources on the compute node 
 
 You get to the cluster to execute your computations by running the following command in your terminal:    
-```srun  -p main --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --export=ALL --pty /bin/bash```   
-Notice that the name in your terminal will change from `amarel` to node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. The following table explains the parts of this command: 
+```srun  -p main --x11 --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash -i```   
+Notice that the name in your terminal will change from `amarel` to a node name like `hal0025` or `slepner086`. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. The following table explains the parts of this command: 
 
 |command part| meaning|
 |----|----|
 |`srun`| `slurm` run, i.e. allocate resources and run via `slurm` scheduler | 
 |`-p main` | on the main partition, one of several queues on the cluster|
-|`--reservation=genomics`| we reserved some compute nodes for this workshop to not wait long for resources|
-|`-N 1`| ask for one node|
-|`-c 2`| ask for two cores|
-|`-n 1`| this will be 1 most times|
+|`--x11` | it allows the graphical output from a compute node, e.g. GUI of the program|
+|`--reservation=genomics`| we reserved some compute nodes for this workshop to avoid waiting in the queue|
+|`-N 1`| ask for one compute node|
+|`-c 2`| ask for two cpu cores|
+|`-n 1`| tells slurm that the job will be run as  1 task ( for parallel MPI jobs it could be more than 1|
 |`-t 01:40:00`| run this for a maximum time of 1 hour 40 minutes|
-|`--pty /bin/bash`| run the terminal shell in an interactive mode|
+|`--pty /bin/bash -i`| run the terminal shell in an interactive mode|
 
-### Prepare some directories for the data
+### Understanding your data space
 
 You have two main spaces on the Amarel cluster. These are: 
 
-- your home directory - `/home/netid/`  (e.g. `/home/kp807/` for my netid) -
-- your scratch directory - `/scratch/netid/`
+- your home directory (100Gb) - `/home/netid/` 
+- your scratch directory (500Gb)- `/scratch/netid/` 
 
-  They differ in how often they are backed up and by size (100Gb for `/home` and 500Gb for `/scratch`). So we will install programs in `/home`, while the data and output will be in `/scratch`. Execute these commands: 
-```
-                cd ~                      # change directory to your home directory
-                mkdir Genomics_Workshop
-                cd Genomics_Workshop
-                mkdir Programs            # download and install programs here
-```
+  They differ in how often they are backed up and by read/write speed. So we will install programs in `/home`, while the data and output will be in `/scratch`. 
 
-```
-                mkdir -p  /scratch/$USER/Genomics_Workshop/
-                cd /scratch/$USER/Genomics_Workshop/
-                mkdir untreated  
-                mkdir dex_treated
-```
+## Install programs and create a workspace for the workshop
 
-## Install programs
-
-   Each program will have slightly different installation instructions. Here is a handy sequence of commands that will install them: 
-```
-##We are going to do some modifications to a system file .bashrc, be careful doing it and make sure that you created a copy of your .bashrc file
-                cd
-                cp .bashrc .bashrc_20180118
-                nano .bashrc
-##At the end of the file add the line  “##  Genomics_Workshop 06/27/2018 settings”
-##Exit nano (ctrl+x)
-
-#Seqtk:   https://github.com/lh3/seqtk   ##  very handy and fast for processing fastq/a files
-                cd
-                cd Genomics_Workshop/Programs/
-                git clone https://github.com/lh3/seqtk.git 
-                cd seqtk
-                make
-                echo ‘export PATH=$HOME/Genomics_Workshop/Programs/seqtk:$PATH’ >>  ~/.bashrc
-                source ~/.bashrc
-
-#sratoolkit     https://www.ncbi.nlm.nih.gov/books/NBK158900/
-                        https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software
-##for downloading and processing data from GEO/SRA database
-                cd
-                cd Genomics_Workshop/Programs/
-                wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz
-                tar zxvf sratoolkit.2.8.2-centos_linux64.tar.gz
-                echo ‘export PATH=$HOME/Genomics_Workshop/Programs/sratoolkit.2.8.2-centos_linux64/bin:$PATH’ >> ~/.bashrc
-                source ~/.bashrc 
-
-#htseq-count    http://htseq.readthedocs.io/en/master/install.html ##for counting the  reads mapped on to genomics feature
-
-                cd
-                module load intel/17.0.2 python/2.7.12
-                pip install HTSeq --user
-
-#fastQC          #widely used for sequencing read QC
-
-                cd
-                cd  Genomics_Workshop/Programs/
-                wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip
-                unzip  fastqc_v0.11.6.zip
-                echo ‘export PATH=$HOME/Genomics_Workshop/Programs/FastQC:$PATH’ >> ~/.bashrc
-                source ~/.bashrc
-
-
-#FASTX-toolkit    http://hannonlab.cshl.edu/fastx_toolkit/   (##also a tool kit for fastq processing, quality trim, adaptor removal, etc. try if time allows)
-
-#RSeQC-2.6.4     ##An RNA-seq quality control package, multiple functions
-
-                cd
-                cd  Genomics_Workshop/Programs/
-                module load python/2.7.12
-                module load intel/17.0.2
-                pip install RSeQC --user
-
-
-#trimmomatic             ##for fastq quality trim and adaptor removal
-              
-                cd
-                cd  Genomics_Workshop/Programs/
-                wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip
-                unzip Trimmomatic-0.36.zip 
-                java -jar ~/Genomics_Workshop/Programs/Trimmomatic-0.36/trimmomatic-0.36.jar #-h                    
-
-```
-Moreover, execute the following commands to load system-installed sofware so the system knows where to find it (i.e. `samtools` command will work if you execute `module load samtools`): 
-```
-module load samtools       
-module load bedtools2./2.25.0
-module load bowtie2
-module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
-module load intel/17.0.4 R-Project/3.4.1
-```
+   Each program has slightly different installation instructions. 
+   You do not need to install programs manually.  Instead just run the following scirpt:
+   `/projects/oarc/Genomics_Workshop/Labs/misc/labI.sh` <br>
+   It will install neccessary programs and creates folders for this workshop.
+   
+   For curious one, here is the content of the script
+   ########################################################
+   
+   ########################################################<br>
+   
 
 ## Download data
 
-We will download human RNA-seq data with [GEO accession GSE52778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778). The samples we download are in NCBI's short read archive format (SRA). To unpack the original sequence files can be a bit tricky at first. Please put them in different directories:
-```        
-                mkdir -p  /scratch/$USER/Genomics_Workshop/
-                cd /scratch/$USER/Genomics_Workshop/
-                mkdir untreated  
-                mkdir dex_treated
-```
+We will download human RNA-seq data with [GEO accession GSE52778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778). The samples we download are in NCBI's short read archive format (SRA). To unpack the original sequence files can be a bit tricky at first. Please put them in different directories:<br>
+               
+                cd /scratch/$USER/Genomics_Workshop/ 
+                mkdir untreated 
+                mkdir dex_treated 
 
-We will use sratoolkit programs to download data but first we need to configure a location where all data files will be stored. `sratoolkit` will be in your home directory, under `Programs`, and the `vdb-config` might be under the `bin` directory. You will enter `/scratch/your_netID/Genomics_Workshop/download` for the path - NOTE you have to replace `your_netID` with your true netId, e.g. `kp807`. Do not copy blindly! So your downloads will always go to this directory and you will need to move it out to wherever you want to have them. 
+We will use **sratoolkit** programs to download data but first we need to configure a location where all data files will be stored. <br>
+`vdb-config` is a configuration subprogram for `sratoolkit`. We will use it to specify the directory where `sratoolkit` fetches data. You will need to type in the followingt path, but remember to replace `netID` with your own `Rutgers netid`  `/scratch/your_netID/Genomics_Workshop/download`.  Do not copy blindly! So your downloads will always go to this directory and you will need to move it out to wherever you want to have them. 
+
 ```
-                vdb-config   --interactive-mode textual     ### dash-dash before interactive-mode
+                vdb-config   --interactive-mode textual     ### dash-dash before interactive-mode 
+## Now in the program:
+                
                          Your choice > 4
 ## type new path in
                         /scratch/your_netID/Genomics_Workshop/download
                         Your choice > Y
 ```
 
-Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools. Downloading can take some time! [TODO: check how much time for these files!]
+Then execute the following commands to get the data. Both `prefetch` and `fastq-dump` are part of sratools. Downloading can take some time! [TODO: check how much time for these files!]<br>
+
 ```
-prefetch -v SRR1039508                           # fetches the SRA data
+# fetch the SRA data
+# Untreated
+prefetch -v SRR1039508  
+prefetch -v SRR1039512  
+prefetch -v SRR1039516  
+#DEX treated  
+prefetch -v SRR1039509  
+prefetch -v SRR1039513  
+prefetch -v SRR1039517                          
+```
+Then you need to move files into corresponding folders: <br>*508,512,516* into /scratch/$USER/Genomics_Workshop/download/untreated and <br> 
+ *509,513,517* into /scratch/$USER/Genomics_Workshop/download/dex_treated
+```
 fastq-dump --gzip --split-files SRR1039508       # ???? 
 ```
 You have to pay attention to where you are putting your data. So these two commands will actually be several: 
@@ -474,6 +421,27 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.4292
 ```
 
 
+Execute these commands: 
+```
+                cd ~                      # change directory to your home directory
+                mkdir Genomics_Workshop
+                cd Genomics_Workshop
+                mkdir Programs            # download and install programs here
+```
 
+```
+                mkdir -p  /scratch/$USER/Genomics_Workshop/
+                cd /scratch/$USER/Genomics_Workshop/
+                mkdir untreated  
+                mkdir dex_treated
+```
 
+Moreover, execute the following commands to load system-installed sofware so the system knows where to find it (i.e. `samtools` command will work if you execute `module load samtools`): 
 
+```
+module load samtools       
+module load bedtools2./2.25.0
+module load bowtie2
+module load mvapich2/2.1  boost/1.59.0  tophat2/2.1.0
+module load intel/17.0.4 R-Project/3.4.1
+```
