@@ -493,14 +493,23 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.4292
 ```
 
 ## 10. R practice 
-
-	a). Install needed packages
-	##exit from the computer node, START R ON LOGIN NODE, install some packages
-	exit  ##do exit, only if you are on a computer node
-	module load intel/17.0.4
-	module load R-Project/3.4.1
-	R
-
+There is one exeption when the computational job can be started on the cluster login node,  and it is when you need to install some software packages. `R program` is alread installed on the cluster as a module, but we need to add some packages from [bioconductor](https://bioconductor.org/biocLite.R) as well.
+-a). Install needed packages
+exit from the compute node, START R ON LOGIN NODE, install some packages
+	```
+	exit
+	```  
+You should see that the prompt in the terminal changed from a compute node to a login node.
+`netid@hal0011` to `netid@amarel`
+Now load R module
+	
+```
+module load intel/17.0.4
+module load R-Project/3.4.1
+R
+```
+In R environmnent install the following packages
+```
 	source("https://bioconductor.org/biocLite.R") 
 	biocLite("ape")
 	biocLite("MKmisc")
@@ -509,7 +518,7 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.4292
 	biocLite("flashClust")
 	biocLite("affy")
 	##yes (for personal library)
-
+```
 	b). Calculate gene length  
 
 	###A way to calculate the gene length:
