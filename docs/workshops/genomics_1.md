@@ -558,7 +558,8 @@ Calculate a gene length
 	> class(exonic.gene.sizes)
 
 	> Hg20_geneLength <-do.call(rbind, exonic.gene.sizes)
-	> colnames(Hg20_geneLength) <- paste('geneLength')    
+	> colnames(Hg20_geneLength) <- paste('geneLength')  
+	> write.csv(Hg20_geneLength, file="Hg20_geneLength") ##export/save this gene length file into your working directory
 	### the gene length is defined to be the total length of all exons in the gene, including the 3'UTR###
 
 	c). More self practice 
