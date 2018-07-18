@@ -324,7 +324,7 @@ oplevel with Bowtie2
 ……………………………………………………….
 ```
 Here is another example of mapping with tophat. <br>
-The transcriptome index was built  by pointing to gtf file first (the gtf file is prepared earlier).  The following would be the command to generate the transcriptome index while running tophat alignment.<br>
+The transcriptome index was built  by pointing to a gtf file first (the gtf file is prepared earlier).  The following would be the command to generate the transcriptome index while running tophat alignment.<br>
 **NOTE:**  tophat2 command starting with `tophat2 -p 7` is a one line command, move the slider to the right to see the whole line. 
 ```
    tophat2 -p 7 --library-type fr-unstranded  -o tophat_out/untreated_SRR1039508 –GTF /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf --transcriptome-index /projects/oarc/Genomics_Workshop/Reference/hg20_transciptome/GRCh38.78 /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.dna.toplevel SRR1039508_1.fastq.pairedOut.fastq SRR1039508_2.fastq.pairedOut.fastq
@@ -493,15 +493,15 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.4292
 ```
 
 ## 10. R practice 
-There is one exeption when the computational job can be started on the cluster login node,  and it is when you need to install some software packages. `R program` is alread installed on the cluster as a module, but we need to add some packages from [bioconductor](https://bioconductor.org/biocLite.R) as well.
--a). Install needed packages
-exit from the compute node, START R ON LOGIN NODE, install some packages
+There is one exeption when the computational job can be started on the cluster login node,  and it is when you need to install some software packages. `R program` is alread installed on the cluster as a module, but we need to add some packages from [bioconductor](https://bioconductor.org) as well. <br>
+- a). Install needed packages
+exit from the compute node 
 	```
 	exit
 	```  
 You should see that the prompt in the terminal changed from a compute node to a login node.
 `netid@hal0011` to `netid@amarel`
-Now load R module
+Now load R module on a login node
 	
 ```
 module load intel/17.0.4
@@ -519,19 +519,32 @@ In R environmnent install the following packages
 	biocLite("affy")
 	##yes (for personal library)
 ```
-	b). Calculate gene length  
+Exit R:
+```
+	> quit()
+Save workspace image? [y/n/c]: n
+```
+- b). Download gene annotation in gtf format from [Ensembl](http://useast.ensembl.org/index.html)<br>
+```
+/scratch/$USER/Genomics_Workshop/Reference/
+wget ftp://ftp.ensembl.org/pub/release-78/gtf/homo_sapiens/Homo_sapiens.GRCh38.78.gtf.gz
+tar -zxvf Homo_sapiens.GRCh38.78.gtf.gz
+```
+*NOTE*: the latest Ensembl Release is 93 (July 2018) but we will work with release 78 for this class
+To save time you may just copy gtf file:
+```
+cp /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf /scratch/$USER/Genomics_Workshop/Reference/
+```
 
-	###A way to calculate the gene length:
+Calculate a gene length  
+
+
 
 	###cp  the Homo_sapiens.GRCh38.78.gtf to your own Reference folder  
 	cp /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf /scratch/$USER/Genomics_Workshop/Reference/. 
 
 
-	###The following shows how we download it from ENSEMBLE, version 78, version 91  ###
-	wget ftp://ftp.ensembl.org/pub/release-78/gtf/homo_sapiens/Homo_sapiens.GRCh38.78.gtf.gz
-	###The most current one is release 91
-	wget ftp://ftp.ensembl.org/pub/release-91/gtf/homo_sapiens/Homo_sapiens.GRCh38.91.gtf.gz
-
+	
 	module load intel/17.0.4
 	module load R-Project/3.4.1
 	##start R on computer node now
