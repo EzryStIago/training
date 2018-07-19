@@ -368,7 +368,6 @@ Here’s how to run a parallel batch job, loading modules and using the **sbatch
 ## Running array of jobs
 
 Array job is an approach to handle multiple jobs with single job script. Here is an example to submit 500 jobs with single job script. 
-
 ```
 #!/bin/bash
 #SBATCH --partition=main             # Name of the partition
@@ -392,11 +391,11 @@ In the above script, the line
 ```
 asks slurm to submit 500 jobs. 
 
-The number of jobs in the queue can be controlled  by using a "%" seperator. For example, the above array job can release a maximum of 100 jobs to the queue by the following condition. 
+The number of jobs in the queue can be controlled  by using a "%" seperator. For example, the above array job can release a maximum of 100 jobs to the queue by the 
+following condition.
 ```
 #SBATCH --array=0-499%100
 ```
-
 
 ## Running an interactive job
 
