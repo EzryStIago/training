@@ -1,29 +1,30 @@
-       Practice Lab partII
+## Genomics Workshop Practice Lab partII
 
-##Getting the files ready:      
+- Getting the files ready:      
+By now, you are assumed to have completed the tophat mapping, the output alignment files shall be located at
 
-##By now, you are assumed to have completed the tophat mapping, the output alignment files shall be located at
+ `/scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 (untreated_SRR1039512  untreated_SRR1039516)` 
 
- /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508 (untreated_SRR1039512  untreated_SRR1039516) 
+`/scratch/$USER/Genomics_Workshop/dex_treated/tophat_out/dex_SRR1039509 (dex_SRR1039513, dex_SRR1039517)`
+<br> You are also expected to have the read counts ready, located at: <br>  
+`/scratch/$USER/Genomics_Workshop/read_counts`
 
-/scratch/$USER/Genomics_Workshop/dex_treated/tophat_out/dex_SRR1039509 (dex_SRR1039513, dex_SRR1039517);
-
-You are also expected to have the read counts ready, located at:   /scratch/$USER/Genomics_Workshop/read_counts
-
-SHORTCUT 
-## To ensure the workshop progress, we have those files prepared already. 
+**SHORTCUT <br>
+To ensure the workshop progress, we have those files prepared already. 
  Please run the following code to have those files copied and linked into your folders:
-
-	 /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Labs/lab_PartII.sh
+ ```
+ /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Labs/lab_PartII.sh
+```
 
 Start an interactive session on the compute node
-       srun --x11 -p main --reservation=genomics -N 1 -c 2 -n 1 -t 2:00:00 --pty /bin/bash -i
-##The above command will land you on a reserved compute node
+```
+srun --x11 -p main --reservation=genomics -N 1 -c 2 -n 1 -t 2:00:00 --pty /bin/bash -i
+```
 
 #############################################################
-Lab 1: Visualization using IGV
+## Lab 1: Visualization using IGV
 #############################################################   
-### IGV  --- Focus on visualization, best for validation and confirmation of the analysis result,  Not good for primary analysis
+# IGV  --- Focus on visualization, best for validation and confirmation of the analysis result,  Not good for primary analysis
 
 ###The mapping file is in bam format, located under the folder of tophat_out, they shall be sorted and indexed using the following command ### 
 
@@ -32,35 +33,37 @@ Lab 1: Visualization using IGV
 	samtools sort accepted_hits.bam -o accepted_hits.sorted.bam  ##sort the bam file 
 	samtools index accepted_hits.sorted.bam ## index the sorted bam
 
-### The resulting files: accepted_hits.sorted.bam    
-  			 accepted_hits.sorted.bam.bai 
-				are the files to be uploaded to IGV
+ The resulting files: <br>
+ `accepted_hits.sorted.bam` and `accepted_hits.sorted.bam.bai` are the files to be uploaded to IGV
 
-You need to repeat these steps for every sample 
+You need to repeat these steps for every sample <br>
 
-	SHORTCUT LAB_1
-	
-	### We have prepared 4 sets of such files (dex09, dex13, untreated08 and untreated12), located at: /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Bam_for_IGV/ . Make a soft link (see the following command), or copy them into your scratch  folder, then we use IGV to visualize them.
-    
-	cd /scratch/$USER/Genomics_Workshop/
-	## ln -s /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Bam_for_IGV  Bam_for_IGV  
+**SHORTCUT LAB_1 <br>
 
-###start IGV 
+We have prepared 4 sets of such files (dex09, dex13, untreated08 and untreated12), located at: <br>
+`/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Bam_for_IGV/`.  Make a soft link  or copy them into your scratch  folder, then we use IGV to visualize them.
+```
+cd /scratch/$USER/Genomics_Workshop/
+ln -s /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Bam_for_IGV  Bam_for_IGV  
+```
+Start IGV 
+```
 	module load java
 	/projects/oarc/Genomics_Workshop/Programs/IGV_2.4.6/igv.sh 
+```
 
-###Practice and get familiar with:
-	How to Load genome and data track
-	How to navigate
-	How and what to visualize:
-	Examine coverage
-	Low mapping quality
-	Mis-alignment
-	Translocation
-	Novel genes/transcript
-	Alternative splicing
-	Inversion
-	Look for SNPs
+Practice and get familiar with:
+	<br>How to Load genome and data track
+	<br>How to navigate
+	<br>How and what to visualize:
+	<br>Examine coverage
+	<br>Low mapping quality
+	<br>Mis-alignment
+	<br>Translocation
+	<br>Novel genes/transcript
+	<br>Alternative splicing
+	<br>Inversion
+	<br>Look for SNPs
 
 More detailed explanation here:  http://software.broadinstitute.org/software/igv/book/export/html/37
  
