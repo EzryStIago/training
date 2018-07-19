@@ -385,14 +385,11 @@ hostname
 echo "Array Task ID : " $SLURM_ARRAY_TASK_ID 
 echo " Random number : " $RANDOM
 ```
-In the above script, the line 
-```
-#SBATCH --array=0-499
-```
-asks slurm to submit 500 jobs. 
+In the above description, the line 
+``` #SBATCH --array=0-499 ```
+submits 500 jobs. 
 
-The number of jobs in the queue can be controlled  by using a "%" seperator. For example, the above array job can release a maximum of 100 jobs to the queue by the 
-following condition.
+The "%" seperator is useful to limit the number of maximum jobs. For example, the following line sets a maximum of 100 jobs to the queue
 ```
 #SBATCH --array=0-499%100
 ```
