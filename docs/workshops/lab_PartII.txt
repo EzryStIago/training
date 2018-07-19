@@ -43,7 +43,7 @@ You need to repeat these steps for every sample
 	### We have prepared 4 sets of such files (dex09, dex13, untreated08 and untreated12), located at: /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Bam_for_IGV/ . Make a soft link (see the following command), or copy them into your scratch  folder, then we use IGV to visualize them.
     
 	cd /scratch/$USER/Genomics_Workshop/
-	## ln -s /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Bam_for_IGV  Bam_for_IGV  
+	ln -s /projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Bam_for_IGV  Bam_for_IGV  
 
 ###start IGV 
 	module load java
