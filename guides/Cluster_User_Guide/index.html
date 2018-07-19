@@ -52,12 +52,12 @@
     
 
 
-<ul class="" href="../..">
+<ul class="" href="/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../..">Home</a>
+        <a class="" href="/">Home</a>
       </li>
 </ul>
 
@@ -75,12 +75,12 @@
     
 
 
-<ul class="current" href="./">
+<ul class="current" href="/guides/Cluster_User_Guide/">
   
     
     
       <li class="current toctree-l1">
-        <a class="current" href="./">Cluster Guides</a>
+        <a class="current" href="/guides/Cluster_User_Guide/">Cluster Guides</a>
         
   
   
@@ -309,6 +309,17 @@
 
 
   <li class="toctree-l2 toc-item">
+    <a href="#running-array-of-jobs" title="Cluster Guides">Running array of jobs</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
     <a href="#running-an-interactive-job" title="Cluster Guides">Running an interactive job</a>
   </li>
 
@@ -465,12 +476,12 @@
     
 
 
-<ul class="" href="../Cluster_Examples/">
+<ul class="" href="/guides/Cluster_Examples/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../Cluster_Examples/">Examples</a>
+        <a class="" href="/guides/Cluster_Examples/">Examples</a>
       </li>
 </ul>
 
@@ -488,12 +499,12 @@
     
 
 
-<ul class="" href="../community_resources/">
+<ul class="" href="/guides/community_resources/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../community_resources/">Community</a>
+        <a class="" href="/guides/community_resources/">Community</a>
       </li>
 </ul>
 
@@ -559,12 +570,12 @@
     
 
 
-<ul class="" href="../../ressentials/">
+<ul class="" href="/ressentials/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../../ressentials/">R tutorial</a>
+        <a class="" href="/ressentials/">R tutorial</a>
       </li>
 </ul>
 
@@ -582,12 +593,12 @@
     
 
 
-<ul class="" href="../../CheatSheet/">
+<ul class="" href="/CheatSheet/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../../CheatSheet/">Cheat Sheets</a>
+        <a class="" href="/CheatSheet/">Cheat Sheets</a>
       </li>
 </ul>
 
@@ -605,12 +616,12 @@
     
 
 
-<ul class="" href="../../resources/">
+<ul class="" href="/resources/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../../resources/">Resources</a>
+        <a class="" href="/resources/">Resources</a>
       </li>
 </ul>
 
@@ -1017,6 +1028,34 @@ srun --mpi=pmi2 /scratch/[your NetID]/zipper/2.4.1/bin/zipper &lt; my-input-file
 <p>Note here that I’m also loading the module for the parallel communication libraries (MPI libraries) needed by my parallel executable.</p>
 <p>Here’s how to run a parallel batch job, loading modules and using the <strong>sbatch</strong> command:<br />
 <code>sbatch my-job-script.sh</code></p>
+<h2 id="running-array-of-jobs">Running array of jobs</h2>
+<p>Array job is an approach to handle multiple jobs with single job script. Here is an example to submit 500 jobs with single job script. </p>
+<pre><code>#!/bin/bash
+#SBATCH --partition=main             # Name of the partition
+#SBATCH --job-name=arrayjobs         # Name of the job
+#SBATCH --ntasks=1                   # Number of tasks
+#SBATCH --cpus-per-task=1            # Number of CPUs per task
+#SBATCH --mem=1GB                    # Requested memory
+#SBATCH --array=0-499                # Array job will submit 500 jobs
+#SBATCH --time=00:10:00              # Total run time limit (HH:MM:SS)
+#SBATCH --output=slurm.%N.%j.out     # STDOUT file
+#SBATCH --error=slurm.%N.%j.err      # STDERR file 
+
+echo  -n &quot;Executing on the machine: &quot; 
+hostname
+echo &quot;Array Task ID : &quot; $SLURM_ARRAY_TASK_ID 
+echo &quot; Random number : &quot; $RANDOM
+</code></pre>
+
+<p>In the above script, the line </p>
+<pre><code>#SBATCH --array=0-499
+</code></pre>
+
+<p>asks slurm to submit 500 jobs. </p>
+<p>The number of jobs in the queue can be controlled  by using a "%" seperator. For example, the above array job can release a maximum of 100 jobs to the queue by the following condition. </p>
+<pre><code>#SBATCH --array=0-499%100
+</code></pre>
+
 <h2 id="running-an-interactive-job">Running an interactive job</h2>
 <p>An interactive job gives you an active connection to a compute node (or collection of compute nodes) where you will have a login shell and you can run commands directly on the command line. This can be useful for testing, short analysis tasks, computational steering, or for running GUI-based applications.</p>
 <p>When submitting an interactive job, you can request resources (single or multiple cores, memory, GPU nodes, etc.) just like you would in a batch job:</p>
