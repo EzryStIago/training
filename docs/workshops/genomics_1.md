@@ -171,7 +171,7 @@ fastq-dump --outdir /scratch/$USER/Genomics_Workshop/dex_treated --split-files  
 It takes a while to convert sra files. To save time, files are already converted for you. 
 Run the following command to copy files into your /scratch/ directories.
 ```
-sra_fastq.sh
+sra-fastq.sh
 ```
 
 # Running bioinformatics jobs
