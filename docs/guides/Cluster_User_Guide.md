@@ -323,6 +323,7 @@ Here’s how to run a serial batch job, loading modules and using the **sbatch**
 
 The **sbatch** command reads the contents of your job script and forwards those instructions to the SLURM workload manager. Depending on the level of activity on the cluster, your job may wait in the job queue for minutes or hours before it begins running.
 
+
 ## Running a parallel (multicore MPI) job
 
 Here’s an example of a SLURM job script for a parallel job. See the previous (serial) example for some important details omitted here.
@@ -363,6 +364,39 @@ Note here that I’m also loading the module for the parallel communication libr
 
 Here’s how to run a parallel batch job, loading modules and using the **sbatch** command:  
 ```sbatch my-job-script.sh```
+
+## Running array of jobs
+
+Array job is an approach to handle multiple jobs with single job script. Here is an example to submit 500 jobs with single job script. 
+
+```
+#!/bin/bash
+#SBATCH --partition=main             # Name of the partition
+#SBATCH --job-name=arrayjobs         # Name of the job
+#SBATCH --ntasks=1                   # Number of tasks
+#SBATCH --cpus-per-task=1            # Number of CPUs per task
+#SBATCH --mem=1GB                    # Requested memory
+#SBATCH --array=0-499                # Array job will submit 500 jobs
+#SBATCH --time=00:10:00              # Total run time limit (HH:MM:SS)
+#SBATCH --output=slurm.%N.%j.out     # STDOUT file
+#SBATCH --error=slurm.%N.%j.err      # STDERR file 
+
+echo  -n "Executing on the machine: " 
+hostname
+echo "Array Task ID : " $SLURM_ARRAY_TASK_ID 
+echo " Random number : " $RANDOM
+```
+In the above script, the line 
+```
+#SBATCH --array=0-499
+```
+asks slurm to submit 500 jobs. 
+
+The number of jobs in the queue can be controlled  by using a "%" seperator. For example, the above array job can release a maximum of 100 jobs to the queue by the following condition. 
+```
+#SBATCH --array=0-499%100
+```
+
 
 ## Running an interactive job
 
