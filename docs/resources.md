@@ -3,6 +3,7 @@
 ## Code Examples
 
 - [OARC-provided slurm examples](https://github.com/rutgers-oarc/training/tree/master/slurm_examples) - collection of slurm batch scripts that can serve as templates for your jobs
+- [Shiny examples](https://github.com/rstudio/shiny-examples) - excellent collection of 200 Shiny apps (interactive R webapps, or how to publish your R code)
 
 ## Services
 
