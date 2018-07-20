@@ -427,12 +427,12 @@
         }, 
         {
             "location": "/resources/", 
-            "text": "Code Examples\n\n\n\n\nOARC-provided slurm examples\n - collection of slurm batch scripts that can serve as templates for your jobs\n\n\n\n\nServices\n\n\n\n\nRutgers free web pages\n - WordPress-based websites hosting, free for Rutgers community\n\n\n\n\nTools\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown\n\n\n\n\nEducation\n\n\n\n\nOARC events\n - OARC holds a number of workshops on Linux, HPC, genomics and others\n\n\nCornell virtual workshops\n - A number of courses designed to get you up to speed using HPC and programming. \n\n\nSoftware Carpentry\n - Software Carpentry has a number of lectures and workshops on many computing subjects", 
+            "text": "Code Examples\n\n\n\n\nOARC-provided slurm examples\n - collection of slurm batch scripts that can serve as templates for your jobs\n\n\nShiny examples\n - excellent collection of 200 Shiny apps (interactive R webapps, or how to publish your R code)\n\n\n\n\nServices\n\n\n\n\nRutgers free web pages\n - WordPress-based websites hosting, free for Rutgers community\n\n\n\n\nTools\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown\n\n\n\n\nEducation\n\n\n\n\nOARC events\n - OARC holds a number of workshops on Linux, HPC, genomics and others\n\n\nCornell virtual workshops\n - A number of courses designed to get you up to speed using HPC and programming. \n\n\nSoftware Carpentry\n - Software Carpentry has a number of lectures and workshops on many computing subjects", 
             "title": "Resources"
         }, 
         {
             "location": "/resources/#code-examples", 
-            "text": "OARC-provided slurm examples  - collection of slurm batch scripts that can serve as templates for your jobs", 
+            "text": "OARC-provided slurm examples  - collection of slurm batch scripts that can serve as templates for your jobs  Shiny examples  - excellent collection of 200 Shiny apps (interactive R webapps, or how to publish your R code)", 
             "title": "Code Examples"
         }, 
         {
