@@ -389,10 +389,13 @@ In the above description, the line
 ``` #SBATCH --array=0-499 ```
 submits 500 jobs. 
 
-The "%" seperator is useful to limit the number of maximum jobs. For example, the following line sets a maximum of 100 jobs to the queue
+The "%" seperator is useful to limit the number of jobs in the queue at a any given time. For example, the following line would send a maximum of 100 jobs to the queue. 
 ```
 #SBATCH --array=0-499%100
 ```
+
+It is a good practice to populate the queue with less than 500 jobs at any given time. 
+
 
 ## Running an interactive job
 
