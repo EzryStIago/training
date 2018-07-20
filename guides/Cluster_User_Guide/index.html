@@ -1050,10 +1050,11 @@ echo &quot; Random number : &quot; $RANDOM
 <p>In the above description, the line 
 <code>#SBATCH --array=0-499</code>
 submits 500 jobs. </p>
-<p>The "%" seperator is useful to limit the number of maximum jobs. For example, the following line sets a maximum of 100 jobs to the queue</p>
+<p>The "%" seperator is useful to limit the number of jobs in the queue at a any given time. For example, the following line would send a maximum of 100 jobs to the queue. </p>
 <pre><code>#SBATCH --array=0-499%100
 </code></pre>
 
+<p>It is a good practice to populate the queue with less than 500 jobs at any given time. </p>
 <h2 id="running-an-interactive-job">Running an interactive job</h2>
 <p>An interactive job gives you an active connection to a compute node (or collection of compute nodes) where you will have a login shell and you can run commands directly on the command line. This can be useful for testing, short analysis tasks, computational steering, or for running GUI-based applications.</p>
 <p>When submitting an interactive job, you can request resources (single or multiple cores, memory, GPU nodes, etc.) just like you would in a batch job:</p>
