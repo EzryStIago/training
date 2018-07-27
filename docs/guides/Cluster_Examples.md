@@ -4,6 +4,12 @@ Generally, there are 2 approaches for accessing R on Amarel:
 1. use one of the pre-installed R modules named R-Project/*version* (these versions come bundled with a very broad range of common and useful tools).   
 2. install your own custom build of R in your /home directory or in a shared directory (e.g. `/projects/[group]` or `/projects/community`).
 
+## Quickstart
+
+```
+module load intel/17.0.4 R-Project/3.4.1   #loads libraries for underlying c/c++/fortran code first
+```
+
 ##Using pre-installed R modules
 
 Start by finding which module you wish to use with the 'module spider R-Project' command:
@@ -160,6 +166,12 @@ q()
 # Using Python
 
 Generally, there are 2 approaches for using Python and its associated tools: (1) use one of the pre-installed Python modules (version 2.7.x or 3.5.x) which come bundled with a very broad range of common and useful tools (you can add or update packages if needed) or (2) install your own custom build of Python in your /home directory or in a shared directory (e.g., /projects/[group] or /projects/community).
+
+## Quickstart
+
+```
+module load intel_mkl/17.0.2 python/3.5.2 #loads libraries for underlying c/c++/fortran code first, needed for numpy.
+```
 
 ## Using pre-installed Python modules 
 

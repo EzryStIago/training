@@ -14,4 +14,10 @@ Here is the video walking through these steps:
 
 [![Graphical programs via FastX](https://img.youtube.com/vi/8UQHLO85rlQ/0.jpg)](https://www.youtube.com/watch?v=8UQHLO85rlQ)
 
+## Troubleshooting
 
+If you get an error on xfce desktop, and you installed anaconda, it may be interfering with your fastX: 
+
+- close all FastX sessions
+- delete `.fastx_server` directory (it will be hidden, do `ls -la`)
+- comment out path to anaconda in your `.bash_profile` and/or `.bashrc` files (also hidden)
