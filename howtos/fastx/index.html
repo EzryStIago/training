@@ -177,6 +177,24 @@
     
     
       
+  
+  
+  <ul class="current subnav">
+    
+      
+
+  
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#troubleshooting" title="FastX">Troubleshooting</a>
+  </li>
+
+    
+  </ul>
+
     
   
 </li>
@@ -312,6 +330,13 @@ This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 
 </ol>
 <p>Here is the video walking through these steps: </p>
 <p><a href="https://www.youtube.com/watch?v=8UQHLO85rlQ"><img alt="Graphical programs via FastX" src="https://img.youtube.com/vi/8UQHLO85rlQ/0.jpg" /></a></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If you get an error on xfce desktop, and you installed anaconda, it may be interfering with your fastX: </p>
+<ul>
+<li>close all FastX sessions</li>
+<li>delete <code>.fastx_server</code> directory (it will be hidden, do <code>ls -la</code>)</li>
+<li>comment out path to anaconda in your <code>.bash_profile</code> and/or <code>.bashrc</code> files (also hidden)</li>
+</ul>
               
             </div>
           </div>

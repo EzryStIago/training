@@ -135,6 +135,17 @@
 
 
   <li class="toctree-l2 toc-item">
+    <a href="#quickstart" title="Examples">Quickstart</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
     <a href="#using-pre-installed-r-modules" title="Examples">Using pre-installed R modules</a>
   </li>
 
@@ -168,6 +179,17 @@
       </a>
     
     <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#quickstart_1" title="Examples">Quickstart</a>
+  </li>
+
       
         
 
@@ -439,6 +461,10 @@
 <p>Generally, there are 2 approaches for accessing R on Amarel:<br />
 1. use one of the pre-installed R modules named R-Project/<em>version</em> (these versions come bundled with a very broad range of common and useful tools). <br />
 2. install your own custom build of R in your /home directory or in a shared directory (e.g. <code>/projects/[group]</code> or <code>/projects/community</code>).</p>
+<h2 id="quickstart">Quickstart</h2>
+<pre><code>module load intel/17.0.4 R-Project/3.4.1   #loads libraries for underlying c/c++/fortran code first
+</code></pre>
+
 <h2 id="using-pre-installed-r-modules">Using pre-installed R modules</h2>
 <p>Start by finding which module you wish to use with the 'module spider R-Project' command:</p>
 <pre><code>module spider R-Project
@@ -574,6 +600,13 @@ q()
 
 <h1 id="using-python">Using Python</h1>
 <p>Generally, there are 2 approaches for using Python and its associated tools: (1) use one of the pre-installed Python modules (version 2.7.x or 3.5.x) which come bundled with a very broad range of common and useful tools (you can add or update packages if needed) or (2) install your own custom build of Python in your /home directory or in a shared directory (e.g., /projects/[group] or /projects/community).</p>
+<h2 id="quickstart_1">Quickstart</h2>
+<pre><code>module load intel_mkl/17.0.2 python/3.5.2 #loads libraries for underlying c/c++/fortran code first, needed for numpy.
+# OR
+module use /projects/community/modulefiles     # community software
+module load py-data-science-stack/5.1.0-kp807  # anaconda 5.1.0; various conda environments
+</code></pre>
+
 <h2 id="using-pre-installed-python-modules">Using pre-installed Python modules</h2>
 <p>With the pre-installed Python modules, you can add or update Python modules/packages as needed if you do it using the '--user' option for pip. This option will instruct pip to install new software or upgrades in your ~/.local directory. Here's an example where I'm installing the Django package:</p>
 <pre><code>module load python/3.5.2
