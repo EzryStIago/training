@@ -171,6 +171,9 @@ Generally, there are 2 approaches for using Python and its associated tools: (1)
 
 ```
 module load intel_mkl/17.0.2 python/3.5.2 #loads libraries for underlying c/c++/fortran code first, needed for numpy.
+# OR
+module use /projects/community/modulefiles     # community software
+module load py-data-science-stack/5.1.0-kp807  # anaconda 5.1.0; various conda environments
 ```
 
 ## Using pre-installed Python modules 
