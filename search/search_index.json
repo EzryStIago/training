@@ -442,7 +442,7 @@
         },
         {
             "location": "/resources/",
-            "text": "Code Examples\n\n\n\n\nOARC-provided slurm examples\n - collection of slurm batch scripts that can serve as templates for your jobs\n\n\nShiny examples\n - excellent collection of 200 Shiny apps (interactive R webapps, or how to publish your R code)\n\n\n\n\nServices\n\n\n\n\nRutgers free web pages\n - WordPress-based websites hosting, free for Rutgers community\n\n\n\n\nTools\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown\n\n\n\n\nEducation\n\n\n\n\nOARC events\n - OARC holds a number of workshops on Linux, HPC, genomics and others\n\n\nCornell virtual workshops\n - A number of courses designed to get you up to speed using HPC and programming. \n\n\nSoftware Carpentry\n - Software Carpentry has a number of lectures and workshops on many computing subjects",
+            "text": "Code Examples\n\n\n\n\nOARC-provided slurm examples\n - collection of slurm batch scripts that can serve as templates for your jobs\n\n\nShiny examples\n - excellent collection of 200 Shiny apps (interactive R webapps, or how to publish your R code)\n\n\n\n\nServices\n\n\n\n\nRutgers free web pages\n - WordPress-based websites hosting, free for Rutgers community\n\n\n\n\nTools\n\n\n\n\nmarkdown editor\n - lets you view the finished (rendered) markdown side by side with raw markdown\n\n\n\n\nEducation\n\n\n\n\nOARC events\n - OARC holds a number of workshops on Linux, HPC, genomics and others\n\n\nCornell virtual workshops\n - A number of courses designed to get you up to speed using HPC and programming. \n\n\nSoftware Carpentry\n - Software Carpentry has a number of lectures and workshops on many computing subjects\n\n\n\n\nLinux\n\n\n\n\nLinux Journey\n - slow and gentle introduction with side-by-side exercises\n\n\nEdX course\n - free course by Linux Foundation, option to buy certificate not needed\n\n\nGalen's tutorial\n\n\nExcellent short lessons\n\n\nAlexei's course he runs for engineering students every semester",
             "title": "Resources"
         },
         {
@@ -464,6 +464,11 @@
             "location": "/resources/#education",
             "text": "OARC events  - OARC holds a number of workshops on Linux, HPC, genomics and others  Cornell virtual workshops  - A number of courses designed to get you up to speed using HPC and programming.   Software Carpentry  - Software Carpentry has a number of lectures and workshops on many computing subjects",
             "title": "Education"
+        },
+        {
+            "location": "/resources/#linux",
+            "text": "Linux Journey  - slow and gentle introduction with side-by-side exercises  EdX course  - free course by Linux Foundation, option to buy certificate not needed  Galen's tutorial  Excellent short lessons  Alexei's course he runs for engineering students every semester",
+            "title": "Linux"
         }
     ]
 }
