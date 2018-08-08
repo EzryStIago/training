@@ -19,3 +19,9 @@
 - [Cornell virtual workshops](https://cvw.cac.cornell.edu/topics) - A number of courses designed to get you up to speed using HPC and programming. 
 - [Software Carpentry](http://swcarpentry.github.io/shell-novice/) - Software Carpentry has a number of lectures and workshops on many computing subjects
 
+### Linux
+- [Linux Journey](https://linuxjourney.com/) - slow and gentle introduction with side-by-side exercises
+- [EdX course](https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-1) - free course by Linux Foundation, option to buy certificate not needed
+- [Galen's tutorial](http://www.rci.rutgers.edu/~gc563/linux/index.html)
+- [Excellent short lessons](http://www.ee.surrey.ac.uk/Teaching/Unix/)
+- [Alexei's course he runs for engineering students every semester](http://linuxcourse.rutgers.edu/)
