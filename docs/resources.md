@@ -25,3 +25,5 @@
 - [Galen's tutorial](http://www.rci.rutgers.edu/~gc563/linux/index.html)
 - [Excellent short lessons](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 - [Alexei's course he runs for engineering students every semester](http://linuxcourse.rutgers.edu/)
+- Book: [How Linux Works](https://nostarch.com/howlinuxworks2)
+- Book: [The Linux Command Line](https://nostarch.com/tlcl)
