@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Resources - OARC-Rutgers</title>
+  <title>FAQ - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Resources";
-    var mkdocs_page_input_path = "resources.md";
-    var mkdocs_page_url = "/resources/";
+    var mkdocs_page_name = "FAQ";
+    var mkdocs_page_input_path = "faq.md";
+    var mkdocs_page_url = "/faq/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -238,86 +238,12 @@
     
 
 
-<ul class="current" href="./">
+<ul class="" href="../resources/">
   
     
     
-      <li class="current toctree-l1">
-        <a class="current" href="./">Resources</a>
-        
-  
-  
-  
-  
-  
-  <ul class="current subnav">
-    
-      
-
-  
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#code-examples" title="Resources">Code Examples</a>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#services" title="Resources">Services</a>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#tools" title="Resources">Tools</a>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#education" title="Resources"
-          class="">
-        Education
-      </a>
-    
-    <ul class=" subnav">
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#linux" title="Resources">Linux</a>
-  </li>
-
-      
-    </ul>
-  </li>
-
-    
-  </ul>
-
+      <li class=" toctree-l1">
+        <a class="" href="../resources/">Resources</a>
       </li>
 </ul>
 
@@ -335,12 +261,79 @@
     
 
 
-<ul class="" href="../faq/">
+<ul class="current" href="./">
   
     
     
-      <li class=" toctree-l1">
-        <a class="" href="../faq/">FAQ</a>
+      <li class="current toctree-l1">
+        <a class="current" href="./">FAQ</a>
+        
+  
+  
+  
+  
+  
+  
+  <ul class="current subnav">
+    
+      
+
+  
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#error-and-output-files" title="FAQ">error and output files</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#common-errors-and-their-fixes" title="FAQ">common errors and their fixes</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#numpy-and-other-hidden-modules" title="FAQ">numpy and other hidden modules</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#r-dllpath" title="FAQ">R DLLpath</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#email-notifications" title="FAQ">email notifications</a>
+  </li>
+
+    
+  </ul>
+
       </li>
 </ul>
 
@@ -374,10 +367,10 @@
     
       
     
-    <li>Resources</li>
+    <li>FAQ</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/resources.md"
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/faq.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -387,35 +380,63 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="code-examples">Code Examples</h2>
+                <h2 id="error-and-output-files">error and output files</h2>
+<p><strong>In the directory "slurm.slepner009.3695956.err" was created. Is this what should be happening?</strong> <br />
+Yes, if one of your options to run a slurm job included a line like <code>--error=slurm.%N.%j.err</code> then any error messages during execution will be going to a file you can inspect afterwards to
+determine how to fix the job's failure. E.g. if your jobs's results are supposed to go to <code>results</code> directory, but the directory "results" was not created before running the job. Since the slurm script is accessing a nonexistent path, it aborts. You can't see the job with <code>squeue</code> because it's not running (it finished with "exit 1" i.e. failed). You can use the command <code>sacct</code> (see slurm cheatsheet) to see some details of finished jobs (but not as many details as with <code>scontrol show job 12345</code>). </p>
+<h2 id="common-errors-and-their-fixes">common errors and their fixes</h2>
+<p><strong>I'm getting this error. Why? What's happening?</strong></p>
+<table>
+<thead>
+<tr>
+<th>error</th>
+<th>explanation</th>
+<th>fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sbatch: error: Slurm temporarily unable to accept job, sleeping and retrying.</code></td>
+<td>The Slurm queue reached its maximum and is not accepting new jobs</td>
+<td>Wait until the queue clears up and resubmit</td>
+</tr>
+<tr>
+<td><code>Batch script contains DOS line breaks (\r\n)sbatch: error: instead of expected UNIX line breaks (\n).</code></td>
+<td>If you created or edited the file in Windows, it can insert Windows line breaks, which are not the same as unix line breaks.</td>
+<td>convert between the two formats with <code>dos2unix</code> and <code>unix2dos</code> commands  - see <a href="https://www.geeksforgeeks.org/dos2unix-unix2dos-commands/">this explanation</a></td>
+</tr>
+<tr>
+<td><code>No such file or directory</code></td>
+<td>A path you gave is wrong or nonexistent</td>
+<td>Check the exact path; if file exists, check permissions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="numpy-and-other-hidden-modules">numpy and other hidden modules</h2>
+<p><strong>How do I get numpy?</strong></p>
+<p>You need to load libraries that are needed by numpy first. For example Intel Math Kernel Library: </p>
+<pre><code>module load intel_mkl/17.0.2 python/3.5.2 
+</code></pre>
+
+<h2 id="r-dllpath">R DLLpath</h2>
 <ul>
-<li><a href="https://github.com/rutgers-oarc/training/tree/master/slurm_examples">OARC-provided slurm examples</a> - collection of slurm batch scripts that can serve as templates for your jobs</li>
-<li><a href="https://github.com/rstudio/shiny-examples">Shiny examples</a> - excellent collection of 200 Shiny apps (interactive R webapps, or how to publish your R code)</li>
+<li><strong>When I install R package xxx, I get an error  dyn.load(file, DLLpath = DLLpath, ...):</strong> </li>
 </ul>
-<h2 id="services">Services</h2>
+<p>A lot of R packages are actually written in other languages, very often C or C++. Depending on how the R package is packaged, it can rely on "shared objects", recognized by .so extension. These .so files are 
+created by compilers, but different compiler versions will produce files which are sometimes not compatible. So either the .so is not found because its file path is missing, or it has been compiled for a 
+different version of the operating system or different version of the software. Complicating this, sometimes software which is in your path (e.g. anaconda will put itself in your .bashrc so it will be 
+available) has its own version of the library you want to load - e.g. R package may need a .so file that anaconda installation already contains, but is not compatible with your R package. Solutions can vary: </p>
 <ul>
-<li><a href="http://sites.rutgers.edu">Rutgers free web pages</a> - WordPress-based websites hosting, free for Rutgers community</li>
+<li>remove paths to known other softeware (such as Anaconda)</li>
+<li>remove other R packages that might be interfering (e.g. by moving it out of your path, not necessarily deleting)</li>
 </ul>
-<h2 id="tools">Tools</h2>
-<ul>
-<li><a href="https://stackedit.io">markdown editor</a> - lets you view the finished (rendered) markdown side by side with raw markdown</li>
-</ul>
-<h2 id="education">Education</h2>
-<ul>
-<li><a href="https://oarc.rutgers.edu/events/">OARC events</a> - OARC holds a number of workshops on Linux, HPC, genomics and others</li>
-<li><a href="https://cvw.cac.cornell.edu/topics">Cornell virtual workshops</a> - A number of courses designed to get you up to speed using HPC and programming. </li>
-<li><a href="http://swcarpentry.github.io/shell-novice/">Software Carpentry</a> - Software Carpentry has a number of lectures and workshops on many computing subjects</li>
-</ul>
-<h3 id="linux">Linux</h3>
-<ul>
-<li><a href="https://linuxjourney.com/">Linux Journey</a> - slow and gentle introduction with side-by-side exercises</li>
-<li><a href="https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-1">EdX course</a> - free course by Linux Foundation, option to buy certificate not needed</li>
-<li><a href="http://www.rci.rutgers.edu/~gc563/linux/index.html">Galen's tutorial</a></li>
-<li><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">Excellent short lessons</a></li>
-<li><a href="http://linuxcourse.rutgers.edu/">Alexei's course he runs for engineering students every semester</a></li>
-<li>Book: <a href="https://nostarch.com/howlinuxworks2">How Linux Works</a></li>
-<li>Book: <a href="https://nostarch.com/tlcl">The Linux Command Line</a></li>
-</ul>
+<h2 id="email-notifications">email notifications</h2>
+<p><strong>How do I make sure that I get an email when my slurm job finally starts, finishes, or fails?</strong></p>
+<p>It is possible to specify in the slurm batch script or srun command that you wish to receive an email notification. There are two options associated with this: 
+<code>mail-type</code> and <code>mail-user</code>. For example, <code>--mail-type=BEGIN</code> and <code>--mail-user=kp807@rutgers.edu</code> . 
+- Without mail-type specified, it doesn't send an email 
+- If you have domain other than <code>rutgers.edu</code>, slurm doesn't properly send it (e.g. <code>kp807@oarc.rutgers.edu</code> won't work, but <code>kp807@rutgers.edu</code> will.)
+Other options for <code>mail-type</code> are: BEGIN (send email when job starts, useful for interactive jobs), END (send email when job finishes), FAIL (send email when job finishes), ALL(send email for all 3). </p>
               
             </div>
           </div>
@@ -423,10 +444,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../faq/" class="btn btn-neutral float-right" title="FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../CheatSheet/" class="btn btn-neutral" title="Cheat Sheets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../resources/" class="btn btn-neutral" title="Resources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -454,10 +473,8 @@
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../CheatSheet/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../resources/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../faq/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
