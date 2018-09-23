@@ -42,9 +42,29 @@ available) has its own version of the library you want to load - e.g. R package 
 
 It is possible to specify in the slurm batch script or srun command that you wish to receive an email notification. There are two options associated with this: 
 `mail-type` and `mail-user`. For example, ``--mail-type=BEGIN`` and ``--mail-user=kp807@rutgers.edu`` . 
+
 - Without mail-type specified, it doesn't send an email 
 - If you have domain other than `rutgers.edu`, slurm doesn't properly send it (e.g. `kp807@oarc.rutgers.edu` won't work, but `kp807@rutgers.edu` will.)
+
 Other options for `mail-type` are: BEGIN (send email when job starts, useful for interactive jobs), END (send email when job finishes), FAIL (send email when job finishes), ALL(send email for all 3). 
+
+## file permissions 
  
- 
+One way to control the access to the dataset is via `getfacl` and `setfacl` commands (see https://www.computerhope.com/unix/usetfacl.htm). Here is an example of how to give permission to user user1, and only
+to this user, to read one of my subdirectories, `sharedir`: 
+
+``` setfacl -m u:user1:rx /home/kp807/sharedir
+```
+Here is how you would see what are the permissions to this directory: 
+``` getfacl  /home/kp807/sharedir
+```
+- `-m` option means modify permissions
+- `u`  means user
+- `rx` means read and execute. You must give execute permissions to a directory if you want to execute a listing of the directory. You also have to give `x` permission to every directory that needs to be
+traversed during execution and reading. E.g. you'd also have to execute `setfacl -m u:user1:x /home/kp807/`
+
+NOTE OF CAUTION: By default, Linux umask is set to 022. This means that by default, all directories and files are readable by group and other. The only thing stopping someone else reading your home directory
+is lack of `x` flag on the home directory. If you add this flag to a user, now this user will also be able to read any readable files in your home directory. So use `x` flag judiciously, or simply change
+all your permissions (and user's `umask` in `.bashrc` to something more restrictive). 
+
 
