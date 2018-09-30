@@ -274,6 +274,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -329,6 +330,17 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#email-notifications" title="FAQ">email notifications</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#file-permissions" title="FAQ">file permissions</a>
   </li>
 
     
@@ -433,10 +445,29 @@ available) has its own version of the library you want to load - e.g. R package 
 <h2 id="email-notifications">email notifications</h2>
 <p><strong>How do I make sure that I get an email when my slurm job finally starts, finishes, or fails?</strong></p>
 <p>It is possible to specify in the slurm batch script or srun command that you wish to receive an email notification. There are two options associated with this: 
-<code>mail-type</code> and <code>mail-user</code>. For example, <code>--mail-type=BEGIN</code> and <code>--mail-user=kp807@rutgers.edu</code> . 
-- Without mail-type specified, it doesn't send an email 
-- If you have domain other than <code>rutgers.edu</code>, slurm doesn't properly send it (e.g. <code>kp807@oarc.rutgers.edu</code> won't work, but <code>kp807@rutgers.edu</code> will.)
-Other options for <code>mail-type</code> are: BEGIN (send email when job starts, useful for interactive jobs), END (send email when job finishes), FAIL (send email when job finishes), ALL(send email for all 3). </p>
+<code>mail-type</code> and <code>mail-user</code>. For example, <code>--mail-type=BEGIN</code> and <code>--mail-user=kp807@rutgers.edu</code> . </p>
+<ul>
+<li>Without mail-type specified, it doesn't send an email </li>
+<li>If you have domain other than <code>rutgers.edu</code>, slurm doesn't properly send it (e.g. <code>kp807@oarc.rutgers.edu</code> won't work, but <code>kp807@rutgers.edu</code> will.)</li>
+</ul>
+<p>Other options for <code>mail-type</code> are: BEGIN (send email when job starts, useful for interactive jobs), END (send email when job finishes), FAIL (send email when job finishes), ALL(send email for all 3). </p>
+<h2 id="file-permissions">file permissions</h2>
+<p>One way to control the access to the dataset is via <code>getfacl</code> and <code>setfacl</code> commands (see https://www.computerhope.com/unix/usetfacl.htm). Here is an example of how to give permission to user user1, and only
+to this user, to read one of my subdirectories, <code>sharedir</code>: </p>
+<p>``` setfacl -m u:user1:rx /home/kp807/sharedir</p>
+<pre><code>Here is how you would see what are the permissions to this directory: 
+``` getfacl  /home/kp807/sharedir
+</code></pre>
+
+<ul>
+<li><code>-m</code> option means modify permissions</li>
+<li><code>u</code>  means user</li>
+<li><code>rx</code> means read and execute. You must give execute permissions to a directory if you want to execute a listing of the directory. You also have to give <code>x</code> permission to every directory that needs to be
+traversed during execution and reading. E.g. you'd also have to execute <code>setfacl -m u:user1:x /home/kp807/</code></li>
+</ul>
+<p>NOTE OF CAUTION: By default, Linux umask is set to 022. This means that by default, all directories and files are readable by group and other. The only thing stopping someone else reading your home directory
+is lack of <code>x</code> flag on the home directory. If you add this flag to a user, now this user will also be able to read any readable files in your home directory. So use <code>x</code> flag judiciously, or simply change
+all your permissions (and user's <code>umask</code> in <code>.bashrc</code> to something more restrictive). </p>
               
             </div>
           </div>
