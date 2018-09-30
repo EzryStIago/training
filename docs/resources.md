@@ -18,6 +18,7 @@
 - [OARC events](https://oarc.rutgers.edu/events/) - OARC holds a number of workshops on Linux, HPC, genomics and others
 - [Cornell virtual workshops](https://cvw.cac.cornell.edu/topics) - A number of courses designed to get you up to speed using HPC and programming. 
 - [Software Carpentry](http://swcarpentry.github.io/shell-novice/) - Software Carpentry has a number of lectures and workshops on many computing subjects
+- [HPC Carpentry](https://hpc-carpentry.github.io/) - HPC carpentry - course materials much like this training guide, especially suited for a novice
 
 ### Linux
 - [Linux Journey](https://linuxjourney.com/) - slow and gentle introduction with side-by-side exercises
