@@ -67,4 +67,37 @@ NOTE OF CAUTION: By default, Linux umask is set to 022. This means that by defau
 is lack of `x` flag on the home directory. If you add this flag to a user, now this user will also be able to read any readable files in your home directory. So use `x` flag judiciously, or simply change
 all your permissions (and user's `umask` in `.bashrc` to something more restrictive). 
 
+## python and conda
 
+Backgroud:
+
+- bash has some predefined variables that programs (or you) can use. You can get a list of those variables by typing `env` command in your bash terminal. By convention, the names are uppercase.
+- to set variables and get variables use `=` (without spaces) and `echo` with `${NAME_OF_VARIABLE}`. E.g. `PWD=/home/kris` to set the `PWD` variable, or `echo $PATH` to print the value of variable `PATH`
+- `PATH` is a bash variable that tells the systems in which directories to look for the programs/commands you invoke from the bash terminal. You can see the current path by `echo $PATH`
+- .bashrc file is the file that always gets called when you start up a terminal, and sets PATH variable to some default
+
+*How to install anaconda with python 2, but not set it as default anaconda version*
+
+1. install anaconda2 (https://www.anaconda.com/download/) - follow instructions for your OS
+2. anaconda puts itself automatically in your .bashrc file. You need to find the line that anaconda added and comment it out or delete from your .bashrc file so that anaconda2 is not your default every time you log in. The lines to comment out look like this: 
+```
+# added by Anaconda2 installer
+export PATH="/home/kris/anaconda2/bin:$PATH"
+```
+3. When you want to use anaconda2 instead of anaconda3, you reset your PATH variable manually, by issuing this command in your bash terminal:
+```export PATH="/home/$USER/anaconda2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin"```
+This will be valid ONLY in that terminal, so remember to launch any python2 scripts in that terminal, otherwise python will default to your other default
+4. Verify which conda and python version are you using by this command: ```which python```
+5. When you are sure that you are using conda from anaconda2, create new conda environment with a descriptive name, e.g.
+```conda create --name mytensorflow-1.5```
+6. Activate this environment:
+```source activate mytensorflow-1.5```
+7. Install tensorflow-1.5 into this environment:
+```pip install tensorflow==1.5.0```
+8. After having finished your work, ```source deactivate``` gets you out of the mytensorflow-1.5 environment.
+
+Now you have installed your environment. Next time, these are the commands to get you in the python2, mytensorflow-1.5 environment ready to do your python2 work:
+```
+export PATH="/home/$USER/anaconda2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin"
+source activate mytensorflow-1.5
+```
