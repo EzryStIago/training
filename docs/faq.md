@@ -1,6 +1,6 @@
 # Things affected by the outage Oct 6 - Oct 11
 
-Please see our [system status page]() for some explanation of what went on. Here we will focus on some changes and what it means, from the technical standpoint: 
+Please see our [system status page](https://oarc.rutgers.edu/systems-status/) for some explanation of what went on. Here we will focus on some changes and what it means, from the technical standpoint: 
 
 ** My /scratch disappeared. Where is it? **
 
