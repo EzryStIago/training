@@ -8,7 +8,7 @@ The filesystem has been moved to new hardware. As a result, what used to be `/sc
 
 ** I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger? **
 
-You are not in danger. During the upgrade the fingerprint of the server changed. Go to your `.ssh/authorized_hosts` file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. 
+You are not in danger. During the upgrade the fingerprint of the server changed. Go to your `.ssh/authorized_hosts` or `.ssh/known_hosts` file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. 
 ```
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
