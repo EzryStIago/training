@@ -55,6 +55,9 @@ IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
 IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
 ```
  
+** Where are snapshots for /home stored? ""
+
+Normally, they are in `/home/.snapshots`. After the upgrade the .snapshots was not copied. New `/home/.snapshots` will be created as soon as the backups kick in - at latest on Oct 20, but more likely midweek ~ Oct 18. 
 
 # Usual FAQs
 
