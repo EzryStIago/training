@@ -271,11 +271,6 @@
   
   
   
-  
-  
-  
-  
-  
   <ul class="current subnav">
     
       
@@ -286,11 +281,37 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#error-and-output-files" title="FAQ">error and output files</a>
+    <a href="#things-affected-by-the-outage-oct-6-oct-11" title="FAQ">Things affected by the outage Oct 6 - Oct 11</a>
   </li>
 
     
       
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#usual-faqs" title="FAQ"
+          class="">
+        Usual FAQs
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#error-and-output-files" title="FAQ">error and output files</a>
+  </li>
+
+      
+        
 
   
   
@@ -300,8 +321,8 @@
     <a href="#common-errors-and-their-fixes" title="FAQ">common errors and their fixes</a>
   </li>
 
-    
       
+        
 
   
   
@@ -311,8 +332,8 @@
     <a href="#numpy-and-other-hidden-modules" title="FAQ">numpy and other hidden modules</a>
   </li>
 
-    
       
+        
 
   
   
@@ -322,8 +343,8 @@
     <a href="#r-dllpath" title="FAQ">R DLLpath</a>
   </li>
 
-    
       
+        
 
   
   
@@ -333,8 +354,8 @@
     <a href="#email-notifications" title="FAQ">email notifications</a>
   </li>
 
-    
       
+        
 
   
   
@@ -344,8 +365,8 @@
     <a href="#file-permissions" title="FAQ">file permissions</a>
   </li>
 
-    
       
+        
 
   
   
@@ -353,6 +374,10 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#python-and-conda" title="FAQ">python and conda</a>
+  </li>
+
+      
+    </ul>
   </li>
 
     
@@ -404,7 +429,30 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="error-and-output-files">error and output files</h2>
+                <h1 id="things-affected-by-the-outage-oct-6-oct-11">Things affected by the outage Oct 6 - Oct 11</h1>
+<p>Please see our <a href="">system status page</a> for some explanation of what went on. Here we will focus on some changes and what it means, from the technical standpoint: </p>
+<p><strong> My /scratch disappeared. Where is it? </strong></p>
+<p>The filesystem has been moved to new hardware. As a result, what used to be <code>/scratch</code> before the upgrade is now <code>/oldscratch</code>. Please copy any files you need to retain to new /scratch. <code>/oldscratch</code> will be retired soon. </p>
+<p><strong> I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger? </strong></p>
+<p>You are not in danger. During the upgrade the fingerprint of the server changed. Go to your <code>.ssh/authorized_hosts</code> file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. </p>
+<pre><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The ECDSA host key for perceval.hpc.rutgers.edu has changed,
+and the key for the corresponding IP address 172.16.94.50
+is unknown. This could either mean that
+DNS SPOOFING is happening or the IP address for the host
+and its host key have changed at the same time.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+</code></pre>
+
+<h1 id="usual-faqs">Usual FAQs</h1>
+<h2 id="error-and-output-files">error and output files</h2>
 <p><strong>In the directory "slurm.slepner009.3695956.err" was created. Is this what should be happening?</strong> <br />
 Yes, if one of your options to run a slurm job included a line like <code>--error=slurm.%N.%j.err</code> then any error messages during execution will be going to a file you can inspect afterwards to
 determine how to fix the job's failure. E.g. if your jobs's results are supposed to go to <code>results</code> directory, but the directory "results" was not created before running the job. Since the slurm script is accessing a nonexistent path, it aborts. You can't see the job with <code>squeue</code> because it's not running (it finished with "exit 1" i.e. failed). You can use the command <code>sacct</code> (see slurm cheatsheet) to see some details of finished jobs (but not as many details as with <code>scontrol show job 12345</code>). </p>
