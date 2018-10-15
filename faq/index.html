@@ -451,6 +451,24 @@ Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 It is also possible that a host key has just been changed.
 </code></pre>
 
+<p><strong> What is the status of GPU nodes? </strong> </p>
+<p>To check the current status of GPU nodes with reason: check with command <code>sinfo -R -l -p gpu</code>. Here is some output: </p>
+<pre><code>[kp807@perceval1 ~]$ sinfo -R -l -p gpu
+Mon Oct 15 10:06:40 2018
+REASON               USER         TIMESTAMP           STATE  NODELIST
+NHC: check_cmd_outpu root(0)      2018-10-12T03:22:03 drain  cuda[001-008]
+</code></pre>
+
+<pre><code>[kp807@amarel1 ~]$ sinfo -R -l -p gpu
+Mon Oct 15 10:06:19 2018
+REASON               USER         TIMESTAMP           STATE  NODELIST
+no cnx ipmi          root(0)      2018-10-13T11:51:15 drain* gpu[001-003]
+IP                   root(0)      2018-10-15T09:53:10 drng   pascal[001-004]
+not part of mentat2  root(0)      2018-10-13T11:52:52 drain  gpu[005-006]
+IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
+IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
+</code></pre>
+
 <h1 id="usual-faqs">Usual FAQs</h1>
 <h2 id="error-and-output-files">error and output files</h2>
 <p><strong>In the directory "slurm.slepner009.3695956.err" was created. Is this what should be happening?</strong> <br />
