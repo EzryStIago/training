@@ -25,6 +25,27 @@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
 Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 It is also possible that a host key has just been changed.
 ```
+** What is the status of GPU nodes? ** 
+
+
+To check the current status of GPU nodes with reason: check with command `sinfo -R -l -p gpu`. Here is some output: 
+```
+[kp807@perceval1 ~]$ sinfo -R -l -p gpu
+Mon Oct 15 10:06:40 2018
+REASON               USER         TIMESTAMP           STATE  NODELIST
+NHC: check_cmd_outpu root(0)      2018-10-12T03:22:03 drain  cuda[001-008]
+```
+```
+[kp807@amarel1 ~]$ sinfo -R -l -p gpu
+Mon Oct 15 10:06:19 2018
+REASON               USER         TIMESTAMP           STATE  NODELIST
+no cnx ipmi          root(0)      2018-10-13T11:51:15 drain* gpu[001-003]
+IP                   root(0)      2018-10-15T09:53:10 drng   pascal[001-004]
+not part of mentat2  root(0)      2018-10-13T11:52:52 drain  gpu[005-006]
+IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
+IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
+```
+ 
 
 # Usual FAQs
 
