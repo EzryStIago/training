@@ -1,3 +1,33 @@
+# Things affected by the outage Oct 6 - Oct 11
+
+Please see our [system status page]() for some explanation of what went on. Here we will focus on some changes and what it means, from the technical standpoint: 
+
+** My /scratch disappeared. Where is it? **
+
+The filesystem has been moved to new hardware. As a result, what used to be `/scratch` before the upgrade is now `/oldscratch`. Please copy any files you need to retain to new /scratch. `/oldscratch` will be retired soon. 
+
+** I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger? **
+
+You are not in danger. During the upgrade the fingerprint of the server changed. Go to your `.ssh/authorized_hosts` file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. 
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The ECDSA host key for perceval.hpc.rutgers.edu has changed,
+and the key for the corresponding IP address 172.16.94.50
+is unknown. This could either mean that
+DNS SPOOFING is happening or the IP address for the host
+and its host key have changed at the same time.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+```
+
+# Usual FAQs
+
 ## error and output files
 
 **In the directory "slurm.slepner009.3695956.err" was created. Is this what should be happening?**   
