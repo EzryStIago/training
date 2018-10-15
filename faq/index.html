@@ -275,6 +275,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -341,6 +342,17 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#file-permissions" title="FAQ">file permissions</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#python-and-conda" title="FAQ">python and conda</a>
   </li>
 
     
@@ -468,6 +480,40 @@ traversed during execution and reading. E.g. you'd also have to execute <code>se
 <p>NOTE OF CAUTION: By default, Linux umask is set to 022. This means that by default, all directories and files are readable by group and other. The only thing stopping someone else reading your home directory
 is lack of <code>x</code> flag on the home directory. If you add this flag to a user, now this user will also be able to read any readable files in your home directory. So use <code>x</code> flag judiciously, or simply change
 all your permissions (and user's <code>umask</code> in <code>.bashrc</code> to something more restrictive). </p>
+<h2 id="python-and-conda">python and conda</h2>
+<p>Backgroud:</p>
+<ul>
+<li>bash has some predefined variables that programs (or you) can use. You can get a list of those variables by typing <code>env</code> command in your bash terminal. By convention, the names are uppercase.</li>
+<li>to set variables and get variables use <code>=</code> (without spaces) and <code>echo</code> with <code>${NAME_OF_VARIABLE}</code>. E.g. <code>PWD=/home/kris</code> to set the <code>PWD</code> variable, or <code>echo $PATH</code> to print the value of variable <code>PATH</code></li>
+<li><code>PATH</code> is a bash variable that tells the systems in which directories to look for the programs/commands you invoke from the bash terminal. You can see the current path by <code>echo $PATH</code></li>
+<li>.bashrc file is the file that always gets called when you start up a terminal, and sets PATH variable to some default</li>
+</ul>
+<p><em>How to install anaconda with python 2, but not set it as default anaconda version</em></p>
+<ol>
+<li>install anaconda2 (https://www.anaconda.com/download/) - follow instructions for your OS</li>
+<li>anaconda puts itself automatically in your .bashrc file. You need to find the line that anaconda added and comment it out or delete from your .bashrc file so that anaconda2 is not your default every time you log in. The lines to comment out look like this: </li>
+</ol>
+<pre><code># added by Anaconda2 installer
+export PATH=&quot;/home/kris/anaconda2/bin:$PATH&quot;
+</code></pre>
+
+<ol>
+<li>When you want to use anaconda2 instead of anaconda3, you reset your PATH variable manually, by issuing this command in your bash terminal:
+<code>export PATH="/home/$USER/anaconda2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin"</code>
+This will be valid ONLY in that terminal, so remember to launch any python2 scripts in that terminal, otherwise python will default to your other default</li>
+<li>Verify which conda and python version are you using by this command: <code>which python</code></li>
+<li>When you are sure that you are using conda from anaconda2, create new conda environment with a descriptive name, e.g.
+<code>conda create --name mytensorflow-1.5</code></li>
+<li>Activate this environment:
+<code>source activate mytensorflow-1.5</code></li>
+<li>Install tensorflow-1.5 into this environment:
+<code>pip install tensorflow==1.5.0</code></li>
+<li>After having finished your work, <code>source deactivate</code> gets you out of the mytensorflow-1.5 environment.</li>
+</ol>
+<p>Now you have installed your environment. Next time, these are the commands to get you in the python2, mytensorflow-1.5 environment ready to do your python2 work:</p>
+<pre><code>export PATH=&quot;/home/$USER/anaconda2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin&quot;
+source activate mytensorflow-1.5
+</code></pre>
               
             </div>
           </div>
