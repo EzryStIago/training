@@ -9,7 +9,7 @@ Please see our [system status page](https://oarc.rutgers.edu/systems-status/) fo
 ### Things that we know are broken:
 - GPU nodes are going to be rebooted to fix some things
 - gcc doesn't compile on login node
-
+- lmod version reverted to 6.0.1.
 
 ** My /scratch disappeared. Where is it? **
 
