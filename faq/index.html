@@ -337,6 +337,17 @@
 
 
   <li class="toctree-l2 toc-item">
+    <a href="#emailing-for-help" title="FAQ">Emailing for help</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
     <a href="#error-and-output-files" title="FAQ">error and output files</a>
   </li>
 
@@ -512,6 +523,9 @@ IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
 <p>** Where are snapshots for /home stored? ""</p>
 <p>Normally, they are in <code>/home/.snapshots</code>. After the upgrade the .snapshots was not copied. New <code>/home/.snapshots</code> will be created as soon as the backups kick in - at latest on Oct 20, but more likely midweek ~ Oct 18. Meanwhile the current version of snapshots as 10/09/2018 is available with a manual assistance  from OARC team on request.</p>
 <h1 id="usual-faqs">Usual FAQs</h1>
+<h2 id="emailing-for-help">Emailing for help</h2>
+<p><strong>who do I email for help?</strong></p>
+<p>Please email <code>help@oarc.rutgers.edu</code> - this will reach all research scientists, but not system admins. Research scientists will include sysadmins if necessary. (We are trying to streamline communications.)</p>
 <h2 id="error-and-output-files">error and output files</h2>
 <p><strong>In the directory "slurm.slepner009.3695956.err" was created. Is this what should be happening?</strong> <br />
 Yes, if one of your options to run a slurm job included a line like <code>--error=slurm.%N.%j.err</code> then any error messages during execution will be going to a file you can inspect afterwards to
