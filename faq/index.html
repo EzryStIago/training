@@ -434,7 +434,7 @@
 <p><strong> My /scratch disappeared. Where is it? </strong></p>
 <p>The filesystem has been moved to new hardware. As a result, what used to be <code>/scratch</code> before the upgrade is now <code>/oldscratch</code>. Please copy any files you need to retain to new /scratch. <code>/oldscratch</code> will be retired soon. </p>
 <p><strong> I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger? </strong></p>
-<p>You are not in danger. During the upgrade the fingerprint of the server changed. Go to your <code>.ssh/authorized_hosts</code> file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. </p>
+<p>You are not in danger. During the upgrade the fingerprint of the server changed. Go to your <code>.ssh/authorized_hosts</code> or <code>.ssh/known_hosts</code> file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. </p>
 <pre><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
