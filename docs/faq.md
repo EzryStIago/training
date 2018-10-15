@@ -11,6 +11,8 @@ Please see our [system status page](https://oarc.rutgers.edu/systems-status/) fo
 - gcc doesn't compile on login node
 - lmod version reverted to 6.0.1.
 
+### Outage-related questions
+
 ** My /scratch disappeared. Where is it? **
 
 The filesystem has been moved to new hardware. As a result, what used to be `/scratch` before the upgrade is now `/oldscratch`. Please copy any files you need to retain to new /scratch. `/oldscratch` will be retired soon. 
@@ -55,9 +57,9 @@ IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
 IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
 ```
  
-** Where are snapshots for /home stored? ""
+**Where are snapshots for /home stored?**
 
-Normally, they are in `/home/.snapshots`. After the upgrade the .snapshots was not copied. New `/home/.snapshots` will be created as soon as the backups kick in - at latest on Oct 20, but more likely midweek ~ Oct 18. Meanwhile the current version of snapshots as 10/09/2018 is available with a manual assistance  from OARC team on request.
+Normally, they are in `/home/.snapshots`. After the upgrade the `.snapshots` was not copied. New `/home/.snapshots` will be created as soon as the backups kick in - at latest on Oct 20, but more likely midweek ~ Oct 18. Meanwhile the current version of snapshots as 10/09/2018 is available with a manual assistance  from OARC team on request.
 
 # Usual FAQs
 
@@ -122,10 +124,12 @@ Other options for `mail-type` are: BEGIN (send email when job starts, useful for
 One way to control the access to the dataset is via `getfacl` and `setfacl` commands (see https://www.computerhope.com/unix/usetfacl.htm). Here is an example of how to give permission to user user1, and only
 to this user, to read one of my subdirectories, `sharedir`: 
 
-``` setfacl -m u:user1:rx /home/kp807/sharedir
+``` 
+setfacl -m u:user1:rx /home/kp807/sharedir
 ```
 Here is how you would see what are the permissions to this directory: 
-``` getfacl  /home/kp807/sharedir
+``` 
+getfacl  /home/kp807/sharedir
 ```
 - `-m` option means modify permissions
 - `u`  means user
@@ -145,7 +149,7 @@ Backgroud:
 - `PATH` is a bash variable that tells the systems in which directories to look for the programs/commands you invoke from the bash terminal. You can see the current path by `echo $PATH`
 - .bashrc file is the file that always gets called when you start up a terminal, and sets PATH variable to some default
 
-*How to install anaconda with python 2, but not set it as default anaconda version*
+**How to install anaconda with python 2, but not set it as default anaconda version**
 
 1. install anaconda2 (https://www.anaconda.com/download/) - follow instructions for your OS
 2. anaconda puts itself automatically in your .bashrc file. You need to find the line that anaconda added and comment it out or delete from your .bashrc file so that anaconda2 is not your default every time you log in. The lines to comment out look like this: 
