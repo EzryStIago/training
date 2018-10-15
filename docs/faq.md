@@ -61,6 +61,12 @@ Normally, they are in `/home/.snapshots`. After the upgrade the .snapshots was n
 
 # Usual FAQs
 
+## Emailing for help
+
+**who do I email for help?**
+
+Please email `help@oarc.rutgers.edu` - this will reach all research scientists, but not system admins. Research scientists will include sysadmins if necessary. (We are trying to streamline communications.)
+
 ## error and output files
 
 **In the directory "slurm.slepner009.3695956.err" was created. Is this what should be happening?**   
