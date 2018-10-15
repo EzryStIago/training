@@ -311,6 +311,17 @@
   </li>
 
       
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#outage-related-questions" title="FAQ">Outage-related questions</a>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -482,6 +493,7 @@
 <li>gcc doesn't compile on login node</li>
 <li>lmod version reverted to 6.0.1.</li>
 </ul>
+<h3 id="outage-related-questions">Outage-related questions</h3>
 <p><strong> My /scratch disappeared. Where is it? </strong></p>
 <p>The filesystem has been moved to new hardware. As a result, what used to be <code>/scratch</code> before the upgrade is now <code>/oldscratch</code>. Please copy any files you need to retain to new /scratch. <code>/oldscratch</code> will be retired soon. </p>
 <p><strong> I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger? </strong></p>
@@ -520,8 +532,8 @@ IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
 IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
 </code></pre>
 
-<p>** Where are snapshots for /home stored? ""</p>
-<p>Normally, they are in <code>/home/.snapshots</code>. After the upgrade the .snapshots was not copied. New <code>/home/.snapshots</code> will be created as soon as the backups kick in - at latest on Oct 20, but more likely midweek ~ Oct 18. Meanwhile the current version of snapshots as 10/09/2018 is available with a manual assistance  from OARC team on request.</p>
+<p><strong>Where are snapshots for /home stored?</strong></p>
+<p>Normally, they are in <code>/home/.snapshots</code>. After the upgrade the <code>.snapshots</code> was not copied. New <code>/home/.snapshots</code> will be created as soon as the backups kick in - at latest on Oct 20, but more likely midweek ~ Oct 18. Meanwhile the current version of snapshots as 10/09/2018 is available with a manual assistance  from OARC team on request.</p>
 <h1 id="usual-faqs">Usual FAQs</h1>
 <h2 id="emailing-for-help">Emailing for help</h2>
 <p><strong>who do I email for help?</strong></p>
@@ -588,9 +600,11 @@ available) has its own version of the library you want to load - e.g. R package 
 <h2 id="file-permissions">file permissions</h2>
 <p>One way to control the access to the dataset is via <code>getfacl</code> and <code>setfacl</code> commands (see https://www.computerhope.com/unix/usetfacl.htm). Here is an example of how to give permission to user user1, and only
 to this user, to read one of my subdirectories, <code>sharedir</code>: </p>
-<p>``` setfacl -m u:user1:rx /home/kp807/sharedir</p>
-<pre><code>Here is how you would see what are the permissions to this directory: 
-``` getfacl  /home/kp807/sharedir
+<pre><code>setfacl -m u:user1:rx /home/kp807/sharedir
+</code></pre>
+
+<p>Here is how you would see what are the permissions to this directory: </p>
+<pre><code>getfacl  /home/kp807/sharedir
 </code></pre>
 
 <ul>
@@ -610,7 +624,7 @@ all your permissions (and user's <code>umask</code> in <code>.bashrc</code> to s
 <li><code>PATH</code> is a bash variable that tells the systems in which directories to look for the programs/commands you invoke from the bash terminal. You can see the current path by <code>echo $PATH</code></li>
 <li>.bashrc file is the file that always gets called when you start up a terminal, and sets PATH variable to some default</li>
 </ul>
-<p><em>How to install anaconda with python 2, but not set it as default anaconda version</em></p>
+<p><strong>How to install anaconda with python 2, but not set it as default anaconda version</strong></p>
 <ol>
 <li>install anaconda2 (https://www.anaconda.com/download/) - follow instructions for your OS</li>
 <li>anaconda puts itself automatically in your .bashrc file. You need to find the line that anaconda added and comment it out or delete from your .bashrc file so that anaconda2 is not your default every time you log in. The lines to comment out look like this: </li>
