@@ -2,6 +2,15 @@
 
 Please see our [system status page](https://oarc.rutgers.edu/systems-status/) for some explanation of what went on. Here we will focus on some changes and what it means, from the technical standpoint: 
 
+### Things that have been fixed:
+- intel compiler's licence path
+
+
+### Things that we know are broken:
+- GPU nodes are going to be rebooted to fix some things
+- gcc doesn't compile on login node
+
+
 ** My /scratch disappeared. Where is it? **
 
 The filesystem has been moved to new hardware. As a result, what used to be `/scratch` before the upgrade is now `/oldscratch`. Please copy any files you need to retain to new /scratch. `/oldscratch` will be retired soon. 
