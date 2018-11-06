@@ -9,6 +9,18 @@ See workshop for explanation of the various options of `srun`
         ##start R on compute node now
         R
 ```
+# To submit R job using sbatch:
+        
+        #!/bin/bash
+        #SBATCH -n 1
+        #SBATCH -t 1:00
+        #SBATCH -p main
+        #SBATCH --export=ALL
+        #SBATCH -o example-%j.out
+        #SBATCH -e example-%j.err
+
+        Rscript yourRprogram.r
+        
 
 # Packages used from BioConductor
 
