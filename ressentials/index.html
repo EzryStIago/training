@@ -203,6 +203,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -214,6 +215,17 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#to-start-r-shell-on-the-cluster" title="R tutorial">To start R shell on the cluster</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#to-submit-r-job-using-sbatch" title="R tutorial">To submit R job using sbatch:</a>
   </li>
 
     
@@ -514,6 +526,17 @@
         R
 </code></pre>
 
+<h1 id="to-submit-r-job-using-sbatch">To submit R job using sbatch:</h1>
+<pre><code>    #!/bin/bash
+    #SBATCH -n 1
+    #SBATCH -t 1:00
+    #SBATCH -p main
+    #SBATCH --export=ALL
+    #SBATCH -o example-%j.out
+    #SBATCH -e example-%j.err
+
+    Rscript yourRprogram.r
+</code></pre>
 <h1 id="packages-used-from-bioconductor">Packages used from BioConductor</h1>
 <p>If these packages are not installed, you can install them yourself. On login node, start R and inside R copy-paste the following commands: </p>
 <pre><code class="r">        source(&quot;https://bioconductor.org/biocLite.R&quot;) 

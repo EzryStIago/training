@@ -696,14 +696,15 @@
 <ul>
 <li><strong>Amarel</strong> - a general access cluster. <a href="https://oarc.rutgers.edu/access/">Request access</a> or <a href="https://oarc.rutgers.edu/services/condo-model/">become an owner</a></li>
 <li><strong>Perceval</strong> - similar to Amarel, but paid for, and to be used by exclusively by, NIH grants and grantees</li>
-<li><strong>NM3</strong> - <a href="http://nm3wiki.newark.rutgers.edu/index.php/Main_Page">Newark Massive Memory Machine</a></li>
+<li><strong>AmarelN</strong> - the Amarel system component located in Newark</li>
 <li><strong>Sirius</strong> - a single big machine with no resource scheduler, acts as a big desktop with multiple concurrent users</li>
 </ul>
 <h1 id="cluster-resources">Cluster Resources</h1>
 <h2 id="amarel">Amarel</h2>
 <p>Amarel is a CentOS 7 Linux compute cluster that is actively growing through the combination of separate computing clusters into a single, shared resource.</p>
-<p>Amarel includes the following hardware (this list may already be outdated since the cluster is actively growing):</p>
-<pre><code>52 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 128 GB RAM
+<p>Below is a sample of the hardware found in the Amarel system (this list may already be outdated since the cluster is actively growing):</p>
+<pre><code>68 CPU-only nodes, each with 32 Xeon 6130 (Skylake) cores + 192 GB RAM
+52 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 128 GB RAM
 20 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 256 GB RAM
 4 28-core e5-2680v4 nodes each with 2 x Nvidia Pascal P100 GPUs onboard
 2 high-memory nodes, each with 56 e7-4830v4 (Broadwell) cores + 1.5 TB RAM
@@ -716,7 +717,7 @@
 1 16-core e5-2670 node with 8 Xeon Phi 5110P accelerators onboard
 </code></pre>
 
-<p>Default run time = 2 hours in the 'main' partition
+<p>Default run time = 2 minutes in the 'main' partition
 Maximum run time = 3 days in the 'main' partition</p>
 <h2 id="perceval">Perceval</h2>
 <p>Perceval has the same setup as Amarel. The same file system is mounted on both clusters and changes made to the filesystem on one cluster will be reflected in the other cluster as well. </p>
@@ -731,6 +732,7 @@ Maximum run time = 7 days in the 'main' partition, 2 days in the 'gpu' partition
 <ul>
 <li>Amarel is currently accessed using a single hostname, <code>amarel.rutgers.edu</code></li>
 <li>Perceval is currently accessed using a single hostname, <code>perceval.rutgers.edu</code></li>
+<li>AmarelN is currently accessed using a single hostname, <code>amareln.hpc.rutgers.edu</code></li>
 </ul>
 <p>For the example purposes, we will assume you are connecting to Amarel. When you connect to this system, your log-in session (your Linux shell) will begin on one of multiple log-in nodes, named amarel1, amarel2, etc. So, while you are logged-in to Amarel, you will see "amarel1" or "amarel2" as the name of the machine you are using.</p>
 <p><code>ssh [your NetID]@amarel.rutgers.edu</code></p>

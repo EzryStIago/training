@@ -280,49 +280,8 @@
   
 
 
-  <li class="current toctree-l2">
-    
-      <a href="#things-affected-by-the-outage-oct-6-oct-11" title="FAQ"
-          class="current">
-        Things affected by the outage Oct 6 - Oct 11
-      </a>
-    
-    <ul class="current subnav">
-      
-        
-
-  
-  
-
-
   <li class="toctree-l2 toc-item">
-    <a href="#things-that-have-been-fixed" title="FAQ">Things that have been fixed:</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#things-that-we-know-are-broken" title="FAQ">Things that we know are broken:</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#outage-related-questions" title="FAQ">Outage-related questions</a>
-  </li>
-
-      
-    </ul>
+    <a href="#oct6-outage-related-questions" title="FAQ">Oct6 outage-related questions</a>
   </li>
 
     
@@ -340,6 +299,17 @@
       </a>
     
     <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#i-cant-reach-amarel-from-outside-the-campus" title="FAQ">I can't reach Amarel from outside the campus</a>
+  </li>
+
       
         
 
@@ -481,19 +451,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="things-affected-by-the-outage-oct-6-oct-11">Things affected by the outage Oct 6 - Oct 11</h1>
-<p>Please see our <a href="https://oarc.rutgers.edu/systems-status/">system status page</a> for some explanation of what went on. Here we will focus on some changes and what it means, from the technical standpoint (please note we are short-staffed until Friday, Oct 19): </p>
-<h3 id="things-that-have-been-fixed">Things that have been fixed:</h3>
-<ul>
-<li>intel compiler's licence path</li>
-</ul>
-<h3 id="things-that-we-know-are-broken">Things that we know are broken:</h3>
-<ul>
-<li>GPU nodes are going to be rebooted to fix some things</li>
-<li>gcc doesn't compile on login node</li>
-<li>lmod version reverted to 6.0.1.</li>
-</ul>
-<h3 id="outage-related-questions">Outage-related questions</h3>
+                <h3 id="oct6-outage-related-questions">Oct6 outage-related questions</h3>
 <p><strong> My /scratch disappeared. Where is it? </strong></p>
 <p>The filesystem has been moved to new hardware. As a result, what used to be <code>/scratch</code> before the upgrade is now <code>/oldscratch</code>. Please copy any files you need to retain to new /scratch. <code>/oldscratch</code> will be retired soon. </p>
 <p><strong> I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger? </strong></p>
@@ -533,8 +491,11 @@ IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
 </code></pre>
 
 <p><strong>Where are snapshots for /home stored?</strong></p>
-<p>Normally, they are in <code>/home/.snapshots</code>. After the upgrade the <code>.snapshots</code> was not copied. New <code>/home/.snapshots</code> will be created as soon as the backups kick in - at latest on Oct 20, but more likely midweek ~ Oct 18. Meanwhile the current version of snapshots as 10/09/2018 is available with a manual assistance  from OARC team on request.</p>
+<p>Normally, they are in <code>/home/.snapshots</code>. </p>
 <h1 id="usual-faqs">Usual FAQs</h1>
+<h2 id="i-cant-reach-amarel-from-outside-the-campus">I can't reach Amarel from outside the campus</h2>
+<p>You can only connect to Amarel through a VPN to access the Rutgers network  when off campus. Download the <a href="https://software.rutgers.edu/product/3085">Pulse Secure VPN here</a>
+Follow the instructions on this webpage and fill in the server URL:   <code>ssl-vpn.rutgers.edu</code> </p>
 <h2 id="emailing-for-help">Emailing for help</h2>
 <p><strong>who do I email for help?</strong></p>
 <p>Please email <code>help@oarc.rutgers.edu</code> - this will reach all research scientists, but not system admins. Research scientists will include sysadmins if necessary. (We are trying to streamline communications.)</p>

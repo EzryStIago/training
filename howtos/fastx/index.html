@@ -343,7 +343,7 @@
                 <p>Connecting to the remote Linux cluster makes running graphical programs remotely tricky, because the graphical program runs on the remote computer, yet, it must be displayed on the local machine such as laptop. In general, command line interaction with the cluster is normally preferred and even more efficient than a GUI. However, there are times when running a graphical program cannot be avoided, for example, running a debugger for a code running on the cluster. </p>
 <p>There is a convenient way to run a graphical program remotely, for example, using FastX. Here is the procedure: </p>
 <ol>
-<li>Go to htts://amarel.hpc.rutgers.edu:3443  and log in (you must be either on campus, or connected through VPN)</li>
+<li>Go to htts://amarel1.hpc.rutgers.edu:3443  and log in (you must be either on campus, or connected through VPN)</li>
 <li>Click on Launch session</li>
 <li>Click on xterm</li>
 <li>Run this command that will ask the resource scheduler to put you on a compute node, rather than a login node (where you shouldn't be running intensive computations)<br />
@@ -351,6 +351,7 @@
 This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 Gb or memory and time of 1 hour and runs interactive shell. After executing this, you should notice that the name of the node changed from <code>amarel</code> to <code>slepner036</code> or some such. You can request whatever resources you deem necessary for your work, but keep in mind that bigger requests are typically placed further down in the queue. </li>
 <li>Start the program with graphical interface from the terminal window.</li>
 </ol>
+<p>Note: to disconnect from and then return to your active FastX session on Amarel, you must connect using the same login node you were using previously (i.e., amarel1 or amarel2). So, consistently connecting via amarel1.hpc.rutgers.edu:3443 would help ensure that you don't accidently "lose" a FastX session.</p>
 <p>Here is the video walking through these steps: </p>
 <p><a href="https://www.youtube.com/watch?v=8UQHLO85rlQ"><img alt="Graphical programs via FastX" src="https://img.youtube.com/vi/8UQHLO85rlQ/0.jpg" /></a></p>
 <h2 id="troubleshooting">Troubleshooting</h2>
