@@ -1,17 +1,5 @@
-# Things affected by the outage Oct 6 - Oct 11
 
-Please see our [system status page](https://oarc.rutgers.edu/systems-status/) for some explanation of what went on. Here we will focus on some changes and what it means, from the technical standpoint (please note we are short-staffed until Friday, Oct 19): 
-
-### Things that have been fixed:
-- intel compiler's licence path
-
-
-### Things that we know are broken:
-- GPU nodes are going to be rebooted to fix some things
-- gcc doesn't compile on login node
-- lmod version reverted to 6.0.1.
-
-### Outage-related questions
+### Oct6 outage-related questions
 
 ** My /scratch disappeared. Where is it? **
 
@@ -59,9 +47,14 @@ IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
  
 **Where are snapshots for /home stored?**
 
-Normally, they are in `/home/.snapshots`. After the upgrade the `.snapshots` was not copied. New `/home/.snapshots` will be created as soon as the backups kick in - at latest on Oct 20, but more likely midweek ~ Oct 18. Meanwhile the current version of snapshots as 10/09/2018 is available with a manual assistance  from OARC team on request.
+Normally, they are in `/home/.snapshots`. 
 
 # Usual FAQs
+
+## I can't reach Amarel from outside the campus
+
+You can only connect to Amarel through a VPN to access the Rutgers network  when off campus. Download the [Pulse Secure VPN here](https://software.rutgers.edu/product/3085)
+Follow the instructions on this webpage and fill in the server URL:   `ssl-vpn.rutgers.edu` 
 
 ## Emailing for help
 
