@@ -4,7 +4,7 @@ There are several clusters administered by OARC. Each cluster is using the resou
 
 - **Amarel** - a general access cluster. [Request access](https://oarc.rutgers.edu/access/) or [become an owner](https://oarc.rutgers.edu/services/condo-model/)
 - **Perceval** - similar to Amarel, but paid for, and to be used by exclusively by, NIH grants and grantees
-- **NM3** - [Newark Massive Memory Machine](http://nm3wiki.newark.rutgers.edu/index.php/Main_Page)
+- **AmarelN** - the Amarel system component located in Newark
 - **Sirius** - a single big machine with no resource scheduler, acts as a big desktop with multiple concurrent users
 
 #Cluster Resources
@@ -12,8 +12,9 @@ There are several clusters administered by OARC. Each cluster is using the resou
 ## Amarel
 Amarel is a CentOS 7 Linux compute cluster that is actively growing through the combination of separate computing clusters into a single, shared resource.
 
-Amarel includes the following hardware (this list may already be outdated since the cluster is actively growing):
+Below is a sample of the hardware found in the Amarel system (this list may already be outdated since the cluster is actively growing):
 ```
+68 CPU-only nodes, each with 32 Xeon 6130 (Skylake) cores + 192 GB RAM
 52 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 128 GB RAM
 20 CPU-only nodes, each with 28 Xeon e5-2680v4 (Broadwell) cores + 256 GB RAM
 4 28-core e5-2680v4 nodes each with 2 x Nvidia Pascal P100 GPUs onboard
@@ -26,7 +27,7 @@ Amarel includes the following hardware (this list may already be outdated since 
 2 28-core e5-2680 nodes with 4 Quadro M6000 GPUs onboard
 1 16-core e5-2670 node with 8 Xeon Phi 5110P accelerators onboard
 ```
-Default run time = 2 hours in the 'main' partition
+Default run time = 2 minutes in the 'main' partition
 Maximum run time = 3 days in the 'main' partition
 
 ## Perceval 
@@ -48,6 +49,7 @@ Maximum run time = 7 days in the 'main' partition, 2 days in the 'gpu' partition
 
 - Amarel is currently accessed using a single hostname, `amarel.rutgers.edu`
 - Perceval is currently accessed using a single hostname, `perceval.rutgers.edu`
+- AmarelN is currently accessed using a single hostname, `amareln.hpc.rutgers.edu`
 
 For the example purposes, we will assume you are connecting to Amarel. When you connect to this system, your log-in session (your Linux shell) will begin on one of multiple log-in nodes, named amarel1, amarel2, etc. So, while you are logged-in to Amarel, you will see "amarel1" or "amarel2" as the name of the machine you are using.
 
