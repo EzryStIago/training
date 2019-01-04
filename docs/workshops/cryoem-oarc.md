@@ -84,7 +84,7 @@ scipion install --help
 You have two main spaces on the OARC cluster. These are: 
 
 - your home directory (100Gb) - `/home/netid/` 
-- your scratch directory (unlimited, no-backup)- `/scratch/netid/` 
+- your scratch directory (unlimited, no-backup) - `/scratch/netid/` 
 
 The difference between two is that scratch is not backed up and the read/write speed is higher for the scratch. <br> 
 For the purpose of our workshop all the data and computational output will be held in `/scratch/netid/ScipionUserData`.<br>
