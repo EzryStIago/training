@@ -16,9 +16,9 @@ The compute node will be accessible only on the Rutgers network or if you are co
  Enter your Rutgers netID and Password and click on the **Log in** button.
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/fastX_login.png" width="500" height="500" center> <p>
  
- In the new window 
+ In the new window, click on **Launch Session** on the left, select **XFCE desktop** and then click on **Launch** button on the right.<p>
 <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_sessions.png"> 
-  Click on **Launch Session** on the left, select **XFCE desktop** and then click on **Launch** button on the right.<p>
+  
 <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_XFCE.png"> 
 <p> 
  Ignore the warning<p> 
@@ -26,14 +26,6 @@ The compute node will be accessible only on the Rutgers network or if you are co
 <p>
  
  
- 
- |Login page|Click on Launch Session and Select XFCE desktop|Open new terminal, copy text from your computer into clipboard window and click on Send to Remote. Put cursor into a terminal and click Edit->Paste. The text from a clipboard appears in the terminal. Hit Return to submit a job to a compute node. Notice that the jobid number has been assigned and resources have been allocated. The command prompt in the treminal will also change from a login node netid@amarel to a compute node netid@slepner or netid@hal. 
-|------|-----------------------------|-----------------------|
-| ![](https://github.com/rutgers-oarc/training/blob/master/workshops/fastX_web.png "FastX web interface")     | ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_newsession.png "FastX new session")| ![](https://github.com/rutgers-oarc/training/blob/master/workshops/FX_srun.png "FastX terminal srun") |
- 
-On rare occasions, especially if the user has a modified .bashrc file,  FastX doesn't work. If it is the case, you can still use a terminal but the connection will be much slower for graphical outputs.
-  - **via a terminal**: if you have a Mac or Linux, a terminal is part of your standard apps. If you have Windows, install an SSH client such as  [mobaXterm](https://mobaxterm.mobatek.net/). Then from your terminal connect to the cluster by executing the following command:   
-``` ssh -X <your netid>@amarel.hpc.rutgers.edu```   
   
 # Overview
 
