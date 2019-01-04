@@ -44,7 +44,7 @@ This is a list of software to install for the workshop
 |Software|Description|URL|
 |------|-----------------------------|-----------------------|
 |Scipion|An image processing framework for obtaining 3D models of macromolecular complexes using Electron Microscopy (3DEM)|[[link]](https://github.com/I2PC/scipion/wiki)|
-|Scipion packages|Scipion integrated packages|[[link]](https://github.com/I2PC/scipion/wiki/Integrated-Packages)|
+|Scipion packages|Scipion integrated packages: Bsoft,cryoFF,CTFFIND,Chimera,EMAN,ETHAN,Frealign,Gautomatch,gCTF,gEMpicker,IMAGIC-4D,Localrec,Motioncorr/dosefgpu,Motioncorr2,Relion,ResMap,SIMPLE,SPIDER,Xmipp,Unblur & summovie|[[link]](https://github.com/I2PC/scipion/wiki/Integrated-Packages)|
 |Chimera|counting the  reads mapped on to genomics feature|[[link]](http://htseq.readthedocs.io/en/master/install.html)|
 |fastQC|widely used for sequencing read QC|[[link]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc) [[download]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
 |RSeQC-2.6.4|An RNA-seq quality control package, multiple functions|[[link]](http://rseqc.sourceforge.net/)|
