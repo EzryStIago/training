@@ -16,15 +16,21 @@ The compute node will be accessible only on the Rutgers network or if you are co
  **Remote desktop via FastX**: 
  In your browser, go to https://cryoem-oarc.hpc.rutgers.edu:port <p>
  Enter your Rutgers netID and Password and click on the **Log in** button.
+ <kbd>
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/fastX_login.png" width="500" height="500" center> <p>
- 
+ </kbd>
  In the new window, click on **Launch Session** on the left, select **XFCE desktop** and then click on **Launch** button on the right.<p>
-<img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_sessions.png"> 
-  
+<kbd>
+<img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_sessions.png">  
+</kbd>
+<kbd>  
 <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_XFCE.png"> 
+  </kbd>
 <p> 
  Ignore the warning<p> 
+ <kbd>
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_popup.png" width="500" height="155" center> 
+  </kbd>
 <p>
  It will open a new desktop window on a compute node<br> 
  At the bottom of the page find a terminal icon, a black rectangular that looks like an old fashion TV box. Click on it. <br>
@@ -34,12 +40,14 @@ The compute node will be accessible only on the Rutgers network or if you are co
  scipion
  ```  
  <p><p>
- 
+ <kbd>
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_desktop.png" width="600" height="349"> <p> 
- 
+ </kbd>
  #### Please be patient, it may take up to 30sec to start Scipion for the first time <p>
 
- <kbd><img src="https://github.com/rutgers-oarc/training/blob/master/workshops/scipion_projects.png" border="5" width="600" height="254"></kbd> <p>
+ <kbd>
+ <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/scipion_projects.png" border="5" width="600" height="254"></kbd>
+ <p>
   
  
  **Reconnecting to the FastX remote desktop session**:
