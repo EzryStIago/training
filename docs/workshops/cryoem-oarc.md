@@ -16,9 +16,9 @@ The compute node will be accessible only on the Rutgers network or if you are co
  **Remote desktop via FastX**: 
  In your browser, go to https://cryoem-oarc.hpc.rutgers.edu:port <p>
  Enter your Rutgers netID and Password and click on the **Log in** button.
- <kbd>
+ 
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/fastX_login.png" width="500" height="500" center> <p>
- </kbd>
+ 
  In the new window, click on **Launch Session** on the left, select **XFCE desktop** and then click on **Launch** button on the right.<p>
 <kbd>
 <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_sessions.png">  
