@@ -44,53 +44,25 @@ This is a list of software to install for the workshop
 |Software|Description|URL|
 |------|-----------------------------|-----------------------|
 |Scipion|An image processing framework for obtaining 3D models of macromolecular complexes using Electron Microscopy (3DEM)|[[link]](https://github.com/I2PC/scipion/wiki)|
-|Scipion packages|Scipion integrated packages: Bsoft, cryoFF, CTFFIND, Chimera, EMAN, ETHAN, Frealign, Gautomatch, gCTF, gEMpicker, IMAGIC-4D, Localrec, Motioncorr/dosefgpu, Motioncorr2, Relion, ResMap, SIMPLE, SPIDER, Xmipp, Unblur & summovie|[[link]](https://github.com/I2counting the  reads mapped on to genomics featurePC/scipion/wiki/Integrated-Packages)|
+|Scipion packages|Scipion integrated packages: Bsoft, cryoFF, CTFFIND, Chimera, EMAN, ETHAN, Frealign, Gautomatch, gCTF, gEMpicker, IMAGIC-4D, Localrec, Motioncorr/dosefgpu, Motioncorr2, Relion, ResMap, SIMPLE, SPIDER, Xmipp, Unblur & summovie|[[link]](https://github.com/I2counting)|
 |Chimera|A program for interactive visualization and analysis of molecular structures and related data, including density maps|[[link]](https://www.cgl.ucsf.edu/chimera/)|
-|fastQC|widely used for sequencing read QC|[[link]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc) [[download]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
-|RSeQC-2.6.4|An RNA-seq quality control package, multiple functions|[[link]](http://rseqc.sourceforge.net/)|
-|trimmomatic|fastq quality trim and adaptor removal|[[link]](http://www.usadellab.org/cms/?page=trimmomatic) [[download]](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip)|
 
 
 
 
 ## DO NOT RUN ANY COMPUTATIONAL JOBS ON THE LOGIN NODE 
-## Get resources on the compute node 
 
-When you login to the cluster you are on the login node. Jobs are not allowed to be run on the loging node, intstead you need to request a resource on the compute node for your job. This means that you will not impede other users who are also using the login node, and will be placed on a machine which you share with only a few people. You can do so by running the following command in your terminal:    
-```
-srun  -p main --x11 --reservation=genomics -N 1 -c 2 -n 1 -t 01:40:00 --pty /bin/bash -i
-```  
- or just run this script
-```
-node_request.sh
-```
-Notice that the name in your terminal will change from `amarel` to a node name like `hal0025` or `slepner086`.  The following table explains the parts of this command: 
-
-|command part| meaning|
-|----|----|
-|`srun`| `slurm` run, i.e. allocate resources and run via `slurm` scheduler | 
-|`-p main` | on the main partition, one of several queues on the cluster|
-|`--x11` | it allows the graphical output from a compute node, e.g. GUI of the program|
-|`--reservation=genomics`| we reserved some compute nodes for this workshop to avoid waiting in the queue|
-|`-N 1`| ask for one compute node|
-|`-c 2`| ask for two cpu cores|
-|`-n 1`| tells slurm that the job will be run as  1 task ( for parallel MPI jobs it could be more than 1|
-|`-t 01:40:00`| run this for a maximum time of 1 hour 40 minutes|
-|`--pty /bin/bash -i`| run the terminal shell in an interactive mode|
 
 ### Understanding your data space
 
-You have two main spaces on the Amarel cluster. These are: 
+You have two main spaces on the OARC cluster. These are: 
 
 - your home directory (100Gb) - `/home/netid/` 
-- your scratch directory (500Gb)- `/scratch/netid/` 
+- your scratch directory (unlimited, no-backup)- `/scratch/netid/` 
 
-  They differ in how they are backed up (scratch is not backed up) and by read/write speed. <br> 
-  So we will install programs in  `/home/$USER/Genomics_Workshop`, <br>
-  while the data and computational output will be held in `/scratch/$USER/Genomics_Workshop`. 
-  
-
-## 1. Install programs and create a workspace for the workshop
+They differ in how they are backed up (scratch is not backed up) and by read/write speed. <br> 
+For the purpose of our workshop all the data and computational output will be held in `/scratch/netid/ScipionUserData`. 
+** In the linux environment the names of files/directories are case sensative. Make sure that you properly type upper and lower case letters in the path when needed. **  
 
    Each program has slightly different installation instructions. 
    You do not need to install programs manually.  Instead just run the following scirpt:
