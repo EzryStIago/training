@@ -24,7 +24,10 @@ The compute node will be accessible only on the Rutgers network or if you are co
  Ignore the warning<p> 
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_popup.png" width="600" height="150" center> 
 <p>
- 
+ **Reconnect to the FastX remote desktop session**:
+ Open the web browser and go to https://cryoem-oarc.hpc.rutgers.edu:port
+ Login into your account with your Rutgers netID and a password.
+ Click on the **XFCE Desktop** session in the My Session list. 
  
   
 # Overview
