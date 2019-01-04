@@ -52,7 +52,13 @@ This is a list of software installed on OARC clusters for the workshop
 |------|-----------------------------|-----------------------|
 |Scipion|An image processing framework for obtaining 3D models of macromolecular complexes using Electron Microscopy (3DEM)|[[link]](https://github.com/I2PC/scipion/wiki)|
 |Scipion packages|Scipion integrated packages: Bsoft, cryoFF, CTFFIND, EMAN, ETHAN, Frealign, Gautomatch, gCTF, gEMpicker, IMAGIC-4D, Localrec, Motioncorr/dosefgpu, Motioncorr2, Relion, ResMap, SIMPLE, SPIDER, Xmipp, Unblur & summovie|[[link]](https://github.com/I2counting)|
-|Chimera|A program for interactive visualization and analysis of molecular structures and related data, including density maps|[[link]](https://www.cgl.ucsf.edu/chimera/)|
+|Chimera|A program for interactive visualization and analysis of molecular structures and related data, including density maps|[[link]](https://www.cgl.ucsf.edu/chimera/)| <p>
+ 
+You can also check what Scipion packages are installed from a command line.<br>
+Open a new terminal window and type
+```
+scipion install --help
+```
 
 
 
