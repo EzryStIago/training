@@ -27,11 +27,12 @@ The compute node will be accessible only on the Rutgers network or if you are co
  It will open a new desktop window on a compute node<br> 
  At the bottom of the page find a terminal icon, a black rectangular that looks like an old fashion TV box. Click on it. <br>
  In the terminal window type *scipion to start Scipion 
- <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_desktop.png" width="600" height="300" center> 
+ <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_desktop.png"> 
 <p>
+ <p>
+  
  
- 
- **Reconnect to the FastX remote desktop session**:
+ **Reconnecting to the FastX remote desktop session**:
  - Open the web browser and go to https://cryoem-oarc.hpc.rutgers.edu:port <br>
  - Login into your account with your Rutgers netID and a password.<br>
  - Click on the **XFCE Desktop** session in the My Session list. <br>
