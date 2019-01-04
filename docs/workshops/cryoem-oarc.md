@@ -1,13 +1,15 @@
-As a part of ongoing collaboration between Rutgers [**Office of Advanced Research Computing (OARC)**](http://oarc.rutgers.edu) and Rutgers **Institute for Quantitative Biomedicine** we are proud to announce that OARC clusters were chosen to be a primary computational platform to support  the 6th Annual Interdisciplinary Quantitative Biology Winter Boot Camp for  Single-Particle Cryo-Electron Microscopy
-January 7 - 11, 2019
-https://iqb.rutgers.edu/bootcampwinter2019
+## As a part of ongoing collaboration between Rutgers [**Office of Advanced Research Computing (OARC)**](http://oarc.rutgers.edu) and Rutgers **Institute for Quantitative Biomedicine** we are proud to announce that OARC clusters were chosen to be a primary computational platform to support the 6th Annual Interdisciplinary Quantitative Biology Winter Boot Camp for  Single-Particle Cryo-Electron Microscopy January 7 - 11, 2019 https://iqb.rutgers.edu/bootcampwinter2019
 
-We are proud of being at the frontier of science and helping to spread the knowledge of Rutgers scientists with the  national and international scientific community.
+### We are proud of being at the frontier of science and helping to spread the knowledge of Rutgers scientists with the  national and international scientific community.
 
 # Setup
 
-## Connect to the cluster login node 
-The preferred method to connect to the cluster is through a web browser and fastX client
+## Connect to the OARC cluster 
+The boot camp participants are expected to bring their own laptops with a **Chrome web browser** installed.
+The preferred method to connect to the cluster is through fastX session in a web browser.
+Each participant will be granted an access to an individual compute node for the duration of the boot camp.
+The compute node will accessible on a particular port and should not be shared between participants.
+
 
  - **via FastX**: in your browser, go to https://cryoem-oarc.hpc.rutgers.edu:port or [click here](https://cryoem-oarc.hpc.rutgers.edu). (It will only work from campus or if you are connected via VPN [link](https://ssl-vpn.rutgers.edu/dana-na/auth/url_default/welcome.cgi).) See [FastX](https://rutgers-oarc.github.io/training/howtos/fastx/) for a walkthrough that includes a tip on copying/pasting commands. 
  
