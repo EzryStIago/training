@@ -44,13 +44,9 @@ This is a list of software to install for the workshop
 |Software|Description|URL|
 |------|-----------------------------|-----------------------|
 |Scipion|An image processing framework for obtaining 3D models of macromolecular complexes using Electron Microscopy (3DEM)|[[link]](https://github.com/I2PC/scipion/wiki)|
-|Scipion packages|Scipion integrated packages: Bsoft, cryoFF, CTFFIND, Chimera, EMAN, ETHAN, Frealign, Gautomatch, gCTF, gEMpicker, IMAGIC-4D, Localrec, Motioncorr/dosefgpu, Motioncorr2, Relion, ResMap, SIMPLE, SPIDER, Xmipp, Unblur & summovie|[[link]](https://github.com/I2counting)|
+|Scipion packages|Scipion integrated packages: Bsoft, cryoFF, CTFFIND, EMAN, ETHAN, Frealign, Gautomatch, gCTF, gEMpicker, IMAGIC-4D, Localrec, Motioncorr/dosefgpu, Motioncorr2, Relion, ResMap, SIMPLE, SPIDER, Xmipp, Unblur & summovie|[[link]](https://github.com/I2counting)|
 |Chimera|A program for interactive visualization and analysis of molecular structures and related data, including density maps|[[link]](https://www.cgl.ucsf.edu/chimera/)|
 
-
-
-
-## DO NOT RUN ANY COMPUTATIONAL JOBS ON THE LOGIN NODE 
 
 
 ### Understanding your data space
@@ -60,9 +56,9 @@ You have two main spaces on the OARC cluster. These are:
 - your home directory (100Gb) - `/home/netid/` 
 - your scratch directory (unlimited, no-backup)- `/scratch/netid/` 
 
-They differ in how they are backed up (scratch is not backed up) and by read/write speed. <br> 
-For the purpose of our workshop all the data and computational output will be held in `/scratch/netid/ScipionUserData`. 
-** In the linux environment the names of files/directories are case sensative. Make sure that you properly type upper and lower case letters in the path when needed. **  
+The difference between two is that scratch is not backed up and the read/write speed is higher for the scratch. <br> 
+For the purpose of our workshop all the data and computational output will be held in `/scratch/netid/ScipionUserData`.<br>
+**In the linux environment the names of files/directories are case sensative. Make sure that you properly type upper and lower case letters in the path when needed.**  
 
    Each program has slightly different installation instructions. 
    You do not need to install programs manually.  Instead just run the following scirpt:
