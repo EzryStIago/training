@@ -18,14 +18,13 @@ The compute node will be accessible only on the Rutgers network or if you are co
  
  - in the new window 
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_sessions.png"> 
-  Click on Launch Session on the left, in a new window select XFCE desktop and then click on Launch button on the right.
-  
-- in the new window
+  Click on Launch Session on the left, select XFCE desktop and then click on Launch button on the right.
+
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_XFCE.png"> 
-  Click on Launch Session, then  Select XFCE desktop and in the new.
+ 
  
   - ignore the warning 
- <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_popup.png" width="500" height="300" center> 
+ <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_popup.png" width="1210" height="374" center> 
 
  
  
