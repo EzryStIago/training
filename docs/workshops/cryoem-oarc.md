@@ -32,9 +32,9 @@ The compute node will be accessible only on the Rutgers network or if you are co
  
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_desktop.png" width="600" height="349"> <p> 
  
- ### Please be patient, it may take up to 30sec to start Scipion for the first time <p>
+ #### Please be patient, it may take up to 30sec to start Scipion for the first time <p>
 
- <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/scipion_projects.png" width="500" height="212"> <p>
+ <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/scipion_projects.png" border="1" width="600" height="254"> <p>
   
  
  **Reconnecting to the FastX remote desktop session**:
