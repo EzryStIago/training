@@ -27,7 +27,7 @@ The compute node will be accessible only on the Rutgers network or if you are co
  It will open a new desktop window on a compute node<br> 
  At the bottom of the page find a terminal icon, a black rectangular that looks like an old fashion TV box. Click on it. <br>
  In the terminal window type *scipion to start Scipion 
- <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_desktop.png"> 
+ <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_desktop.png" width="600" height="349"> 
 <p>
  <p>
   
