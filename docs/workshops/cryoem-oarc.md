@@ -1,3 +1,5 @@
+# Overview
+
 ## As a part of ongoing collaboration between Rutgers [**Office of Advanced Research Computing (OARC)**](http://oarc.rutgers.edu) and Rutgers [**Institute for Quantitative Biomedicine**](http://iqb.rutgers.edu/) we are proud to announce that OARC clusters were chosen to be a primary computational platform to support the 6th Annual Interdisciplinary Quantitative Biology Winter Boot Camp for  Single-Particle Cryo-Electron Microscopy January 7 - 11, 2019 https://iqb.rutgers.edu/bootcampwinter2019
 
 ### We are proud of being at the frontier of science and helping to spread the knowledge of Rutgers scientists with the  national and international scientific community.
@@ -37,8 +39,6 @@ The compute node will be accessible only on the Rutgers network or if you are co
  - Login into your account with your Rutgers netID and a password.<br>
  - Click on the **XFCE Desktop** session in the My Session list. <br>
  
-  
-# Overview
 
 
 
@@ -46,7 +46,7 @@ The compute node will be accessible only on the Rutgers network or if you are co
 
 ## CRYO-EM Software
 
-This is a list of software to install for the workshop
+This is a list of software installed on OARC clusters for the workshop
 
 |Software|Description|URL|
 |------|-----------------------------|-----------------------|
@@ -65,44 +65,19 @@ You have two main spaces on the OARC cluster. These are:
 
 The difference between two is that scratch is not backed up and the read/write speed is higher for the scratch. <br> 
 For the purpose of our workshop all the data and computational output will be held in `/scratch/netid/ScipionUserData`.<br>
-**In the linux environment the names of files/directories are case sensative. Make sure that you properly type upper and lower case letters in the path when needed.**  
+**In the linux environment the names of files/directories are case sensative. Make sure that you properly type upper and lower case letters in the path when needed.**  <p>
 
-   Each program has slightly different installation instructions. 
-   You do not need to install programs manually.  Instead just run the following scirpt:
-   **/projects/oarc/Genomics_Workshop/RNA-Seq_analysis/Labs/lab_PartI.sh**<br>
-   It will install neccessary programs and creates folders for this workshop.
-   
-   For curious one, here is the content of the script
-   ########################################################
- ```  
- #!/bin/bash
-
-mkdir -p /home/$USER/Genomics_Workshop/
-mkdir -p /scratch/$USER/Genomics_Workshop/scripts
-mkdir -p /scratch/$USER/Genomics_Workshop/download
-mkdir -p /scratch/$USER/Genomics_Workshop/untreated
-mkdir -p /scratch/$USER/Genomics_Workshop/dex_treated
-mkdir -p /scratch/$USER/Genomocs_Workshop/Reference
-
-echo "Copying files... Please wait"
-
-cp  -r /projects/oarc/Genomics_Workshop/Programs/ /home/$USER/Genomics_Workshop/
-
-echo '## Genomics_Workshop specific settings 07/16/2018' >> ~/.bashrc
-echo 'export PATH=$HOME/Genomics_Workshop/Programs/seqtk:$PATH' >> ~/.bashrc
-echo 'export PATH=$HOME/Genomics_Workshop/Programs/sratoolkit.2.8.2-centos_linux64/bin:$PATH' >> ~/.bashrc
-echo 'export PATH=$HOME/Genomics_Workshop/Programs/FastQC:$PATH' >> ~/.bashrc
-source ~/.bashrc 
-
-
-module load intel/17.0.2 python/2.7.12
-pip install HTSeq --user
-wait
-pip install bx-python==0.7.3 --user
-wait
-pip install RSeQC --user
+When you start Scipion for the first time you may see some warning messages about security of python cashe directory. 
 ```
-   ########################################################<br>
-   
+>>>>> python  /gpfs/home/projects/community/scipion/openmpi3/pyworkflow/apps/pw_manager.py 
+/gpfs/home/projects/community/scipion/openmpi3/software/lib/python2.7/site-packages/setuptools-5.4.1-py2.7.egg/pkg_resources.py:1049: UserWarning: /home/db1102/.python-eggs is writable by group/others and vulnerable to attack when used with get_resource_filename. Consider a more secure location (set with .set_extraction_path or the PYTHON_EGG_CACHE environment variable).
+```
+You may ignore this message or if you want to get rid off its annoyance, in a new terminal window type the following command:
+```
+chmod g-w ~/.python-eggs
+```
+
+
+
 
 
