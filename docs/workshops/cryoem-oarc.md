@@ -24,6 +24,7 @@ The compute node will be accessible only on the Rutgers network or if you are co
  Ignore the warning<p> 
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_popup.png" width="600" height="150" center> 
 <p>
+ 
  **Reconnect to the FastX remote desktop session**:
  Open the web browser and go to https://cryoem-oarc.hpc.rutgers.edu:port
  Login into your account with your Rutgers netID and a password.
@@ -36,14 +37,14 @@ The compute node will be accessible only on the Rutgers network or if you are co
 
 
 
-## CRYO-EM  Software
+## CRYO-EM Software
 
 This is a list of software to install for the workshop
 
 |Software|Description|URL|
 |------|-----------------------------|-----------------------|
-|Scipion|very handy and fast for processing fastq/a files|[[link]](https://github.com/lh3/seqtk)|
-|Relion|downloading and processing data from GEO/SRA database|[[link]](https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/) [[download]](http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz)|
+|Scipion|An image processing framework for obtaining 3D models of macromolecular complexes using Electron Microscopy (3DEM)|[[link]](https://github.com/I2PC/scipion/wiki)|
+|Scipion packages|Scipion integrated packages|[[link]](https://github.com/I2PC/scipion/wiki/Integrated-Packages)|
 |Chimera|counting the  reads mapped on to genomics feature|[[link]](http://htseq.readthedocs.io/en/master/install.html)|
 |fastQC|widely used for sequencing read QC|[[link]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc) [[download]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
 |RSeQC-2.6.4|An RNA-seq quality control package, multiple functions|[[link]](http://rseqc.sourceforge.net/)|
