@@ -43,7 +43,8 @@ The compute node will be accessible only on the Rutgers network or if you are co
  <kbd>
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/FX_desktop.png" width="600" height="349"> <p> 
  </kbd>
- #### Please be patient, it may take up to 30sec to start Scipion for the first time <p>
+ 
+ ##### Please be patient, it may take up to 30sec to start Scipion for the first time <p>
 
  <kbd>
  <img src="https://github.com/rutgers-oarc/training/blob/master/workshops/scipion_projects.png" border="5" width="600" height="254"></kbd>
