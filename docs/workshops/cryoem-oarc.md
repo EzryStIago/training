@@ -7,11 +7,11 @@
 ## Connect to the OARC cluster 
 The boot camp participants are expected to bring their own laptops with a **Chrome web browser** installed.
 The preferred method to connect to the cluster is through remote desktop (fastX) in a web browser.
-Each participant will be granted an access to an individual compute node for the duration of the boot camp.
-The compute node will be accessible on a particular port that should not be shared between participants.
+Each participant will be granted an access to an individual compute node for the duration of the boot camp. 
+The compute node will be accessible only on the Rutgers network or if you are connected via VPN [link](https://ssl-vpn.rutgers.edu/dana-na/auth/url_default/welcome.cgi).) The access port is unique for each participant and should not be shared.
 
 
- - **Remote desktop via FastX**: in your browser, go to https://cryoem-oarc.hpc.rutgers.edu:*port (It will only work from campus or if you are connected via VPN [link](https://ssl-vpn.rutgers.edu/dana-na/auth/url_default/welcome.cgi).) 
+ - **Remote desktop via FastX**: in your browser, go to https://cryoem-oarc.hpc.rutgers.edu:*port (It will only work from campus or  
  
  |Login page|Click on Launch Session and Select XFCE desktop|Open new terminal, copy text from your computer into clipboard window and click on Send to Remote. Put cursor into a terminal and click Edit->Paste. The text from a clipboard appears in the terminal. Hit Return to submit a job to a compute node. Notice that the jobid number has been assigned and resources have been allocated. The command prompt in the treminal will also change from a login node netid@amarel to a compute node netid@slepner or netid@hal. 
 |------|-----------------------------|-----------------------|
