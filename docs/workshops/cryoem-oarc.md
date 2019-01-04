@@ -26,9 +26,9 @@ The compute node will be accessible only on the Rutgers network or if you are co
 <p>
  
  **Reconnect to the FastX remote desktop session**:
- Open the web browser and go to https://cryoem-oarc.hpc.rutgers.edu:port
- Login into your account with your Rutgers netID and a password.
- Click on the **XFCE Desktop** session in the My Session list. 
+ - Open the web browser and go to https://cryoem-oarc.hpc.rutgers.edu:port <br>
+ - Login into your account with your Rutgers netID and a password.<br>
+ - Click on the **XFCE Desktop** session in the My Session list. <br>
  
   
 # Overview
@@ -44,29 +44,12 @@ This is a list of software to install for the workshop
 |Software|Description|URL|
 |------|-----------------------------|-----------------------|
 |Scipion|An image processing framework for obtaining 3D models of macromolecular complexes using Electron Microscopy (3DEM)|[[link]](https://github.com/I2PC/scipion/wiki)|
-|Scipion packages|Scipion integrated packages: Bsoft, cryoFF, CTFFIND, Chimera, EMAN, ETHAN, Frealign, Gautomatch, gCTF, gEMpicker, IMAGIC-4D, Localrec, Motioncorr/dosefgpu, Motioncorr2, Relion, ResMap, SIMPLE, SPIDER, Xmipp, Unblur & summovie|[[link]](https://github.com/I2PC/scipion/wiki/Integrated-Packages)|
-|Chimera|counting the  reads mapped on to genomics feature|[[link]](http://htseq.readthedocs.io/en/master/install.html)|
+|Scipion packages|Scipion integrated packages: Bsoft, cryoFF, CTFFIND, Chimera, EMAN, ETHAN, Frealign, Gautomatch, gCTF, gEMpicker, IMAGIC-4D, Localrec, Motioncorr/dosefgpu, Motioncorr2, Relion, ResMap, SIMPLE, SPIDER, Xmipp, Unblur & summovie|[[link]](https://github.com/I2counting the  reads mapped on to genomics featurePC/scipion/wiki/Integrated-Packages)|
+|Chimera|A program for interactive visualization and analysis of molecular structures and related data, including density maps|[[link]](https://www.cgl.ucsf.edu/chimera/)|
 |fastQC|widely used for sequencing read QC|[[link]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc) [[download]](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.zip)|
 |RSeQC-2.6.4|An RNA-seq quality control package, multiple functions|[[link]](http://rseqc.sourceforge.net/)|
 |trimmomatic|fastq quality trim and adaptor removal|[[link]](http://www.usadellab.org/cms/?page=trimmomatic) [[download]](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip)|
 
-This is a list of software already available on the cluster and the command you need to execute to load it in your environment: 
-
-|Software|Description|Access on the cluster|
-|------|-----------------------------|-----------------------|
-|samtools|utilities for short DNA seq alignments [[link]](http://samtools.sourceforge.net/) |`module load samtools/1.3.1`|
-|bedtools|tools for a wide-range of genomics analysis [[link]](http://bedtools.readthedocs.io/en/latest/)|`module load bedtools2/2.25.0`|
-|bowtie2| alignment software [[link]](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)|`module load bowtie2/2.2.9`|
-|tophat2| a fast splice junction mapper for RNA-Seq reads [[link]](https://ccb.jhu.edu/software/tophat/index.shtml)|`module load mvapich2/2.1  boost/1.59.0 tophat2/2.1.0`|
-|R|language for statistical analysis|`module load intel/17.0.4 R-Project/3.4.1`|
-
-This is a list of other software you might find useful:
-
-|Software|Description|URL|
-|------|-----------------------------|-----------------------|
-| GSEA     | Genome set enrichment analysis| [[link]](http://software.broadinstitute.org/gsea/index.jsp) |
-| IGV      | Interactive Genome Viewer      | [[link]](http://software.broadinstitute.org/software/igv/)|
-| Cytoscape| Network visualization softwar   | [[link]](http://www.cytoscape.org/)|
 
 
 
