@@ -41,7 +41,9 @@ Perceval includes the following hardware (this list may already be outdated sinc
 1 Large Memory node with 48 Intel Xeon E5-2680 cores + 1.5 TB RAM
 
 Default run time = 2 hours for all partitions
-Maximum run time = 7 days in the 'main' partition, 2 days in the 'gpu' partition
+Maximum run time = 7 days in the 'main' and 'perceval' partitions, 2 days in the 'gpu' partition
+
+Preemption: jobs running in the 'main' job partition are subject to preemption but jobs running in the 'perceval' partition are not subject to preemption.
 
 # Basic operations - connecting and moving files
 
