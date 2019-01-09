@@ -123,7 +123,7 @@ mem          up 3-00:00:00      1  alloc mem001
 ```
 Understanding this output:
 
-- There are 4 basic partitions, main (traditional compute nodes, CPUs only), gpu (nodes with general-purpose GPU accelerators), mem (CPU-only nodes with 1.5 TB RAM), phi (CPU-only nodes with Xeon Phi coprocessors.
+- There are 4 basic partitions, main (traditional compute nodes, CPUs only, jobs running here are preemptible), gpu (nodes with general-purpose GPU accelerators), mem (CPU-only nodes with 1.5 TB RAM), phi (CPU-only nodes with Xeon Phi coprocessors. Note: Perceval users will see an additional 'perceval' partition available and this partition is not subject to preemption.
 - The upper limit for a job’s run time is 3 days (72 hours).
 
 **Term** |**Meaning**
