@@ -697,7 +697,8 @@
 <li><strong>Amarel</strong> - a general access cluster. <a href="https://oarc.rutgers.edu/access/">Request access</a> or <a href="https://oarc.rutgers.edu/services/condo-model/">become an owner</a></li>
 <li><strong>Perceval</strong> - similar to Amarel, but paid for, and to be used by exclusively by, NIH grants and grantees</li>
 <li><strong>AmarelN</strong> - the Amarel system component located in Newark</li>
-<li><strong>Sirius</strong> - a single big machine with no resource scheduler, acts as a big desktop with multiple concurrent users</li>
+<li><strong>Sirius</strong> - a single big machine with no resource scheduler, acts as a big desktop with multiple concurrent users. This is being retired Feb 25, 2019 and no new accounts will be create on this machine. </li>
+<li><strong>Didact</strong> - <strong>experimental</strong> - a small cluster dedicated to teaching classes. It was stood up in Jan 2019 and is in experimental stage (only friendly users allowed).</li>
 </ul>
 <h1 id="cluster-resources">Cluster Resources</h1>
 <h2 id="amarel">Amarel</h2>
@@ -726,7 +727,8 @@ Maximum run time = 3 days in the 'main' partition</p>
 8 GPU nodes with 24 Intel Xeon E5-2680 cores + 128 GB RAM
 1 Large Memory node with 48 Intel Xeon E5-2680 cores + 1.5 TB RAM</p>
 <p>Default run time = 2 hours for all partitions
-Maximum run time = 7 days in the 'main' partition, 2 days in the 'gpu' partition</p>
+Maximum run time = 7 days in the 'main' and 'perceval' partitions, 2 days in the 'gpu' partition</p>
+<p>Preemption: jobs running in the 'main' job partition are subject to preemption but jobs running in the 'perceval' partition are not subject to preemption.</p>
 <h1 id="basic-operations-connecting-and-moving-files">Basic operations - connecting and moving files</h1>
 <h2 id="connecting-to-the-cluster">Connecting to the cluster</h2>
 <ul>
@@ -789,7 +791,7 @@ mem          up 3-00:00:00      1  alloc mem001
 
 <p>Understanding this output:</p>
 <ul>
-<li>There are 4 basic partitions, main (traditional compute nodes, CPUs only), gpu (nodes with general-purpose GPU accelerators), mem (CPU-only nodes with 1.5 TB RAM), phi (CPU-only nodes with Xeon Phi coprocessors.</li>
+<li>There are 4 basic partitions, main (traditional compute nodes, CPUs only, jobs running here are preemptible), gpu (nodes with general-purpose GPU accelerators), mem (CPU-only nodes with 1.5 TB RAM), phi (CPU-only nodes with Xeon Phi coprocessors. Note: Perceval users will see an additional 'perceval' partition available and this partition is not subject to preemption.</li>
 <li>The upper limit for a job’s run time is 3 days (72 hours).</li>
 </ul>
 <table>
