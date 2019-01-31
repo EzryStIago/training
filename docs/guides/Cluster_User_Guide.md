@@ -5,7 +5,8 @@ There are several clusters administered by OARC. Each cluster is using the resou
 - **Amarel** - a general access cluster. [Request access](https://oarc.rutgers.edu/access/) or [become an owner](https://oarc.rutgers.edu/services/condo-model/)
 - **Perceval** - similar to Amarel, but paid for, and to be used by exclusively by, NIH grants and grantees
 - **AmarelN** - the Amarel system component located in Newark
-- **Sirius** - a single big machine with no resource scheduler, acts as a big desktop with multiple concurrent users
+- **Sirius** - a single big machine with no resource scheduler, acts as a big desktop with multiple concurrent users. This is being retired Feb 25, 2019 and no new accounts will be create on this machine. 
+- **Didact** - **experimental** - a small cluster dedicated to teaching classes. It was stood up in Jan 2019 and is in experimental stage (only friendly users allowed).
 
 #Cluster Resources
 
