@@ -1,54 +1,6 @@
 
-
-** My /scratch disappeared. Where is it? **
-
-The filesystem has been moved to new hardware. As a result, what used to be `/scratch` before the upgrade is now `/oldscratch`. Please copy any files you need to retain to new /scratch. `/oldscratch` will be retired soon. 
-
-** I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger? **
-
-You are not in danger. During the upgrade the fingerprint of the server changed. Go to your `.ssh/authorized_hosts` or `.ssh/known_hosts` file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. 
-```
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-The ECDSA host key for perceval.hpc.rutgers.edu has changed,
-and the key for the corresponding IP address 172.16.94.50
-is unknown. This could either mean that
-DNS SPOOFING is happening or the IP address for the host
-and its host key have changed at the same time.
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that a host key has just been changed.
-```
-** What is the status of GPU nodes? ** 
-
-
-To check the current status of GPU nodes with reason: check with command `sinfo -R -l -p gpu`. Here is some output: 
-```
-[kp807@perceval1 ~]$ sinfo -R -l -p gpu
-Mon Oct 15 10:06:40 2018
-REASON               USER         TIMESTAMP           STATE  NODELIST
-NHC: check_cmd_outpu root(0)      2018-10-12T03:22:03 drain  cuda[001-008]
-```
-```
-[kp807@amarel1 ~]$ sinfo -R -l -p gpu
-Mon Oct 15 10:06:19 2018
-REASON               USER         TIMESTAMP           STATE  NODELIST
-no cnx ipmi          root(0)      2018-10-13T11:51:15 drain* gpu[001-003]
-IP                   root(0)      2018-10-15T09:53:10 drng   pascal[001-004]
-not part of mentat2  root(0)      2018-10-13T11:52:52 drain  gpu[005-006]
-IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
-IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
-```
- 
-**Where are snapshots for /home stored?**
-
-Normally, they are in `/home/.snapshots`. 
-
 # Usual FAQs
+
 
 ## What happened... tip to gather info
 
@@ -65,6 +17,11 @@ Follow the instructions on this webpage and fill in the server URL:   `ssl-vpn.r
 **who do I email for help?**
 
 Please email `help@oarc.rutgers.edu` - this will reach all research scientists, but not system admins. Research scientists will include sysadmins if necessary. (We are trying to streamline communications.)
+
+## Where are snapshots for /home stored?
+
+Normally, they are in `/home/.snapshots`. 
+
 
 ## error and output files
 
@@ -171,3 +128,48 @@ Now you have installed your environment. Next time, these are the commands to ge
 export PATH="/home/$USER/anaconda2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin"
 source activate mytensorflow-1.5
 ```
+
+## My /scratch disappeared after October 6,2018 outage. Where is it? 
+
+The filesystem has been moved to new hardware. As a result, what used to be `/scratch` before the upgrade is now `/oldscratch`. Please copy any files you need to retain to new /scratch. `/oldscratch` will be retired soon. 
+
+## I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger? 
+
+If there was a recent outage, you are not in danger. During the upgrade the fingerprint of the server can have changed. Go to your `.ssh/authorized_hosts` or `.ssh/known_hosts` file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. 
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The ECDSA host key for perceval.hpc.rutgers.edu has changed,
+and the key for the corresponding IP address 172.16.94.50
+is unknown. This could either mean that
+DNS SPOOFING is happening or the IP address for the host
+and its host key have changed at the same time.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+```
+
+## What is the status of GPU nodes? 
+
+To check the current status of GPU nodes with reason: check with command `sinfo -R -l -p gpu`. Here is some output: 
+```
+[kp807@perceval1 ~]$ sinfo -R -l -p gpu
+Mon Oct 15 10:06:40 2018
+REASON               USER         TIMESTAMP           STATE  NODELIST
+NHC: check_cmd_outpu root(0)      2018-10-12T03:22:03 drain  cuda[001-008]
+```
+```
+[kp807@amarel1 ~]$ sinfo -R -l -p gpu
+Mon Oct 15 10:06:19 2018
+REASON               USER         TIMESTAMP           STATE  NODELIST
+no cnx ipmi          root(0)      2018-10-13T11:51:15 drain* gpu[001-003]
+IP                   root(0)      2018-10-15T09:53:10 drng   pascal[001-004]
+not part of mentat2  root(0)      2018-10-13T11:52:52 drain  gpu[005-006]
+IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
+IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
+```
+ 
