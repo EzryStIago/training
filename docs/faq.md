@@ -1,5 +1,4 @@
 
-### Oct6 outage-related questions
 
 ** My /scratch disappeared. Where is it? **
 
@@ -50,6 +49,11 @@ IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
 Normally, they are in `/home/.snapshots`. 
 
 # Usual FAQs
+
+## What happened... tip to gather info
+
+If you see a problem with your job on a cluster, please **DO NOT CANCEL** your job and please report it  to help@oarc.rutgers.edu.
+In this case we can troubleshoot and investigate why something is not working. We have no control and no information about why jobs got cancelled by user.
 
 ## I can't reach Amarel from outside the campus
 
