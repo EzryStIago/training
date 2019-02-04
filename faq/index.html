@@ -52,12 +52,12 @@
     
 
 
-<ul class="" href="..">
+<ul class="" href="/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="..">Home</a>
+        <a class="" href="/">Home</a>
       </li>
 </ul>
 
@@ -75,12 +75,12 @@
     
 
 
-<ul class="" href="../guides/Cluster_User_Guide/">
+<ul class="" href="/guides/Cluster_User_Guide/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../guides/Cluster_User_Guide/">Cluster Guides</a>
+        <a class="" href="/guides/Cluster_User_Guide/">Cluster Guides</a>
       </li>
 </ul>
 
@@ -98,12 +98,12 @@
     
 
 
-<ul class="" href="../guides/Cluster_Examples/">
+<ul class="" href="/guides/Cluster_Examples/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../guides/Cluster_Examples/">Examples</a>
+        <a class="" href="/guides/Cluster_Examples/">Examples</a>
       </li>
 </ul>
 
@@ -121,12 +121,12 @@
     
 
 
-<ul class="" href="../guides/community_resources/">
+<ul class="" href="/guides/community_resources/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../guides/community_resources/">Community</a>
+        <a class="" href="/guides/community_resources/">Community</a>
       </li>
 </ul>
 
@@ -192,12 +192,12 @@
     
 
 
-<ul class="" href="../ressentials/">
+<ul class="" href="/ressentials/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../ressentials/">R tutorial</a>
+        <a class="" href="/ressentials/">R tutorial</a>
       </li>
 </ul>
 
@@ -215,12 +215,12 @@
     
 
 
-<ul class="" href="../CheatSheet/">
+<ul class="" href="/CheatSheet/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../CheatSheet/">Cheat Sheets</a>
+        <a class="" href="/CheatSheet/">Cheat Sheets</a>
       </li>
 </ul>
 
@@ -238,12 +238,12 @@
     
 
 
-<ul class="" href="../resources/">
+<ul class="" href="/resources/">
   
     
     
       <li class=" toctree-l1">
-        <a class="" href="../resources/">Resources</a>
+        <a class="" href="/resources/">Resources</a>
       </li>
 </ul>
 
@@ -261,14 +261,13 @@
     
 
 
-<ul class="current" href="./">
+<ul class="current" href="/faq/">
   
     
     
       <li class="current toctree-l1">
-        <a class="current" href="./">FAQ</a>
+        <a class="current" href="/faq/">FAQ</a>
         
-  
   
   
   <ul class="current subnav">
@@ -280,25 +279,20 @@
   
 
 
+  <li class="current toctree-l2">
+    
+    <ul class="current subnav">
+      
+        
+
+  
+  
+
+
   <li class="toctree-l2 toc-item">
-    <a href="#oct6-outage-related-questions" title="FAQ">Oct6 outage-related questions</a>
+    <a href="#what-happened-tip-to-gather-info" title="FAQ">What happened... tip to gather info</a>
   </li>
 
-    
-      
-
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#usual-faqs" title="FAQ"
-          class="">
-        Usual FAQs
-      </a>
-    
-    <ul class=" subnav">
       
         
 
@@ -319,6 +313,17 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#emailing-for-help" title="FAQ">Emailing for help</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#where-are-snapshots-for-home-stored" title="FAQ">Where are snapshots for /home stored?</a>
   </li>
 
       
@@ -399,6 +404,39 @@
   </li>
 
       
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#my-scratch-disappeared-after-october-62018-outage-where-is-it" title="FAQ">My /scratch disappeared after October 6,2018 outage. Where is it?</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#i-get-a-message-telling-me-someone-may-be-spoofing-when-i-try-to-login-to-perceval-am-i-in-danger" title="FAQ">I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger?</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#what-is-the-status-of-gpu-nodes" title="FAQ">What is the status of GPU nodes?</a>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -451,54 +489,18 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="oct6-outage-related-questions">Oct6 outage-related questions</h3>
-<p><strong> My /scratch disappeared. Where is it? </strong></p>
-<p>The filesystem has been moved to new hardware. As a result, what used to be <code>/scratch</code> before the upgrade is now <code>/oldscratch</code>. Please copy any files you need to retain to new /scratch. <code>/oldscratch</code> will be retired soon. </p>
-<p><strong> I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger? </strong></p>
-<p>You are not in danger. During the upgrade the fingerprint of the server changed. Go to your <code>.ssh/authorized_hosts</code> or <code>.ssh/known_hosts</code> file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. </p>
-<pre><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-The ECDSA host key for perceval.hpc.rutgers.edu has changed,
-and the key for the corresponding IP address 172.16.94.50
-is unknown. This could either mean that
-DNS SPOOFING is happening or the IP address for the host
-and its host key have changed at the same time.
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that a host key has just been changed.
-</code></pre>
-
-<p><strong> What is the status of GPU nodes? </strong> </p>
-<p>To check the current status of GPU nodes with reason: check with command <code>sinfo -R -l -p gpu</code>. Here is some output: </p>
-<pre><code>[kp807@perceval1 ~]$ sinfo -R -l -p gpu
-Mon Oct 15 10:06:40 2018
-REASON               USER         TIMESTAMP           STATE  NODELIST
-NHC: check_cmd_outpu root(0)      2018-10-12T03:22:03 drain  cuda[001-008]
-</code></pre>
-
-<pre><code>[kp807@amarel1 ~]$ sinfo -R -l -p gpu
-Mon Oct 15 10:06:19 2018
-REASON               USER         TIMESTAMP           STATE  NODELIST
-no cnx ipmi          root(0)      2018-10-13T11:51:15 drain* gpu[001-003]
-IP                   root(0)      2018-10-15T09:53:10 drng   pascal[001-004]
-not part of mentat2  root(0)      2018-10-13T11:52:52 drain  gpu[005-006]
-IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
-IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
-</code></pre>
-
-<p><strong>Where are snapshots for /home stored?</strong></p>
-<p>Normally, they are in <code>/home/.snapshots</code>. </p>
-<h1 id="usual-faqs">Usual FAQs</h1>
+                <h1 id="usual-faqs">Usual FAQs</h1>
+<h2 id="what-happened-tip-to-gather-info">What happened... tip to gather info</h2>
+<p>If you see a problem with your job on a cluster, please <strong>DO NOT CANCEL</strong> your job and please report it  to help@oarc.rutgers.edu.
+In this case we can troubleshoot and investigate why something is not working. We have no control and no information about why jobs got cancelled by user.</p>
 <h2 id="i-cant-reach-amarel-from-outside-the-campus">I can't reach Amarel from outside the campus</h2>
 <p>You can only connect to Amarel through a VPN to access the Rutgers network  when off campus. Download the <a href="https://software.rutgers.edu/product/3085">Pulse Secure VPN here</a>
 Follow the instructions on this webpage and fill in the server URL:   <code>ssl-vpn.rutgers.edu</code> </p>
 <h2 id="emailing-for-help">Emailing for help</h2>
 <p><strong>who do I email for help?</strong></p>
 <p>Please email <code>help@oarc.rutgers.edu</code> - this will reach all research scientists, but not system admins. Research scientists will include sysadmins if necessary. (We are trying to streamline communications.)</p>
+<h2 id="where-are-snapshots-for-home-stored">Where are snapshots for /home stored?</h2>
+<p>Normally, they are in <code>/home/.snapshots</code>. </p>
 <h2 id="error-and-output-files">error and output files</h2>
 <p><strong>In the directory "slurm.slepner009.3695956.err" was created. Is this what should be happening?</strong> <br />
 Yes, if one of your options to run a slurm job included a line like <code>--error=slurm.%N.%j.err</code> then any error messages during execution will be going to a file you can inspect afterwards to
@@ -610,6 +612,44 @@ This will be valid ONLY in that terminal, so remember to launch any python2 scri
 <p>Now you have installed your environment. Next time, these are the commands to get you in the python2, mytensorflow-1.5 environment ready to do your python2 work:</p>
 <pre><code>export PATH=&quot;/home/$USER/anaconda2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin&quot;
 source activate mytensorflow-1.5
+</code></pre>
+
+<h2 id="my-scratch-disappeared-after-october-62018-outage-where-is-it">My /scratch disappeared after October 6,2018 outage. Where is it?</h2>
+<p>The filesystem has been moved to new hardware. As a result, what used to be <code>/scratch</code> before the upgrade is now <code>/oldscratch</code>. Please copy any files you need to retain to new /scratch. <code>/oldscratch</code> will be retired soon. </p>
+<h2 id="i-get-a-message-telling-me-someone-may-be-spoofing-when-i-try-to-login-to-perceval-am-i-in-danger">I get a message telling me someone may be spoofing, when I try to login to Perceval. Am I in danger?</h2>
+<p>If there was a recent outage, you are not in danger. During the upgrade the fingerprint of the server can have changed. Go to your <code>.ssh/authorized_hosts</code> or <code>.ssh/known_hosts</code> file and delete the line containing perceval information. The message you got before, that looked like the following, will disappear next time you login. </p>
+<pre><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The ECDSA host key for perceval.hpc.rutgers.edu has changed,
+and the key for the corresponding IP address 172.16.94.50
+is unknown. This could either mean that
+DNS SPOOFING is happening or the IP address for the host
+and its host key have changed at the same time.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+</code></pre>
+
+<h2 id="what-is-the-status-of-gpu-nodes">What is the status of GPU nodes?</h2>
+<p>To check the current status of GPU nodes with reason: check with command <code>sinfo -R -l -p gpu</code>. Here is some output: </p>
+<pre><code>[kp807@perceval1 ~]$ sinfo -R -l -p gpu
+Mon Oct 15 10:06:40 2018
+REASON               USER         TIMESTAMP           STATE  NODELIST
+NHC: check_cmd_outpu root(0)      2018-10-12T03:22:03 drain  cuda[001-008]
+</code></pre>
+
+<pre><code>[kp807@amarel1 ~]$ sinfo -R -l -p gpu
+Mon Oct 15 10:06:19 2018
+REASON               USER         TIMESTAMP           STATE  NODELIST
+no cnx ipmi          root(0)      2018-10-13T11:51:15 drain* gpu[001-003]
+IP                   root(0)      2018-10-15T09:53:10 drng   pascal[001-004]
+not part of mentat2  root(0)      2018-10-13T11:52:52 drain  gpu[005-006]
+IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
+IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
 </code></pre>
               
             </div>
