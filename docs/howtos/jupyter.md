@@ -62,5 +62,16 @@ You should then do the port tunneling described in the previous section and open
 Youtube video that explains this: 
 [![Graphical programs via FastX](http://img.youtube.com/vi/8UQHLO85rlQ/0.jpg)](https://www.youtube.com/watch?v=8UQHLO85rlQ)
 
+**NOTE**: to find which node your jupyter notebook landed on, you can look in the slurm job output file (or error file). For example, if the error file is `slurm.nm319_84010016.err`, then you landed on node `nm319` and your jupyter notebook is slurm job number 84010016. 
+
+**NOTE**: You will see the url of the notebook which will have a line like this:
+```
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://0.0.0.0:8889/?token=e68b5ad15574911b812acdfe3d9441ff217282685c8f7e29
+```
+the long hash is the token. If you by any chance get logged out of the notebook and you get asked for a password, you can copy-paste your token in the jupyter login screen. See this: https://ask.oarc.rutgers.edu/question/69/my-jupyter-notebook-asks-me-for-a-password/
+
+**NOTE**: Recently, our systems have been federated. If you end up on a node like `haln` or `nm3`, you will need to tunnel through `amareln`, not `amarel` login node. 
 
 
