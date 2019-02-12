@@ -2,7 +2,7 @@ Connecting to the remote Linux cluster makes running graphical programs remotely
 
 There is a convenient way to run a graphical program remotely, for example, using FastX. Here is the procedure: 
 
-1. Go to htts://amarel1.hpc.rutgers.edu:3443  and log in (you must be either on campus, or connected through VPN)
+1. Go to https://amarel1.hpc.rutgers.edu:3443  and log in (you must be either on campus, or connected through VPN)
 2. Click on Launch session
 3. Click on xterm
 4. Run this command that will ask the resource scheduler to put you on a compute node, rather than a login node (where you shouldn't be running intensive computations)  
