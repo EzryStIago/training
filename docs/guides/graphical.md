@@ -27,7 +27,7 @@ On Feb 25, 2019, sirius machine was retired. This section documents information 
 
 We have prepared some videos to illustrate the functionalities of OpenOnDemand graphical interface to the Amarel cluster: 
 
-- TODO:  lauching Sirius3 desktop
+- https://youtu.be/D2C-yYzQ2uQ - 3:18 mins - lauching Sirius3 desktop (NOTE: 2 cores, not 1 as in video)
 - https://youtu.be/GPpDG1eAiKo - 4:24 mins - Amarel ondemand intro - available functionalities
 - https://youtu.be/zNrpS5CUa-8 - 4:24 mins - launching Amarel desktop
 - https://youtu.be/znmnbli0d5Y - 6:33 mins - using the Job Composer to keep track of slurm jobs, create new slurm jobs from templates, and create new templates.
