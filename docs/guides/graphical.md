@@ -16,6 +16,13 @@ On Feb 25, 2019, sirius machine was retired. This section documents information 
 - sirius3 is intended to be used for graphical applications and for interactive code development. As such, code for more intense computations may be developed and tested on small scale on this machine. However, to perform a more intense computation, you should prepare a "batch" script (see cluster guide and video walktroughs for OpenOnDemand job templates). To ensure that there are enough resources for many users at once, each user on sirius3 is **limited to 2 cores and 4Gb of memory for a maximum of 24 hours**. 
 - you can submit sbatch jobs, from the sirius3 desktop, to the wider Amarel cluster
 
+## Instructions to connect to OpenOnDemand - Sirius3 Desktop
+
+1. Open your browser at https://ondemand.hpc.rutgers.edu/  (make sure you are connected through VPN)
+2. Go to Interactive Apps -> Sirius3 Deskop
+3. Choose number of hours that your session will be active (max 24) and number of cores (max 2) and click Launch
+4. In maximum 30 seconds, a blue button "Launch VNC in New Tab" will appear; clicking it will open Linux Desktop on sirius3
+
 ## Video walkthroughs
 
 We have prepared some videos to illustrate the functionalities of OpenOnDemand graphical interface to the Amarel cluster: 
