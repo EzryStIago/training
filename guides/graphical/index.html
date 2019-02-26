@@ -438,6 +438,7 @@
 <li>there is a scheduler called slurm, which makes sharing of the resources fairer between users - making it impossible to monopolize resources</li>
 <li>sirius3 is intended to be used for graphical applications and for interactive code development. As such, code for more intense computations may be developed and tested on small scale on this machine. However, to perform a more intense computation, you should prepare a "batch" script (see cluster guide and video walktroughs for OpenOnDemand job templates). To ensure that there are enough resources for many users at once, each user on sirius3 is <strong>limited to 2 cores and 4Gb of memory for a maximum of 24 hours</strong>. </li>
 <li>you can submit sbatch jobs, from the sirius3 desktop, to the wider Amarel cluster</li>
+<li>when off campus, you need to connect to it using VPN, otherwise it will not connect</li>
 </ul>
 <h2 id="instructions-to-connect-to-openondemand-sirius3-desktop">Instructions to connect to OpenOnDemand - Sirius3 Desktop</h2>
 <ol>
@@ -445,6 +446,8 @@
 <li>Go to Interactive Apps -&gt; Sirius3 Deskop</li>
 <li>Choose number of hours that your session will be active (max 24) and number of cores (max 2) and click Launch</li>
 <li>In maximum 30 seconds, a blue button "Launch VNC in New Tab" will appear; clicking it will open Linux Desktop on sirius3</li>
+<li>To get the Linux terminal (shell), click on the little terminal icon in the top left corner of the Linux Mate desktop (the systems bar)</li>
+<li>Use <code>module load</code> command to load appropriate version of your software to your software path, such as <code>module load SAS</code></li>
 </ol>
 <h2 id="video-walkthroughs">Video walkthroughs</h2>
 <p>We have prepared some videos to illustrate the functionalities of OpenOnDemand graphical interface to the Amarel cluster: </p>
