@@ -69,6 +69,7 @@ Please let us know if any of this software is not available on Amarel, but is es
 - RStudio  - available through OnDemand; R available on command line
 - Rna-star    - this is called STAR/2.5.2a on Amarel
 - Samtools
+- SAS 
 - Trimmomatic 
 - Trinityrnaseq 
 - Trinotate   
@@ -77,7 +78,6 @@ Please let us know if any of this software is not available on Amarel, but is es
 ### In question, but important software and is a work in progress: 
 
 - Goldsuite - Vlad in communication with CCDC vendor
-- SAS - licence will be ported from existing sirius machine
 
 ### Will install on request: 
 
