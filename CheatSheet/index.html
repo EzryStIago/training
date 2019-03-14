@@ -142,29 +142,6 @@
 
   
     
-
-
-<ul class="" href="../guides/graphical/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../guides/graphical/">Sirius3</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
     
     
     
@@ -695,16 +672,12 @@ b = 10; echo $b      #bad - spaces around =
 <td>file usage on <code>/scratch/netid</code> for the user's netid</td>
 </tr>
 <tr>
-<td><code>mmlsquota home --block-size=auto</code></td>
+<td><code>mmlsquota cache --block-size=auto</code></td>
 <td>file usage on <code>/home/netid</code> for the user's netid</td>
 </tr>
 <tr>
-<td><code>mmlsquota home:foran --block-size=auto</code></td>
-<td>file usage in the shared folder foran (/projects/foran)</td>
-</tr>
-<tr>
-<td><code>mmlsquota -j foran home  --block-size=auto</code></td>
-<td>quota and usage of the whole fileset foran</td>
+<td><code>mmlsquota -j foran projectsp  --block-size=auto</code></td>
+<td>quota and usage of the whole fileset foran - you need to know if it is projectsp, projectsn or projectc - Piscataway, Newark or Camden</td>
 </tr>
 <tr>
 <td><code>du -hs /directory/to/query/*</code></td>
