@@ -82,9 +82,8 @@ NOTE: `/home` and `/scratch` are two different filesystems, with different backu
 Command | Description of which file usage
 ---|---
 `mmlsquota scratch --block-size=auto` | file usage on `/scratch/netid` for the user's netid
-`mmlsquota home --block-size=auto`    | file usage on `/home/netid` for the user's netid
-`mmlsquota home:foran --block-size=auto` | file usage in the shared folder foran (/projects/foran)
-`mmlsquota -j foran home  --block-size=auto` | quota and usage of the whole fileset foran
+`mmlsquota cache --block-size=auto`    | file usage on `/home/netid` for the user's netid
+`mmlsquota -j foran projectsp  --block-size=auto` | quota and usage of the whole fileset foran - you need to know if it is projectsp, projectsn or projectc - Piscataway, Newark or Camden
 `du -hs /directory/to/query/*`          | human-readable sizes of all 1st-level subdirectories of `/directory/to/query/`
 
 # Linux basic commands
