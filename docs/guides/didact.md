@@ -21,10 +21,10 @@ If you are used to apps.rutgers.edu, you will find Didact Desktop familiar. Here
 4. Click "Launch" (wait up to 30 seconds until your environment is ready)
 5. Click "Launch noVNC in New Tab"
 
-[step 2](pics/didact1.png)
-[step 3](pics/didact2.png)
-[step 4](pics/didact3.png)
-[step 5](pics/didact4.png)
+- ![step 2](pics/didact1.png)
+- ![step 3](pics/didact2.png)
+- ![step 4](pics/didact3.png)
+- ![step 5](pics/didact4.png)
 
 ## What else can you launch on didact? 
 
