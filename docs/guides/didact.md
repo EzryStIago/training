@@ -7,7 +7,7 @@ the general Amarel cluster. (See also https://ask.oarc.rutgers.edu/question/35/w
 
 ## How to connect to didact? 
 
-To connect to didact, just open your browser and this link: https://didact.oarc.rutgers.edu
+To connect to didact, just open your browser and this link: https://didact.oarc.rutgers.edu (you must be connected to VPN, otherwise it will show up as "Page not found"). 
 Use your netid and password to login (note: you must have an Amarel account. If you are part of a class teaching on didact, this will be provided to you.)
 OARC does not administer netids and passwords - we get the authentication from the central authentication service at Rutgers. 
 
@@ -18,12 +18,13 @@ If you are used to apps.rutgers.edu, you will find Didact Desktop familiar. Here
 1. login to https://didact.oarc.rutgers.edu
 2. Go to Interactive Sessions
 3. Click Didact Desktop
-4. Click "Launch" (wait up to 30 seconds until your environment is ready)
+4. Click "Launch" (wait up to 30 seconds until your environment is ready and the blue button appears on the bottom)
 5. Click "Launch noVNC in New Tab"
 
 - ![step 2](pics/didact1.png)
 - ![step 3](pics/didact2.png)
 - ![step 4](pics/didact3.png)
+- ![step 4](pics/didact3b.png)
 - ![step 5](pics/didact4.png)
 
 ## What else can you launch on didact? 
