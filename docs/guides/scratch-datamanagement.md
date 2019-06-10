@@ -1,21 +1,23 @@
 # Guidelines for managing data on scratch
 
-### Table: Data management on OARC cluster. 
+### Table: Data management on OARC cluster
+
+
+
 | Fileset | Users | quota | Time | Back up | External storage options | Transfer Tools |
----
-|scratch | general | No  Quota| 90 days| no| Personal devices: Laptop, Desktop, USB drives, etc.
+| --------|:-----:|:-----:|:----:|:-------:| :-----------------------:|:--------------:|
+|scratch | general | No  Quota| 90 days| no| 
+-Personal devices: Laptop, Desktop, USB drives, etc.
 Online drives: Box(unlimited for Rutgers), Google Drive, One Drive, Dropbox, etc.
--Public cloud storages: GCP, Azure, AWS, etc.
-CLI tools: scp, rsync, rcloud
+-Public cloud storages: GCP, Azure, AWS, etc. |
 
-GUI tools: Filezilla, WinSCP, Open OnDemand, rclone-browser (via sirius3)
----
-
+- CLI tools: scp, rsync, rcloud
+- GUI tools: Filezilla, WinSCP, Open OnDemand, rclone-browser (via sirius3)
+| --------|:-----:|:-----:|:----:|:-------:| :-----------------------:|:--------------:|
 | home | general |100GB | Valid account | yes |
----
-| project | node owners |
-| varies |  varies | yes |
-
+| --------|:-----:|:-----:|:----:|:-------:| :-----------------------:|:--------------:|
+| project | node owners | varies |  varies | yes |
+| --------|:-----:|:-----:|:----:|:-------:| :-----------------------:|:--------------:|
 
 Scratch offers unlimited temporary storage. You can processing large volumes of data in scratch, but the data cannot be older than 90 days. The files older than 90 days are automatically removed, and there is no backup. If you exceed the disk quota, your jobs would fail with a message that you cannot write anymore. So, it is a best practice to move the data from scratch as soon as possible.
 
@@ -38,4 +40,18 @@ where ‘your-netid’ is your Rutger’s netid, which is same as your account n
     scp  your-netid@amarel.hpc.rutgers.edu:/scratch/your-net-id/your-data-file ~/your-data-file
 
 
+| Tables        | Are           | Cool  |
+| ---- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
+<table>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+  </tr>
+  <tr>
+    <td colspan="2">Three</td>
+  </tr>
+</table>
