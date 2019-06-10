@@ -19,12 +19,12 @@
     <td> No  Quota
     <td> 90 days
     <td> no
-    <td> - Personal devices: Laptop, Desktop, USB drives, etc.
-         - Online drives: Box(unlimited for Rutgers), Google Drive, One Drive, Dropbox, etc.
-         -Public cloud storages: GCP, Azure, AWS, etc.
+    <td> - Personal devices: Laptop, Desktop, USB drives, etc. <br>
+         - Online drives: Box(unlimited for Rutgers), Google Drive, One Drive, Dropbox, etc. <br>
+         -Public cloud storages: GCP, Azure, AWS, etc. <br>
        </td>
-    <td> -CLI tools: scp, rsync, rcloud
-         -GUI tools: Filezilla, WinSCP, Open OnDemand, rclone-browser (via sirius3)
+    <td> -CLI tools: scp, rsync, rcloud <br>
+         -GUI tools: Filezilla, WinSCP, Open OnDemand, rclone-browser (via sirius3) <br>
        </td>
   </tr>
   
