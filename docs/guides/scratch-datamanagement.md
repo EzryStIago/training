@@ -5,13 +5,13 @@
 
 <table>
   <tr>
-    <td> Fileset </td>
-    <td> Users </td>
-    <td> quota </td>
-    <td> Time </td>
-    <td> Back up </td>
-    <td> External storage options </td>
-    <td> Transfer Tools </td>
+    <th> Fileset </th>
+    <th> Users </th>
+    <th> quota </th>
+    <th> Time </th>
+    <th> Back up </th>
+    <th> External storage options </th>
+    <th> Transfer Tools </th>
   </tr>
   <tr>
     <td> scratch
