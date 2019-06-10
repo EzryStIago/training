@@ -27,6 +27,25 @@
          -GUI tools: Filezilla, WinSCP, Open OnDemand, rclone-browser (via sirius3) <br>
        </td>
   </tr>
+  <tr>
+    <td> home </td>
+    <td> general </td>
+    <td> 100GB </td>
+    <td> Valid account </td>
+    <td> yes </td>
+    <td> same as scratch </td>
+    <td> same as scratch </td>
+  </tr>
+
+  <tr>
+    <td> project </td>
+    <td> node owners </td>
+    <td> varies </td>
+    <td> varies </td>
+    <td> yes </td>
+    <td> same as scratch </td>
+    <td> same as scratch </td>
+  </tr>
   
 </table>
 
