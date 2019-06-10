@@ -580,10 +580,45 @@ Done. Image can be found at: ubuntu.img
 $ sudo singularity import ubuntu.img ubuntu.tar
 ```
 
-## Guidelines for managing data on scratch
+##Using Singularity containers inside a SLURM job
 
-#### Table: Data management on OARC cluster
+[Transfer](https://rutgers-oarc.github.io/amarel/#movingfiles) your new Singularity image to Amarel. The following steps are performed while logged-in to Amarel.
 
+You can run any task/program inside the container by prefacing it with  
+```singularity exec [your image name]``` 
+
+Here is a simple example job script that executes commands inside a container,  
+```
+#SBATCH --partition=main             # Partition (job queue)
+#SBATCH --job-name=sing2me           # Assign an short name to your job
+#SBATCH --nodes=1                    # Number of nodes you require
+#SBATCH --ntasks=1                   # Total # of tasks across all nodes
+#SBATCH --cpus-per-task=1            # Cores per task (>1 if multithread tasks)
+#SBATCH --mem=4000                   # Real memory (RAM) required (MB)
+#SBATCH --time=00:30:00              # Total run time limit (HH:MM:SS)
+#SBATCH --output=slurm.%N.%j.out     # STDOUT output file
+
+module purge
+module load singularity/.2.5.1
+
+## Where am I running?
+srun singularity exec ubuntu.img hostname
+
+## What is the current time and date?
+srun singularity exec ubuntu.img date
+```
+
+If you created directories for any Amarel filesystems, you should find they are mounted inside your container,
+```
+mount | grep gpfs
+/dev/scratch/gc563 on /scratch/gc563 type gpfs (rw,relatime)
+/dev/projects/oarc on /projects/oarc type gpfs (rw,relatime)
+```
+NOTE: If your container mounts Amarel directories, software inside the container may be able to destroy data on these filesystems for which you have write permissions. Proceed with caution.
+
+# Guidelines for managing data on scratch
+
+### Table: Data management on OARC cluster
 
 <table>
   <tr>
@@ -629,16 +664,15 @@ $ sudo singularity import ubuntu.img ubuntu.tar
   
 </table>
 
-
 Scratch offers unlimited temporary storage. You can processing large volumes of data in scratch, but the data cannot be older than 90 days. The files older than 90 days are automatically removed, and there is no backup. If you exceed the disk quota, your jobs would fail with a message that you cannot write anymore. So, it is a best practice to move the data from scratch as soon as possible.
 
-### Internal and external storage options
+## Internal and external storage options
 
 For long term storage, you can utilize the internal storage at OARC's cluster or any of the external storage. OARC's internal storage includes home and project file sets.  If your data can be accommodated in your home directory, it is okay to keep the final results in the home. Node owners may want to use their project space. If you don't have enough space in the OARC cluster, you need to move the data to an external storage.
 
 Here we point out a few options to consider for external storage. Personal devices such as laptop, desktop, workstations, or USB drives can serve as external storage.  Third part vendors offer several storage options that are either free or paid services. Box offers unlimited free storage for Rutgers community. Google offers unlimited  free storage for the academic community  by a service called Google Drive File Stream. One Drive and DropBox services are free to use up to a set quota.  Public cloud providers such as AWS, Azure, and GCP charge a fee to move the data in and out of the cloud.
 
-### Data transfer tools
+## Data transfer tools
 
 There are several tools and methods available to move the data that are based on command line interface (CLI) or Graphical User Interface (GUI). You can use command line tools such as scp, rsync, or rcloud to move the data from OARC cluster to any external storage. scp and rsync are suitable choices if you are moving data from OARC to your laptop or desktop that runs linux or MacOS. rcloud is an excellent choice to move your data to many storage services such as Box, DropBox, cloud, etc. GUI tools such as Filezilla, WinSCP, rclone-browser, and Open OnDemand are popular choices to move the data from variety of storage end points. Among GUI tools, FIlezilla, rclone-browser, and Open OnDemand tools should work on any operating systems (Linux, MacOS, Windows) since they interact through a web-browser.
 
@@ -649,44 +683,6 @@ Please refer our user guide for more details about how to use specific CLI tools
 where ‘your-netid’ is your Rutger’s netid, which is same as your account name on OARC cluster. For example, to move data from scratch space located at /scratch/your-netid/your-data-file to a home directory on your laptop using scp command, type the following in your terminal shell prompt on your laptop.
 
     scp  your-netid@amarel.hpc.rutgers.edu:/scratch/your-net-id/your-data-file ~/your-data-file
-
-
-
-##Using Singularity containers inside a SLURM job
-
-[Transfer](https://rutgers-oarc.github.io/amarel/#movingfiles) your new Singularity image to Amarel. The following steps are performed while logged-in to Amarel.
-
-You can run any task/program inside the container by prefacing it with  
-```singularity exec [your image name]``` 
-
-Here is a simple example job script that executes commands inside a container,  
-```
-#SBATCH --partition=main             # Partition (job queue)
-#SBATCH --job-name=sing2me           # Assign an short name to your job
-#SBATCH --nodes=1                    # Number of nodes you require
-#SBATCH --ntasks=1                   # Total # of tasks across all nodes
-#SBATCH --cpus-per-task=1            # Cores per task (>1 if multithread tasks)
-#SBATCH --mem=4000                   # Real memory (RAM) required (MB)
-#SBATCH --time=00:30:00              # Total run time limit (HH:MM:SS)
-#SBATCH --output=slurm.%N.%j.out     # STDOUT output file
-
-module purge
-module load singularity/.2.5.1
-
-## Where am I running?
-srun singularity exec ubuntu.img hostname
-
-## What is the current time and date?
-srun singularity exec ubuntu.img date
-```
-
-If you created directories for any Amarel filesystems, you should find they are mounted inside your container,
-```
-mount | grep gpfs
-/dev/scratch/gc563 on /scratch/gc563 type gpfs (rw,relatime)
-/dev/projects/oarc on /projects/oarc type gpfs (rw,relatime)
-```
-NOTE: If your container mounts Amarel directories, software inside the container may be able to destroy data on these filesystems for which you have write permissions. Proceed with caution.
 
 
 # Troubleshooting/ Common Problems 
