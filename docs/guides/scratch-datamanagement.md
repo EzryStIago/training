@@ -52,30 +52,5 @@ where ‘your-netid’ is your Rutger’s netid, which is same as your account n
     scp  your-netid@amarel.hpc.rutgers.edu:/scratch/your-net-id/your-data-file ~/your-data-file
 
 
-<table>
-  <tr>
-    <td> Fileset </td>
-    <td> Users </td>
-    <td> quota </td>
-    <td> Time </td>
-    <td> Back up </td>
-    <td> External storage options </td>
-    <td> Transfer Tools </td>
-  </tr>
-  <tr>
-    <td> scratch
-    <td> general
-    <td> No  Quota
-    <td> 90 days
-    <td> no
-    <td> Personal devices: Laptop, Desktop, USB drives, etc.
-         Online drives: Box(unlimited for Rutgers), Google Drive, One Drive, Dropbox, etc.
--Public cloud storages: GCP, Azure, AWS, etc.
-       </td>
-    <td> CLI tools: scp, rsync, rcloud
 
-        GUI tools: Filezilla, WinSCP, Open OnDemand, rclone-browser (via sirius3)
-       </td>
-  </tr>
-</table>
 
