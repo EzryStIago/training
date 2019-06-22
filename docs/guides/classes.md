@@ -21,8 +21,8 @@ Didact is a small cluster dedicated to teaching. It can be accessed at [this did
 
 # Steps to run stata/spss or other programs
 
-- Go the the form to launch an interactive desktop [on didact](https://didact.oarc.rutgers.edu/pun/sys/dashboard/batch_connect/sys/bc_desktop/didact/session_contexts/new) or [on Amarel](https://ondemand.hpc.rutgers.edu/pun/sys/dashboard/batch_connect/sys/bc_desktop_local/session_contexts/new) and click blue button "Launch". If you have trouble with this step, see the "VPN access" and "Debugging" sections. 
-- A new tab will open, where the session is being created. After about 30 seconds when the session is ready, a blue button will appear "Launch noVNC in New Tab" - click on it, and your desktop is ready to be used. 
+- Go the the form to launch an interactive desktop [on didact](https://didact.oarc.rutgers.edu/pun/sys/dashboard/batch_connect/sys/bc_desktop/didact/session_contexts/new) or [on Amarel](https://ondemand.hpc.rutgers.edu/pun/sys/dashboard/batch_connect/sys/bc_desktop_local/session_contexts/new) and click blue button "Launch". [Screenshot](../assets/didact_desktop_form.png) If you have trouble with this step, see the "VPN access" and "Debugging" sections. 
+- A new tab will open, where the session is being created. After about 30 seconds when the session is ready, a blue button will appear "Launch noVNC in New Tab" [Screenshot](../assets/interactive_session_launched.png) - click on it, and your desktop is ready to be used. [Screenshot](../assets/didact_desktop.png)
 - icons should appear on your desktop. If you see no icons, please see [this question](https://ask.oarc.rutgers.edu/question/55/how-can-i-get-icons-on-amarel-desktop/) - you need to copy the files from /projects/community/desktops to Desktop folder in your home folder. You can do this eitherby using a terminal linux command, or by using the file explorer. 
 
 # User forum
@@ -33,15 +33,15 @@ Please find answers to some common questions and help each other by asking and a
 
 To access any OARC services from off-campus, you need a VPN. This is for Rutgers security reasons, and is a campus-wide service administered outside our office. Please direct any questions to [OIT helpdesk](https://oit.rutgers.edu/help). For your convenience, here is a brief collection of links and directions: 
 
-- you can download VPN client at the [Rutgers software page](https://software.rutgers.edu/product/3085), from the "Download" tab. **Please DO NOT USE** [web-based VPN access](https://ssl-vpn.rutgers.edu/), as it interferes with the OpenOnDemand application (see Known Issues below)
+- you can download VPN client at the [Rutgers software page](https://software.rutgers.edu/product/3085), from the "Download" tab. **Please DO NOT USE** [web-based VPN access](https://ssl-vpn.rutgers.edu/), as it interferes with the OpenOnDemand application (see Known Issues below). This is how the web-based VPN access looks like - [Screenshot](../assets/web_ssl.png)
 - instructions to install VPN client on a Mac from [School of Arts and Sciences](https://sasit.rutgers.edu/documentation-help/accessing-sas-servers/304-configuring-the-vpn-client-for-mac)
 - if you have a newer Windows laptop, you need 64bit version, and not 32bit version
 
 # Known issues
 
-- `this page does not exist` - this means you connected from off campus and you are not connected through VPN. If you can't see [this page](https://ask.oarc.rutgers.edu/question/157/i-cant-connect-to-ondemand), you are not on campus and not connected through VPN. Please download the VPN client. 
+- `this page can't be reached` ([screenshot](../assets/site_cant_be_reached.png))- this means you connected from off campus and you are not connected through VPN. If you can't see [this page](https://ask.oarc.rutgers.edu/question/157/i-cant-connect-to-ondemand), you are not on campus and not connected through VPN. Please download the VPN client. 
 - `failed to connect to VNC server` - one of two things is possible: 
-  * you connected through web-based VPN, which doesn't work well with ondemand. You will recognize this problem by looking at the URL and it starts with `https://ssl-vpn.rutgers.edu/pun/sys/dashboard`and your screenshot [looks like this](cant_connect_to_vnc_server.png)
+  * you connected through web-based VPN, which doesn't work well with ondemand. You will recognize this problem by looking at the URL and it starts with `https://ssl-vpn.rutgers.edu/pun/sys/dashboard`and your screenshot [looks like this](../assets/cant_connect_to_vnc_server.png)
   * you are using Safari as your browser. Please try Firefox instead. 
 
 # Debugging questions
