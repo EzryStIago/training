@@ -6,6 +6,7 @@ pages:
   - Cluster Guides: 'guides/Cluster_User_Guide.md'
   - Examples: 'guides/Cluster_Examples.md'
   - Community: 'guides/community_resources.md'
+  - Classes: 'guides/classes.md'
   - HowTo: 
       - Jupyter: 'howtos/jupyter.md' 
       - FastX: 'howtos/fastx.md'
