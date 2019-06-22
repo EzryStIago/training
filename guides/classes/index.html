@@ -458,8 +458,8 @@
 </ul>
 <h1 id="steps-to-run-stataspss-or-other-programs">Steps to run stata/spss or other programs</h1>
 <ul>
-<li>Go the the form to launch an interactive desktop <a href="https://didact.oarc.rutgers.edu/pun/sys/dashboard/batch_connect/sys/bc_desktop/didact/session_contexts/new">on didact</a> or <a href="https://ondemand.hpc.rutgers.edu/pun/sys/dashboard/batch_connect/sys/bc_desktop_local/session_contexts/new">on Amarel</a> and click blue button "Launch". If you have trouble with this step, see the "VPN access" and "Debugging" sections. </li>
-<li>A new tab will open, where the session is being created. After about 30 seconds when the session is ready, a blue button will appear "Launch noVNC in New Tab" - click on it, and your desktop is ready to be used. </li>
+<li>Go the the form to launch an interactive desktop <a href="https://didact.oarc.rutgers.edu/pun/sys/dashboard/batch_connect/sys/bc_desktop/didact/session_contexts/new">on didact</a> or <a href="https://ondemand.hpc.rutgers.edu/pun/sys/dashboard/batch_connect/sys/bc_desktop_local/session_contexts/new">on Amarel</a> and click blue button "Launch". <a href="../../assets/didact_desktop_form.png">Screenshot</a> If you have trouble with this step, see the "VPN access" and "Debugging" sections. </li>
+<li>A new tab will open, where the session is being created. After about 30 seconds when the session is ready, a blue button will appear "Launch noVNC in New Tab" <a href="../../assets/interactive_session_launched.png">Screenshot</a> - click on it, and your desktop is ready to be used. <a href="../../assets/didact_desktop.png">Screenshot</a></li>
 <li>icons should appear on your desktop. If you see no icons, please see <a href="https://ask.oarc.rutgers.edu/question/55/how-can-i-get-icons-on-amarel-desktop/">this question</a> - you need to copy the files from /projects/community/desktops to Desktop folder in your home folder. You can do this eitherby using a terminal linux command, or by using the file explorer. </li>
 </ul>
 <h1 id="user-forum">User forum</h1>
@@ -467,15 +467,15 @@
 <h1 id="vpn-access">VPN access</h1>
 <p>To access any OARC services from off-campus, you need a VPN. This is for Rutgers security reasons, and is a campus-wide service administered outside our office. Please direct any questions to <a href="https://oit.rutgers.edu/help">OIT helpdesk</a>. For your convenience, here is a brief collection of links and directions: </p>
 <ul>
-<li>you can download VPN client at the <a href="https://software.rutgers.edu/product/3085">Rutgers software page</a>, from the "Download" tab. <strong>Please DO NOT USE</strong> <a href="https://ssl-vpn.rutgers.edu/">web-based VPN access</a>, as it interferes with the OpenOnDemand application (see Known Issues below)</li>
+<li>you can download VPN client at the <a href="https://software.rutgers.edu/product/3085">Rutgers software page</a>, from the "Download" tab. <strong>Please DO NOT USE</strong> <a href="https://ssl-vpn.rutgers.edu/">web-based VPN access</a>, as it interferes with the OpenOnDemand application (see Known Issues below). This is how the web-based VPN access looks like - <a href="../../assets/web_ssl.png">Screenshot</a></li>
 <li>instructions to install VPN client on a Mac from <a href="https://sasit.rutgers.edu/documentation-help/accessing-sas-servers/304-configuring-the-vpn-client-for-mac">School of Arts and Sciences</a></li>
 <li>if you have a newer Windows laptop, you need 64bit version, and not 32bit version</li>
 </ul>
 <h1 id="known-issues">Known issues</h1>
 <ul>
-<li><code>this page does not exist</code> - this means you connected from off campus and you are not connected through VPN. If you can't see <a href="https://ask.oarc.rutgers.edu/question/157/i-cant-connect-to-ondemand">this page</a>, you are not on campus and not connected through VPN. Please download the VPN client. </li>
+<li><code>this page can't be reached</code> (<a href="../../assets/site_cant_be_reached.png">screenshot</a>)- this means you connected from off campus and you are not connected through VPN. If you can't see <a href="https://ask.oarc.rutgers.edu/question/157/i-cant-connect-to-ondemand">this page</a>, you are not on campus and not connected through VPN. Please download the VPN client. </li>
 <li><code>failed to connect to VNC server</code> - one of two things is possible: </li>
-<li>you connected through web-based VPN, which doesn't work well with ondemand. You will recognize this problem by looking at the URL and it starts with <code>https://ssl-vpn.rutgers.edu/pun/sys/dashboard</code>and your screenshot <a href="../cant_connect_to_vnc_server.png">looks like this</a></li>
+<li>you connected through web-based VPN, which doesn't work well with ondemand. You will recognize this problem by looking at the URL and it starts with <code>https://ssl-vpn.rutgers.edu/pun/sys/dashboard</code>and your screenshot <a href="../../assets/cant_connect_to_vnc_server.png">looks like this</a></li>
 <li>you are using Safari as your browser. Please try Firefox instead. </li>
 </ul>
 <h1 id="debugging-questions">Debugging questions</h1>
