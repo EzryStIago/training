@@ -633,7 +633,7 @@ NOTE: If your container mounts Amarel directories, software inside the container
   <tr>
     <td> scratch
     <td> general
-    <td> No  Quota
+    <td> 20 TB
     <td> 90 days
     <td> no
    <td rowspan="3"> - Personal devices: Laptop, Desktop, USB drives, etc. <br>
