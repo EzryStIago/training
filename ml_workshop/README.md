@@ -48,17 +48,17 @@ This is an introductory overview of machine learning. We will not dive into code
 
 - **slides**: https://docs.google.com/presentation/d/1b12AuZZlJRUx_22ojqImKIQ1WPaWtmG5oNvV7IZHAyE/edit?usp=sharing
 - **jupyter notebook** (available options): 
-  * download from: https://jupyterhub.hpc.rutgers.edu/kp807/titanic_notebook_clean_master.ipynb 
+  * download from this folder: titanic_notebook_clean_master.ipynb 
   * copy on Amarel from /projects/oarc/users/share/kp807 to your home directory
   * save to your google drive from this shared link: https://colab.research.google.com/drive/12V3yfjPfkHvE8SfCqINVgBd_S07PGImS
 - **data** (available options): 
-  * download from: https://jupyterhub.hpc.rutgers.edu/kp807/   (train.csv and test.csv) and upload
+  * download from: this folder's data subfolder   (train.csv and test.csv) and upload
   * copy on Amarel from /projects/oarc/users/share/kp807 to your home directory
   * save to your google drive from this shared link: https://datastudio.google.com/open/1m1T50t6qbaw7y7xwuVQLEo-K5zgfEBEo
 
 # Google Cloud options 
 
-- you must have a google account (such as your rutgers scarletmail account) - every gmail account gets $300 free cloud credits for 1 year
+- you must have a personal google account (NOT your rutgers scarletmail account, as those apps are not enabled) - every gmail account gets $300 free cloud credits for 1 year
 - exploring data and creating dashboards: https://datastudio.google.com/ (max size of 100Mb for exploration)
 - machine learning on tabular datasets: https://cloud.google.com/automl-tables/  (click on "Go to console")
 - Google Colab (hosted Jupyter notebook): https://colab.research.google.com/
