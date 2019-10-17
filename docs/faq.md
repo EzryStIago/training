@@ -173,3 +173,30 @@ IP                   root(0)      2018-10-15T09:59:24 drain  pascal005
 IP                   root(0)      2018-10-15T09:53:10 drain  pascal006
 ```
  
+## How can I troubleshoot my OnDemand session? 
+
+Each OnDemand session leaves an `output.log` file in your home directory. The exact path depends on the ondemand app you are using (Jupyter,RStudio,Desktop...). So, if you find that your session terminates for some reason (and most common reasons are, either the job was preempted, or it ran out of memory), then you can after the fact, find the directory that contains the "trail of evidence" for that session. Each session is given a unique directory (a long hash string), and the best thing is to look at the time stamps to identify which session was problematic. Let's illustrate that with some linux commands. 
+
+Go into the directory which contains the record of all ondemand sessions for Amarel Desktop app, and list the contents by time order (most recent listed last): 
+```
+[kp807@amarel2 ~]$ cd ondemand/data/sys/dashboard/batch_connect/sys/bc_desktop/amarel/output/
+[kp807@amarel2 output]$ ls -ltra
+drwxr-xr-x.  3 kp807 kp807 32768 Oct 17 11:05 da10e852-4475-43e0-827f-9114e9116511
+
+```
+
+Having identified the session, look at the `output.log` file to see if there are any slurm messages (you can ignore warnings, they usually don't interfere with the functioning of the desktop). 
+```
+[kp807@amarel2 output]$ cat 25d6dec3-d32c-470e-a18e-861148cdcabb/output.log 
+(.....)
+slurmstepd: error: Job 133540017 exceeded memory limit (52578904 > 52428800), being killed
+slurmstepd: error: Exceeded job memory limit
+slurmstepd: error: *** JOB 133540017 ON slepner015 CANCELLED AT 2019-10-17T10:59:32 ***
+```
+
+In this case, the application you are using within the desktop requires more memory than has been allocated to you. You have several options: 
+- Relaunch the session with more memory
+- use Advanced Desktop, where you can list verbatim slurm options, including memory
+- rewrite your job as a batch script - large memory usage is an indication it should really be a long-running computation, and batch submission is best suited for this. 
+
+
