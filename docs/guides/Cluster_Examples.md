@@ -74,7 +74,7 @@ First, I'll create a directory where I can store my locally-installed R packages
 `mkdir ~/my.R.libs`
 
 Next, to ensure that my new private R packages directory is searched when I try to load a library that's installed there, I need to make an environment setting that will point R to the right location. I'll create a new file in my /home directory named .Renviron (note the leading "." in that name) and I'll add the following line to that file:  
-`export R_LIBS=~/my.R.libs`  
+`R_LIBS=~/my.R.libs`  
 Now, every time I start any version of R, my ~/my.R.libs directory will be the first location to be searched when loading a library.
 
 ** Some important notes about installing packages:**
