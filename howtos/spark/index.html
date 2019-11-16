@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>FastX - OARC-Rutgers</title>
+  <title>Using Spark - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "FastX";
-    var mkdocs_page_input_path = "howtos/fastx.md";
-    var mkdocs_page_url = "/training/howtos/fastx/";
+    var mkdocs_page_name = "Using Spark";
+    var mkdocs_page_input_path = "howtos/spark.md";
+    var mkdocs_page_url = "/training/howtos/spark/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -105,28 +105,9 @@
           
 
 
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        FastX
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-  <li class="toctree-l2 current with-children">
-    <a href="#troubleshooting">
-      Troubleshooting
-      <span class="toctree-expand"></span>
-    </a>
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../fastx/">FastX</a>
   </li>
-
-
-
-
-  
         
       </ul>
     </li>
@@ -180,15 +161,11 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>HowTo &raquo;</li>
-        
-      
     
-    <li>FastX</li>
+    <li>Using Spark</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/howtos/fastx.md"
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/howtos/spark.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -198,40 +175,46 @@
           <div role="main">
             <div class="section">
               
-                <p>Connecting to the remote Linux cluster makes running graphical programs remotely tricky, because the graphical program runs on the remote computer, yet, it must be displayed on the local machine such as laptop. In general, command line interaction with the cluster is normally preferred and even more efficient than a GUI. However, there are times when running a graphical program cannot be avoided, for example, running a debugger for a code running on the cluster. </p>
-<p>There is a convenient way to run a graphical program remotely, for example, using FastX. Here is the procedure: </p>
+                <h1 id="using-spark">Using Spark</h1>
+<p><a href="http://spark.apache.org">Apache Spark</a> is a good way to process tabular or unstructured data at scale. Spark runs usually with one of the several schedulers:<br />
+  - Spark Standalone
+  - YARN
+  - Mesos
+  - Kubernetes</p>
+<p>We will describe how to spin up a virtual Spark cluster inside the cluster than runs slurm. </p>
+<h2 id="easy-use-spark-standalone-local-single-node">Easy - use Spark Standalone local (single node)</h2>
 <ol>
-<li>Go to https://amarel.hpc.rutgers.edu:3443  and log in (you must be either on campus, or connected through VPN)</li>
-<li>Click on Launch session</li>
-<li>Click on xterm</li>
-<li>Run this command that will ask the resource scheduler to put you on a compute node, rather than a login node (where you shouldn't be running intensive computations)<br />
-<code>srun -p main -N 1 -c 2 --mem=4Gb -t 1:00:00 --pty /bin/bash</code><br />
-This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 Gb or memory and time of 1 hour and runs interactive shell. After executing this, you should notice that the name of the node changed from <code>amarel</code> to <code>slepner036</code> or some such. You can request whatever resources you deem necessary for your work, but keep in mind that bigger requests are typically placed further down in the queue. </li>
-<li>Start the program with graphical interface from the terminal window.</li>
+<li>Allocate resources, using Slurm, that Spark cluster will use for its cluster. This means allocate cpu cores, memory, and maxtime for your job. Number of nodes will be 1 if you use Standalone local. </li>
+<li>load Spark module (see <a href="../guides/cluster_guide.md">environment modules</a>), which will put environment variables that Spark uses in your path</li>
+<li>Run <code>spark-submit</code> or <code>spark-shell</code> with <code>--master local[4]</code> (don't use <code>local[*]</code>, as it might confuse the Spark Standalone if it derives its information from node spec rather than what you have been allocated)</li>
 </ol>
-<p>Note: to disconnect from and then return to your active FastX session on Amarel, you must connect using the same login node you were using previously (i.e., amarel1 or amarel2). So, consistently connecting via amarel1.hpc.rutgers.edu:3443 would help ensure that you don't accidently "lose" a FastX session.</p>
-<p>Here is the video walking through these steps: </p>
-<p><a href="https://www.youtube.com/watch?v=8UQHLO85rlQ"><img alt="Graphical programs via FastX" src="https://img.youtube.com/vi/8UQHLO85rlQ/0.jpg" /></a></p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>If you get an error on xfce desktop, and you installed anaconda, it may be interfering with your fastX: </p>
-<ul>
-<li>close all FastX sessions</li>
-<li>delete <code>.fastx_server</code> directory (it will be hidden, do <code>ls -la</code>)</li>
-<li>comment out path to anaconda in your <code>.bash_profile</code> and/or <code>.bashrc</code> files (also hidden)</li>
-</ul>
+<p>In code:   </p>
+<pre><code>srun -N 1 -n 1 -c 4 -t 01:00:00 --mem=10Gb --pty bash   # to ask for single node and 4 cores for 1 hour. This has the effect of placing you on a compute node
+module use /projects/community/modulefiles
+module load spark/2.3.0-kp807    # finds spark installed in community software
+spark-shell --master local[4]    # starts spark-shell. Use the same number of cores (4 in this case) that you asked in srun
+</code></pre>
+
+<p>To look at Spark GUI, see how to do <a href="../jupyter/">tunnelling</a>. </p>
+<h2 id="advanced-spin-up-multinode-cluster">Advanced - spin up multinode cluster</h2>
+<p>TODO</p>
+<h2 id="submit-a-batch-script">Submit a batch script</h2>
+<p>Check out the <code>slurm_examples</code> directory in our <a href="https://github.com/rutgers-oarc/training">github repo</a> for an example. </p>
+<h2 id="start-spark-notebook">Start Spark notebook</h2>
+<pre><code>srun -N 1 -n 1 -c 4 -t 01:00:00 --mem=10Gb --pty bash   # to ask for single node and 4 cores for 1 hour. This has the effect of placing you on a compute node
+module use /projects/community/modulefiles
+module load spark-notebook/2.2.0-kp807
+spark-notebook                # starts spark notebook on port 9000, now you have to tunnel to reach it
+</code></pre>
+
+<p>See <a href="https://www.youtube.com/watch?v=tms_KpmTTkQ">spark notebook demo</a> for more information and options.</p>
+<p>To tunnel, in another terminal establish tunnelling with this command (supposing your compute node is slepner022, and your netid is kp807: <br />
+<code>ssh -L 9000:slepner022:9000 kp807@amarel.hpc.rutgers.edu</code><br />
+Then open your browser on laptop at localhost:9000 to use the notebook. </p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../ressentials/" class="btn btn-neutral float-right" title="R tutorial">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../jupyter/" class="btn btn-neutral" title="Jupyter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -257,10 +240,6 @@ This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../jupyter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../../ressentials/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

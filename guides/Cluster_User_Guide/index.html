@@ -14,18 +14,19 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Cluster Guides";
     var mkdocs_page_input_path = "guides/Cluster_User_Guide.md";
-    var mkdocs_page_url = "/guides/Cluster_User_Guide/";
+    var mkdocs_page_url = "/training/guides/Cluster_User_Guide/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -39,700 +40,393 @@
         <a href="../.." class="icon icon-home"> OARC-Rutgers</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
       
 
 
-  
-    
-
-
-<ul class="" href="../..">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../..">Home</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="current" href="./">
-  
-    
-    
-      <li class="current toctree-l1">
-        <a class="current" href="./">Cluster Guides</a>
-        
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <ul class="current subnav">
-    
-      
-
-  
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#general-information" title="Cluster Guides">General Information</a>
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../..">Home</a>
   </li>
-
     
       
 
-  
-  
 
-
-  <li class=" toctree-l2">
+  
     
-      <a href="#cluster-resources" title="Cluster Guides"
-          class="">
-        Cluster Resources
+    <li class="navtree toctree-l1 page current">
+      <a class="current" href="./">
+        Cluster Guides
       </a>
+    </li>
     
-    <ul class=" subnav">
       
-        
 
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#amarel" title="Cluster Guides">Amarel</a>
+  <li class="toctree-l1 current with-children">
+    <a href="#general-information">
+      General Information
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
+
+
       
-        
 
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#perceval" title="Cluster Guides">Perceval</a>
+  <li class="toctree-l1">
+    <a href="#cluster-resources">
+      Cluster Resources
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
+    
       
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#amarel">Amarel</a>
+        </li>
+    
+      
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#perceval">Perceval</a>
+        </li>
+    
     </ul>
   </li>
 
-    
       
 
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#basic-operations-connecting-and-moving-files" title="Cluster Guides"
-          class="">
-        Basic operations - connecting and moving files
-      </a>
-    
-    <ul class=" subnav">
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#connecting-to-the-cluster" title="Cluster Guides">Connecting to the cluster</a>
+  <li class="toctree-l1">
+    <a href="#basic-operations-connecting-and-moving-files">
+      Basic operations - connecting and moving files
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#moving-files" title="Cluster Guides">Moving files</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#connecting-to-the-cluster">Connecting to the cluster</a>
+        </li>
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#ondemand-gui-for-the-cluster" title="Cluster Guides">OnDemand - GUI for the cluster</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#moving-files">Moving files</a>
+        </li>
+    
       
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#ondemand-gui-for-the-cluster">OnDemand - GUI for the cluster</a>
+        </li>
+    
     </ul>
   </li>
 
-    
       
 
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#listing-available-resources" title="Cluster Guides">Listing available resources</a>
+  <li class="toctree-l1">
+    <a href="#listing-available-resources">
+      Listing available resources
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
-    
+
+
       
 
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#loading-software-modules" title="Cluster Guides"
-          class="">
-        Loading software modules
-      </a>
-    
-    <ul class=" subnav">
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#lmod-video-walkthrough" title="Cluster Guides">Lmod video walkthrough</a>
+  <li class="toctree-l1">
+    <a href="#loading-software-modules">
+      Loading software modules
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#longer-explanation" title="Cluster Guides">Longer explanation</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#lmod-video-walkthrough">Lmod video walkthrough</a>
+        </li>
+    
       
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#longer-explanation">Longer explanation</a>
+        </li>
+    
     </ul>
   </li>
 
+      
+
+  <li class="toctree-l1">
+    <a href="#running-slurm-jobs">
+      Running slurm jobs
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
     
       
-
-  
-  
-
-
-  <li class=" toctree-l2">
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#video-walkthrough">Video walkthrough</a>
+        </li>
     
-      <a href="#running-slurm-jobs" title="Cluster Guides"
-          class="">
-        Running slurm jobs
-      </a>
+      
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#running-a-serial-single-core-job">Running a serial (single-core) job</a>
+        </li>
     
-    <ul class=" subnav">
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#video-walkthrough" title="Cluster Guides">Video walkthrough</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#running-a-parallel-multicore-mpi-job">Running a parallel (multicore MPI) job</a>
+        </li>
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#running-a-serial-single-core-job" title="Cluster Guides">Running a serial (single-core) job</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#running-array-of-jobs">Running array of jobs</a>
+        </li>
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#running-a-parallel-multicore-mpi-job" title="Cluster Guides">Running a parallel (multicore MPI) job</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#running-array-of-jobs" title="Cluster Guides">Running array of jobs</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#running-an-interactive-job" title="Cluster Guides">Running an interactive job</a>
-  </li>
-
-      
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#running-an-interactive-job">Running an interactive job</a>
+        </li>
+    
     </ul>
   </li>
 
+      
+
+  <li class="toctree-l1">
+    <a href="#monitoring-the-status-of-jobs">
+      Monitoring the status of jobs
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l1">
+    <a href="#killing-cancelling-terminating-jobs">
+      Killing/ cancelling/ terminating jobs
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l1">
+    <a href="#installing-your-own-software">
+      Installing your own software
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l1">
+    <a href="#singularity">
+      Singularity
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
     
       
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#monitoring-the-status-of-jobs" title="Cluster Guides">Monitoring the status of jobs</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#important-differences-between-docker-and-singularity">Important differences between Docker and Singularity:</a>
+        </li>
     
       
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#killing-cancelling-terminating-jobs" title="Cluster Guides">Killing/ cancelling/ terminating jobs</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#importing-a-docker-image">Importing a Docker image:</a>
+        </li>
     
       
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#installing-your-own-software" title="Cluster Guides">Installing your own software</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#exporting-your-docker-image">Exporting your Docker image</a>
+        </li>
     
       
-
-  
-  
-
-
-  <li class=" toctree-l2">
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#converting-to-a-singularity-image">Converting to a Singularity image</a>
+        </li>
     
-      <a href="#singularity" title="Cluster Guides"
-          class="">
-        Singularity
-      </a>
+      
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#using-singularity-containers-inside-a-slurm-job">Using Singularity containers inside a SLURM job</a>
+        </li>
     
-    <ul class=" subnav">
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#important-differences-between-docker-and-singularity" title="Cluster Guides">Important differences between Docker and Singularity:</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#importing-a-docker-image" title="Cluster Guides">Importing a Docker image:</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#exporting-your-docker-image" title="Cluster Guides">Exporting your Docker image</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#converting-to-a-singularity-image" title="Cluster Guides">Converting to a Singularity image</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#using-singularity-containers-inside-a-slurm-job" title="Cluster Guides">Using Singularity containers inside a SLURM job</a>
-  </li>
-
-      
     </ul>
   </li>
 
-    
       
 
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#guidelines-for-managing-data-on-scratch" title="Cluster Guides"
-          class="">
-        Guidelines for managing data on scratch
-      </a>
-    
-    <ul class=" subnav">
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#table-data-management-on-oarc-cluster" title="Cluster Guides">Table: Data management on OARC cluster</a>
+  <li class="toctree-l1">
+    <a href="#guidelines-for-managing-data-on-scratch">
+      Guidelines for managing data on scratch
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#internal-and-external-storage-options" title="Cluster Guides">Internal and external storage options</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#table-data-management-on-oarc-cluster">Table: Data management on OARC cluster</a>
+        </li>
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#data-transfer-tools" title="Cluster Guides">Data transfer tools</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#internal-and-external-storage-options">Internal and external storage options</a>
+        </li>
+    
       
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#data-transfer-tools">Data transfer tools</a>
+        </li>
+    
     </ul>
   </li>
 
+      
+
+  <li class="toctree-l1">
+    <a href="#troubleshooting-common-problems">
+      Troubleshooting/ Common Problems
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l1">
+    <a href="#acknowledging-amarel">
+      Acknowledging Amarel
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+
+  
     
       
 
-  
-  
 
-
-  <li class="toctree-l2 toc-item">
-    <a href="#troubleshooting-common-problems" title="Cluster Guides">Troubleshooting/ Common Problems</a>
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../Cluster_Examples/">Examples</a>
   </li>
-
     
       
 
-  
-  
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../community_resources/">Community</a>
+  </li>
+    
+      
 
 
-  <li class="toctree-l2 toc-item">
-    <a href="#acknowledging-amarel" title="Cluster Guides">Acknowledging Amarel</a>
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../classes/">Classes</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">HowTo</p>
   </li>
 
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../howtos/jupyter/">Jupyter</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../howtos/fastx/">FastX</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../ressentials/">R tutorial</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../CheatSheet/">Cheat Sheets</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../resources/">Resources</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../faq/">FAQ</a>
+  </li>
     
   </ul>
-
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../Cluster_Examples/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../Cluster_Examples/">Examples</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../community_resources/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../community_resources/">Community</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../classes/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../classes/">Classes</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-    
-    
-    
-    
-    
-
-  <p class="caption">HowTo</p>
-
-
-<ul class="" href="howtos/jupyter">
-  
-    
-      
-<li class=" toctree-l1">
-  <a href="../../howtos/jupyter/" title="Jupyter"
-      class="">
-    Jupyter
-  </a>
-
-  
-  
-</li>
-    
-      
-<li class=" toctree-l1">
-  <a href="../../howtos/fastx/" title="FastX"
-      class="">
-    FastX
-  </a>
-
-  
-  
-</li>
-    
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../../ressentials/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../../ressentials/">R tutorial</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../../CheatSheet/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../../CheatSheet/">Cheat Sheets</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../../resources/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../../resources/">Resources</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../../faq/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../../faq/">FAQ</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
       </div>
       &nbsp;
     </nav>
@@ -1475,9 +1169,8 @@ Try: &quot;module spider R-Project/3.4.1&quot; to see how to load the module(s).
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

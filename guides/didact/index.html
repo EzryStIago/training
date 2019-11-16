@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>FastX - OARC-Rutgers</title>
+  <title>Didact - teaching cluster - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "FastX";
-    var mkdocs_page_input_path = "howtos/fastx.md";
-    var mkdocs_page_url = "/training/howtos/fastx/";
+    var mkdocs_page_name = "Didact - teaching cluster";
+    var mkdocs_page_input_path = "guides/didact.md";
+    var mkdocs_page_url = "/training/guides/didact/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -60,28 +60,28 @@
 
 
   <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../guides/Cluster_User_Guide/">Cluster Guides</a>
+    <a class="" href="../Cluster_User_Guide/">Cluster Guides</a>
   </li>
     
       
 
 
   <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../guides/Cluster_Examples/">Examples</a>
+    <a class="" href="../Cluster_Examples/">Examples</a>
   </li>
     
       
 
 
   <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../guides/community_resources/">Community</a>
+    <a class="" href="../community_resources/">Community</a>
   </li>
     
       
 
 
   <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../guides/classes/">Classes</a>
+    <a class="" href="../classes/">Classes</a>
   </li>
     
       
@@ -99,34 +99,15 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../jupyter/">Jupyter</a>
+    <a class="" href="../../howtos/jupyter/">Jupyter</a>
   </li>
         
           
 
 
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        FastX
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-  <li class="toctree-l2 current with-children">
-    <a href="#troubleshooting">
-      Troubleshooting
-      <span class="toctree-expand"></span>
-    </a>
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../howtos/fastx/">FastX</a>
   </li>
-
-
-
-
-  
         
       </ul>
     </li>
@@ -180,15 +161,11 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>HowTo &raquo;</li>
-        
-      
     
-    <li>FastX</li>
+    <li>Didact - teaching cluster</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/howtos/fastx.md"
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/guides/didact.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -198,40 +175,48 @@
           <div role="main">
             <div class="section">
               
-                <p>Connecting to the remote Linux cluster makes running graphical programs remotely tricky, because the graphical program runs on the remote computer, yet, it must be displayed on the local machine such as laptop. In general, command line interaction with the cluster is normally preferred and even more efficient than a GUI. However, there are times when running a graphical program cannot be avoided, for example, running a debugger for a code running on the cluster. </p>
-<p>There is a convenient way to run a graphical program remotely, for example, using FastX. Here is the procedure: </p>
+                <h1 id="didact-teaching-cluster">Didact - teaching cluster</h1>
+<p>didact is a small cluster dedicated to teaching classes. There will be no maintenances during the semesters and all upgrades and updates will be done 
+depending on academic schedule so as not to interfere with classes. didact consists of 8 machines with 16 cores each. It has a separate filesystem from 
+the general Amarel cluster. (See also https://ask.oarc.rutgers.edu/question/35/what-are-the-differences-between-didact-and-amarel/)</p>
+<h2 id="how-to-connect-to-didact">How to connect to didact?</h2>
+<p>To connect to didact, just open your browser and this link: https://didact.oarc.rutgers.edu (you must be connected to VPN, otherwise it will show up as "Page not found"). 
+Use your netid and password to login (note: you must have an Amarel account. If you are part of a class teaching on didact, this will be provided to you.)
+OARC does not administer netids and passwords - we get the authentication from the central authentication service at Rutgers. </p>
+<h2 id="how-to-launch-a-desktop-on-didact">How to launch a desktop on didact?</h2>
+<p>If you are used to apps.rutgers.edu, you will find Didact Desktop familiar. Here is the series of instructions how to launch a desktop: </p>
 <ol>
-<li>Go to https://amarel.hpc.rutgers.edu:3443  and log in (you must be either on campus, or connected through VPN)</li>
-<li>Click on Launch session</li>
-<li>Click on xterm</li>
-<li>Run this command that will ask the resource scheduler to put you on a compute node, rather than a login node (where you shouldn't be running intensive computations)<br />
-<code>srun -p main -N 1 -c 2 --mem=4Gb -t 1:00:00 --pty /bin/bash</code><br />
-This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 Gb or memory and time of 1 hour and runs interactive shell. After executing this, you should notice that the name of the node changed from <code>amarel</code> to <code>slepner036</code> or some such. You can request whatever resources you deem necessary for your work, but keep in mind that bigger requests are typically placed further down in the queue. </li>
-<li>Start the program with graphical interface from the terminal window.</li>
+<li>login to https://didact.oarc.rutgers.edu</li>
+<li>Go to Interactive Sessions</li>
+<li>Click Didact Desktop</li>
+<li>Click "Launch" (wait up to 30 seconds until your environment is ready and the blue button appears on the bottom)</li>
+<li>
+<p>Click "Launch noVNC in New Tab"</p>
+</li>
+<li>
+<p><img alt="step 2" src="../pics/didact1.png" /></p>
+</li>
+<li><img alt="step 3" src="../pics/didact2.png" /></li>
+<li><img alt="step 4" src="../pics/didact3.png" /></li>
+<li><img alt="step 4" src="../pics/didact3b.png" /></li>
+<li><img alt="step 5" src="../pics/didact4.png" /></li>
 </ol>
-<p>Note: to disconnect from and then return to your active FastX session on Amarel, you must connect using the same login node you were using previously (i.e., amarel1 or amarel2). So, consistently connecting via amarel1.hpc.rutgers.edu:3443 would help ensure that you don't accidently "lose" a FastX session.</p>
-<p>Here is the video walking through these steps: </p>
-<p><a href="https://www.youtube.com/watch?v=8UQHLO85rlQ"><img alt="Graphical programs via FastX" src="https://img.youtube.com/vi/8UQHLO85rlQ/0.jpg" /></a></p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>If you get an error on xfce desktop, and you installed anaconda, it may be interfering with your fastX: </p>
+<h2 id="what-else-can-you-launch-on-didact">What else can you launch on didact?</h2>
 <ul>
-<li>close all FastX sessions</li>
-<li>delete <code>.fastx_server</code> directory (it will be hidden, do <code>ls -la</code>)</li>
-<li>comment out path to anaconda in your <code>.bash_profile</code> and/or <code>.bashrc</code> files (also hidden)</li>
+<li>Jupyter notebook (with python 3.6)</li>
+<li>RStudio</li>
 </ul>
+<h2 id="how-is-didact-different-from-appsrutgersedu">How is didact different from apps.rutgers.edu?</h2>
+<ul>
+<li>It uses somewhat different interface to launch a desktop.</li>
+<li>It has a graphical way to upload and download files</li>
+</ul>
+<h2 id="can-an-instructor-distribute-class-materials-directly">Can an instructor distribute class materials directly?</h2>
+<p>Yes! The instructor doesn't have to post materials on Canvas or other places - the instructor can deposit files directly in their student's home directories. </p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../ressentials/" class="btn btn-neutral float-right" title="R tutorial">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../jupyter/" class="btn btn-neutral" title="Jupyter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -257,10 +242,6 @@ This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../jupyter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../../ressentials/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

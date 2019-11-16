@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>FastX - OARC-Rutgers</title>
+  <title>Group permissions - OARC-Rutgers</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "FastX";
-    var mkdocs_page_input_path = "howtos/fastx.md";
-    var mkdocs_page_url = "/training/howtos/fastx/";
+    var mkdocs_page_name = "Group permissions";
+    var mkdocs_page_input_path = "howtos/group_permissions.md";
+    var mkdocs_page_url = "/training/howtos/group_permissions/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -105,28 +105,9 @@
           
 
 
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        FastX
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-  <li class="toctree-l2 current with-children">
-    <a href="#troubleshooting">
-      Troubleshooting
-      <span class="toctree-expand"></span>
-    </a>
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../fastx/">FastX</a>
   </li>
-
-
-
-
-  
         
       </ul>
     </li>
@@ -180,15 +161,11 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>HowTo &raquo;</li>
-        
-      
     
-    <li>FastX</li>
+    <li>Group permissions</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/howtos/fastx.md"
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/howtos/group_permissions.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -198,40 +175,53 @@
           <div role="main">
             <div class="section">
               
-                <p>Connecting to the remote Linux cluster makes running graphical programs remotely tricky, because the graphical program runs on the remote computer, yet, it must be displayed on the local machine such as laptop. In general, command line interaction with the cluster is normally preferred and even more efficient than a GUI. However, there are times when running a graphical program cannot be avoided, for example, running a debugger for a code running on the cluster. </p>
-<p>There is a convenient way to run a graphical program remotely, for example, using FastX. Here is the procedure: </p>
-<ol>
-<li>Go to https://amarel.hpc.rutgers.edu:3443  and log in (you must be either on campus, or connected through VPN)</li>
-<li>Click on Launch session</li>
-<li>Click on xterm</li>
-<li>Run this command that will ask the resource scheduler to put you on a compute node, rather than a login node (where you shouldn't be running intensive computations)<br />
-<code>srun -p main -N 1 -c 2 --mem=4Gb -t 1:00:00 --pty /bin/bash</code><br />
-This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 Gb or memory and time of 1 hour and runs interactive shell. After executing this, you should notice that the name of the node changed from <code>amarel</code> to <code>slepner036</code> or some such. You can request whatever resources you deem necessary for your work, but keep in mind that bigger requests are typically placed further down in the queue. </li>
-<li>Start the program with graphical interface from the terminal window.</li>
-</ol>
-<p>Note: to disconnect from and then return to your active FastX session on Amarel, you must connect using the same login node you were using previously (i.e., amarel1 or amarel2). So, consistently connecting via amarel1.hpc.rutgers.edu:3443 would help ensure that you don't accidently "lose" a FastX session.</p>
-<p>Here is the video walking through these steps: </p>
-<p><a href="https://www.youtube.com/watch?v=8UQHLO85rlQ"><img alt="Graphical programs via FastX" src="https://img.youtube.com/vi/8UQHLO85rlQ/0.jpg" /></a></p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>If you get an error on xfce desktop, and you installed anaconda, it may be interfering with your fastX: </p>
-<ul>
-<li>close all FastX sessions</li>
-<li>delete <code>.fastx_server</code> directory (it will be hidden, do <code>ls -la</code>)</li>
-<li>comment out path to anaconda in your <code>.bash_profile</code> and/or <code>.bashrc</code> files (also hidden)</li>
-</ul>
+                <p>Suppose I have a directory that I want to share with a collaborator, <code>/home/kp807/myproject</code>, which I want to make readable for the collaborator and a subdirectory <code>/home/kp807/myproject/code</code> where I will also give the collaborator the permission to write. I do not want the collaborator to see everything in my home directory <code>/home/kp807</code>. </p>
+<h2 id="using-granular-facl-controls">Using granular FACL controls</h2>
+<p>FACL (File Access Control List) has two important commands, <code>setfacl</code> and <code>getfacl</code>. <code>getfacl</code> works just like <code>ls</code>. Example: </p>
+<pre><code>[kp807@amarel1 ~]$ getfacl /home/kp807
+getfacl: Removing leading '/' from absolute path names
+# file: home/kp807
+# owner: kp807
+# group: kp807
+user::rwx
+user:dm1084:--x
+group::---
+other::---
+</code></pre>
+
+<p>So to setup the correct permissions, we'd need to do: </p>
+<pre><code>setfacl -m u:kholodvl:x /home/kp807/  #modify permissions (-m) for user kholodvl and make /home/kp807/ executable for his commands
+setfacl -m u:kholodvl:rx /home/kp807/myproject
+setfacl -m u:kholodvl:rwx /home/kp807/myproject  
+</code></pre>
+
+<p><strong>Important Note</strong>: Check defaults with which your files and directories are created. </p>
+<h2 id="using-group-membership">Using group membership</h2>
+<p>Use commands <code>chmod</code> (or <code>chown</code> as appropriate) to modify permissions and ownership, respectively, of directories or files: </p>
+<pre><code>chmod g+x /home/kp807/                  #make the directory executable so other person's command can tranverse the file tree to myproject
+chmod g+rx /home/kp807/myproject/       #make the directory readable and executable for the group I belong to
+chmod g+rwx /home/kp807/myproject/code  #make the directory readable, writable and executable for the group I belong to
+</code></pre>
+
+<p>[kp807@amarel1 ~]$ mkdir myproject
+[kp807@amarel1 ~]$ mkdir myproject/code
+[kp807@amarel1 ~]$ setfacl -m u:kholodvl:x /home/kp807/  #modify permissions (-m) to user kholodvl and make /home/kp807/ executable for his commands
+[kp807@amarel1 ~]$ setfacl -m u:kholodvl:rx /home/kp807/myproject
+[kp807@amarel1 ~]$ setfacl -m u:kholodvl:rwx /home/kp807/myproject
+[kp807@amarel1 ~]$ touch /home/kp807/myproject/readme.txt
+[kp807@amarel1 ~]$ touch /home/kp807/myproject/code/writeme.txt
+[kp807@amarel1 ~]$ ls /home/kp807/myproject/code/</p>
+<p>rm -rf /home/kp807/myproject
+mkdir /home/kp807/myproject
+mkdir /home/kp807/myproject/code
+ls -la /home/kp807/myproject
+getfacl /home/kp807/myproject
+ls -la /home/kp807/myproject/code
+getfacl /home/kp807/myproject/code</p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../ressentials/" class="btn btn-neutral float-right" title="R tutorial">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../jupyter/" class="btn btn-neutral" title="Jupyter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -257,10 +247,6 @@ This command puts you on main partition, asks for 2 cores on 1 node, asks for 4 
           <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../jupyter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../../ressentials/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

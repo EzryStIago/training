@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Guidelines for managing data on scratch - OARC-Rutgers</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Guidelines for managing data on scratch";
+    var mkdocs_page_input_path = "guides/scratch-datamanagement.md";
+    var mkdocs_page_url = "/training/guides/scratch-datamanagement/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> OARC-Rutgers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../Cluster_User_Guide/">Cluster Guides</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../Cluster_Examples/">Examples</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../community_resources/">Community</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../classes/">Classes</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">HowTo</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../howtos/jupyter/">Jupyter</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../howtos/fastx/">FastX</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../ressentials/">R tutorial</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../CheatSheet/">Cheat Sheets</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../resources/">Resources</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../faq/">FAQ</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">OARC-Rutgers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Guidelines for managing data on scratch</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/guides/scratch-datamanagement.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="guidelines-for-managing-data-on-scratch">Guidelines for managing data on scratch</h1>
+<h3 id="table-data-management-on-oarc-cluster">Table: Data management on OARC cluster</h3>
+<table>
+  <tr>
+    <th> Fileset </th>
+    <th> Users </th>
+    <th> quota </th>
+    <th> Time </th>
+    <th> Back up </th>
+    <th> External storage options </th>
+    <th> Transfer Tools </th>
+  </tr>
+  <tr>
+    <td> scratch
+    <td> general
+    <td> No  Quota
+    <td> 90 days
+    <td> no
+   <td rowspan="3"> - Personal devices: Laptop, Desktop, USB drives, etc. <br>
+         - Online drives: Box(unlimited for Rutgers), Google Drive, One Drive, Dropbox, etc. <br>
+         -Public cloud storages: GCP, Azure, AWS, etc. <br>
+       </td>
+   <td rowspan="3">  -CLI tools: scp, rsync, rcloud <br>
+         -GUI tools: Filezilla, WinSCP, Open OnDemand, rclone-browser (via sirius3) <br>
+       </td>
+  </tr>
+  <tr>
+    <td> home </td>
+    <td> general </td>
+    <td> 100GB </td>
+    <td> Valid account </td>
+    <td> yes </td>
+
+  </tr>
+
+  <tr>
+    <td> project </td>
+    <td> node owners </td>
+    <td> varies </td>
+    <td> varies </td>
+    <td> yes </td>
+
+  </tr>
+
+</table>
+
+<p>Scratch offers unlimited temporary storage. You can processing large volumes of data in scratch, but the data cannot be older than 90 days. The files older than 90 days are automatically removed, and there is no backup. If you exceed the disk quota, your jobs would fail with a message that you cannot write anymore. So, it is a best practice to move the data from scratch as soon as possible.</p>
+<h2 id="internal-and-external-storage-options">Internal and external storage options</h2>
+<p>For long term storage, you can utilize the internal storage at OARC's cluster or any of the external storage. OARC's internal storage includes home and project file sets.  If your data can be accommodated in your home directory, it is okay to keep the final results in the home. Node owners may want to use their project space. If you don't have enough space in the OARC cluster, you need to move the data to an external storage.</p>
+<p>Here we point out a few options to consider for external storage. Personal devices such as laptop, desktop, workstations, or USB drives can serve as external storage.  Third part vendors offer several storage options that are either free or paid services. Box offers unlimited free storage for Rutgers community. Google offers unlimited  free storage for the academic community  by a service called Google Drive File Stream. One Drive and DropBox services are free to use up to a set quota.  Public cloud providers such as AWS, Azure, and GCP charge a fee to move the data in and out of the cloud.</p>
+<h2 id="data-transfer-tools">Data transfer tools</h2>
+<p>There are several tools and methods available to move the data that are based on command line interface (CLI) or Graphical User Interface (GUI). You can use command line tools such as scp, rsync, or rcloud to move the data from OARC cluster to any external storage. scp and rsync are suitable choices if you are moving data from OARC to your laptop or desktop that runs linux or MacOS. rcloud is an excellent choice to move your data to many storage services such as Box, DropBox, cloud, etc. GUI tools such as Filezilla, WinSCP, rclone-browser, and Open OnDemand are popular choices to move the data from variety of storage end points. Among GUI tools, FIlezilla, rclone-browser, and Open OnDemand tools should work on any operating systems (Linux, MacOS, Windows) since they interact through a web-browser.</p>
+<p>Please refer our user guide for more details about how to use specific CLI tools such as scp, rsync, and rclone. Here is a simple command line example to move your data using scp. </p>
+<pre><code>scp your-netid@amarel.hpc.rutgers.edu:&lt;file location on oarc cluster&gt; &lt;file location on your device&gt;
+</code></pre>
+<p>where ‘your-netid’ is your Rutger’s netid, which is same as your account name on OARC cluster. For example, to move data from scratch space located at /scratch/your-netid/your-data-file to a home directory on your laptop using scp command, type the following in your terminal shell prompt on your laptop.</p>
+<pre><code>scp  your-netid@amarel.hpc.rutgers.edu:/scratch/your-net-id/your-data-file ~/your-data-file
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

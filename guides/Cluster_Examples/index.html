@@ -14,18 +14,19 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Examples";
     var mkdocs_page_input_path = "guides/Cluster_Examples.md";
-    var mkdocs_page_url = "/guides/Cluster_Examples/";
+    var mkdocs_page_url = "/training/guides/Cluster_Examples/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -39,436 +40,216 @@
         <a href="../.." class="icon icon-home"> OARC-Rutgers</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../Cluster_User_Guide/">Cluster Guides</a>
+  </li>
+    
       
 
 
   
     
-
-
-<ul class="" href="../..">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../..">Home</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../Cluster_User_Guide/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../Cluster_User_Guide/">Cluster Guides</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="current" href="./">
-  
-    
-    
-      <li class="current toctree-l1">
-        <a class="current" href="./">Examples</a>
-        
-  
-  
-  
-  
-  
-  <ul class="current subnav">
-    
-      
-
-  
-  
-  
-
-
-  <li class="current toctree-l2">
-    
-      <a href="#using-r" title="Examples"
-          class="current">
-        Using R
+    <li class="navtree toctree-l1 page current">
+      <a class="current" href="./">
+        Examples
       </a>
+    </li>
     
-    <ul class="current subnav">
       
-        
 
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#quickstart" title="Examples">Quickstart</a>
+  <li class="toctree-l1 current with-children">
+    <a href="#using-r">
+      Using R
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
+
+
+  <li class="toctree-l1 current">
+    <ul class="subnav-l1 current">
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#using-pre-installed-r-modules" title="Examples">Using pre-installed R modules</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#quickstart">Quickstart</a>
+        </li>
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#installing-your-own-build-of-r" title="Examples">Installing your own build of R</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#using-pre-installed-r-modules">Using pre-installed R modules</a>
+        </li>
+    
       
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#installing-your-own-build-of-r">Installing your own build of R</a>
+        </li>
+    
     </ul>
   </li>
 
-    
       
 
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#using-python" title="Examples"
-          class="">
-        Using Python
-      </a>
-    
-    <ul class=" subnav">
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#quickstart_1" title="Examples">Quickstart</a>
+  <li class="toctree-l1">
+    <a href="#using-python">
+      Using Python
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#using-pre-installed-python-modules" title="Examples">Using pre-installed Python modules</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#quickstart_1">Quickstart</a>
+        </li>
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#building-your-own-python-installation" title="Examples">Building your own Python installation</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#using-pre-installed-python-modules">Using pre-installed Python modules</a>
+        </li>
+    
       
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#building-your-own-python-installation">Building your own Python installation</a>
+        </li>
+    
     </ul>
   </li>
 
-    
       
 
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#running-gromacs" title="Examples">Running GROMACS</a>
+  <li class="toctree-l1">
+    <a href="#running-gromacs">
+      Running GROMACS
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
-    
+
+
       
 
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#running-tensorflow-with-a-gpu" title="Examples"
-          class="">
-        Running TensorFlow with a GPU
-      </a>
-    
-    <ul class=" subnav">
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#using-singularity" title="Examples">Using Singularity</a>
+  <li class="toctree-l1">
+    <a href="#running-tensorflow-with-a-gpu">
+      Running TensorFlow with a GPU
+      <span class="toctree-expand"></span>
+    </a>
   </li>
 
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
+    
       
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#using-conda" title="Examples">Using conda</a>
-  </li>
-
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#using-singularity">Using Singularity</a>
+        </li>
+    
       
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#using-conda">Using conda</a>
+        </li>
+    
     </ul>
   </li>
 
+
+  
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../community_resources/">Community</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../classes/">Classes</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">HowTo</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../howtos/jupyter/">Jupyter</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../howtos/fastx/">FastX</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../ressentials/">R tutorial</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../CheatSheet/">Cheat Sheets</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../resources/">Resources</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../faq/">FAQ</a>
+  </li>
     
   </ul>
-
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../community_resources/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../community_resources/">Community</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../classes/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../classes/">Classes</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-    
-    
-    
-    
-    
-
-  <p class="caption">HowTo</p>
-
-
-<ul class="" href="howtos/jupyter">
-  
-    
-      
-<li class=" toctree-l1">
-  <a href="../../howtos/jupyter/" title="Jupyter"
-      class="">
-    Jupyter
-  </a>
-
-  
-  
-</li>
-    
-      
-<li class=" toctree-l1">
-  <a href="../../howtos/fastx/" title="FastX"
-      class="">
-    FastX
-  </a>
-
-  
-  
-</li>
-    
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../../ressentials/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../../ressentials/">R tutorial</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../../CheatSheet/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../../CheatSheet/">Cheat Sheets</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../../resources/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../../resources/">Resources</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
-
-  
-    
-
-
-<ul class="" href="../../faq/">
-  
-    
-    
-      <li class=" toctree-l1">
-        <a class="" href="../../faq/">FAQ</a>
-      </li>
-</ul>
-
-<!--
- | This is a hacky way to pass setting from the template generator to the
- | javascript that drives the dropdown functionality
--->
-<div style="width: 1px; height: 1px; visibility: none;">
-
-</div>
-
-
       </div>
       &nbsp;
     </nav>
@@ -572,7 +353,7 @@ BSgenome             &quot;BSgenome&quot;             &quot;1.46.0&quot;
 <p>First, I'll create a directory where I can store my locally-installed R packages. This can have any name and it can be located anywhere you have access:<br />
 <code>mkdir ~/my.R.libs</code></p>
 <p>Next, to ensure that my new private R packages directory is searched when I try to load a library that's installed there, I need to make an environment setting that will point R to the right location. I'll create a new file in my /home directory named .Renviron (note the leading "." in that name) and I'll add the following line to that file:<br />
-<code>export R_LIBS=~/my.R.libs</code><br />
+<code>R_LIBS=~/my.R.libs</code><br />
 Now, every time I start any version of R, my ~/my.R.libs directory will be the first location to be searched when loading a library.</p>
 <p><strong> Some important notes about installing packages:</strong></p>
 <p>There are a variety of different ways to install packages in R. The most straightforward way is to use the built-in 'install.packages()' function while R is running. Using this approach gives you the flexibility to install the latest version of a package or you can specify an older version of a package. To install a specifc version of a package, you'll need the URL (web address) for the tarball (<em>.tar.gz or </em>.tgz file) containing the source code for that version.</p>
@@ -946,9 +727,8 @@ srun python /home/kp807/tf/benchmarking/mnist.py
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

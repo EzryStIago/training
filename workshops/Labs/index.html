@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>LAB 1: Visualization using IGV - OARC-Rutgers</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "LAB 1: Visualization using IGV";
+    var mkdocs_page_input_path = "workshops/Labs.md";
+    var mkdocs_page_url = "/training/workshops/Labs/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> OARC-Rutgers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../guides/Cluster_User_Guide/">Cluster Guides</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../guides/Cluster_Examples/">Examples</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../guides/community_resources/">Community</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../guides/classes/">Classes</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">HowTo</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../howtos/jupyter/">Jupyter</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../howtos/fastx/">FastX</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../ressentials/">R tutorial</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../CheatSheet/">Cheat Sheets</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../resources/">Resources</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../faq/">FAQ</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">OARC-Rutgers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>LAB 1: Visualization using IGV</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/rutgers-oarc/training/edit/master/docs/workshops/Labs.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="lab-1-visualization-using-igv">LAB 1: Visualization using IGV</h1>
+<hr />
+<p><strong>IGV</strong>  --- Focus on visualization, best for validation and confirmation of the analysis result, Not good for primary analysis
+ The mapping file is in bam format, located under the folder of tophat_out, they shall be sorted and indexed using the following command</p>
+<pre><code>  cd /scratch/$USER/Genomics_Workshop/untreated/tophat_out/untreated_SRR1039508
+  module load samtools                                                             
+  samtools sort accepted_hits.bam -o accepted_hits.sorted.bam  ##this step  takes about 10 minutes to complete 
+  samtools index accepted_hits.sorted.bam ## it takes about 30 seconds
+</code></pre>
+
+<p>The resulting files: accepted_hits.sorted.bam  <br />
+                     accepted_hits.sorted.bam.bai<br />
+                     are the files to be uploaded to IGV</p>
+<p>You need to repeat these steps for every sample </p>
+<h2 id="shortcut-lab-1">Shortcut Lab 1</h2>
+<p>We have prepared 4 sets of such files (dex09, dex13, untreated08 and untreated12), located at: <code>/projects/oarc/Genomics_Workshop/Bam_for_IGV/</code> . Make a soft link (see the following command), or copy them into your scratch  folder, then we use IGV to analyze them. </p>
+<pre><code>cd /scratch/$USER/Genomics_Workshop/
+ln -s /projects/oarc/Genomics_Workshop/Bam_for_IGV  Bam_for_IGV  ## this step was  done when you ran lab_PartII.sh
+#start IGV 
+module load java
+/projects/oarc/Genomics_Workshop/IGV_2.4.6/igv.sh 
+</code></pre>
+
+<p>Practice and get familiar with:  </p>
+<ul>
+<li>How to Load genome and data track</li>
+<li>How to navigate</li>
+<li>How and what to visualize:</li>
+<li>Examine coverage</li>
+<li>Low mapping quality</li>
+<li>Mis-alignment</li>
+<li>Translocation</li>
+<li>Novel genes/transcript</li>
+<li>Alternative splicing</li>
+<li>Inversion</li>
+<li>Look for SNPs</li>
+<li>CNV, ChipSeq, RNASeq, WGS alignmentSNP</li>
+</ul>
+<p>More detailed explanation <a href="http://software.broadinstitute.org/software/igv/book/export/html/37">here</a></p>
+<p>The following is a <a href="HTTP://SOFTWARE.BROADINSTITUTE.ORG/SOFTWARE/IGV/">sample</a> snap shot of the above two files loaded to IGV.<br />
+  CLOSE your interactive session on a node  when done with IGV by typing exit</p>
+<h1 id="lab-2-data-processing-and-expression-analysis-using-edger">LAB 2:  Data processing and expression analysis using edgeR</h1>
+<hr />
+<p>All the htseq-count output files should be present in one folder. Here we created the folder read_counts.</p>
+<pre><code>            read_counts/dex09.txt
+                        dex13.txt
+                        dex17.txt
+                        untreated08.txt
+                        untreated12.txt
+                        untreated16.txt
+</code></pre>
+
+<p>Go to this folder containing all above six counts output files<br />
+<code>cd /scratch/$USER/Genomics_Workshop/read_counts</code></p>
+<p>We need to combine all counts into one file, which will be imported into R for further analysis.
+ The following shows how this can be done with bash commands on linux ( you may do it in excel too)</p>
+<pre><code> paste dex09.txt dex13.txt dex17.txt untreated08.txt untreated12.txt untreated16.txt &gt; merged_counts.txt    
+ ## merge files by columns
+ cut -f1,2,4,6,8,10,13 merged_counts.txt  &gt; merged_counts_clean.txt     ## extract the relevant columns  
+ head -n -5 merged_counts_clean.txt &gt; merged_counts_clean2.txt      ##remove the last 5 line stats summary
+</code></pre>
+
+<p>We also need to prepare a file containing group/treatment information. This file Targets.txt is a tab delimited text file. You may construct in excel. 
+ <strong>The file should contain the following info</strong></p>
+<table>
+<thead>
+<tr>
+<th>label</th>
+<th>sample</th>
+<th>group</th>
+<th>treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>dex09</td>
+<td>dex</td>
+<td>dex_treated</td>
+</tr>
+<tr>
+<td>2</td>
+<td>dex13</td>
+<td>dex</td>
+<td>dex_treated</td>
+</tr>
+<tr>
+<td>3</td>
+<td>dex17</td>
+<td>dex</td>
+<td>dex_treated</td>
+</tr>
+<tr>
+<td>4</td>
+<td>untreated08</td>
+<td></td>
+<td>control untreated</td>
+</tr>
+<tr>
+<td>5</td>
+<td>untreated12</td>
+<td></td>
+<td>control untreated</td>
+</tr>
+<tr>
+<td>6</td>
+<td>untreated16</td>
+<td></td>
+<td>control untreated</td>
+</tr>
+</tbody>
+</table>
+<p>This file has been prepared for you. You will need to copy it into your folder, see later Lab2.2:</p>
+<h2 id="lab22-pre-processing-the-data-in-r">Lab2.2: Pre-processing the data in R</h2>
+<pre><code>cd /scratch/$USER/Genomics_Workshop/
+mkdir  DE_analysis  ##set working directory to run differential expression analysis
+cd DE_analysis 
+
+## Copy the needed files here
+
+cp /projects/oarc/Genomics_Workshop/SRA_data/DE_analysis/Targets.txt $PWD                           ##This file denotes the experimental group
+cp /projects/oarc/Genomics_Workshop/SRA_data/read_counts/merged_counts_clean2.txt $PWD              ##This file contains read counts on genes for all samples
+cp /projects/oarc/Genomics_Workshop/Reference/hg20/Homo_sapiens.GRCh38.78.gtf $PWD     ##annotation file needed to calculate exonic gene length -- needed for FPKM calculation
+</code></pre>
+
+<h2 id="homework-catch-up">HOMEWORK CATCH-UP</h2>
+<p>From your homework assignment you should have the following packages to be installed already :).
+If you didn't, install them now.</p>
+<pre><code>##Open a terminal for  amarel2 login node.
+ssh -X amarel2.hpc.rutgers.edu
+
+##On the login node start R
+module load intel/17.0.4
+module load R-Project/3.4.1
+R
+
+##then in the R workspace do the following:
+source(&quot;https://bioconductor.org/biocLite.R&quot;)
+biocLite(&quot;MKmisc&quot;)
+Would you like to use a personal library instead?  (y/n)  y
+Would you like to create a personal library
+~/R/x86_64-pc-linux-gnu-library/3.4 to install packages into?  (y/n) y
+
+##Wait till it finishes.
+
+biocLite(&quot;Heatplus&quot;)
+biocLite(&quot;affycoretools&quot;)
+biocLite(&quot;flashClust&quot;)
+biocLite(&quot;affy&quot;)
+biocLite(&quot;GenomicFeatures&quot;)
+quit()   ###quit R, no save
+Save workspace image? [y/n/c]: n
+</code></pre>
+
+<h2 id="starting-the-job">Starting the Job</h2>
+<p>Now,start a new interactive job on the compute node or switch to another terminal if you still have an interactive job running<br />
+<code>srun --x11 -p main --reservation=genomics_2 -N 1 -c 2 -n 1 -t 02:00:00 --pty /bin/bash -i</code>   <br />
+Go to your working directory<br />
+<code>cd /scratch/$USER/Genomics_Workshop/DE_analysis/</code>
+ Then, start R<br />
+<code>module load intel/17.0.4
+ module load R-Project/3.4.1</code><br />
+<code>getwd()</code> Check which directory you are in<br />
+ You should be in the directory where the files merged_counts_clean2.txt and "Targets.txt", annotation gtf file are. If not there, set your working directory :
+ <code>setwd("/scratch/&lt;your_netID&gt;/Genomics_Workshop/DE_analysis/")</code>. Set the working directory</p>
+<p>Now load up the libraries needed for the analysis</p>
+<pre><code>    library(edgeR)
+    library(MKmisc)
+    library(affy)
+    library(flashClust)
+    library(affycoretools)
+    library(Heatplus)
+    library(GenomicFeatures)
+</code></pre>
+<pre><code>raw.data &lt;- read.delim(&quot;merged_counts_clean2.txt&quot;, header=F, row.names=1)  
+##import count data to R
+head(raw.data)  ## check the beginning portion of the imported file, now an object
+dim(raw.data)   ##check the dimention of this object
+class(raw.data)  ## check what class of this object
+apply(raw.data, 2, summary) ## check the range of counts per sample
+range(rowSums(raw.data))      ## check the range of counts per gene
+colnames(raw.data) &lt;- c(&quot;dex09&quot;,&quot;dex13&quot;,&quot;dex17&quot;,&quot;untreated08&quot;,&quot;untreated12&quot;,&quot;untreated16&quot;)
+##add column header
+
+raw.data2 &lt;- raw.data[rowSums(raw.data) != 0 ,] ##remove genes with zero counts for all samples
+dim(raw.data2)
+
+cpm.values &lt;- cpm(raw.data2) #calculate counts per million mapped reads without any other normalization
+
+above1cpm &lt;- apply(cpm.values, 1, function(x) sum(x &gt;=1)) ##How many samples/genes had at least 1 cpm 
+counts.use &lt;- raw.data2[above1cpm &gt;= 3,] ##we have three replicates in each group. If a gene can be reliably detected, it should be detected in all 3 replicates. So, a gene to be included for further analysis shall have 1 cpm in at least 3 samples. (The 3 samples are irrespective of group)
+dim(counts.use)
+colSums(counts.use) / colSums(raw.data)  ##the % of total counts kept after filtering
+nrow(counts.use) / nrow(raw.data)  ##the % of genes kept after filtering
+
+targets &lt;- readTargets()      ##import targets file that contains experiment group info.
+targets$GpF &lt;- factor(targets$group)   ##change character to factor
+targets$GpN &lt;- as.numeric(targets$GpF) ##change factor to numeric (optional)
+
+ls()  #see that objects have been loaded
+save.image(&quot;RNASeqDemo.RData&quot;)   ##save the work workspace
+savehistory(&quot;RNASeqDemo.Rhistory&quot;)  ##save command history
+
+</code></pre>
+
+<h2 id="lab-23-to-calculate-expression-values-as-fpkm">Lab 2.3: To calculate expression values as fpkm</h2>
+<p>First, compute the gene length as described in Lab6--partI</p>
+<pre><code> library(GenomicFeatures)  ##may skip, because we already loaded at start
+ gtfdb &lt;- makeTxDbFromGFF(&quot;Homo_sapiens.GRCh38.78.gtf&quot;,format=&quot;gtf&quot;)
+ exons.list.per.gene &lt;- exonsBy(gtfdb,by=&quot;gene&quot;)
+ exonic.gene.sizes &lt;- lapply(exons.list.per.gene,function(x){sum(width(reduce(x)))})
+ class(exonic.gene.sizes)
+ Hg20_geneLength &lt;-do.call(rbind, exonic.gene.sizes)
+ colnames(Hg20_geneLength) &lt;- paste('geneLength')    
+
+ Hg20_geneLength2 &lt;- data.frame(Hg20_geneLength[rownames(counts.use),]) ## to extract the gene length file to contain 
+ the same number genes in the same order as in the filtered read counts file
+ colnames(Hg20_geneLength2) &lt;- paste('geneLength')  ## to change column name, make    it neat
+ fpkm.data &lt;- cpm(counts.use) / (Hg20_geneLength2$geneLength/1000) ## compute fpkm
+ min.count &lt;- apply(fpkm.data,1,min)
+ write.csv(fpkm.data,file=&quot;fpkm_values.csv&quot;)  #### To output FPKM data  
+
+</code></pre>
+
+<h2 id="lab-24-analysis-qc-or-sample-diagnosis">Lab 2.4:  Analysis QC ---or sample diagnosis</h2>
+<pre><code>## density distribution
+plotDensity(log2(raw.data+0.1),col=targets$GpF,lty=1,lwd=2)
+legend(&quot;topright&quot;, legend=levels(targets$GpF),fill=1:4)
+</code></pre>
+
+<p>Change data from raw.data to raw.data2, to CPM, FPKM,.. to see the effect of filtering and normalization</p>
+<h3 id="clustering">Clustering</h3>
+<pre><code>hc.raw &lt;- flashClust(dist(t(log2(raw.data2+0.1))),method=&quot;average&quot;)
+plot(hc.raw,hang = -1, main = &quot;RNASeqDemo, raw values&quot;, sub = &quot;&quot;, xlab = &quot;&quot;,cex=0.9, labels=targets$sample)
+##change data from raw.data to raw.data2, to CPM, logCPM, FPKM,.. to see the effect of filtering and normalization
+
+#####PCA#######
+plotPCA(fpkm.data, pch=16, col=targets$GpF,groupnames=levels(targets$GpF), addtext=rep(1:3,4),main=&quot;PCA on FPKM&quot;)
+
+###do it after edgeR analysis, otherwise some values not existing yet###
+
+plotPCA(logCPM), pch=16, col=targets$GpF,groupnames=levels(targets$GpF), addtext=rep(1:3,4),main=&quot;PCA on logCPM&quot;)
+
+
+#####heatmap####
+test &lt;- topTags(eR.dex_Ctl,n=Inf,sort.by=&quot;PValue&quot;)$table ####sort gene list according to P values
+test2 &lt;- test[1:500,]  ###Take the top 500 significant genes
+logCPM2 &lt;- logCPM[rownames(test2),]  ###Extract logCPM values of these 500 genes
+meanFC &lt;- logCPM2 - rowMeans(logCPM2)
+color.meanFC &lt;- heatmapCol(data = meanFC, lim = 3, col =colorRampPalette(c(&quot;blue&quot;,&quot;white&quot;,&quot;red&quot;))(128))
+heatmap_2(meanFC, col=color.meanFC, legend=3, scale=&quot;none&quot;)
+
+
+
+ #####Volcano plot####
+with(eR.dex_Ctl.detailed, plot(logFC, -log10(PValue), pch=20, main=&quot;Volcano plot&quot;, xlim=c(-2.5,2),ylim=c(0,25)))
+with(subset(eR.dex_Ctl.detailed,FDR&lt;0.05), points(logFC, -log10(PValue), pch=20, col=&quot;red&quot;))
+with(subset(eR.dex_Ctl.detailed, abs(logFC)&gt;1), points(logFC, -log10(PValue), pch=20, col=&quot;orange&quot;))
+with(subset(eR.dex_Ctl.detailed, FDR&lt;0.05&amp;abs(logFC)&gt;1), points(logFC, -log10(PValue), pch=20, col=&quot;green&quot;))
+
+</code></pre>
+
+<h2 id="lab-25-differential-expression-analysis-with-edger">Lab 2.5: Differential expression analysis  with edgeR</h2>
+<p>Create the design matrix</p>
+<pre><code>  groups &lt;- factor(targets$group)
+  design &lt;- model.matrix(~0+groups)
+  colnames(design) &lt;- levels(groups)
+  rownames(design) &lt;- targets$sample   
+  design
+</code></pre>
+
+<pre><code>                                        control dex
+dex09             0   1
+dex13             0   1
+dex17             0   1
+untreated08       1   0
+untreated12       1   0
+untreated16       1   0
+attr(,&quot;assign&quot;)
+[1] 1 1
+attr(,&quot;contrasts&quot;)
+attr(,&quot;contrasts&quot;)$groups
+[1] &quot;contr.treatment&quot;
+</code></pre>
+
+<h3 id="create-contrast-matrix">Create contrast matrix</h3>
+<p><code>cont.matrix &lt;- makeContrasts(dex_Ctl= dex - control, levels=design)</code></p>
+<h3 id="create-dgelist-object">Create DGEList object</h3>
+<pre><code> d &lt;- DGEList(counts=counts.use, lib.size=colSums(counts.use), group=targets$GpF)
+ class(d)
+ names(d)    ## the names of the items in the list
+ d$counts[1:5,]    ## The counts are stored in the $counts:
+ d$samples   ## The group info and library sizes stored in $samples
+ d &lt;- calcNormFactors(d)  ## an additional normalization factor using a TMM method
+ d$samples   ## now the norm.factors are no longer 1
+
+ ###this can be useful when diagnose problem)###
+ apply(d$counts,2,function(x) sum(sort(x/sum(x),decreasing=T)[1:20])) * 100
+ ##the proportions of total counts for the top 20 genes in each sample, 10-20% is OK. 
+
+ logCPM &lt;-  cpm(d$counts, log = TRUE)   ## modified logCPM values in edgeR, can be used for clustering, heatmap
+
+</code></pre>
+
+<p>Now,the DE test! The term "estimating dispersions" in edgeR describes a method to account for the variance among 
+replicates.</p>
+<pre><code>  d &lt;- estimateGLMCommonDisp(d, design, verbose=TRUE)   
+  Disp = 0.06037 , BCV = 0.2457 
+  d &lt;- estimateGLMTrendedDisp(d, design)
+  d &lt;- estimateGLMTagwiseDisp(d, design)
+  plotBCV(d)   ## the relationship between the overall abundance and the tagwise dispersion estimates
+
+
+  fit.edgeR &lt;- glmFit(d, design)  ## Estimate model coefficients from count data and design matrix
+  names(fit.edgeR)
+</code></pre>
+
+<p>Specify contrasts of interest, do empirical Bayes "shrinkage" of  variances and calculate test statistics. Both of these are performed with same function glmLRT in edgeR (Genewise Negative Binomial Generalized Linear Models)</p>
+<pre><code> eR.dex_Ctl &lt;- glmLRT(fit.edgeR, contrast=cont.matrix[,1])
+
+ summary(decideTestsDGE(eR.dex_Ctl)) [,1]  ## Correct for multiple tests and extract relvant data (1 means sig up, -1 means sig down, and 0 means NS)
+
+ eR.dex_Ctl.detailed &lt;- topTags(eR.dex_Ctl,n=Inf,sort.by=&quot;none&quot;)$table ## Get detailed output for a single contrast
+
+ eR.dex_Ctl.detailed[1:5,]
+                      logFC   logCPM         LR    PValue       FDR
+ ENSG00000000003 -0.36354885 5.227841 2.37143785 0.1235732 0.5501740
+ ENSG00000000419  0.18626588 4.674100 0.79016266 0.3740509 0.8571700
+ ENSG00000000457  0.04304803 3.838702 0.03317218 0.8554789 0.9905954
+ ENSG00000000460 -0.05998067 1.609803 0.02021703 0.8869326 0.9916274
+ ENSG00000000971  0.35401120 8.007586 1.55551391 0.2123233 0.7070242
+
+ ## Fold change is simply group A-B (if on the log scale), or A/B (if on   raw scale).
+ ## logCPM = the average log2-counts-per-million 
+ ## LR = likelihood ratio statistics 
+ ##PValue = the two-sided p-value 
+ ## FDR = adjusted p-value 
+
+ #### To back-translate logFC to regular FC with down-reg as -FC
+ eR.dex_Ctl.detailed$FC &lt;- 2^abs(eR.dex_Ctl.detailed$logFC) * sign(eR.dex_Ctl.detailed$logFC)
+
+ write.csv(eR.dex_Ctl.detailed,file=&quot;Demo_eR.dex_Ctl_results.csv&quot;)  ##output the file
+
+</code></pre>
+
+<h1 id="lab-3-running-enrichment-analysis-using-gsea">Lab 3  Running enrichment analysis using GSEA</h1>
+<hr />
+<p>The command to start the gsea:</p>
+<pre><code>srun --x11 -p main --reservation=genomics_2 -N 1 -c 2 -n 1 -t 2:00:00 --pty /bin/bash -i  ##get onto a reserved compute node
+module load java
+java -jar /scratch/$USER/Genomics_Workshop/gsea-3.0.jar      
+
+</code></pre>
+
+<p>Prepare files required to run GSEA<br />
+For detailed file format, see <a href="https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#GMX:_Gene_MatriX_file_format_.28.2A.gmx.29">here</a></p>
+<table>
+<thead>
+<tr>
+<th><strong>Files</strong></th>
+<th><strong>Format</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expression data files</td>
+<td>Gene cluster text file format (.gct)</td>
+</tr>
+<tr>
+<td>Gene set files</td>
+<td>gene matrix file format(.gmx), gene matrix transposed format(.gmt)</td>
+</tr>
+<tr>
+<td>Phenotype data files</td>
+<td>Categorical class file (.cls) (defining experimental group)</td>
+</tr>
+</tbody>
+</table>
+<p>A set of following sample files are prepared for GSEA analysis practice, which are located at  <code>/projects/oarc/Genomics_Workshop/GSEA/</code></p>
+<pre><code>fpkm_values.ready.gct    gct file (expression fpkm values)
+fpkm_values.ready.cls     cls file  (defining experimental group)
+Mouse_Human_NCI_Nature_November_01_2017_symbol.gmt     gmt file (gene set file biological function set)
+
+</code></pre>
+
+<p>In practice analysis, use online broad C2 geneset instead of the above .gmt file<br />
+ Results are located at <code>/home/Net_ID/gsea_home/output/&lt;jun27&gt;/my_analysis.Gsea.nnnnnnnnnnnnn/</code>  </p>
+<p>To view your result:</p>
+<pre><code>  cd ~/gsea_home/output/&lt;jun27&gt;/my_analysis.Gsea.nnnnnnnnnnnnn/  
+  ## (same as: cd /home/Net_ID/gsea_home/output/&lt;jun27&gt;/my_analysis.Gsea.nnnnnnnnnnn/)
+  firefox index.html
+</code></pre>
+
+<h2 id="additional-gene-set-database-downloading-source">Additional gene set database downloading source:</h2>
+<ul>
+<li><a href="http://software.broadinstitute.org/gsea/msigdb/index.jsp">http://software.broadinstitute.org/gsea/msigdb/index.jsp</a></li>
+<li><a href="http://download.baderlab.org/EM_Genesets/">http://download.baderlab.org/EM_Genesets/</a></li>
+<li><a href="http://www.go2msig.org/cgi-bin/prebuilt.cgi">http://www.go2msig.org/cgi-bin/prebuilt.cgi</a></li>
+<li>or build your <a href="http://www.go2msig.org/cgi-bin/go2msig.cgi">own</a></li>
+</ul>
+<h1 id="lab-4-running-the-go-term-analysis">Lab 4 Running the GO term analysis</h1>
+<hr />
+<p>Open <a href="http://amigo.geneontology.org/amigo">this</a> link<br />
+Gene list from de-analysis of our downloaded data (selected based on FDR and FC):</p>
+<pre><code>FDR&lt;0.05, FC &lt; -2.5     FDR&lt;0.05, FC &lt; -2.5     FDR&lt;0.05, FC &gt; 2.5      FDR&lt;0.05, FC &gt; 2.5
+ENSG00000146006 ENSG00000123610 ENSG00000139220 ENSG00000235927
+ENSG00000108700 ENSG00000124766 ENSG00000136478 ENSG00000099860B 
+ENSG00000162692 ENSG00000176771 ENSG00000112218 ENSG00000153904
+ENSG00000105989 ENSG00000196517 ENSG00000157510 ENSG00000243244
+ENSG00000188176 ENSG00000132622 ENSG00000071282 ENSG00000169218
+ENSG00000141469 ENSG00000126016 ENSG00000171385 ENSG00000163513
+ENSG00000116991 ENSG00000128342 ENSG00000108960 ENSG00000187498
+ENSG00000119714 ENSG00000116711 ENSG00000116962 ENSG00000148175
+ENSG00000214814 ENSG00000025423 ENSG00000111859 ENSG00000108924
+ENSG00000126878 ENSG00000125848 ENSG00000145675 ENSG00000180139
+ENSG00000172061 ENSG00000163394 ENSG00000140511 ENSG00000245812
+ENSG00000184564 ENSG00000272841 ENSG00000110756 ENSG00000158813
+ENSG00000122877 ENSG00000181634 ENSG00000162616 ENSG00000068383
+ENSG00000131771 ENSG00000243742 ENSG00000278621 ENSG00000221869
+ENSG00000165272 ENSG00000103742 ENSG00000135678 ENSG00000213626
+ENSG00000145777 ENSG00000172497 ENSG00000241399 ENSG00000149591
+ENSG00000013293 ENSG00000254726 ENSG00000165507 ENSG00000131386
+ENSG00000146250 ENSG00000131389 ENSG00000267669 ENSG00000164442
+ENSG00000143494 ENSG00000016391 ENSG00000179862 ENSG00000261490
+ENSG00000154864 ENSG00000157368 ENSG00000147119 ENSG00000072571
+ENSG00000163491 ENSG00000099194 ENSG00000134121 ENSG00000156675
+ENSG00000183508 ENSG00000049246 ENSG00000168621 ENSG00000171793
+ENSG00000128165 ENSG00000028277 ENSG00000048540 ENSG00000174437
+ENSG00000123689 ENSG00000107562 ENSG00000133142 ENSG00000163171
+ENSG00000136999 ENSG00000146592 ENSG00000179820 ENSG00000172260
+ENSG00000128606 ENSG00000100784 ENSG00000175471 ENSG00000161647
+ENSG00000128510 ENSG00000139269 ENSG00000151726 ENSG00000137265
+ENSG00000178695 ENSG00000168398 ENSG00000135362 ENSG00000162878
+ENSG00000177614 ENSG00000235109 ENSG00000162998 ENSG00000198431
+ENSG00000138316 ENSG00000196932 ENSG00000106617 ENSG00000137959
+ENSG00000108830 ENSG00000148848 ENSG00000035664 ENSG00000131979
+FDR&lt;0.05, FC &lt; -2.5     FDR&lt;0.05, FC &lt; -2.5     FDR&lt;0.05, FC &gt; 2.5      FDR&lt;0.05, FC &gt; 2.5
+ENSG00000168811 ENSG00000147883 ENSG00000270885 ENSG00000162493
+ENSG00000177570 ENSG00000183876 ENSG00000146122 ENSG00000162772
+ENSG00000117600 ENSG00000131242 ENSG00000172403 ENSG00000116675
+ENSG00000160145 ENSG00000100302 ENSG00000164647 ENSG00000154930
+ENSG00000134253 ENSG00000126950 ENSG00000137880 ENSG00000196569
+ENSG00000130513 ENSG00000182010 ENSG00000103175 ENSG00000145244
+ENSG00000089041 ENSG00000105516 ENSG00000167191 ENSG00000169738
+ENSG00000168918 ENSG00000235513 ENSG00000169031 ENSG00000211448
+ENSG00000070808 ENSG00000007237 ENSG00000154856 ENSG00000237697
+ENSG00000134363 ENSG00000162643 ENSG00000163110 ENSG00000157214
+ENSG00000278727 ENSG00000135472 ENSG00000142871 ENSG00000116194
+ENSG00000106484 ENSG00000138669 ENSG00000213160 ENSG00000095637
+ENSG00000225783 ENSG00000160097 ENSG00000280143 ENSG00000169715
+ENSG00000276600 ENSG00000054938 ENSG00000100242 ENSG00000119138
+ENSG00000013297 ENSG00000138135 ENSG00000197943 ENSG00000149218
+ENSG00000126861 ENSG00000186198 ENSG00000280099 ENSG00000185950
+ENSG00000106976 ENSG00000185745 ENSG00000128262 ENSG00000137672
+ENSG00000172738 ENSG00000127824 ENSG00000100206 ENSG00000138829
+ENSG00000129682 ENSG00000158806 ENSG00000246430 ENSG00000166741
+ENSG00000134259 ENSG00000123612 ENSG00000184307 ENSG00000163661
+ENSG00000122966 ENSG00000149256 ENSG00000259426 ENSG00000253368
+ENSG00000112837 ENSG00000143786 ENSG00000081052 ENSG00000267480
+ENSG00000102524 ENSG00000170989 ENSG00000070404 ENSG00000165072
+ENSG00000132321 ENSG00000223949 ENSG00000137801 ENSG00000165899
+ENSG00000133216 ENSG00000129467 ENSG00000154736 ENSG00000176928
+ENSG00000100739 ENSG00000196155 ENSG00000119139 ENSG00000067798
+ENSG00000143320 ENSG00000111728 ENSG00000127083 ENSG00000162614
+ENSG00000183496 ENSG00000117461 ENSG00000108387 ENSG00000143869
+ENSG00000227268 ENSG00000103647 ENSG00000137393 ENSG00000163251
+ENSG00000092969 ENSG00000272168 ENSG00000174944 ENSG00000163017
+ENSG00000223764 ENSG00000137872 ENSG00000170873 ENSG00000150907
+ENSG00000088756 ENSG00000167992 ENSG00000139132 ENSG00000197381
+ENSG00000166592 ENSG00000166793 ENSG00000185432 ENSG00000205364
+ENSG00000107611 ENSG00000100292 ENSG00000134243 ENSG00000167549
+ENSG00000213420 ENSG00000137266 ENSG00000261685 ENSG00000060718
+ENSG00000110900 ENSG00000165891 ENSG00000158246 ENSG00000102554
+ENSG00000258947 ENSG00000164619 ENSG00000122035 ENSG00000141401
+ENSG00000101825 ENSG00000246763 ENSG00000119508 ENSG00000159167
+ENSG00000102984 ENSG00000173114 ENSG00000140807 ENSG00000145390
+ENSG00000064309 ENSG00000230417 ENSG00000125148 ENSG00000116285
+
+FDR&lt;0.05, FC &lt; -2.5             FDR&lt;0.05, FC &gt; 2.5      FDR&lt;0.05, FC &gt; 2.5
+ENSG00000164761         ENSG00000177283 ENSG00000268913
+ENSG00000149633         ENSG00000230018 ENSG00000103196
+ENSG00000012048         ENSG00000261468 ENSG00000162630
+ENSG00000126860         ENSG00000197301 ENSG00000247311
+ENSG00000092621         ENSG00000154734 ENSG00000046653
+ENSG00000154263         ENSG00000169271 ENSG00000167641
+ENSG00000079462         ENSG00000124440 ENSG00000135821
+ENSG00000182580         ENSG00000099998 ENSG00000136237
+ENSG00000167771         ENSG00000120162 ENSG00000099337
+ENSG00000205208         ENSG00000126803 ENSG00000120129
+ENSG00000172986         ENSG00000068831 ENSG00000004799
+ENSG00000272341         ENSG00000123685 ENSG00000221866
+                ENSG00000128045 ENSG00000157150
+                ENSG00000101342 ENSG00000102760
+                ENSG00000096060 ENSG00000198624
+                ENSG00000128917 ENSG00000179094
+                ENSG00000163083 ENSG00000179300
+                ENSG00000173838 ENSG00000136383
+                ENSG00000143127 ENSG00000189221
+                ENSG00000163884 ENSG00000174697
+                ENSG00000168309 ENSG00000112936
+                ENSG00000152583 ENSG00000165995
+                ENSG00000127954 ENSG00000157514
+                ENSG00000250978 ENSG00000233117
+                ENSG00000109906 ENSG00000157152
+                ENSG00000179593 ENSG00000187193
+                ENSG00000101347 ENSG00000152779
+                ENSG00000211445 ENSG00000170214
+</code></pre>
+
+<h1 id="lab-5-id-mapping-and-conversion">Lab 5 ID mapping and conversion</h1>
+<hr />
+<p>Learn about gene identifiers, g:profiler, Synergizer and BioMart</p>
+<p>Use the above gene list:  <br />
+1. Convert Gene IDs to Entrez Gene, gene name: Use g:Profiler 
+  Explore more functions, what the site can do for you <br />
+2. Get gene name, GO annotation + evidence codes Use Ensembl BioMart<br />
+3. Do it again with your own gene list  </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/rutgers-oarc/training/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
